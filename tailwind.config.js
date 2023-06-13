@@ -12,7 +12,21 @@ module.exports = {
         title: ['var(--font-bodoni)', 'serif'],
         text: ['var(--font-cormorant)', 'sans-serif'],
       },
+      screens: {
+        sm: '480px',
+        md: '768px',
+        lg: '976px',
+        xl: '1440px',
+      },
+      colors: {
+        green: '#5BAB5D',
+        orange: '#b5442b',
+        darkerGreen: '#36654f',
+        gray: '#f4f7f5',
+        black: '#000000',
+        white: '#FFFFFF',
+      },
     },
+    plugins: [],
   },
-  plugins: [],
 };

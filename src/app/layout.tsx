@@ -30,7 +30,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${noto.variable} ${cormorant.variable} ${bodoni.variable}`}>{children}</body>
+      <body
+        className={`${noto.variable} ${cormorant.variable} ${bodoni.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
