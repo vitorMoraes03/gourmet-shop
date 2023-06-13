@@ -1,5 +1,6 @@
 import './globals.css';
 import { Noto_Sans, Bodoni_Moda, Cormorant_Garamond } from 'next/font/google';
+import Header from '../components/header'
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${noto.variable} ${cormorant.variable} ${bodoni.variable}`}
       >
+        <Header />
         {children}
       </body>
     </html>
