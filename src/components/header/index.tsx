@@ -1,8 +1,6 @@
 'use client';
 
 import isSmallScreen from '@/utils/isSmallScreen';
-import { useState } from 'react';
-import Portal from '../portal';
 import Cart from './cart';
 import Logo from './logo';
 import MobileNav from './mobileNav';

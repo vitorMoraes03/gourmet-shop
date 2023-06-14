@@ -12,10 +12,11 @@ interface PortalProps {
   children: ReactNode;
   setModalState: Dispatch<SetStateAction<boolean>>;
   modalState: boolean;
+  overlayStyle: string;
 }
 
 const Portal = (
-  { children, setModalState, modalState }: PortalProps,
+  { children, setModalState, modalState, overlayStyle }: PortalProps,
 ) => {
   const ref = useRef<Element | null>(null);
 
@@ -26,9 +27,7 @@ const Portal = (
   return modalState && ref.current
     ? createPortal(
         <div
-          className="
-            fixed top-0 left-0 w-screen h-screen bg-black 
-            bg-opacity-40 overflow-auto z-20"
+          className={overlayStyle}
         >
           {children}
         </div>,
