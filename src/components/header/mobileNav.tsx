@@ -16,11 +16,15 @@ function MobileNav() {
         modalState={modalOpen}
         setModalState={setModalOpen}
       >
-        <div className="z-100 bg-white w-3/5">
+        <div
+          className={`z-100 bg-white w-2/3 h-screen transition-opacity ${
+            modalOpen ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
           <div className="flex justify-end items-end">
             <button
               onClick={() => setModalOpen(false)}
-              className="p-1"
+              className="p-2"
             >
               <CloseIcon />
             </button>
