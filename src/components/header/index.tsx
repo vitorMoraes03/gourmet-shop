@@ -1,13 +1,17 @@
 import Logo from "./logo";
 import NavBar from "./navbar";
-import PersonalAndSearch from "./personalAndSearch";
+import Cart from "./cart";
+import Search from "./search";
+import Profile from "./profile";
 
 function Header() {
   return (
     <header>
       <Logo />
       <NavBar />
-      <PersonalAndSearch />
+      <Search />
+      <Cart />
+      <Profile />
     </header>
   )
 };
