@@ -1,40 +1,22 @@
 'use client';
 
-import Logo from './logo';
-import NavBar from './navbar';
-import Cart from './cart';
-import Search from './search';
-import MenuOutlineIcon from '../icons/menuOutline';
-import Profile from './profile';
 import isSmallScreen from '@/utils/isSmallScreen';
-import Portal from '../modal';
 import { useState } from 'react';
+import Portal from '../portal';
+import Cart from './cart';
+import Logo from './logo';
+import MobileNav from './mobileNav';
+import Profile from './profile';
+import Search from './search';
 
 function Header() {
-  const [navModal, setNavModal] = useState(false);
-
-  function handleModal() {
-    console.log('handleModal clicked');
-  }
-
   return (
     <header
       className="flex justify-between items-center
      fixed inset-x-0 w-screen border py-3 px-5 bg-gray"
     >
-      <Portal
-        setModalState={setNavModal}
-        modalState={navModal}
-      >
-        <p>Next Js Portal by LearnBestCoding</p>
-      </Portal>
-      {isSmallScreen() && (
-        <button>
-          <MenuOutlineIcon />
-        </button>
-      )}
+      {isSmallScreen() && <MobileNav />}
       <Logo />
-      {/* {!isSmallScreen() && <NavBar />} */}
       <div className="flex gap-2">
         <Search />
         {!isSmallScreen() && <Profile />}
