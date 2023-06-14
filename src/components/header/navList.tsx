@@ -13,9 +13,12 @@ const linksNav = [
 
 function NavList() {
   return (
-    <ul className="font-title p-3">
+    <ul
+      className="font-title p-3 md:font-subtitle md:text-xs 
+    md:flex md:uppercase md:font-semibold md:ml-5"
+    >
       {linksNav.map(({ href, label }) => (
-        <li key={`${href}${label}`} className='mb-2 pl-3'>
+        <li key={`${href}${label}`} className="mb-2 pl-3">
           <Link href={href}>{label}</Link>
         </li>
       ))}

@@ -8,6 +8,7 @@ import Logo from './logo';
 import MobileNav from './mobileNav';
 import Profile from './profile';
 import Search from './search';
+import NavList from './navList';
 
 function Header() {
   return (
@@ -16,8 +17,11 @@ function Header() {
      fixed inset-x-0 w-screen border py-3 px-5 bg-gray"
     >
       {isSmallScreen() && <MobileNav />}
-      <Logo />
-      <div className="flex gap-2">
+      <div className="md:flex">
+        <Logo />
+        {!isSmallScreen() && <NavList />}
+      </div>
+      <div className="flex gap-2 md:gap-6">
         <Search />
         {!isSmallScreen() && <Profile />}
         <Cart />
