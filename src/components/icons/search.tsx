@@ -4,8 +4,8 @@ function SearchIcon() {
       xmlns="http://www.w3.org/2000/svg"
       className="ionicon"
       viewBox="0 0 512 512"
-      width="25"
-      height="25"
+      width="20"
+      height="20"
     >
       <path
         d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"

@@ -4,8 +4,8 @@ function CartIcon() {
       xmlns="http://www.w3.org/2000/svg"
       className="ionicon"
       viewBox="0 0 512 512"
-      width="25"
-      height="25"
+      width="20"
+      height="20"
     >
       <circle
         cx="176"

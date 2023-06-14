@@ -1,7 +1,7 @@
 function Logo() {
   return (
     <div>
-      <h1>Gourmet</h1>
+      <h1 className="font-title text-2xl font-semibold tracking-tight">Gourmet</h1>
     </div>
   )
 };

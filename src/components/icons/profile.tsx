@@ -4,8 +4,8 @@ function ProfileIcon() {
       xmlns="http://www.w3.org/2000/svg"
       className="ionicon"
       viewBox="0 0 512 512"
-      width="25"
-      height="25"
+      width="20"
+      height="20"
     >
       <path
         d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
