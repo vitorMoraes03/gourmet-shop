@@ -34,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${noto.variable} ${cormorant.variable} ${bodoni.variable}`}
       >
+        <div id='portal'></div>
         <Header />
         {children}
       </body>
