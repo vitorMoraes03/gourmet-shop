@@ -1,9 +1,5 @@
 import Link from 'next/link';
-import {
-  MouseEventHandler,
-  SetStateAction,
-  useState,
-} from 'react';
+import DropdownNav from './dropdown';
 
 const linksNav = [
   { href: '', label: 'Blog', identifier: 'blog' },
@@ -19,6 +15,7 @@ const linksNav = [
 
 interface NavListProps {
   hoverState?: boolean;
+  dropdownState?: string | null;
   setHoverState?: React.Dispatch<
     React.SetStateAction<boolean>
   >;
@@ -29,30 +26,41 @@ interface NavListProps {
 
 function NavList({
   hoverState,
+  dropdownState,
   setHoverState,
   setDropdown,
 }: NavListProps) {
   return (
-    <ul
-      className="font-title p-3 cursor-pointer md:font-subtitle md:text-xs 
-    md:flex md:uppercase md:font-semibold md:ml-5"
-      onMouseEnter={() =>
-        setHoverState && setHoverState(true)
+    <div
+      onMouseLeave={() =>
+        setHoverState && setHoverState(false)
       }
+      className='relative'
     >
-      {linksNav.map(({ href, label, identifier }) => (
-        <li key={`${href}${label}`} className="mb-2 pl-3">
-          <Link
-            href={href}
-            onMouseEnter={() =>
-              setDropdown && setDropdown(`${identifier}`)
-            }
-          >
-            {label}
-          </Link>
-        </li>
-      ))}
-    </ul>
+      <ul
+        className="font-title p-3 cursor-pointer md:font-subtitle md:text-xs 
+    md:flex md:uppercase md:font-semibold md:ml-5"
+        onMouseEnter={() =>
+          setHoverState && setHoverState(true)
+        }
+      >
+        {linksNav.map(({ href, label, identifier }) => (
+          <li key={`${href}${label}`} className="mb-2 pl-3">
+            <Link
+              href={href}
+              onMouseEnter={() =>
+                setDropdown && setDropdown(`${identifier}`)
+              }
+            >
+              {label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      {hoverState && dropdownState && (
+        <DropdownNav identifier={dropdownState} />
+      )}
+    </div>
   );
 }
 
