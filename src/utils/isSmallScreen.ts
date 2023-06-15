@@ -14,6 +14,9 @@
 
 import { useEffect, useState } from 'react';
 
+// quando eu Buildo o projeto, essa fn esta dando alguns erros, por causa do 
+// objeto window esta rodando no servidor
+
 function useIsSmallScreen() {
   const [isSmall, setIsSmall] = useState(false);
 
