@@ -1,4 +1,4 @@
-import SearchIcon from "../icons/search";
+import SearchIcon from "@/components/icons/search";
 
 function Search() {
   return (

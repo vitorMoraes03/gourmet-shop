@@ -5,16 +5,20 @@ import MobileNav from './nav/mobileNav';
 import NavList from './nav/navList';
 import DropdownNav from './nav/dropdownNav';
 import { useEffect, useState } from 'react';
-import Search from './search';
-import Profile from './profile';
-import Logo from './logo';
-import Cart from './cart';
+import Search from './cart/search';
+import Profile from './cart/profile';
+import Logo from './logo/logo';
+import Cart from './cart/cart';
+import { allSections } from './nav/allSections';
+import Section from './nav/section';
+import { SectionProps } from './nav/section';
 
 function Header() {
   const [dropdownHovered, setDropdownHovered] =
     useState(false);
-  const [dropdownSelected, setDropdownSelected] =
-    useState('');
+  const [dropdownSelected, setDropdownSelected] = useState<
+    string | null
+  >(null);
 
   return (
     <header
@@ -42,7 +46,11 @@ function Header() {
           <Cart />
         </div>
       </div>
-      {dropdownHovered && <DropdownNav>teste</DropdownNav>}
+      {dropdownHovered && (
+        <DropdownNav>
+          <Section identifier={dropdownSelected} />
+        </DropdownNav>
+      )}
     </header>
   );
 }
