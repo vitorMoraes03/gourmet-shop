@@ -1,18 +1,20 @@
 'use client';
 
 import isSmallScreen from '@/utils/isSmallScreen';
-import Cart from './cart';
-import Logo from './logo';
-import MobileNav from './mobileNav';
-import Profile from './profile';
+import MobileNav from './nav/mobileNav';
+import NavList from './nav/navList';
+import DropdownNav from './nav/dropdownNav';
+import { useEffect, useState } from 'react';
 import Search from './search';
-import NavList from './navList';
-import DropdownNav from './dropdownNav';
-import { useState } from 'react';
+import Profile from './profile';
+import Logo from './logo';
+import Cart from './cart';
 
 function Header() {
   const [dropdownHovered, setDropdownHovered] =
     useState(false);
+  const [dropdownSelected, setDropdownSelected] =
+    useState('');
 
   return (
     <header
@@ -30,6 +32,7 @@ function Header() {
             <NavList
               hoverState={dropdownHovered}
               setHoverState={setDropdownHovered}
+              setDropdown={setDropdownSelected}
             />
           )}
         </div>

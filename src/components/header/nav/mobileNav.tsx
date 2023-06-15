@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import MenuOutlineIcon from '../icons/menuOutline';
-import CloseIcon from '../icons/close';
-import Portal from '../portal';
+import { SetStateAction, useState } from 'react';
+import MenuOutlineIcon from '@/components/icons/menuOutline';
+import CloseIcon from '@/components/icons/close';
+import Portal from '@/components/portal';
 import NavList from './navList';
 
 function MobileNav() {

@@ -17,29 +17,38 @@ const linksNav = [
 ];
 
 interface NavListProps {
-  hoverState: boolean;
-  setHoverState: React.Dispatch<
+  hoverState?: boolean;
+  setHoverState?: React.Dispatch<
     React.SetStateAction<boolean>
+  >;
+  setDropdown?: React.Dispatch<
+    React.SetStateAction<string>
   >;
 }
 
 function NavList({
   hoverState,
   setHoverState,
+  setDropdown,
 }: NavListProps) {
   return (
     <ul
-      className="font-title p-3 md:font-subtitle md:text-xs 
+      className="font-title p-3 cursor-pointer md:font-subtitle md:text-xs 
     md:flex md:uppercase md:font-semibold md:ml-5"
-      onMouseEnter={() => setHoverState(true)}
+      onMouseEnter={() =>
+        setHoverState && setHoverState(true)
+      }
     >
       {linksNav.map(({ href, label }) => (
-        <li
-          key={`${href}${label}`}
-          className="mb-2 pl-3"
-          value={label}
-        >
-          <Link href={href}>{label}</Link>
+        <li key={`${href}${label}`} className="mb-2 pl-3">
+          <Link
+            href={href}
+            onMouseEnter={() =>
+              setDropdown && setDropdown(`${label}`)
+            }
+          >
+            {label}
+          </Link>
         </li>
       ))}
     </ul>
