@@ -5,7 +5,7 @@ export const allSections = {
       src: '/images/malgorzata-bujalska-RGM_UAsQwXA-unsplash.jpg',
       width: 345,
       height: 230,
-      alt: 'Imagem de temperos a venda em uma prateleira'
+      alt: 'Imagem de temperos a venda em uma prateleira',
     },
     links: [
       {
@@ -34,9 +34,10 @@ export const allSections = {
   cheeses: {
     title: 'Nossa queijaria especial',
     image: {
-      src: '',
-      width: 0,
-      height: 0,
+      src: '/images/azzedine-rouichi-YW_5rJvAdKw-unsplash.jpg',
+      width: 518,
+      height: 344,
+      alt: 'Imagem de queijos diversos, inteiros e com cascas',
     },
     links: [
       {
@@ -64,9 +65,10 @@ export const allSections = {
   wines: {
     title: 'Vinhos para todos os gostos',
     image: {
-      src: '',
-      width: 0,
-      height: 0,
+      src: '/images/maksym-kaharlytskyi-3uJt73tr4hI-unsplash.jpg',
+      width: 425,
+      height: 283,
+      alt: 'Quatro tipos de vinhos em taças sobre uma mesa',
     },
     links: [
       {
@@ -94,9 +96,10 @@ export const allSections = {
   preserves: {
     title: 'Nossas conservas especiais',
     image: {
-      src: '',
-      width: 0,
-      height: 0,
+      src: '/images/towfiqu-barbhuiya-ONQaaWF1EPI-unsplash.jpg',
+      width: 459,
+      height: 306,
+      alt: 'Imagem de uma lata de conserva de sardinha em azeite aberta',
     },
     links: [
       {
@@ -124,9 +127,10 @@ export const allSections = {
   all: {
     title: '',
     image: {
-      src: '',
-      width: 0,
-      height: 0,
+      src: '/images/janko-ferlic-uayYTomQ5r8-unsplash.jpg',
+      width: 693,
+      height: 491,
+      alt: 'Imagem de tomates pequenos ainda no pé',
     },
     links: [
       {

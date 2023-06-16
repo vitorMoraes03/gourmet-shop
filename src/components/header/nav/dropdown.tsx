@@ -20,13 +20,13 @@ function DropdownNav({ identifier }: SectionProps) {
 
   return (
     <div
-      className="absolute gap-40 flex space h-80 px-10 pb-2 bg-gray font-title text-lg mt-5"
+      className="absolute gap-40 flex space h-96 px-10 pb-2 bg-gray font-title text-lg mt-5"
       style={{
         width: 'calc(100vw + 120px)',
         marginLeft: '-120px',
       }}
     >
-      <ul>
+      <ul className="w-1/5">
         {sectionNav.title && (
           <h2 className="text-2xl">{sectionNav.title}</h2>
         )}
@@ -40,12 +40,15 @@ function DropdownNav({ identifier }: SectionProps) {
         ))}
       </ul>
       {sectionNav.image && (
-        <Image
-          src={sectionNav.image.src}
-          alt="ada"
-          width={sectionNav.image.width}
-          height={sectionNav.image.height}
-        />
+        <div className="flex items-center">
+          <Image
+            src={sectionNav.image.src}
+            alt="ada"
+            width={sectionNav.image.width}
+            height={sectionNav.image.height}
+            className="w-96 h-60"
+          />
+        </div>
       )}
     </div>
   );
