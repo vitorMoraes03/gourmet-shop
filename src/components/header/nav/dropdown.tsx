@@ -18,7 +18,10 @@ function DropdownNav({ identifier }: SectionProps) {
   }
 
   return (
-    <div className="w-full bg-gray font-title text-lg absolute mt-5">
+    <div
+      className="absolute px-10 pb-2 bg-gray font-title text-lg mt-5"
+      style={{ width: 'calc(100vw + 120px)', marginLeft: '-120px' }}
+    >
       <ul>
         <h2 className="text-2xl">Ajustar!</h2>
         {sectionNav.map(({ href, label }) => (

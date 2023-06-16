@@ -37,7 +37,7 @@ function Header() {
             />
           )}
         </div>
-        <div className="flex gap-2 md:gap-6 border">
+        <div className="flex gap-2 md:gap-6">
           <Search />
           {!isSmallScreen() && <Profile />}
           <Cart />
