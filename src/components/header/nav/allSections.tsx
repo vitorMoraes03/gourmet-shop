@@ -1,6 +1,12 @@
 export const allSections = {
   blog: {
     title: 'Mais vistas',
+    image: {
+      src: '/images/malgorzata-bujalska-RGM_UAsQwXA-unsplash.jpg',
+      width: 345,
+      height: 230,
+      alt: 'Imagem de temperos a venda em uma prateleira'
+    },
     links: [
       {
         href: '/blog/vinhos-nacionais',
@@ -27,6 +33,11 @@ export const allSections = {
   },
   cheeses: {
     title: 'Nossa queijaria especial',
+    image: {
+      src: '',
+      width: 0,
+      height: 0,
+    },
     links: [
       {
         href: '/queijos/queijos-nacionais',
@@ -52,6 +63,11 @@ export const allSections = {
   },
   wines: {
     title: 'Vinhos para todos os gostos',
+    image: {
+      src: '',
+      width: 0,
+      height: 0,
+    },
     links: [
       {
         href: '/vinhos/vinhos-nacionais',
@@ -77,6 +93,11 @@ export const allSections = {
   },
   preserves: {
     title: 'Nossas conservas especiais',
+    image: {
+      src: '',
+      width: 0,
+      height: 0,
+    },
     links: [
       {
         href: '/conservas/conservas-nacionais',
@@ -102,6 +123,11 @@ export const allSections = {
   },
   all: {
     title: '',
+    image: {
+      src: '',
+      width: 0,
+      height: 0,
+    },
     links: [
       {
         href: '/todos-os-produtos/novos-produtos',
