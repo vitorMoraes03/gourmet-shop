@@ -33,7 +33,7 @@ function NavList({
   return (
     <div
     onMouseLeave={() =>
-        setHoverState && setHoverState(true)
+        setHoverState && setHoverState(false)
       }
       className='relative'
     >

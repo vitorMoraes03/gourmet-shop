@@ -1,6 +1,12 @@
 import './globals.css';
-import { Noto_Sans, Bodoni_Moda, Cormorant_Garamond } from 'next/font/google';
-import Header from '../components/header'
+import {
+  Noto_Sans,
+  Bodoni_Moda,
+  Cormorant_Garamond,
+} from 'next/font/google';
+import Header from '@/components/header';
+import { useLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -26,15 +32,23 @@ export const metadata = {
 
 export default function RootLayout({
   children,
+  params
 }: {
   children: React.ReactNode;
+  params: any;
 }) {
+  const locale = useLocale();
+
+  if(params.locale !== locale){
+    notFound();
+  }
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={`${noto.variable} ${cormorant.variable} ${bodoni.variable}`}
       >
-        <div id='portal'></div>
+        <div id="portal"></div>
         <Header />
         {children}
       </body>

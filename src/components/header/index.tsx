@@ -3,7 +3,7 @@
 import isSmallScreen from '@/utils/isSmallScreen';
 import MobileNav from './nav/mobileNav';
 import NavList from './nav/navList';
-import DropdownNav from './nav/dropdown';
+import LangSelector from './langSelector';
 import { useState } from 'react';
 import Search from './cart/search';
 import Profile from './cart/profile';
@@ -37,8 +37,9 @@ function Header() {
             />
           )}
         </div>
-        <div className="flex gap-2 md:gap-6">
+        <div className="flex gap-2 md:gap-6 items-center">
           <Search />
+          <LangSelector />
           {!isSmallScreen() && <Profile />}
           <Cart />
         </div>
