@@ -1,6 +1,12 @@
 {
-    "Index": {
-      "title": "Indexe",
-      "description": "Descrisaao"
+  "content": {
+    "header": {
+      "title": "Mercearia",
+      "blog": "Blog",
+      "wines": "Vinhos",
+      "conserves": "Conservas",
+      "cheeses": "Queijos",
+      "all": "Todos os produtos"
     }
   }
+}

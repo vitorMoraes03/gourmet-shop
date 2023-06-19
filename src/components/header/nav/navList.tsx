@@ -1,5 +1,19 @@
 import Link from 'next/link';
 import DropdownNav from './dropdown';
+import { HeaderProps } from '../../../../messages/useContent';
+
+// header: {
+//   title: t('header.title'),
+//   links: {
+//     blog: t('header.blog'),
+//     wines: t('header.wines'),
+//     conserves: t('header.conserves'),
+//     cheeses: t('header.cheeses'),
+//     all: t('header.all'),
+//   },
+// },
+
+// loopar no objeto acima e gerar href, label, identifier
 
 const linksNav = [
   { href: '', label: 'Blog', identifier: 'blog' },
@@ -22,6 +36,7 @@ interface NavListProps {
   setDropdown?: React.Dispatch<
     React.SetStateAction<string | null>
   >;
+  headerText: HeaderProps;
 }
 
 function NavList({
@@ -29,13 +44,14 @@ function NavList({
   dropdownState,
   setHoverState,
   setDropdown,
+  headerText,
 }: NavListProps) {
   return (
     <div
-    onMouseLeave={() =>
+      onMouseLeave={() =>
         setHoverState && setHoverState(false)
       }
-      className='relative'
+      className="relative"
     >
       <ul
         className="font-title p-3 cursor-pointer md:font-subtitle md:text-xs 
@@ -44,7 +60,38 @@ function NavList({
           setHoverState && setHoverState(true)
         }
       >
-        {linksNav.map(({ href, label, identifier }) => (
+        {Object.entries(headerText.links).map(
+          ([key, value]) => (
+            <li key={key} className="mb-2 pl-3">
+              <Link
+                href={key}
+                onMouseEnter={() =>
+                  setDropdown && setDropdown(`${key}`)
+                }
+              >
+                {value}
+              </Link>
+            </li>
+          )
+        )}
+        {/* {Object.keys(headerText.links).map((key) => {
+          if (headerText.links.hasOwnProperty(key)) {
+            return (
+              <li key={key} className="mb-2 pl-3">
+                <Link
+                  href={key}
+                  onMouseEnter={() =>
+                    setDropdown && setDropdown(`${key}`)
+                  }
+                >
+                  {headerText.links[key]}
+                </Link>
+              </li>
+            );
+          }
+          return null;
+        })} */}
+        {/* {linksNav.map(({ href, label, identifier }) => (
           <li key={`${href}${label}`} className="mb-2 pl-3">
             <Link
               href={href}
@@ -55,7 +102,7 @@ function NavList({
               {label}
             </Link>
           </li>
-        ))}
+        ))} */}
       </ul>
       {hoverState && dropdownState && (
         <DropdownNav identifier={dropdownState} />

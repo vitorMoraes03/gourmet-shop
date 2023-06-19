@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-function Logo() {
+function Logo({ titleText }: { titleText: string}) {
   return (
     <div>
       <Link href={'/'}>
         <h1 className="font-title text-2xl font-semibold tracking-tight">
-          Gourmet
+          {titleText}
         </h1>
       </Link>
     </div>

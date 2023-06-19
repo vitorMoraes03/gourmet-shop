@@ -9,8 +9,9 @@ import Search from './cart/search';
 import Profile from './cart/profile';
 import Logo from './logo/logo';
 import Cart from './cart/cart';
+import { HeaderProps } from '../../../messages/useContent';
 
-function Header() {
+function Header({ header }: { header: HeaderProps }) {
   const [dropdownHovered, setDropdownHovered] =
     useState(false);
   const [dropdownSelected, setDropdownSelected] = useState<
@@ -18,22 +19,21 @@ function Header() {
   >(null);
 
   return (
-    <header
-      className="fixed inset-x-0 w-screen h-20 bg-gray"
-    >
+    <header className="fixed inset-x-0 w-screen h-20 bg-gray">
       <div
         className="flex justify-between items-center
      py-3 px-5"
       >
         {isSmallScreen() && <MobileNav />}
         <div className="md:flex">
-          <Logo />
+          <Logo titleText={header.title} />
           {!isSmallScreen() && (
             <NavList
               hoverState={dropdownHovered}
               dropdownState={dropdownSelected}
               setHoverState={setDropdownHovered}
               setDropdown={setDropdownSelected}
+              headerText={header}
             />
           )}
         </div>

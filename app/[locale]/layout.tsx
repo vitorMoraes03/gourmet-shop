@@ -7,6 +7,7 @@ import {
 import Header from '@/components/header';
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
+import { useContent, HeaderProps } from '../../messages/useContent';
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -38,7 +39,8 @@ export default function RootLayout({
   params: any;
 }) {
   const locale = useLocale();
-
+  const { content } = useContent();
+  
   if(params.locale !== locale){
     notFound();
   }
@@ -49,7 +51,7 @@ export default function RootLayout({
         className={`${noto.variable} ${cormorant.variable} ${bodoni.variable}`}
       >
         <div id="portal"></div>
-        <Header />
+        <Header header={content.header}/>
         {children}
       </body>
     </html>

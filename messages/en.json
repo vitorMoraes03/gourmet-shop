@@ -1,6 +1,12 @@
 {
-  "Index": {
-    "title": "dasdasd",
-    "description": "Index"
+  "content": {
+    "header": {
+      "title": "Gourmet",
+      "blog": "Blog",
+      "wines": "Wines",
+      "conserves": "Preserves",
+      "cheeses": "Cheeses",
+      "all": "All products"
+    }
   }
 }
