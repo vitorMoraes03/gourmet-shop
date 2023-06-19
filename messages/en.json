@@ -1,12 +1,54 @@
 {
   "content": {
     "header": {
-      "title": "Gourmet",
-      "blog": "Blog",
-      "wines": "Wines",
-      "conserves": "Preserves",
-      "cheeses": "Cheeses",
-      "all": "All products"
+      "links": {
+        "title": "Gourmet",
+        "blog": "Blog",
+        "wines": "Wines",
+        "preserves": "Preserves",
+        "cheeses": "Cheeses",
+        "all": "All products"
+      },
+      "blog": {
+        "title": "Most viewed",
+        "link1": "Top 10 national wines",
+        "link2": "Saint Jhon Recipes",
+        "link3": "Risotto: different tipes of rice",
+        "link4": "How to preserve your meats",
+        "link5": "A guide of artisan beers from Petrópolis"
+      },
+      "wines": {
+        "title": "Wines for all tastes",
+        "link1": "National wines",
+        "link2": "Old World wines",
+        "link3": "New World wines",
+        "link4": "South American wines",
+        "link5": "Natural wines"
+      },
+      "preserves": {
+        "title": "Our special preserves",
+        "link1": "National preserves",
+        "link2": "International preserves",
+        "link3": "Portuguese preserves",
+        "link4": "Organic preserves",
+        "link5": "Vegan preserves"
+      },
+      "cheeses": {
+        "title": "Our special cheeses",
+        "link1": "National Cheeses",
+        "link2": "Imported Cheeses",
+        "link3": "Vegan Cheeses",
+        "link4": "Blue Cheeses",
+        "link5": "Matured Cheeses"
+      },
+      "all": {
+        "title": "",
+        "link1": "New Products",
+        "link2": "Best Sellers",
+        "link3": "Subscriptions",
+        "link4": "Acessories",
+        "link5": "See all products"
+      }
     }
   }
 }

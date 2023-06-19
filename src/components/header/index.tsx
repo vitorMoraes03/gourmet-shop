@@ -24,7 +24,7 @@ function Header({ header }: { header: HeaderProps }) {
         className="flex justify-between items-center
      py-3 px-5"
       >
-        {isSmallScreen() && <MobileNav />}
+        {isSmallScreen() && <MobileNav headerText={header}/>}
         <div className="md:flex">
           <Logo titleText={header.title} />
           {!isSmallScreen() && (

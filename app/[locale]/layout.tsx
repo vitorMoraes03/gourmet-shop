@@ -7,7 +7,7 @@ import {
 import Header from '@/components/header';
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { useContent, HeaderProps } from '../../messages/useContent';
+import { useContent } from '../../messages/useContent';
 
 const noto = Noto_Sans({
   subsets: ['latin'],

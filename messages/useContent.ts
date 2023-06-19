@@ -6,13 +6,13 @@ export function useContent() {
   return {
     content: {
       header: {
-        title: t('header.title'),
+        title: t('header.links.title'),
         links: {
-          blog: t('header.blog'),
-          wines: t('header.wines'),
-          conserves: t('header.conserves'),
-          cheeses: t('header.cheeses'),
-          all: t('header.all'),
+          blog: t('header.links.blog'),
+          wines: t('header.links.wines'),
+          preserves: t('header.links.preserves'),
+          cheeses: t('header.links.cheeses'),
+          all: t('header.links.all'),
         },
       },
     },
