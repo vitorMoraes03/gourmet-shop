@@ -18,7 +18,7 @@ function DropdownNav({
 
   return (
     <div
-      className="absolute gap-40 flex space h-96 px-10 pb-2 bg-gray font-title text-lg mt-5"
+      className="absolute gap-40 flex space h-96 px-10 py-3 bg-gray font-title text-lg"
       style={{
         width: 'calc(100vw + 120px)',
         marginLeft: '-120px',
@@ -41,7 +41,7 @@ function DropdownNav({
         <div className="flex items-center">
           <Image
             src={sectionNav.image.src}
-            alt="ada"
+            alt={sectionNav.image.alt}
             width={Number(sectionNav.image.width)}
             height={Number(sectionNav.image.height)}
             className="w-96 h-60"

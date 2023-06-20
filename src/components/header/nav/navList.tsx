@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import DropdownNav from './dropdown';
 import { HeaderProps } from '../../../../messages/useContent';
+import { IndexInfo } from 'typescript';
 
 interface NavListProps {
   hoverState?: boolean;
@@ -30,15 +31,18 @@ function NavList({
       className="relative"
     >
       <ul
-        className="font-title p-3 cursor-pointer md:font-subtitle md:text-xs 
-    md:flex md:uppercase md:font-semibold md:ml-5"
+        className="font-title cursor-pointer md:h-20 md:font-subtitle md:text-xs 
+    md:flex md:uppercase md:font-semibold md:gap-2"
         onMouseEnter={() =>
           setHoverState && setHoverState(true)
         }
       >
         {Object.entries(headerText.nav.links).map(
           ([key, value]) => (
-            <li key={key} className="mb-2 pl-3">
+            <li
+              key={key}
+              className="px-2 hover:border-b hover:border-solid hover:border-black flex items-center"
+            >
               <Link
                 href={key}
                 onMouseEnter={() =>
@@ -52,7 +56,12 @@ function NavList({
         )}
       </ul>
       {hoverState && dropdownState && (
-        <DropdownNav identifier={dropdownState} headerText={headerText} />
+        <DropdownNav
+          identifier={
+            dropdownState as keyof typeof headerText.dropdown
+          }
+          headerText={headerText}
+        />
       )}
     </div>
   );

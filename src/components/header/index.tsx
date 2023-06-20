@@ -22,12 +22,12 @@ function Header({ header }: { header: HeaderProps }) {
     <header className="fixed inset-x-0 w-screen h-20 bg-gray">
       <div
         className="flex justify-between items-center
-     py-3 px-5"
+     px-5"
       >
         {isSmallScreen() && (
           <MobileNav headerText={header} />
         )}
-        <div className="md:flex">
+        <div className="md:flex md:items-center md:gap-10">
           <Logo logoText={header.logo} />
           {!isSmallScreen() && (
             <NavList
