@@ -10,6 +10,7 @@ import Profile from './cart/profile';
 import Logo from './logo/logo';
 import Cart from './cart/cart';
 import { HeaderProps } from '../../../messages/useContent';
+import DropdownNav from './nav/dropdown';
 
 function Header({ header }: { header: HeaderProps }) {
   const [dropdownHovered, setDropdownHovered] =
@@ -46,6 +47,15 @@ function Header({ header }: { header: HeaderProps }) {
           <Cart />
         </div>
       </div>
+      {dropdownHovered && dropdownSelected && (
+        <DropdownNav
+          identifier={
+            dropdownSelected as keyof typeof header.dropdown
+          }
+          headerText={header}
+          setHover={setDropdownHovered}
+        />
+      )}
     </header>
   );
 }

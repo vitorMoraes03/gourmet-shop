@@ -21,19 +21,19 @@
         },
         "wines": {
           "title": "Vinhos para todos os gostos",
-          "link1": "Vinhos nacionais",
-          "link2": "Vinhos do Velho Mundo",
-          "link3": "Vinhos do Novo Mundo",
-          "link4": "Vinhos sul-americanos",
-          "link5": "Vinhos naturais"
+          "link1": "Nacionais",
+          "link2": "Velho Mundo",
+          "link3": "Novo Mundo",
+          "link4": "Sul-americanos",
+          "link5": "Naturais"
         },
         "preserves": {
           "title": "Nossas conservas especiais",
-          "link1": "Conservas nacionais",
-          "link2": "Conservas internacionais",
-          "link3": "Conservas portuguesas",
-          "link4": "Conservas orgânicas",
-          "link5": "Conservas veganas"
+          "link1": "Nacionais",
+          "link2": "Internacionais",
+          "link3": "Portuguesas",
+          "link4": "Orgânicas",
+          "link5": "Veganas"
         },
         "cheeses": {
           "title": "Nossos queijos especiais",
@@ -60,9 +60,9 @@
             "width": "345",
             "height": "230",
             "alt": "Imagem de temperos a venda em uma prateleira",
-            "title": "",
-            "text": "",
-            "subtitle": ""
+            "title": "Nossos temperos vem em embalagens especiais de vidro",
+            "text": "Prepare sua despensa com nossos temperos, e terá infinitas possibilidades de receitas",
+            "subtitle": "Duração e sabores preservados"
           },
           "links": [
             {
@@ -94,9 +94,9 @@
             "width": "518",
             "height": "344",
             "alt": "Imagem de queijos diversos, inteiros e com cascas",
-            "title": "",
-            "text": "",
-            "subtitle": ""
+            "title": "A nossa seleção é tratada com muito carinho",
+            "text": "Aqui entendemos de queijo e fazemos de tudo para preservar o sabor e a textura de cada um",
+            "subtitle": "Cortamos seu pedaço na hora"
           },
           "links": [
             {
@@ -128,9 +128,9 @@
             "width": "425",
             "height": "283",
             "alt": "Quatro tipos de vinhos em taças sobre uma mesa",
-            "title": "",
-            "text": "",
-            "subtitle": ""
+            "title": "Nossa adega tem vinhos para todos os gostos",
+            "text": "Selecionamos o melhor, para você que aprecia um perfil mais clássico ou gosta de correr riscos",
+            "subtitle": "Escolha o seu preferido"
           },
           "links": [
             {
@@ -162,9 +162,9 @@
             "width": "459",
             "height": "306",
             "alt": "Imagem de uma lata de conserva de sardinha em azeite aberta",
-            "title": "",
-            "text": "",
-            "subtitle": ""
+            "title": "Sardinhas portuguesas em azeite de oliva",
+            "text": "Sardinhas de sabor intenso e textura macia, conservadas em azeite de oliva extra virgem",
+            "subtitle": "Uma iguaria mediterrânea"
           },
           "links": [
             {
@@ -196,9 +196,9 @@
             "width": "693",
             "height": "491",
             "alt": "Imagem de tomates pequenos ainda no pé",
-            "title": "",
-            "text": "",
-            "subtitle": ""
+            "title": "Do campo para a sua mesa",
+            "text": "Somos comprometidos com a sustentalidade e com a qualidade dos nossos produtos",
+            "subtitle": "Produtos frescos e selecionados"
           },
           "links": [
             {

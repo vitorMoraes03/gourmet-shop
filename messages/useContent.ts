@@ -372,6 +372,9 @@ export interface HeaderProps {
         width: string;
         height: string;
         alt: string;
+        title: string;
+        text: string;
+        subtitle: string;
       };
       links: {
         href: string;
@@ -385,6 +388,9 @@ export interface HeaderProps {
         width: string;
         height: string;
         alt: string;
+        title: string;
+        text: string;
+        subtitle: string;
       };
       links: {
         href: string;
@@ -398,6 +404,9 @@ export interface HeaderProps {
         width: string;
         height: string;
         alt: string;
+        title: string;
+        text: string;
+        subtitle: string;
       };
       links: {
         href: string;
@@ -411,6 +420,9 @@ export interface HeaderProps {
         width: string;
         height: string;
         alt: string;
+        title: string;
+        text: string;
+        subtitle: string;
       };
       links: {
         href: string;

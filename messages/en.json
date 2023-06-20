@@ -21,19 +21,19 @@
         },
         "wines": {
           "title": "Wines for all tastes",
-          "link1": "National wines",
-          "link2": "Old World wines",
-          "link3": "New World wines",
-          "link4": "South American wines",
-          "link5": "Natural wines"
+          "link1": "National",
+          "link2": "Old World",
+          "link3": "New World",
+          "link4": "South American",
+          "link5": "Natural"
         },
         "preserves": {
           "title": "Our special preserves",
-          "link1": "National preserves",
-          "link2": "International preserves",
-          "link3": "Portuguese preserves",
-          "link4": "Organic preserves",
-          "link5": "Vegan preserves"
+          "link1": "National",
+          "link2": "International",
+          "link3": "Portuguese",
+          "link4": "Organic",
+          "link5": "Vegan"
         },
         "cheeses": {
           "title": "Our special cheeses",
@@ -60,9 +60,9 @@
             "width": "345",
             "height": "230",
             "alt": "Image of spices for sale on a shelf",
-            "title": "",
-            "text": "",
-            "subtitle": ""
+            "title": "Our spices come in special glass packaging",
+            "text": "Stock up your pantry with our spices and unlock endless recipe possibilities",
+            "subtitle": "Preserved freshness and flavors"
           },
           "links": [
             {
@@ -94,9 +94,9 @@
             "width": "518",
             "height": "344",
             "alt": "Image of various cheeses, whole and with rinds",
-            "title": "",
-            "text": "",
-            "subtitle": ""
+            "title": "Our selection is treated with great care",
+            "text": "Here, we understand cheese and do everything to preserve the flavor and texture of each one",
+            "subtitle": "We cut your piece at the moment"
           },
           "links": [
             {
@@ -128,9 +128,9 @@
             "width": "425",
             "height": "283",
             "alt": "Four types of wines in glasses on a table",
-            "title": "",
-            "text": "",
-            "subtitle": ""
+            "title": "Our cellar has wines for every taste",
+            "text": "We have carefully selected the best options for those who appreciate a more classic profile or enjoy taking risks",
+            "subtitle": "Choose your favorite"
           },
           "links": [
             {
@@ -162,9 +162,9 @@
             "width": "459",
             "height": "306",
             "alt": "Image of an open tin can of sardines in olive oil",
-            "title": "",
-            "text": "",
-            "subtitle": ""
+            "title": "Portuguese sardines in olive oil",
+            "text": "Intensely flavored and tender-textured sardines, preserved in extra virgin olive oil",
+            "subtitle": "A Mediterranean delicacy"
           },
           "links": [
             {
@@ -196,9 +196,9 @@
             "width": "693",
             "height": "491",
             "alt": "Image of small tomatoes still on the vine",
-            "title": "",
-            "text": "",
-            "subtitle": ""
+            "title": "From the field to your table",
+            "text": "We are committed to sustainability and the quality of our products",
+            "subtitle": "Fresh and carefully selected products"
           },
           "links": [
             {

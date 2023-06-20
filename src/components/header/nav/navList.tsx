@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import DropdownNav from './dropdown';
 import { HeaderProps } from '../../../../messages/useContent';
-import { IndexInfo } from 'typescript';
+
+// a grande questao do dropdown
+// 
 
 interface NavListProps {
   hoverState?: boolean;
@@ -25,13 +27,12 @@ function NavList({
   return (
     <div
       onMouseLeave={() =>
-        // setHoverState && setHoverState(false)
-        setHoverState && setHoverState(true)
+        setHoverState && setHoverState(false)
       }
       className="relative"
     >
       <ul
-        className="font-title cursor-pointer md:h-20 md:font-subtitle md:text-xs 
+        className="font-title cursor-pointer md:h-20 md:font-subtitle md:text-sm 
     md:flex md:uppercase md:font-semibold md:gap-2"
         onMouseEnter={() =>
           setHoverState && setHoverState(true)
@@ -55,14 +56,14 @@ function NavList({
           )
         )}
       </ul>
-      {hoverState && dropdownState && (
+      {/* {hoverState && dropdownState && (
         <DropdownNav
           identifier={
             dropdownState as keyof typeof headerText.dropdown
           }
           headerText={headerText}
         />
-      )}
+      )} */}
     </div>
   );
 }
