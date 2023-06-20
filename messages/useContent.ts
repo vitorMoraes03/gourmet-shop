@@ -63,6 +63,9 @@ export function useContent() {
             width: t('header.dropdown.blog.image.width'),
             height: t('header.dropdown.blog.image.height'),
             alt: t('header.dropdown.blog.image.alt'),
+            title: t('header.dropdown.blog.image.title'),
+            text: t('header.dropdown.blog.image.text'),
+            subtitle: t('header.dropdown.blog.image.subtitle'),
           },
           links: [
             {
@@ -106,6 +109,9 @@ export function useContent() {
               'header.dropdown.cheeses.image.height'
             ),
             alt: t('header.dropdown.cheeses.image.alt'),
+            title: t('header.dropdown.cheeses.image.title'),
+            text: t('header.dropdown.cheeses.image.text'),
+            subtitle: t('header.dropdown.cheeses.image.subtitle'),
           },
           links: [
             {
@@ -157,6 +163,9 @@ export function useContent() {
             width: t('header.dropdown.wines.image.width'),
             height: t('header.dropdown.wines.image.height'),
             alt: t('header.dropdown.wines.image.alt'),
+            title: t('header.dropdown.wines.image.title'),
+            text: t('header.dropdown.wines.image.text'),
+            subtitle: t('header.dropdown.wines.image.subtitle'),
           },
           links: [
             {
@@ -202,6 +211,9 @@ export function useContent() {
               'header.dropdown.preserves.image.height'
             ),
             alt: t('header.dropdown.preserves.image.alt'),
+            title: t('header.dropdown.preserves.image.title'),
+            text: t('header.dropdown.preserves.image.text'),
+            subtitle: t('header.dropdown.preserves.image.subtitle'),
           },
           links: [
             {
@@ -253,6 +265,9 @@ export function useContent() {
             width: t('header.dropdown.all.image.width'),
             height: t('header.dropdown.all.image.height'),
             alt: t('header.dropdown.all.image.alt'),
+            title: t('header.dropdown.all.image.title'),
+            text: t('header.dropdown.all.image.text'),
+            subtitle: t('header.dropdown.all.image.subtitle'),
           },
           links: [
             {
@@ -341,6 +356,9 @@ export interface HeaderProps {
         width: string;
         height: string;
         alt: string;
+        title: string;
+        text: string;
+        subtitle: string;
       };
       links: {
         href: string;
@@ -401,4 +419,3 @@ export interface HeaderProps {
     };
   };
 }
-
