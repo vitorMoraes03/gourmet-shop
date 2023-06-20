@@ -1,27 +1,20 @@
 import Link from 'next/link';
 import { allSections } from './allSections';
 import Image from 'next/image';
+import { HeaderProps } from '../../../../messages/useContent';
 
-export interface SectionProps {
-  identifier: string | null;
-}
-
-function DropdownNav({ identifier }: SectionProps) {
+function DropdownNav({
+  identifier,
+  headerText,
+}: {
+  identifier: keyof typeof headerText.dropdown;
+  headerText: HeaderProps;
+}) {
   if (!identifier) {
     return null;
   }
 
-  const sectionNav =
-    allSections[identifier as keyof typeof allSections];
-
-  if (!sectionNav) {
-    return null;
-  }
-
-  // precisamos substituir o sectionNav
-  // o que vai ser necessário? 
-  // title, image: src, width, height, alt, links
-  // mas traduzido? title, image: alt, links 
+  const sectionNav = headerText.dropdown[identifier];
 
   return (
     <div
@@ -49,8 +42,8 @@ function DropdownNav({ identifier }: SectionProps) {
           <Image
             src={sectionNav.image.src}
             alt="ada"
-            width={sectionNav.image.width}
-            height={sectionNav.image.height}
+            width={Number(sectionNav.image.width)}
+            height={Number(sectionNav.image.height)}
             className="w-96 h-60"
           />
         </div>

@@ -50,38 +50,9 @@ function NavList({
             </li>
           )
         )}
-        {/* {Object.keys(headerText.links).map((key) => {
-          if (headerText.links.hasOwnProperty(key)) {
-            return (
-              <li key={key} className="mb-2 pl-3">
-                <Link
-                  href={key}
-                  onMouseEnter={() =>
-                    setDropdown && setDropdown(`${key}`)
-                  }
-                >
-                  {headerText.links[key]}
-                </Link>
-              </li>
-            );
-          }
-          return null;
-        })} */}
-        {/* {linksNav.map(({ href, label, identifier }) => (
-          <li key={`${href}${label}`} className="mb-2 pl-3">
-            <Link
-              href={href}
-              onMouseEnter={() =>
-                setDropdown && setDropdown(`${identifier}`)
-              }
-            >
-              {label}
-            </Link>
-          </li>
-        ))} */}
       </ul>
       {hoverState && dropdownState && (
-        <DropdownNav identifier={dropdownState} />
+        <DropdownNav identifier={dropdownState} headerText={headerText} />
       )}
     </div>
   );

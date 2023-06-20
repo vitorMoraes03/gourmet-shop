@@ -14,7 +14,7 @@
         "blog": {
           "title": "Most viewed",
           "link1": "Top 10 national wines",
-          "link2": "Saint Jhon Recipes",
+          "link2": "St Jhon Recipes",
           "link3": "Risotto: different tipes of rice",
           "link4": "How to preserve your meats",
           "link5": "A guide of craft beers from Petrópolis"
@@ -68,7 +68,7 @@
             },
             {
               "href": "/blog/stjohn-recipes",
-              "label": "Saint John fest recipes"
+              "label": "St John fest recipes"
             },
             {
               "href": "/blog/risotto-rices",
