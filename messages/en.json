@@ -1,9 +1,10 @@
 {
-  "content": {
+  "Index": {
+    "title": "",
     "header": {
+      "logo": "Gourmet",
       "nav": {
         "links": {
-          "title": "Gourmet",
           "blog": "Blog",
           "wines": "Wines",
           "preserves": "Preserves",
@@ -56,8 +57,8 @@
           "title": "Most viewed",
           "image": {
             "src": "/images/malgorzata-bujalska-RGM_UAsQwXA-unsplash.jpg",
-            "width": 345,
-            "height": 230,
+            "width": "345",
+            "height": "230",
             "alt": "Image of spices for sale on a shelf"
           },
           "links": [
@@ -87,8 +88,8 @@
           "title": "Our special cheesery",
           "image": {
             "src": "/images/azzedine-rouichi-YW_5rJvAdKw-unsplash.jpg",
-            "width": 518,
-            "height": 344,
+            "width": "518",
+            "height": "344",
             "alt": "Image of various cheeses, whole and with rinds"
           },
           "links": [
@@ -118,8 +119,8 @@
           "title": "Wines for all tastes",
           "image": {
             "src": "/images/maksym-kaharlytskyi-3uJt73tr4hI-unsplash.jpg",
-            "width": 425,
-            "height": 283,
+            "width": "425",
+            "height": "283",
             "alt": "Four types of wines in glasses on a table"
           },
           "links": [
@@ -149,8 +150,8 @@
           "title": "Our special preserves",
           "image": {
             "src": "/images/towfiqu-barbhuiya-ONQaaWF1EPI-unsplash.jpg",
-            "width": 459,
-            "height": 306,
+            "width": "459",
+            "height": "306",
             "alt": "Image of an open tin can of sardines in olive oil"
           },
           "links": [
@@ -180,8 +181,8 @@
           "title": "",
           "image": {
             "src": "/images/janko-ferlic-uayYTomQ5r8-unsplash.jpg",
-            "width": 693,
-            "height": 491,
+            "width": "693",
+            "height": "491",
             "alt": "Image of small tomatoes still on the vine"
           },
           "links": [

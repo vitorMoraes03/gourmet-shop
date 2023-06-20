@@ -21,7 +21,7 @@ function DropdownNav({ identifier }: SectionProps) {
   // precisamos substituir o sectionNav
   // o que vai ser necessário? 
   // title, image: src, width, height, alt, links
-  // mas traduzido? title, image: alt, links
+  // mas traduzido? title, image: alt, links 
 
   return (
     <div

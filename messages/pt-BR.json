@@ -1,9 +1,10 @@
 {
-  "content": {
+  "Index": {
+    "title": "",
     "header": {
+      "logo": "Gourmet",
       "nav": {
         "links": {
-          "title": "Gourmet",
           "blog": "Blog",
           "wines": "Vinhos",
           "preserves": "Conservas",
@@ -56,8 +57,8 @@
           "title": "Mais vistas",
           "image": {
             "src": "/images/malgorzata-bujalska-RGM_UAsQwXA-unsplash.jpg",
-            "width": 345,
-            "height": 230,
+            "width": "345",
+            "height": "230",
             "alt": "Imagem de temperos a venda em uma prateleira"
           },
           "links": [
@@ -87,8 +88,8 @@
           "title": "Nossa queijaria especial",
           "image": {
             "src": "/images/azzedine-rouichi-YW_5rJvAdKw-unsplash.jpg",
-            "width": 518,
-            "height": 344,
+            "width": "518",
+            "height": "344",
             "alt": "Imagem de queijos diversos, inteiros e com cascas"
           },
           "links": [
@@ -118,8 +119,8 @@
           "title": "Vinhos para todos os gostos",
           "image": {
             "src": "/images/maksym-kaharlytskyi-3uJt73tr4hI-unsplash.jpg",
-            "width": 425,
-            "height": 283,
+            "width": "425",
+            "height": "283",
             "alt": "Quatro tipos de vinhos em taças sobre uma mesa"
           },
           "links": [
@@ -149,8 +150,8 @@
           "title": "Nossas conservas especiais",
           "image": {
             "src": "/images/towfiqu-barbhuiya-ONQaaWF1EPI-unsplash.jpg",
-            "width": 459,
-            "height": 306,
+            "width": "459",
+            "height": "306",
             "alt": "Imagem de uma lata de conserva de sardinha em azeite aberta"
           },
           "links": [
@@ -180,8 +181,8 @@
           "title": "",
           "image": {
             "src": "/images/janko-ferlic-uayYTomQ5r8-unsplash.jpg",
-            "width": 693,
-            "height": 491,
+            "width": "693",
+            "height": "491",
             "alt": "Imagem de tomates pequenos ainda no pé"
           },
           "links": [

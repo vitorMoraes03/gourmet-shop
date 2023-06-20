@@ -3,7 +3,7 @@ import MenuOutlineIcon from '@/components/icons/menuOutline';
 import CloseIcon from '@/components/icons/close';
 import Portal from '@/components/portal';
 import NavList from './navList';
-import { HeaderProps } from '../../../../content/useContent';
+import { HeaderProps } from '../../../../messages/useContent';
 
 function MobileNav({
   headerText,

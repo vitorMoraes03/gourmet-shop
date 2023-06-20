@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import DropdownNav from './dropdown';
-import { HeaderProps } from '../../../../content/useContent';
+import { HeaderProps } from '../../../../messages/useContent';
 
 interface NavListProps {
   hoverState?: boolean;
@@ -36,7 +36,7 @@ function NavList({
           setHoverState && setHoverState(true)
         }
       >
-        {Object.entries(headerText.links).map(
+        {Object.entries(headerText.nav.links).map(
           ([key, value]) => (
             <li key={key} className="mb-2 pl-3">
               <Link

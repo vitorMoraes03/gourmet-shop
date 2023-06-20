@@ -9,7 +9,7 @@ import Search from './cart/search';
 import Profile from './cart/profile';
 import Logo from './logo/logo';
 import Cart from './cart/cart';
-import { HeaderProps } from '../../../content/useContent';
+import { HeaderProps } from '../../../messages/useContent';
 
 function Header({ header }: { header: HeaderProps }) {
   const [dropdownHovered, setDropdownHovered] =
@@ -28,7 +28,7 @@ function Header({ header }: { header: HeaderProps }) {
           <MobileNav headerText={header} />
         )}
         <div className="md:flex">
-          <Logo titleText={header.title} />
+          <Logo logoText={header.logo} />
           {!isSmallScreen() && (
             <NavList
               hoverState={dropdownHovered}

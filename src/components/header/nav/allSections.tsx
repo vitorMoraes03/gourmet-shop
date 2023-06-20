@@ -2,7 +2,7 @@
 // mas e se eu quisesse apagar esse arquivo? para seguir o mesmo padrao
 
 import { useTranslations } from 'next-intl';
-import { useContent } from '../../../../content/useContent';
+import { useContent } from '../../../../messages/useContent';
 
 export const allSections = {
   blog: {
