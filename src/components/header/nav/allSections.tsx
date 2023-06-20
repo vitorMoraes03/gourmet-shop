@@ -1,3 +1,9 @@
+// eu posso usar useContent aqui e substituir alguns dados desse arquivo
+// mas e se eu quisesse apagar esse arquivo? para seguir o mesmo padrao
+
+import { useTranslations } from 'next-intl';
+import { useContent } from '../../../../content/useContent';
+
 export const allSections = {
   blog: {
     title: 'Mais vistas',

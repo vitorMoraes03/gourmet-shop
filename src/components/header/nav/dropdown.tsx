@@ -18,6 +18,11 @@ function DropdownNav({ identifier }: SectionProps) {
     return null;
   }
 
+  // precisamos substituir o sectionNav
+  // o que vai ser necessário? 
+  // title, image: src, width, height, alt, links
+  // mas traduzido? title, image: alt, links
+
   return (
     <div
       className="absolute gap-40 flex space h-96 px-10 pb-2 bg-gray font-title text-lg mt-5"

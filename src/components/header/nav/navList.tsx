@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import DropdownNav from './dropdown';
-import { HeaderProps } from '../../../../messages/useContent';
+import { HeaderProps } from '../../../../content/useContent';
 
 interface NavListProps {
   hoverState?: boolean;

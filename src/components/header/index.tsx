@@ -9,7 +9,7 @@ import Search from './cart/search';
 import Profile from './cart/profile';
 import Logo from './logo/logo';
 import Cart from './cart/cart';
-import { HeaderProps } from '../../../messages/useContent';
+import { HeaderProps } from '../../../content/useContent';
 
 function Header({ header }: { header: HeaderProps }) {
   const [dropdownHovered, setDropdownHovered] =
@@ -24,7 +24,9 @@ function Header({ header }: { header: HeaderProps }) {
         className="flex justify-between items-center
      py-3 px-5"
       >
-        {isSmallScreen() && <MobileNav headerText={header}/>}
+        {isSmallScreen() && (
+          <MobileNav headerText={header} />
+        )}
         <div className="md:flex">
           <Logo titleText={header.title} />
           {!isSmallScreen() && (

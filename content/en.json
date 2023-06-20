@@ -1,0 +1,213 @@
+{
+  "content": {
+    "header": {
+      "nav": {
+        "links": {
+          "title": "Gourmet",
+          "blog": "Blog",
+          "wines": "Wines",
+          "preserves": "Preserves",
+          "cheeses": "Cheeses",
+          "all": "All products"
+        },
+        "blog": {
+          "title": "Most viewed",
+          "link1": "Top 10 national wines",
+          "link2": "Saint Jhon Recipes",
+          "link3": "Risotto: different tipes of rice",
+          "link4": "How to preserve your meats",
+          "link5": "A guide of craft beers from Petrópolis"
+        },
+        "wines": {
+          "title": "Wines for all tastes",
+          "link1": "National wines",
+          "link2": "Old World wines",
+          "link3": "New World wines",
+          "link4": "South American wines",
+          "link5": "Natural wines"
+        },
+        "preserves": {
+          "title": "Our special preserves",
+          "link1": "National preserves",
+          "link2": "International preserves",
+          "link3": "Portuguese preserves",
+          "link4": "Organic preserves",
+          "link5": "Vegan preserves"
+        },
+        "cheeses": {
+          "title": "Our special cheeses",
+          "link1": "National Cheeses",
+          "link2": "Imported Cheeses",
+          "link3": "Vegan Cheeses",
+          "link4": "Blue Cheeses",
+          "link5": "Matured Cheeses"
+        },
+        "all": {
+          "title": "",
+          "link1": "New Products",
+          "link2": "Best Sellers",
+          "link3": "Subscriptions",
+          "link4": "Acessories",
+          "link5": "See all products"
+        }
+      },
+      "dropdown": {
+        "blog": {
+          "title": "Most viewed",
+          "image": {
+            "src": "/images/malgorzata-bujalska-RGM_UAsQwXA-unsplash.jpg",
+            "width": 345,
+            "height": 230,
+            "alt": "Image of spices for sale on a shelf"
+          },
+          "links": [
+            {
+              "href": "/blog/national-wines",
+              "label": "Top 10 national wines"
+            },
+            {
+              "href": "/blog/stjohn-recipes",
+              "label": "Saint John fest recipes"
+            },
+            {
+              "href": "/blog/risotto-rices",
+              "label": "Risottos: the different types of rice"
+            },
+            {
+              "href": "/blog/preserve-food",
+              "label": "How to preserve your food"
+            },
+            {
+              "href": "/blog/craft-beers",
+              "label": "A guide to craft beers from Petrópolis"
+            }
+          ]
+        },
+        "cheeses": {
+          "title": "Our special cheesery",
+          "image": {
+            "src": "/images/azzedine-rouichi-YW_5rJvAdKw-unsplash.jpg",
+            "width": 518,
+            "height": 344,
+            "alt": "Image of various cheeses, whole and with rinds"
+          },
+          "links": [
+            {
+              "href": "/cheeses/national-cheeses",
+              "label": "National cheeses"
+            },
+            {
+              "href": "/cheeses/imported-cheeses",
+              "label": "Imported cheeses"
+            },
+            {
+              "href": "/cheeses/vegan-cheeses",
+              "label": "Vegan cheeses"
+            },
+            {
+              "href": "/cheeses/blue-cheeses",
+              "label": "Blue cheeses"
+            },
+            {
+              "href": "/cheeses/aged-cheeses",
+              "label": "Aged cheeses"
+            }
+          ]
+        },
+        "wines": {
+          "title": "Wines for all tastes",
+          "image": {
+            "src": "/images/maksym-kaharlytskyi-3uJt73tr4hI-unsplash.jpg",
+            "width": 425,
+            "height": 283,
+            "alt": "Four types of wines in glasses on a table"
+          },
+          "links": [
+            {
+              "href": "/wines/national-wines",
+              "label": "National wines"
+            },
+            {
+              "href": "/wines/old-world-wines",
+              "label": "Old world wines"
+            },
+            {
+              "href": "/wines/new-world-wines",
+              "label": "New world wines"
+            },
+            {
+              "href": "/wines/south-american-wines",
+              "label": "South American wines"
+            },
+            {
+              "href": "/wines/natural-wines",
+              "label": "Natural wines"
+            }
+          ]
+        },
+        "preserves": {
+          "title": "Our special preserves",
+          "image": {
+            "src": "/images/towfiqu-barbhuiya-ONQaaWF1EPI-unsplash.jpg",
+            "width": 459,
+            "height": 306,
+            "alt": "Image of an open tin can of sardines in olive oil"
+          },
+          "links": [
+            {
+              "href": "/preserves/national-preserves",
+              "label": "National preserves"
+            },
+            {
+              "href": "/preserves/imported-preserves",
+              "label": "Imported preserves"
+            },
+            {
+              "href": "/preserves/vegan-preserves",
+              "label": "Vegan preserves"
+            },
+            {
+              "href": "/preserves/organic-preserves",
+              "label": "Organic preserves"
+            },
+            {
+              "href": "/preserves/vegetarian-preserves",
+              "label": "Vegetarian preserves"
+            }
+          ]
+        },
+        "all": {
+          "title": "",
+          "image": {
+            "src": "/images/janko-ferlic-uayYTomQ5r8-unsplash.jpg",
+            "width": 693,
+            "height": 491,
+            "alt": "Image of small tomatoes still on the vine"
+          },
+          "links": [
+            {
+              "href": "/all-products/new-products",
+              "label": "New products"
+            },
+            {
+              "href": "/all-products/best-sellers",
+              "label": "Best sellers"
+            },
+            {
+              "href": "/all-products/subscription-programs",
+              "label": "Subscription programs"
+            },
+            {
+              "href": "/all-products/accessories",
+              "label": "Accessories"
+            },
+            {
+              "href": "/all-products/buy-all",
+              "label": "Buy all"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

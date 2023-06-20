@@ -7,7 +7,7 @@ import {
 import Header from '@/components/header';
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { useContent } from '../../messages/useContent';
+import { useContent } from '../../content/useContent';
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -33,15 +33,15 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-  params
+  params,
 }: {
   children: React.ReactNode;
   params: any;
 }) {
   const locale = useLocale();
   const { content } = useContent();
-  
-  if(params.locale !== locale){
+
+  if (params.locale !== locale) {
     notFound();
   }
 
@@ -51,7 +51,7 @@ export default function RootLayout({
         className={`${noto.variable} ${cormorant.variable} ${bodoni.variable}`}
       >
         <div id="portal"></div>
-        <Header header={content.header}/>
+        <Header header={content.header} />
         {children}
       </body>
     </html>
