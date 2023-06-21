@@ -19,7 +19,6 @@ function DropdownNav({
 
   return (
     <div
-      // className="absolute gap-40 flex space h-96 px-10 py-3 bg-gray font-title text-lg"
       className="absolute bg-gray flex w-screen h-96 px-20 py-6 font-title text-lg"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(true)} //false

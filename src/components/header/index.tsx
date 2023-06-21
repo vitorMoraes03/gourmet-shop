@@ -21,26 +21,25 @@ function Header({ header }: { header: HeaderProps }) {
 
   return (
     <header className="fixed inset-x-0 w-screen h-20 bg-gray">
-      <div
-        className="flex justify-between items-center
-     px-5"
-      >
+      <div className="md:grid md:grid-cols-6 md:px-5 md:items-center h-full">
         {isSmallScreen() && (
           <MobileNav headerText={header} />
         )}
-        <div className="md:flex md:items-center md:gap-10">
-          <Logo logoText={header.logo} />
-          {!isSmallScreen() && (
-            <NavList
-              hoverState={dropdownHovered}
-              dropdownState={dropdownSelected}
-              setHoverState={setDropdownHovered}
-              setDropdown={setDropdownSelected}
-              headerText={header}
-            />
-          )}
-        </div>
-        <div className="flex gap-2 md:gap-6 items-center">
+        <Logo
+          logoText={header.logo}
+          containerStyle={'md:col-span-1 text-center md:mb-2'}
+        />
+        {!isSmallScreen() && (
+          <NavList
+            hoverState={dropdownHovered}
+            dropdownState={dropdownSelected}
+            setHoverState={setDropdownHovered}
+            setDropdown={setDropdownSelected}
+            headerText={header}
+            containerStyle={'md:col-span-4 md:h-full'}
+          />
+        )}
+        <div className="md:col-span-1 flex gap-2 md:gap-6 items-center">
           <Search />
           <LangSelector />
           {!isSmallScreen() && <Profile />}

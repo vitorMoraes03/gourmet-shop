@@ -3,7 +3,7 @@ import DropdownNav from './dropdown';
 import { HeaderProps } from '../../../../messages/useContent';
 
 // a grande questao do dropdown
-// 
+//
 
 interface NavListProps {
   hoverState?: boolean;
@@ -15,6 +15,7 @@ interface NavListProps {
     React.SetStateAction<string | null>
   >;
   headerText: HeaderProps;
+  containerStyle: string;
 }
 
 function NavList({
@@ -23,48 +24,33 @@ function NavList({
   setHoverState,
   setDropdown,
   headerText,
+  containerStyle,
 }: NavListProps) {
   return (
-    <div
-      onMouseLeave={() =>
-        setHoverState && setHoverState(false)
+    <ul
+      className={`${containerStyle} font-title cursor-pointer md:font-subtitle md:text-sm md:flex md:uppercase md:font-semibold md:gap-2`}
+      onMouseEnter={() =>
+        setHoverState && setHoverState(true)
       }
-      className="relative"
     >
-      <ul
-        className="font-title cursor-pointer md:h-20 md:font-subtitle md:text-sm 
-    md:flex md:uppercase md:font-semibold md:gap-2"
-        onMouseEnter={() =>
-          setHoverState && setHoverState(true)
-        }
-      >
-        {Object.entries(headerText.nav.links).map(
-          ([key, value]) => (
-            <li
-              key={key}
-              className="px-2 hover:border-b hover:border-solid hover:border-black flex items-center"
+      {Object.entries(headerText.nav.links).map(
+        ([key, value]) => (
+          <li
+            key={key}
+            className="px-2 hover:border-b hover:border-solid hover:border-black flex items-center"
+          >
+            <Link
+              href={key}
+              onMouseEnter={() =>
+                setDropdown && setDropdown(`${key}`)
+              }
             >
-              <Link
-                href={key}
-                onMouseEnter={() =>
-                  setDropdown && setDropdown(`${key}`)
-                }
-              >
-                {value}
-              </Link>
-            </li>
-          )
-        )}
-      </ul>
-      {/* {hoverState && dropdownState && (
-        <DropdownNav
-          identifier={
-            dropdownState as keyof typeof headerText.dropdown
-          }
-          headerText={headerText}
-        />
-      )} */}
-    </div>
+              {value}
+            </Link>
+          </li>
+        )
+      )}
+    </ul>
   );
 }
 
