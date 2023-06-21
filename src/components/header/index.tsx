@@ -39,7 +39,7 @@ function Header({ header }: { header: HeaderProps }) {
             containerStyle={'md:col-span-4 md:h-full'}
           />
         )}
-        <div className="md:col-span-1 flex gap-2 md:gap-6 items-center">
+        <div className="md:col-span-1 md:h-20 flex gap-2 md:gap-6 items-center">
           <Search />
           <LangSelector />
           {!isSmallScreen() && <Profile />}
