@@ -6,10 +6,12 @@ function DropdownNav({
   identifier,
   headerText,
   setHover,
+  containerStyle,
 }: {
   identifier: keyof typeof headerText.dropdown;
   headerText: HeaderProps;
   setHover: React.Dispatch<React.SetStateAction<boolean>>;
+  containerStyle: string;
 }) {
   if (!identifier) {
     return null;
@@ -19,28 +21,30 @@ function DropdownNav({
 
   return (
     <div
-      className="absolute bg-gray flex w-screen h-96 px-20 py-6 font-title text-lg"
+      className={`${containerStyle} absolute bg-gray font-title text-lg`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(true)} //false
     >
       <ul>
         {sectionNav.title && (
-          <h2 className="text-2xl mb-5 font-semibold">
+          <h2 className="text-2xl mb-7 font-semibold tracking-tight">
             {sectionNav.title}
           </h2>
         )}
         {sectionNav.links.map(({ href, label }) => (
           <li
             key={`${identifier}-${href}`}
-            className="my-2 font-subtitle"
+            className="my-4 font-subtitle leading-5"
           >
             <Link href={href}>{label}</Link>
           </li>
         ))}
       </ul>
       {sectionNav.image && (
-        // Não gostei da ml-80 aqui! 
-        <div className="flex items-center gap-6 ml-64">
+        <div
+          className="col-span-2 grid gap-4 h-fit justify-end"
+          style={{ gridTemplateColumns: '380px 250px' }}
+        >
           <div>
             <Image
               src={sectionNav.image.src}
@@ -50,11 +54,11 @@ function DropdownNav({
               className="w-96 h-60"
             />
           </div>
-          <div className="flex flex-col w-1/4 text-center gap-2">
-            <p className="text-xs font-subtitle text-green font-bold uppercase">
+          <div className="flex flex-col text-center justify-center gap-1">
+            <p className="text-sm font-subtitle text-green font-bold uppercase tracking-wider">
               {sectionNav.image.subtitle}
             </p>
-            <h3 className="font-semibold text-xl">
+            <h3 className="font-semibold text-2xl tracking-tight">
               {sectionNav.image.title}
             </h3>
             <p className="text-base font-subtitle mt-1">

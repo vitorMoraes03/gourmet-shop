@@ -2,7 +2,7 @@ import CartIcon from '../../icons/cart';
 
 function Cart() {
   return (
-    <div>
+    <div className='-ml-4 mt-1/2'>
       <CartIcon />
     </div>
   );

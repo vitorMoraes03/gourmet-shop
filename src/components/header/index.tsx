@@ -53,6 +53,7 @@ function Header({ header }: { header: HeaderProps }) {
           }
           headerText={header}
           setHover={setDropdownHovered}
+          containerStyle={'grid grid-cols-3 w-full pt-14 h-96 px-20'}
         />
       )}
     </header>
