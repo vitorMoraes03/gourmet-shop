@@ -1,17 +1,9 @@
 import Link from 'next/link';
 import DropdownNav from './dropdown';
+import { HeaderProps } from '../../../../messages/useContent';
 
-const linksNav = [
-  { href: '', label: 'Blog', identifier: 'blog' },
-  { href: '', label: 'Vinhos', identifier: 'wines' },
-  { href: '', label: 'Conservas', identifier: 'preserves' },
-  { href: '', label: 'Queijos', identifier: 'cheeses' },
-  {
-    href: '',
-    label: 'Todos os produtos',
-    identifier: 'all',
-  },
-];
+// a grande questao do dropdown
+//
 
 interface NavListProps {
   hoverState?: boolean;
@@ -22,6 +14,8 @@ interface NavListProps {
   setDropdown?: React.Dispatch<
     React.SetStateAction<string | null>
   >;
+  headerText: HeaderProps;
+  containerStyle?: string;
 }
 
 function NavList({
@@ -29,38 +23,34 @@ function NavList({
   dropdownState,
   setHoverState,
   setDropdown,
+  headerText,
+  containerStyle,
 }: NavListProps) {
   return (
-    <div
-      onMouseLeave={() =>
-        setHoverState && setHoverState(false)
+    <ul
+      className={`${containerStyle} font-title cursor-pointer md:font-subtitle md:text-sm md:flex md:uppercase md:font-semibold md:gap-2`}
+      onMouseEnter={() =>
+        setHoverState && setHoverState(true)
       }
-      className='relative'
     >
-      <ul
-        className="font-title p-3 cursor-pointer md:font-subtitle md:text-xs 
-    md:flex md:uppercase md:font-semibold md:ml-5"
-        onMouseEnter={() =>
-          setHoverState && setHoverState(true)
-        }
-      >
-        {linksNav.map(({ href, label, identifier }) => (
-          <li key={`${href}${label}`} className="mb-2 pl-3">
+      {Object.entries(headerText.nav.links).map(
+        ([key, value]) => (
+          <li
+            key={key}
+            className="px-2 hover:border-b hover:border-solid hover:border-black flex items-center transition ease-in-out duration-300"
+          >
             <Link
-              href={href}
+              href={key}
               onMouseEnter={() =>
-                setDropdown && setDropdown(`${identifier}`)
+                setDropdown && setDropdown(`${key}`)
               }
             >
-              {label}
+              {value}
             </Link>
           </li>
-        ))}
-      </ul>
-      {hoverState && dropdownState && (
-        <DropdownNav identifier={dropdownState} />
+        )
       )}
-    </div>
+    </ul>
   );
 }
 

@@ -3,8 +3,13 @@ import MenuOutlineIcon from '@/components/icons/menuOutline';
 import CloseIcon from '@/components/icons/close';
 import Portal from '@/components/portal';
 import NavList from './navList';
+import { HeaderProps } from '../../../../messages/useContent';
 
-function MobileNav() {
+function MobileNav({
+  headerText,
+}: {
+  headerText: HeaderProps;
+}) {
   const [modalOpen, setModalOpen] = useState(false);
   const overlayNav =
     'fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-40 overflow-auto z-20';
@@ -32,7 +37,7 @@ function MobileNav() {
               <CloseIcon />
             </button>
           </div>
-          <NavList />
+          <NavList headerText={headerText} />
         </div>
       </Portal>
     </div>
