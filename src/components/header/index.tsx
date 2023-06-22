@@ -23,13 +23,13 @@ function Header({ header }: { header: HeaderProps }) {
   return (
     <header className="fixed inset-x-0 w-screen bg-gray">
       <Banner headerText={header}/>
-      <div className="md:grid md:grid-cols-6 md:px-5 md:items-center h-20">
+      <div className="flex justify-between items-center px-4 md:items-center md:grid md:grid-cols-6 md:px-5 h-20">
         {isSmallScreen() && (
           <MobileNav headerText={header} />
         )}
         <Logo
           logoText={header.logo}
-          containerStyle={'md:col-span-1 text-center md:mb-2'}
+          containerStyle={'-ml-20 md:col-span-1 text-center mb-2'}
         />
         {!isSmallScreen() && (
           <NavList

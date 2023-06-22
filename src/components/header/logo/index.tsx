@@ -4,7 +4,7 @@ function Logo({ logoText, containerStyle }: { logoText: string, containerStyle: 
   return (
     <div className={containerStyle}>
       <Link href={'/'}>
-        <h1 className="font-title text-4xl font-semibold tracking-tight">
+        <h1 className="font-title text-2xl md:text-4xl font-semibold tracking-tight">
           {logoText}
         </h1>
       </Link>

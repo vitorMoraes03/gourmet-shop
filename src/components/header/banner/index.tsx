@@ -32,7 +32,7 @@ function Banner({
   if (!bannerText) return null;
 
   return (
-    <div className="bg-black py-2 text-center">
+    <div className="bg-black py-2 px-4 text-center">
       <Link href={''} className="text-white">
         <span className="font-bold uppercase">
           {bannerText.span}:

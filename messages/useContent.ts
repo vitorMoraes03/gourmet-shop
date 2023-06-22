@@ -452,14 +452,8 @@ export interface HeaderProps {
       }[];
     };
   };
-  banner: [
-    {
-      span: string;
-      text: string;
-    },
-    {
-      span: string;
-      text: string;
-    }
-  ];
+  banner: {
+    span: string;
+    text: string;
+  }[];
 }
