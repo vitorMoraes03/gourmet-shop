@@ -7,10 +7,11 @@ import LangSelector from './langSelector';
 import { useState } from 'react';
 import Search from './cart/search';
 import Profile from './cart/profile';
-import Logo from './logo/logo';
+import Logo from './logo';
 import Cart from './cart/cart';
 import { HeaderProps } from '../../../messages/useContent';
 import DropdownNav from './nav/dropdown';
+import Banner from './banner';
 
 function Header({ header }: { header: HeaderProps }) {
   const [dropdownHovered, setDropdownHovered] =
@@ -21,6 +22,7 @@ function Header({ header }: { header: HeaderProps }) {
 
   return (
     <header className="fixed inset-x-0 w-screen h-20 bg-gray">
+      <Banner headerText={header}/>
       <div className="md:grid md:grid-cols-6 md:px-5 md:items-center h-full">
         {isSmallScreen() && (
           <MobileNav headerText={header} />
