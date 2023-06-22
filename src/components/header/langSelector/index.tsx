@@ -3,10 +3,10 @@ import Link from 'next-intl/link';
 function LangSelector() {
   return (
     <div className='font-bold flex gap-2 text-lg'>
-      <Link href={'/'} locale="en" className='h-20 hover:border-b hover:border-solid hover:border-black transition ease-in-out duration-300 flex items-center px-1'>
+      <Link href={'/'} locale="en" className='custom-border'>
         EN
       </Link>
-      <Link href={'/'} locale="pt-BR" className='h-20 hover:border-b hover:border-solid hover:border-black transition ease-in-out duration-300 flex items-center px-1'>
+      <Link href={'/'} locale="pt-BR" className='custom-border'>
         PT
       </Link>
     </div>

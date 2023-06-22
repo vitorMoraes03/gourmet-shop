@@ -37,7 +37,7 @@ function NavList({
           ([key, value]) => (
             <li
               key={key}
-              className="px-2 hover:border-b hover:border-solid hover:border-black flex items-center transition ease-in-out duration-300"
+              className="px-2 custom-border"
             >
               <Link
                 href={key}
