@@ -24,7 +24,7 @@ function Banner({
       const newIndex =
         index + 1 === banner.length ? 0 : index + 1;
       setBannerText(banner[newIndex]);
-    }, 5000);
+    }, 6000);
 
     return () => clearTimeout(timeoutId);
   }, [bannerText]);

@@ -21,9 +21,9 @@ function Header({ header }: { header: HeaderProps }) {
   >(null);
 
   return (
-    <header className="fixed inset-x-0 w-screen h-20 bg-gray">
+    <header className="fixed inset-x-0 w-screen bg-gray">
       <Banner headerText={header}/>
-      <div className="md:grid md:grid-cols-6 md:px-5 md:items-center h-full">
+      <div className="md:grid md:grid-cols-6 md:px-5 md:items-center h-20">
         {isSmallScreen() && (
           <MobileNav headerText={header} />
         )}

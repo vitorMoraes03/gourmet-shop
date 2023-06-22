@@ -21,9 +21,9 @@ function DropdownNav({
 
   return (
     <div
-      className={`${containerStyle} absolute bg-gray font-title text-lg`}
+      className={`${containerStyle} absolute bg-gray font-title text-lg transition duration-300`}
       onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(true)} //false
+      onMouseLeave={() => setHover(false)} //false é default, true para testes
     >
       <ul>
         {sectionNav.title && (
