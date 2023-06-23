@@ -22,7 +22,7 @@ function SingleSlide({
   bgColor,
 }: SingleSlideProps) {
   return (
-    <div className="grid grid-rows-2 md:grid-cols-2 h-96 md:h-96 border shrink-0 w-full">
+    <div className="absolute grid grid-rows-2 md:grid-cols-2 h-96 md:h-96 border shrink-0 w-full">
       <Image
         src={src}
         alt={alt}
@@ -31,7 +31,7 @@ function SingleSlide({
         className="h-full"
       />
       <div
-        className={`${bgColor} grid py-4 px-8 text-center 
+        className={`${bgColor} grid p-4 pb-8 px-8 text-center 
         grid-auto-flow-column grid-auto-columns-1fr text-sm`}
       >
         <p className="uppercase text-xs -mb-2">
