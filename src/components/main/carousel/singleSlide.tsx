@@ -8,6 +8,7 @@ interface SingleSlideProps {
   paragraph: string;
   text: string;
   title: string;
+  bgColor: string;
 }
 
 function SingleSlide({
@@ -18,9 +19,10 @@ function SingleSlide({
   paragraph,
   text,
   title,
+  bgColor,
 }: SingleSlideProps) {
   return (
-    <div className="grid grid-rows-2 md:grid-cols-2 h-96 md:h-96 border">
+    <div className="grid grid-rows-2 md:grid-cols-2 h-96 md:h-96 border shrink-0 w-full">
       <Image
         src={src}
         alt={alt}
@@ -29,8 +31,8 @@ function SingleSlide({
         className="h-full"
       />
       <div
-        className="grid py-4 px-8 bg-orange text-center 
-      grid-auto-flow-column grid-auto-columns-1fr text-sm "
+        className={`${bgColor} grid py-4 px-8 text-center 
+        grid-auto-flow-column grid-auto-columns-1fr text-sm`}
       >
         <p className="uppercase text-xs -mb-2">
           {paragraph}
@@ -46,16 +48,6 @@ function SingleSlide({
         >
           {title}
         </button>
-        <div className="flex justify-center gap-3 mt-6">
-          <button
-            className="border-black bg-black w-2 h-2 
-            rounded-full"
-          />
-          <button
-            className="border-black bg-black w-2 h-2 
-            rounded-full"
-          />
-        </div>
       </div>
     </div>
   );
