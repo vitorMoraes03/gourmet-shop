@@ -5,36 +5,20 @@ import SingleSlide from './singleSlide';
 import { useRef } from 'react';
 
 // carouselRef.current.style.transform = `translateX(${currentPosition}px)`;
-// vc vai translatar x pixels baseado na largura da pagina
-// cade a largura da pagina?
+// const pageWidth = carouselRef.current?.offsetWidth;
 
 function Carousel() {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  let currentPosition = 0;
 
   function handleBtnPrevious() {
-    const pageWidth = carouselRef.current?.offsetWidth;
-    if (carouselRef.current === null) return;
-    if (pageWidth === undefined) return;
-    currentPosition -= pageWidth;
-    console.log(currentPosition);
-    carouselRef.current.style.transform = `translateX(${currentPosition}px)`;
   }
 
   function handleBtnNext() {
-    const pageWidth = carouselRef.current?.offsetWidth;
-    if (carouselRef.current === null) return;
-    if (pageWidth === undefined) return;
-    currentPosition += pageWidth;
-    console.log(currentPosition);
-    carouselRef.current.style.transform = `translateX(${currentPosition}px)`;
   }
 
   return (
     <div
       className="relative flex 
       transition-transform duration-500 ease-in-out h-96"
-      ref={carouselRef}
     >
       <SingleSlide
         src={
