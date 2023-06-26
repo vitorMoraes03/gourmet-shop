@@ -66,7 +66,7 @@ function Carousel() {
         moveCarousel={moveCarousel}
         carouselRef={carouselRef}
       />
-      <div className="inset-x-0 bottom-3 flex absolute justify-center gap-3 mt-6">
+      <div className="inset-x-0 bottom-3 flex absolute justify-center gap-3 mt-6 z-20">
         <button
           className="border-black bg-black w-2 h-2 
             rounded-full"
