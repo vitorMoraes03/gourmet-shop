@@ -30,12 +30,11 @@ function SingleSlide({
 }: SingleSlideProps) {
   const [utilitiesCarousel, setUtilitiesCarousel] =
     useState<string>('');
-  const [parentWidth, setParentWidth] = useState(0);
 
   useEffect(() => {
     const parent = carouselRef.current;
     if (parent) {
-      setParentWidth(parent.offsetWidth);
+      carouselMovement(parent.offsetWidth);
     } 
   }, []);
 
@@ -48,21 +47,14 @@ function SingleSlide({
 
   // pos * translate-x-full
 
-  function initialMovement() {
-    console.log('parentWidth', parentWidth);
-    if (parentWidth === undefined) return;
-    const valueToMove = position * parentWidth;
-    console.log('valueToMove', valueToMove);
+  function carouselMovement(width: number) {
+    const valueToMove = position * width;
     setUtilitiesCarousel(`translate-x-[${valueToMove}px]`);
   }
 
-  useEffect(() => {
-    initialMovement();
-  }, [parentWidth]);
-
   return (
     <div
-      className={`${utilitiesCarousel} ${position === 0 && 'z-10'} absolute 
+      className={`${utilitiesCarousel} ${position === 0 ? 'z-10' : ''} absolute 
       grid grid-rows-2 md:grid-cols-2 h-96 md:h-96 shrink-0 w-full`}
     >
       <Image

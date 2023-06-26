@@ -4,23 +4,11 @@ import Image from 'next/image';
 import SingleSlide from './singleSlide';
 import { useRef, useState } from 'react';
 
-// carouselRef.current.style.transform = `translateX(${currentPosition}px)`;
-// const pageWidth = carouselRef.current?.offsetWidth;
-
-// eu posso adicionar uma classe em cada uma que vai mover, através de ref
-
-// eu posso trabalhar com state? ter uma valor dinamico na classe, que pode ser um estado?
-// que muda e tal...
-
-// estado em cada singleSide para ser o valor da classe
-//
-
 function Carousel() {
   const [moveCarousel, setMoveCarousel] = useState<
     'rigth' | 'left' | null
   >(null);
   const carouselRef = useRef<HTMLDivElement>(null);
-  // const carouselWidth = carouselRef.current?.offsetWidth;
 
   function handleBtnPrevious() {}
 
