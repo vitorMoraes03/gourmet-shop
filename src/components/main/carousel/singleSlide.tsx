@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 interface SingleSlideProps {
   src: string;
@@ -9,6 +10,9 @@ interface SingleSlideProps {
   text: string;
   title: string;
   bgColor: string;
+  position: number;
+  moveCarousel: 'rigth' | 'left' | null;
+  carouselRef: React.RefObject<HTMLDivElement>;
 }
 
 function SingleSlide({
@@ -20,9 +24,41 @@ function SingleSlide({
   text,
   title,
   bgColor,
+  position,
+  moveCarousel,
+  carouselRef,
 }: SingleSlideProps) {
+  const [utilitiesCarousel, setUtilitiesCarousel] =
+    useState<string>('');
+  const [parentWidth, setParentWidth] = useState(0);
+
+  useEffect(() => {
+    const parent = carouselRef.current;
+    if (parent) {
+      setParentWidth(parent.offsetWidth);
+    }
+  }, []);
+
+  // como fazer o alinhamento inicial?
+  // preciso ter um array que controla todos
+  // e a cada indice vamos movimentando x vezes o indice
+
+  // cada singleSlide tem que saber qual é a sua posição
+  // e ele vai receber um comando mover para a direita etc...
+
+  // pos * translate-x-full
+
+  function initialMovement() {
+    // console.log('carouselWidth', carouselWidth);
+    // if (carouselWidth === undefined) return;
+    // const valueToMove = position * carouselWidth;
+    // setUtilitiesCarousel(`translate-x-${valueToMove}`);
+  }
+
   return (
-    <div className="absolute grid grid-rows-2 md:grid-cols-2 h-96 md:h-96 border shrink-0 w-full">
+    <div
+      className={`${utilitiesCarousel} absolute grid grid-rows-2 md:grid-cols-2 h-96 md:h-96 border shrink-0 w-full`}
+    >
       <Image
         src={src}
         alt={alt}
