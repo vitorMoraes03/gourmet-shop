@@ -45,20 +45,25 @@ function SingleSlide({
         className="h-full w-full object-cover"
       />
       <div
-        className={`${imageObj.bgColor} grid p-4 pb-8 px-8 text-center 
-        grid-auto-flow-column grid-auto-columns-1fr text-sm`}
+        className={`${imageObj.bgColor} 
+        grid text-center grid-auto-flow-column grid-auto-columns-1fr text-sm place-items-center
+        p-4 pb-8 px-8
+        md:px-32 md:py-20
+        `}
       >
-        <p className="uppercase text-xs -mb-2">
+        <p className="uppercase text-xs -mb-2 font-semibold tracking-wider md:self-end">
           {imageObj.paragraph}
         </p>
-        <h2 className="text-2xl font-title">Solor Sit</h2>
+        <h2 className="text-2xl md:text-3xl font-title">
+          Solor Sit
+        </h2>
         <p className="tracking-tight leading-4 px-7">
           {imageObj.text}
         </p>
         <button
           type="button"
           className="bg-black text-white mt-2 py-1 uppercase 
-          text-xs font-bold w-3/5 justify-self-center"
+          text-xs font-bold w-3/5 justify-self-center md:self-start"
         >
           {imageObj.title}
         </button>
