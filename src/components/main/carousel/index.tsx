@@ -23,7 +23,7 @@ function Carousel() {
         {
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
-          '&::-webkit-scrollbar': { display: 'none' },
+          '&::WebkitScrollbar': { display: 'none' },
         } as React.CSSProperties
       }
     >
