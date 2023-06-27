@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { CarouselProps } from '../../../../messages/useContent';
 
 interface SingleSlideProps {
   imageObj: {
@@ -16,6 +17,7 @@ interface SingleSlideProps {
   testingStyles?: string;
   current: number;
   index: number;
+  text: CarouselProps;
 }
 
 function SingleSlide({
@@ -23,6 +25,7 @@ function SingleSlide({
   testingStyles,
   current,
   index,
+  text,
 }: SingleSlideProps) {
   const [translateProps, setTranslateProps] = useState('');
 
@@ -52,13 +55,13 @@ function SingleSlide({
         `}
       >
         <p className="uppercase text-xs -mb-2 font-semibold tracking-wider md:self-end">
-          {imageObj.paragraph}
+          {text.paragraph}
         </p>
         <h2 className="text-2xl md:text-3xl font-title">
-          Solor Sit
+          {text.title}
         </h2>
         <p className="tracking-tight leading-4 px-7">
-          {imageObj.text}
+          {text.text}
         </p>
         <button
           type="button"
@@ -66,7 +69,7 @@ function SingleSlide({
           font-bold w-3/5 justify-self-center md:self-start 
           md:w-3/6 md:py-2 mt-2 py-1"
         >
-          {imageObj.title}
+          {text.button}
         </button>
       </div>
     </div>

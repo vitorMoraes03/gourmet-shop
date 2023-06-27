@@ -316,6 +316,32 @@ export function useContent() {
         },
       ],
     },
+    main: {
+      carousel: [
+        {
+          src: t('main.carousel.0.src'),
+          alt: t('main.carousel.0.alt'),
+          width: t('main.carousel.0.width'),
+          height: t('main.carousel.0.height'),
+          paragraph: t('main.carousel.0.paragraph'),
+          text: t('main.carousel.0.text'),
+          title: t('main.carousel.0.title'),
+          bgColor: t('main.carousel.0.bg-color'),
+          button: t('main.carousel.0.button'),
+        },
+        {
+          src: t('main.carousel.1.src'),
+          alt: t('main.carousel.1.alt'),
+          width: t('main.carousel.1.width'),
+          height: t('main.carousel.1.height'),
+          paragraph: t('main.carousel.1.paragraph'),
+          text: t('main.carousel.1.text'),
+          title: t('main.carousel.1.title'),
+          bgColor: t('main.carousel.1.bg-color'),
+          button: t('main.carousel.1.button'),
+        },
+      ],
+    },
   };
 }
 
@@ -456,4 +482,16 @@ export interface HeaderProps {
     span: string;
     text: string;
   }[];
+}
+
+export interface CarouselProps {
+  src: string;
+  alt: string;
+  width: string;
+  height: string;
+  paragraph: string;
+  text: string;
+  title: string;
+  bgColor: string;
+  button: string;
 }
