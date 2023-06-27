@@ -12,15 +12,17 @@ interface SingleSlideProps {
     title: string;
     text: string;
   };
+  testingStyles?: string;
 }
 
-function SingleSlide({ imageObj }: SingleSlideProps) {
-
+function SingleSlide({
+  imageObj,
+  testingStyles,
+}: SingleSlideProps) {
   return (
     <div
-      className={
-        'absolute grid grid-rows-2 md:grid-cols-2 h-96 md:h-96 shrink-0 w-full'
-      }
+      className={`${testingStyles} 
+      absolute grid grid-rows-2 md:grid-cols-2 h-96 md:h-96 shrink-0 w-full`}
     >
       <Image
         src={imageObj.src}

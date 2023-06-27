@@ -4,28 +4,41 @@ import SingleSlide from './singleSlide';
 import { useRef, useState } from 'react';
 import { imagesObjs } from './imagesObjs';
 
-function Carousel() {
-  function handleBtnPrevious() {}
+// Como vou movimentar? translate-x-full, 200%, 300% etc... ? translate-x-[123px]?
+// Bora testar os dois?
 
-  function handleBtnNext() {}
+//
+
+// Como vou pegar o tamanho da página?
+
+function Carousel() {
+  function btnFirstImage() {}
+
+  function btnSecondImage() {}
 
   return (
     <div
-      className="relative flex 
-      transition-transform duration-500 ease-in-out h-96"
+      className="relative flex transition-transform duration-500 
+      ease-in-out h-96 overflow-auto hide-scrollbar"
     >
-      <SingleSlide imageObj={imagesObjs[0]} />
-      <SingleSlide imageObj={imagesObjs[1]} />
+      <SingleSlide
+        imageObj={imagesObjs[0]}
+        testingStyles={''}
+      />
+      <SingleSlide
+        imageObj={imagesObjs[1]}
+        testingStyles={'translate-x-full'}
+      />
       <div className="inset-x-0 bottom-3 flex absolute justify-center gap-3 mt-6 z-20">
         <button
           className="border-black bg-black w-2 h-2 
             rounded-full"
-          onClick={() => handleBtnPrevious()}
+          onClick={() => btnFirstImage()}
         />
         <button
           className="border-black bg-black w-2 h-2 
             rounded-full"
-          onClick={() => handleBtnNext()}
+          onClick={() => btnSecondImage()}
         />
       </div>
     </div>
