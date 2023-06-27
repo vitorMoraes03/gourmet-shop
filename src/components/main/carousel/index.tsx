@@ -16,12 +16,6 @@ function Carousel() {
     setCurrentIndex(1);
   }
 
-  // scrollbar-width: none;
-  // -ms-overflow-style: none;
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
-
   return (
     <div
       className="relative flex h-96 overflow-auto"
@@ -46,8 +40,16 @@ function Carousel() {
         index={1}
       />
       <div className="inset-x-0 bottom-3 md:bottom-4 flex absolute justify-center gap-3 z-20">
-        <BtnSlide handlerBtn={btnFirstImage} />
-        <BtnSlide handlerBtn={btnSecondImage} />
+        <BtnSlide
+          handlerBtn={btnFirstImage}
+          current={currentIndex}
+          index={0}
+        />
+        <BtnSlide
+          handlerBtn={btnSecondImage}
+          current={currentIndex}
+          index={1}
+        />
       </div>
     </div>
   );

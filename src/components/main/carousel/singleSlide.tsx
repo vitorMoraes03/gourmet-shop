@@ -62,8 +62,9 @@ function SingleSlide({
         </p>
         <button
           type="button"
-          className="bg-black text-white mt-2 py-1 uppercase 
-          text-xs font-bold w-3/5 justify-self-center md:self-start"
+          className="bg-black text-white uppercase text-xs 
+          font-bold w-3/5 justify-self-center md:self-start 
+          md:w-3/6 md:py-2 mt-2 py-1"
         >
           {imageObj.title}
         </button>
