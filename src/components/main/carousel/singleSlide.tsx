@@ -13,16 +13,28 @@ interface SingleSlideProps {
     text: string;
   };
   testingStyles?: string;
+  current: number;
+  index: number;
 }
 
 function SingleSlide({
   imageObj,
   testingStyles,
+  current,
+  index,
 }: SingleSlideProps) {
+  const [translateProps, setTranslateProps] = useState('');
+
+  useEffect(() => {
+    setTranslateProps(`${(index - current) * 100}%`);
+  }, [current]);
+
   return (
     <div
       className={`${testingStyles} 
-      absolute grid grid-rows-2 md:grid-cols-2 h-96 md:h-96 shrink-0 w-full`}
+      absolute grid grid-rows-2 md:grid-cols-2 h-96 md:h-96 
+      shrink-0 w-full transition-transform duration-500 ease-in-out`}
+      style={{ transform: `translateX(${translateProps})` }}
     >
       <Image
         src={imageObj.src}
