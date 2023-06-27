@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -32,7 +33,7 @@ function SingleSlide({
   return (
     <div
       className={`${testingStyles} 
-      absolute grid grid-rows-2 md:grid-cols-2 h-96 md:h-96 
+      absolute grid grid-rows-2 md:grid-cols-2 md:grid-rows-1 h-96 
       shrink-0 w-full transition-transform duration-500 ease-in-out`}
       style={{ transform: `translateX(${translateProps})` }}
     >
@@ -41,7 +42,7 @@ function SingleSlide({
         alt={imageObj.alt}
         width={imageObj.width}
         height={imageObj.height}
-        className="h-full"
+        className="h-full w-full object-cover"
       />
       <div
         className={`${imageObj.bgColor} grid p-4 pb-8 px-8 text-center 
