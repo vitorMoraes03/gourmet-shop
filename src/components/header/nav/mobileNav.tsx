@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import MenuOutlineIcon from '@/components/icons/menuOutline';
 import CloseIcon from '@/components/icons/close';
 import Portal from '@/components/portal';

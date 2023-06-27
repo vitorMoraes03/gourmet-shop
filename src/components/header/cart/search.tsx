@@ -2,7 +2,7 @@ import SearchIcon from "@/components/icons/search";
 
 function Search() {
   return (
-    <div>
+    <div className="custom-border">
       <SearchIcon />
     </div>
   );

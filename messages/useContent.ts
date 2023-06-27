@@ -65,7 +65,9 @@ export function useContent() {
             alt: t('header.dropdown.blog.image.alt'),
             title: t('header.dropdown.blog.image.title'),
             text: t('header.dropdown.blog.image.text'),
-            subtitle: t('header.dropdown.blog.image.subtitle'),
+            subtitle: t(
+              'header.dropdown.blog.image.subtitle'
+            ),
           },
           links: [
             {
@@ -111,7 +113,9 @@ export function useContent() {
             alt: t('header.dropdown.cheeses.image.alt'),
             title: t('header.dropdown.cheeses.image.title'),
             text: t('header.dropdown.cheeses.image.text'),
-            subtitle: t('header.dropdown.cheeses.image.subtitle'),
+            subtitle: t(
+              'header.dropdown.cheeses.image.subtitle'
+            ),
           },
           links: [
             {
@@ -165,7 +169,9 @@ export function useContent() {
             alt: t('header.dropdown.wines.image.alt'),
             title: t('header.dropdown.wines.image.title'),
             text: t('header.dropdown.wines.image.text'),
-            subtitle: t('header.dropdown.wines.image.subtitle'),
+            subtitle: t(
+              'header.dropdown.wines.image.subtitle'
+            ),
           },
           links: [
             {
@@ -211,9 +217,13 @@ export function useContent() {
               'header.dropdown.preserves.image.height'
             ),
             alt: t('header.dropdown.preserves.image.alt'),
-            title: t('header.dropdown.preserves.image.title'),
+            title: t(
+              'header.dropdown.preserves.image.title'
+            ),
             text: t('header.dropdown.preserves.image.text'),
-            subtitle: t('header.dropdown.preserves.image.subtitle'),
+            subtitle: t(
+              'header.dropdown.preserves.image.subtitle'
+            ),
           },
           links: [
             {
@@ -267,7 +277,9 @@ export function useContent() {
             alt: t('header.dropdown.all.image.alt'),
             title: t('header.dropdown.all.image.title'),
             text: t('header.dropdown.all.image.text'),
-            subtitle: t('header.dropdown.all.image.subtitle'),
+            subtitle: t(
+              'header.dropdown.all.image.subtitle'
+            ),
           },
           links: [
             {
@@ -293,6 +305,42 @@ export function useContent() {
           ],
         },
       },
+      banner: [
+        {
+          span: t('header.banner.0.span'),
+          text: t('header.banner.0.text'),
+        },
+        {
+          span: t('header.banner.1.span'),
+          text: t('header.banner.1.text'),
+        },
+      ],
+    },
+    main: {
+      carousel: [
+        {
+          src: t('main.carousel.0.src'),
+          alt: t('main.carousel.0.alt'),
+          width: t('main.carousel.0.width'),
+          height: t('main.carousel.0.height'),
+          paragraph: t('main.carousel.0.paragraph'),
+          text: t('main.carousel.0.text'),
+          title: t('main.carousel.0.title'),
+          bgColor: t('main.carousel.0.bg-color'),
+          button: t('main.carousel.0.button'),
+        },
+        {
+          src: t('main.carousel.1.src'),
+          alt: t('main.carousel.1.alt'),
+          width: t('main.carousel.1.width'),
+          height: t('main.carousel.1.height'),
+          paragraph: t('main.carousel.1.paragraph'),
+          text: t('main.carousel.1.text'),
+          title: t('main.carousel.1.title'),
+          bgColor: t('main.carousel.1.bg-color'),
+          button: t('main.carousel.1.button'),
+        },
+      ],
     },
   };
 }
@@ -430,4 +478,20 @@ export interface HeaderProps {
       }[];
     };
   };
+  banner: {
+    span: string;
+    text: string;
+  }[];
+}
+
+export interface CarouselProps {
+  src: string;
+  alt: string;
+  width: string;
+  height: string;
+  paragraph: string;
+  text: string;
+  title: string;
+  bgColor: string;
+  button: string;
 }

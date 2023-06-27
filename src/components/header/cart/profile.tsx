@@ -2,7 +2,7 @@ import ProfileIcon from '../../icons/profile';
 
 function Profile() {
   return (
-    <div>
+    <div className='custom-border'>
       <ProfileIcon />
     </div>
   );

@@ -7,10 +7,11 @@ import LangSelector from './langSelector';
 import { useState } from 'react';
 import Search from './cart/search';
 import Profile from './cart/profile';
-import Logo from './logo/logo';
+import Logo from './logo';
 import Cart from './cart/cart';
 import { HeaderProps } from '../../../messages/useContent';
 import DropdownNav from './nav/dropdown';
+import Banner from './banner';
 
 function Header({ header }: { header: HeaderProps }) {
   const [dropdownHovered, setDropdownHovered] =
@@ -20,14 +21,15 @@ function Header({ header }: { header: HeaderProps }) {
   >(null);
 
   return (
-    <header className="fixed inset-x-0 w-screen h-20 bg-gray">
-      <div className="md:grid md:grid-cols-6 md:px-5 md:items-center h-full">
+    <header className="fixed inset-x-0 w-screen bg-gray">
+      <Banner headerText={header}/>
+      <div className="flex justify-between items-center px-4 md:items-center md:grid md:grid-cols-6 md:px-5 md:h-20">
         {isSmallScreen() && (
           <MobileNav headerText={header} />
         )}
         <Logo
           logoText={header.logo}
-          containerStyle={'md:col-span-1 text-center md:mb-2'}
+          containerStyle={'-ml-24 md:col-span-1 text-center mb-2'}
         />
         {!isSmallScreen() && (
           <NavList
@@ -39,7 +41,7 @@ function Header({ header }: { header: HeaderProps }) {
             containerStyle={'md:col-span-4 md:h-full'}
           />
         )}
-        <div className="md:col-span-1 flex gap-2 md:gap-6 items-center">
+        <div className="md:col-span-1 md:h-20 flex gap-2 md:gap-6 items-center">
           <Search />
           <LangSelector />
           {!isSmallScreen() && <Profile />}

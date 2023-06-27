@@ -223,7 +223,43 @@
             }
           ]
         }
-      }
+      },
+      "banner": [
+        {
+          "span": "lorem",
+          "text": "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        },
+        {
+          "span": "lorem",
+          "text": "asdasdasd adasdasdasd asdasdasdasdasd asda."
+        }
+      ]
+    },
+    "main": {
+      "carousel": [
+        {
+          "src": "/images/camille-brodard-f6Wpz1QPFZI-unsplash.jpg",
+          "alt": "Board with cheese and wine",
+          "width": 390,
+          "height": 244,
+          "paragraph": "Amet elit.",
+          "title": "Solor Sit",
+          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt reprehenderit nam obcaecati, laboriosam quis sapiente?",
+          "bgColor": "bg-orange",
+          "button": "Click here"
+        },
+        {
+          "src": "/images/hermes-rivera-aK6WGqxyHFw-unsplash.jpg",
+          "alt": "Bottles of wine in dark storage",
+          "width": 600,
+          "height": 400,
+          "paragraph": "Lorem ipsum",
+          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt reprehenderit nam obcaecati, laboriosam quis sapiente?",
+          "title": "Solor Sit",
+          "bgColor": "bg-green",
+          "button": "Click here"
+        }
+      ]
     }
   }
 }
