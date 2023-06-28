@@ -51,11 +51,11 @@ export default function RootLayout({
       <body
         className={`${noto.variable} ${cormorant.variable} ${bodoni.variable} text-black`}
       >
-        <DropdownProvider>
+        {/* <DropdownProvider> */}
           <div id="portal"></div>
           <Header header={header} />
           {children}
-        </DropdownProvider>
+        {/* </DropdownProvider> */}
       </body>
     </html>
   );

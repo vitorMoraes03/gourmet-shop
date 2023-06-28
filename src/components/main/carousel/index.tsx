@@ -20,7 +20,8 @@ function Carousel({ content }: { content: CarouselProps[] }) {
 
   return (
     <div
-      className={`${hover ? '-z-10' : 'z-10'} relative flex h-96 overflow-auto`}
+      // className={`${hover ? '-z-10' : 'z-10'} relative flex h-96 overflow-auto`}
+      className={`relative flex h-96 overflow-auto`}
       style={
         {
           scrollbarWidth: 'none',

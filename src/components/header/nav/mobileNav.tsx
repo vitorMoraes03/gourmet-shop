@@ -12,7 +12,7 @@ function MobileNav({
 }) {
   const [modalOpen, setModalOpen] = useState(false);
   const overlayNav =
-    'fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-40 overflow-auto z-20';
+    'fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-40 overflow-auto z-50';
 
   return (
     <div>
@@ -25,7 +25,7 @@ function MobileNav({
         overlayStyle={overlayNav}
       >
         <div
-          className={`z-100 bg-white w-2/3 h-screen transition-opacity ${
+          className={`bg-white w-2/3 h-screen transition-opacity ${
             modalOpen ? 'opacity-100' : 'opacity-0'
           }`}
         >

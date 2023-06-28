@@ -15,19 +15,19 @@ import Banner from './banner';
 import { DropdownContext } from '@/contexts/dropdown';
 
 function Header({ header }: { header: HeaderProps }) {
-  // const [dropdownHovered, setDropdownHovered] =
-  //   useState(false);
-  const { hover, setHover } = useContext(DropdownContext);
+  const [hover, setHover] =
+    useState(false);
+  // const { hover, setHover } = useContext(DropdownContext);
   const [dropdownSelected, setDropdownSelected] = useState<
     string | null
   >(null);
 
   return (
-    <header className="fixed inset-x-0 w-screen bg-gray z-50">
+    <header className="fixed inset-x-0 w-screen bg-gray z-40">
       <Banner headerText={header} />
       <div className="flex justify-between items-center px-4 md:items-center md:grid md:grid-cols-6 md:px-5 md:h-20">
         {isSmallScreen() && (
-          <MobileNav headerText={header} />
+          <MobileNav headerText={header}/>
         )}
         <Logo
           logoText={header.logo}

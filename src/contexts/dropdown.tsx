@@ -1,23 +1,27 @@
-"use client"
+'use client';
 
-import React from "react";
-import { useState } from "react";
+// Acabei não utilizando, possivelmente deletar esse arquivo...
+
+import React from 'react';
+import { useState } from 'react';
 
 export const DropdownContext = React.createContext({
-    hover: false,
-    setHover: (value: boolean) => {},
+  hover: false,
+  setHover: (value: boolean) => {},
 });
 
 interface DropdownProviderProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
-export function DropdownProvider({ children }: DropdownProviderProps) {
-    const [hover, setHover] = useState(false);
+export function DropdownProvider({
+  children,
+}: DropdownProviderProps) {
+  const [hover, setHover] = useState(false);
 
-    return (
-        <DropdownContext.Provider value={{ hover, setHover }}>
-            {children}
-        </DropdownContext.Provider>
-    );
+  return (
+    <DropdownContext.Provider value={{ hover, setHover }}>
+      {children}
+    </DropdownContext.Provider>
+  );
 }
