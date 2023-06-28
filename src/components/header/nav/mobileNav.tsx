@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MenuOutlineIcon from '@/components/icons/menuOutline';
 import CloseIcon from '@/components/icons/close';
 import Portal from '@/components/portal';
@@ -14,6 +14,10 @@ function MobileNav({
   const overlayNav =
     'fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-40 z-50';
 
+  // useEffect(() => {
+  //   if (modalOpen) document.body.style.overflow = 'hidden';
+  // }, [modalOpen]);
+
   return (
     <div>
       <button onClick={() => setModalOpen(true)}>
@@ -25,7 +29,7 @@ function MobileNav({
         overlayStyle={overlayNav}
       >
         <div
-          className={`bg-white fixed top-0 left-0 w-screen h-screen transition-opacity ${
+          className={`bg-gray fixed top-0 left-0 w-screen h-screen transition-opacity ${
             modalOpen ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -38,10 +42,22 @@ function MobileNav({
             </button>
           </div>
           <NavList headerText={headerText} />
+          <div className="text-center mt-8">
+            <button
+              type="button"
+              className="bg-white uppercase text-xs font-semibold px-24 py-3 tracking-wider"
+            >
+              Login
+            </button>
+          </div>
         </div>
       </Portal>
     </div>
   );
 }
+
+// className="bg-black text-white uppercase md:text-sm text-xs
+// font-bold w-3/5 justify-self-center md:self-start
+// md:w-3/6 py-2 mt-2"
 
 export default MobileNav;
