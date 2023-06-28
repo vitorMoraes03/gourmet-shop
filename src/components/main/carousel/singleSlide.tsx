@@ -46,7 +46,7 @@ function SingleSlide({
         <p className="uppercase text-sm -mb-2 font-semibold tracking-wider md:-mb-2">
           {text.paragraph}
         </p>
-        <h1 className="text-3xl md:text-5xl font-title">
+        <h1 className="text-3xl md:text-5xl font-title tracking-tight">
           {text.title}
         </h1>
         <p className="tracking-tight leading-4 px-7 md:text-base">
