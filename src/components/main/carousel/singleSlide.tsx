@@ -39,7 +39,7 @@ function SingleSlide({
       <div
         className={`${text.bgColor} 
         grid text-center grid-auto-flow-column grid-auto-columns-1fr text-sm place-items-center
-        p-4 pb-8 px-8
+        p-4 pb-8 px-8 
         md:px-32 md:py-20
         `}
       >

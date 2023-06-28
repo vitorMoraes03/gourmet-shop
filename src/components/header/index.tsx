@@ -23,7 +23,7 @@ function Header({ header }: { header: HeaderProps }) {
   >(null);
 
   return (
-    <header className="fixed inset-x-0 w-screen bg-gray">
+    <header className="fixed inset-x-0 w-screen bg-gray z-50">
       <Banner headerText={header} />
       <div className="flex justify-between items-center px-4 md:items-center md:grid md:grid-cols-6 md:px-5 md:h-20">
         {isSmallScreen() && (

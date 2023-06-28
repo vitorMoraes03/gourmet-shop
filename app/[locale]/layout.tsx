@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${noto.variable} ${cormorant.variable} ${bodoni.variable}`}
+        className={`${noto.variable} ${cormorant.variable} ${bodoni.variable} text-black`}
       >
         <DropdownProvider>
           <div id="portal"></div>
