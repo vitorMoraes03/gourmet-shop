@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { HeaderProps } from '../../../../messages/useContent';
 
+// nav e carousel (main) com acesso a hover através de context
+
 function DropdownNav({
   identifier,
   headerText,
@@ -23,7 +25,7 @@ function DropdownNav({
     <div
       className={`${containerStyle} absolute bg-gray font-title text-lg transition duration-300`}
       onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)} //false é default, true para testes
+      onMouseLeave={() => setHover(false)} // false é default, true para testes
     >
       <ul>
         {sectionNav.title && (

@@ -8,6 +8,7 @@ import Header from '@/components/header';
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { useContent } from '../../messages/useContent';
+import { DropdownProvider } from '@/contexts/dropdown';
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -50,9 +51,11 @@ export default function RootLayout({
       <body
         className={`${noto.variable} ${cormorant.variable} ${bodoni.variable}`}
       >
-        <div id="portal"></div>
-        <Header header={header} />
-        {children}
+        <DropdownProvider>
+          <div id="portal"></div>
+          <Header header={header} />
+          {children}
+        </DropdownProvider>
       </body>
     </html>
   );
