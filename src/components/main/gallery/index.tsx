@@ -4,28 +4,26 @@
 // flex com overflow auto?
 
 import Image from 'next/image';
+import { GalleryProps } from '../../../../messages/useContent';
 
-function Gallery() {
+function Gallery({ content }: { content: GalleryProps }) {
   return (
     <div>
       <div>
-        <p>Lorem lorem lorem</p>
-        <h2>Lorem Lorem</h2>
+        <p>{content.subtitle}</p>
+        <h2>{content.title}</h2>
       </div>
-      <div>
-        <div>
-          <Image alt="lorem" src={''} />
-          <p>Lorem lorem</p>
+      {content.images.map((image, index) => (
+        <div key={index}>
+          <Image
+            alt={image.alt}
+            src={image.src}
+            width={Number(image.width)}
+            height={Number(image.height)}
+          />
+          <p>{image.text}</p>
         </div>
-        <div>
-          <Image alt="lorem" src={''} />
-          <p>Lorem lorem</p>
-        </div>
-        <div>
-          <Image alt="lorem" src={''} />
-          <p>Lorem</p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
