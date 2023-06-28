@@ -326,7 +326,7 @@ export function useContent() {
           paragraph: t('main.carousel.0.paragraph'),
           text: t('main.carousel.0.text'),
           title: t('main.carousel.0.title'),
-          bgColor: t('main.carousel.0.bg-color'),
+          bgColor: t('main.carousel.0.bgColor'),
           button: t('main.carousel.0.button'),
         },
         {
@@ -337,7 +337,7 @@ export function useContent() {
           paragraph: t('main.carousel.1.paragraph'),
           text: t('main.carousel.1.text'),
           title: t('main.carousel.1.title'),
-          bgColor: t('main.carousel.1.bg-color'),
+          bgColor: t('main.carousel.1.bgColor'),
           button: t('main.carousel.1.button'),
         },
       ],
