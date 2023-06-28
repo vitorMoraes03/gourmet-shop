@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { HeaderProps } from '../../../../messages/useContent';
+import useIsSmallScreen from '@/utils/isSmallScreen';
+import ArrowRightIcon from '@/components/icons/arrowright';
 
 interface NavListProps {
   hoverState?: boolean;
@@ -20,10 +22,12 @@ function NavList({
   headerText,
   containerStyle,
 }: NavListProps) {
+  const isSmall = useIsSmallScreen();
+
   return (
     <div className={containerStyle}>
       <ul
-        className="font-title w-fit cursor-pointer md:h-full md:font-subtitle md:text-sm md:flex md:uppercase md:font-semibold md:gap-2"
+        className="font-title mt-4 md:mt-0 w-full cursor-pointer md:h-full md:font-subtitle md:text-sm md:flex md:uppercase md:font-semibold md:gap-2"
         onMouseEnter={() =>
           setHoverState && setHoverState(true)
         }
@@ -35,7 +39,8 @@ function NavList({
           ([key, value]) => (
             <li
               key={key}
-              className="px-4 md:px-2 md:custom-border mb-2 md:mb-0"
+              className="px-4 md:px-2 md:custom-border mb-2 
+              md:mb-0 flex items-center md:flex-none justify-between"
             >
               <Link
                 href={key}
@@ -45,6 +50,7 @@ function NavList({
               >
                 {value}
               </Link>
+              {isSmall ? <ArrowRightIcon /> : null}
             </li>
           )
         )}
