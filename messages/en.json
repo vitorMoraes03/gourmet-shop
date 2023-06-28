@@ -244,7 +244,7 @@
           "height": "244",
           "paragraph": "Amet elit.",
           "title": "Solor Sit",
-          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt reprehenderit nam obcaecati, laboriosam quis sapiente?",
+          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt.",
           "bgColor": "bg-orange",
           "button": "Click here"
         },
@@ -254,7 +254,7 @@
           "width": "600",
           "height": "400",
           "paragraph": "Lorem ipsum",
-          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt reprehenderit nam obcaecati, laboriosam quis sapiente?",
+          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt.",
           "title": "Solor Sit",
           "bgColor": "bg-green",
           "button": "Click here"

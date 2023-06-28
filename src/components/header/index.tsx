@@ -32,7 +32,7 @@ function Header({ header }: { header: HeaderProps }) {
         <Logo
           logoText={header.logo}
           containerStyle={
-            '-ml-24 md:col-span-1 text-center mb-2'
+            'md:-ml-24 md:col-span-1 text-center mb-2'
           }
         />
         {!isSmallScreen() && (
