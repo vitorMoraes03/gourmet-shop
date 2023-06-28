@@ -2,8 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { HeaderProps } from '../../../../messages/useContent';
 
-// nav e carousel (main) com acesso a hover através de context
-
 function DropdownNav({
   identifier,
   headerText,
@@ -12,7 +10,7 @@ function DropdownNav({
 }: {
   identifier: keyof typeof headerText.dropdown;
   headerText: HeaderProps;
-  setHover: React.Dispatch<React.SetStateAction<boolean>>;
+  setHover: (value: boolean) => void;
   containerStyle: string;
 }) {
   if (!identifier) {

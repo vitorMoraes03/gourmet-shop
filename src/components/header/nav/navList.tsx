@@ -4,9 +4,7 @@ import { HeaderProps } from '../../../../messages/useContent';
 interface NavListProps {
   hoverState?: boolean;
   dropdownState?: string | null;
-  setHoverState?: React.Dispatch<
-    React.SetStateAction<boolean>
-  >;
+  setHoverState?: (value: boolean) => void;
   setDropdown?: React.Dispatch<
     React.SetStateAction<string | null>
   >;
