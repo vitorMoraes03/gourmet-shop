@@ -23,7 +23,7 @@ function NavList({
   return (
     <div className={containerStyle}>
       <ul
-        className='font-title w-fit cursor-pointer md:h-full md:font-subtitle md:text-sm md:flex md:uppercase md:font-semibold md:gap-2'
+        className="font-title w-fit cursor-pointer md:h-full md:font-subtitle md:text-sm md:flex md:uppercase md:font-semibold md:gap-2"
         onMouseEnter={() =>
           setHoverState && setHoverState(true)
         }
@@ -35,7 +35,7 @@ function NavList({
           ([key, value]) => (
             <li
               key={key}
-              className="px-2 md:custom-border"
+              className="px-4 md:px-2 md:custom-border mb-2 md:mb-0"
             >
               <Link
                 href={key}
