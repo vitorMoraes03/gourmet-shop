@@ -259,7 +259,55 @@
           "bgColor": "bg-green",
           "button": "Click here"
         }
-      ]
+      ],
+      "gallery": {
+        "title": "Lorem your lorem",
+        "subtitle": "Lorem lorem psiu",
+        "images": [
+          {
+            "src": "/images/ginny-rose-stewart-_kUCAyYFVBI-unsplash.jpg",
+            "width": "368",
+            "height": "552",
+            "alt": "lorem",
+            "text": "Lorem Abiu Javaqui"
+          },
+          {
+            "src": "/images/gian-cescon-GxQ13MXLTHQ-unsplash.jpg",
+            "width": "288",
+            "height": "360",
+            "alt": "lorem",
+            "text": "Lorem Abiu Javaqui"
+          },
+          {
+            "src": "/images/tomas-jasovsky-d5SZqLkpIrY-unsplash.jpg",
+            "width": "250",
+            "height": "375",
+            "alt": "lorem",
+            "text": "Lorem Abiu Javaqui"
+          },
+          {
+            "src": "/images/janko-ferlic-uayYTomQ5r8-unsplash.jpg",
+            "width": "693",
+            "height": "491",
+            "alt": "lorem",
+            "text": "Lorem Abiu Javaqui"
+          },
+          {
+            "src": "/images/janko-ferlic-uayYTomQ5r8-unsplash.jpg",
+            "width": "693",
+            "height": "491",
+            "alt": "lorem",
+            "text": "Lorem Abiu Javaqui"
+          },
+          {
+            "src": "/images/janko-ferlic-uayYTomQ5r8-unsplash.jpg",
+            "width": "693",
+            "height": "491",
+            "alt": "lorem",
+            "text": "Lorem Abiu Javaqui"
+          }
+        ]
+      }
     }
   }
 }

@@ -43,18 +43,18 @@ function SingleSlide({
         md:px-32 md:py-20
         `}
       >
-        <p className="uppercase text-xs -mb-2 font-semibold tracking-wider md:self-end">
+        <p className="uppercase text-sm -mb-2 font-semibold tracking-wider md:-mb-2">
           {text.paragraph}
         </p>
-        <h2 className="text-2xl md:text-3xl font-title">
+        <h1 className="text-3xl md:text-5xl font-title">
           {text.title}
-        </h2>
-        <p className="tracking-tight leading-4 px-7">
+        </h1>
+        <p className="tracking-tight leading-4 px-7 md:text-base">
           {text.text}
         </p>
         <button
           type="button"
-          className="bg-black text-white uppercase text-xs 
+          className="bg-black text-white uppercase text-sm 
           font-bold w-3/5 justify-self-center md:self-start 
           md:w-3/6 md:py-2 mt-2 py-1"
         >

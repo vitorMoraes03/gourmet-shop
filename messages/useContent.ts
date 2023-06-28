@@ -341,6 +341,33 @@ export function useContent() {
           button: t('main.carousel.1.button'),
         },
       ],
+      gallery: {
+        title: t('main.gallery.title'),
+        subtitle: t('main.gallery.subtitle'),
+        images: [
+          {
+            src: t('main.gallery.images.0.src'),
+            width: t('main.gallery.images.0.width'),
+            height: t('main.gallery.images.0.height'),
+            alt: t('main.gallery.images.0.alt'),
+            text: t('main.gallery.images.0.text'),
+          },
+          {
+            src: t('main.gallery.images.1.src'),
+            width: t('main.gallery.images.1.width'),
+            height: t('main.gallery.images.1.height'),
+            alt: t('main.gallery.images.1.alt'),
+            text: t('main.gallery.images.1.text'),
+          },
+          {
+            src: t('main.gallery.images.2.src'),
+            width: t('main.gallery.images.2.width'),
+            height: t('main.gallery.images.2.height'),
+            alt: t('main.gallery.images.2.alt'),
+            text: t('main.gallery.images.2.text'),
+          },
+        ],
+      },
     },
   };
 }
@@ -494,4 +521,16 @@ export interface CarouselProps {
   title: string;
   bgColor: string;
   button: string;
+}
+
+export interface GalleryProps {
+  title: string;
+  subtitle: string;
+  images: {
+    src: string;
+    width: string;
+    height: string;
+    alt: string;
+    text: string;
+  }[];
 }
