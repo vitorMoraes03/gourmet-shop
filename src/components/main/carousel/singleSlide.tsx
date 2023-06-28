@@ -4,16 +4,6 @@ import { useEffect, useState } from 'react';
 import { CarouselProps } from '../../../../messages/useContent';
 
 interface SingleSlideProps {
-  imageObj: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-    bgColor: string;
-    paragraph: string;
-    title: string;
-    text: string;
-  };
   testingStyles?: string;
   current: number;
   index: number;
@@ -21,7 +11,6 @@ interface SingleSlideProps {
 }
 
 function SingleSlide({
-  imageObj,
   testingStyles,
   current,
   index,
@@ -41,14 +30,14 @@ function SingleSlide({
       style={{ transform: `translateX(${translateProps})` }}
     >
       <Image
-        src={imageObj.src}
-        alt={imageObj.alt}
-        width={imageObj.width}
-        height={imageObj.height}
+        src={text.src}
+        alt={text.alt}
+        width={Number(text.width)}
+        height={Number(text.height)}
         className="h-full w-full object-cover"
       />
       <div
-        className={`${imageObj.bgColor} 
+        className={`${text.bgColor} 
         grid text-center grid-auto-flow-column grid-auto-columns-1fr text-sm place-items-center
         p-4 pb-8 px-8
         md:px-32 md:py-20

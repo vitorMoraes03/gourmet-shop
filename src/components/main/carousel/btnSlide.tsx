@@ -3,18 +3,14 @@ import { useState } from 'react';
 function BtnSlide({
   handlerBtn,
   current,
-  index
+  index,
 }: {
   handlerBtn: () => void;
   current: number;
   index: number;
 }) {
-  const [borderActive, setBorderActive] = useState(false);
-  // criar um estado que vai determinar se tem border
-
   function handleClick() {
     handlerBtn();
-    setBorderActive(true);
   }
 
   return (

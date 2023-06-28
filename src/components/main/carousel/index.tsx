@@ -2,7 +2,6 @@
 
 import SingleSlide from './singleSlide';
 import { useRef, useState } from 'react';
-import { imagesObjs } from './imagesObjs';
 import BtnSlide from './btnSlide';
 import { CarouselProps } from '../../../../messages/useContent';
 
@@ -29,14 +28,12 @@ function Carousel({ content }: { content: CarouselProps[] }) {
       }
     >
       <SingleSlide
-        imageObj={imagesObjs[0]}
         testingStyles={''}
         current={currentIndex}
         index={0}
         text={content[0]}
       />
       <SingleSlide
-        imageObj={imagesObjs[1]}
         testingStyles={'translate-x-full'}
         current={currentIndex}
         index={1}
