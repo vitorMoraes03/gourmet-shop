@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { HeaderProps } from '../../../../messages/useContent';
+import DropdownList from './dropdownList';
 
 function DropdownNav({
   identifier,
@@ -25,21 +26,10 @@ function DropdownNav({
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)} // false é default, true para testes
     >
-      <ul>
-        {sectionNav.title && (
-          <h2 className="text-2xl mb-7 font-semibold tracking-tight">
-            {sectionNav.title}
-          </h2>
-        )}
-        {sectionNav.links.map(({ href, label }) => (
-          <li
-            key={`${identifier}-${href}`}
-            className="my-4 font-subtitle leading-5"
-          >
-            <Link href={href}>{label}</Link>
-          </li>
-        ))}
-      </ul>
+      <DropdownList
+        identifier={identifier}
+        headerText={headerText}
+      />
       {sectionNav.image && (
         <div
           className="col-span-2 grid gap-4 h-fit justify-end"

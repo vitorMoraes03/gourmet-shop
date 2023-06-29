@@ -14,6 +14,12 @@ interface NavListProps {
   containerStyle?: string;
 }
 
+// a li inteira vai ter que ter um evento quando a tela for pequena
+// temos que capturar o que foi clicado
+// vamos renderizar uma ul igual a que esta no dropdown
+// bora componetizar essa ul do dropdown e chamar de listDropdown
+// esse componente vai receber algumas props: valores p estilizacao e o identifier
+
 function NavList({
   hoverState,
   dropdownState,

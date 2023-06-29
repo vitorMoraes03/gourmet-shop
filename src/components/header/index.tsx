@@ -15,8 +15,7 @@ import Banner from './banner';
 import { DropdownContext } from '@/contexts/dropdown';
 
 function Header({ header }: { header: HeaderProps }) {
-  const [hover, setHover] =
-    useState(false);
+  const [hover, setHover] = useState(false);
   // const { hover, setHover } = useContext(DropdownContext);
   const [dropdownSelected, setDropdownSelected] = useState<
     string | null
@@ -27,7 +26,12 @@ function Header({ header }: { header: HeaderProps }) {
       <Banner headerText={header} />
       <div className="flex justify-between items-center px-4 md:items-center md:grid md:grid-cols-6 md:px-5 md:h-20">
         {isSmallScreen() && (
-          <MobileNav headerText={header}/>
+          <MobileNav
+            headerText={header}
+            identifier={
+              dropdownSelected as keyof typeof header.dropdown
+            }
+          />
         )}
         <Logo
           logoText={header.logo}

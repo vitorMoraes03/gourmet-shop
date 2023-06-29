@@ -7,8 +7,10 @@ import { HeaderProps } from '../../../../messages/useContent';
 
 function MobileNav({
   headerText,
+  identifier,
 }: {
   headerText: HeaderProps;
+  identifier: keyof typeof headerText.dropdown;
 }) {
   const [modalOpen, setModalOpen] = useState(false);
   const overlayNav =
@@ -51,13 +53,10 @@ function MobileNav({
             </button>
           </div>
         </div>
+        {/* O componente listDropdown entraria aqui, com identifier e header text  */}
       </Portal>
     </div>
   );
 }
-
-// className="bg-black text-white uppercase md:text-sm text-xs
-// font-bold w-3/5 justify-self-center md:self-start
-// md:w-3/6 py-2 mt-2"
 
 export default MobileNav;
