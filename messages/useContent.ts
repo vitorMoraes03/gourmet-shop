@@ -511,6 +511,23 @@ export interface HeaderProps {
   }[];
 }
 
+export interface DropdownProps {
+  title: string;
+  image: {
+    src: string;
+    width: string;
+    height: string;
+    alt: string;
+    title: string;
+    text: string;
+    subtitle: string;
+  };
+  links: {
+    href: string;
+    label: string;
+  }[];
+}
+
 export interface CarouselProps {
   src: string;
   alt: string;

@@ -1,18 +1,16 @@
 import Link from 'next/link';
 import { HeaderProps } from '../../../../messages/useContent';
 
-// vamos precisar da prop styles mesmo?
-
-function DropdownList({
+function ListDropdown({
   identifier,
-  styles,
   headerText,
 }: {
   identifier: keyof typeof headerText.dropdown;
-  styles?: string;
   headerText: HeaderProps;
 }) {
   const content = headerText.dropdown[identifier];
+
+  if (!content) return null;
 
   return (
     <ul>
@@ -33,4 +31,4 @@ function DropdownList({
   );
 }
 
-export default DropdownList;
+export default ListDropdown;
