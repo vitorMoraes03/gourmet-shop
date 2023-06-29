@@ -4,16 +4,6 @@ import { useEffect, useState } from 'react';
 import { CarouselProps } from '../../../../messages/useContent';
 
 interface SingleSlideProps {
-  imageObj: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-    bgColor: string;
-    paragraph: string;
-    title: string;
-    text: string;
-  };
   testingStyles?: string;
   current: number;
   index: number;
@@ -21,7 +11,6 @@ interface SingleSlideProps {
 }
 
 function SingleSlide({
-  imageObj,
   testingStyles,
   current,
   index,
@@ -41,33 +30,33 @@ function SingleSlide({
       style={{ transform: `translateX(${translateProps})` }}
     >
       <Image
-        src={imageObj.src}
-        alt={imageObj.alt}
-        width={imageObj.width}
-        height={imageObj.height}
+        src={text.src}
+        alt={text.alt}
+        width={Number(text.width)}
+        height={Number(text.height)}
         className="h-full w-full object-cover"
       />
       <div
-        className={`${imageObj.bgColor} 
+        className={`${text.bgColor} 
         grid text-center grid-auto-flow-column grid-auto-columns-1fr text-sm place-items-center
-        p-4 pb-8 px-8
+        p-4 pb-8 px-2 
         md:px-32 md:py-20
         `}
       >
-        <p className="uppercase text-xs -mb-2 font-semibold tracking-wider md:self-end">
+        <p className="uppercase text-xs -mb-2 font-semibold tracking-wider md:-mb-2">
           {text.paragraph}
         </p>
-        <h2 className="text-2xl md:text-3xl font-title">
+        <h1 className="text-2xl md:text-5xl font-title tracking-tight">
           {text.title}
-        </h2>
-        <p className="tracking-tight leading-4 px-7">
+        </h1>
+        <p className="tracking-tight leading-4 px-7 text-sm md:text-base">
           {text.text}
         </p>
         <button
           type="button"
-          className="bg-black text-white uppercase text-xs 
+          className="bg-black text-white uppercase md:text-sm text-xs
           font-bold w-3/5 justify-self-center md:self-start 
-          md:w-3/6 md:py-2 mt-2 py-1"
+          md:w-3/6 py-2 mt-2"
         >
           {text.button}
         </button>

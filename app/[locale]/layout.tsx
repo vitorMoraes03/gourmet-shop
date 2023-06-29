@@ -4,10 +4,10 @@ import {
   Bodoni_Moda,
   Cormorant_Garamond,
 } from 'next/font/google';
-import Header from '@/components/header';
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { useContent } from '../../messages/useContent';
+import HeaderScreenSelector from '@/components/header/headerSelector';
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -48,10 +48,11 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${noto.variable} ${cormorant.variable} ${bodoni.variable}`}
+        className={`${noto.variable} ${cormorant.variable} 
+        ${bodoni.variable} text-black`}
       >
         <div id="portal"></div>
-        <Header header={header} />
+        <HeaderScreenSelector headerContent={header} />
         {children}
       </body>
     </html>

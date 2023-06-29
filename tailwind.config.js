@@ -20,10 +20,10 @@ module.exports = {
       },
       colors: {
         green: '#5bab5d',
-        orange: '#b5442b',
+        orange: '#f75f1e',
         darkerGreen: '#36654f',
         gray: '#f4f7f5',
-        black: '#000000',
+        black: '#1c1515',
         white: '#FFFFFF',
       },
     },

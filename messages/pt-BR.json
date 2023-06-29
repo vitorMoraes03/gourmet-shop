@@ -240,10 +240,10 @@
         {
           "src": "/images/camille-brodard-f6Wpz1QPFZI-unsplash.jpg",
           "alt": "Tábua com queijo e vinho",
-          "width": 390,
-          "height": 244,
+          "width": "390",
+          "height": "244",
           "paragraph": "Amet elit.",
-          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt reprehenderit nam obcaecati, laboriosam quis sapiente?",
+          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt.",
           "title": "Solor Sit",
           "bgColor": "bg-orange",
           "button": "Clique aqui"
@@ -251,15 +251,42 @@
         {
           "src": "/images/hermes-rivera-aK6WGqxyHFw-unsplash.jpg",
           "alt": "Garrafas de vinho em depósito escuro",
-          "width": 600,
-          "height": 400,
+          "width": "600",
+          "height": "400",
           "paragraph": "Lorem ipsum",
-          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt reprehenderit nam obcaecati, laboriosam quis sapiente?",
+          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt.",
           "title": "Solor Sit",
           "bgColor": "bg-green",
           "button": "Clique aqui"
         }
-      ]
+      ],
+      "gallery": {
+        "title": "Lorem your lorem",
+        "subtitle": "Lorem lorem psiu",
+        "images": [
+          {
+            "src": "/images/ginny-rose-stewart-_kUCAyYFVBI-unsplash.jpg",
+            "width": "368",
+            "height": "552",
+            "alt": "lorem",
+            "text": "Lorem Abiu Javaqui"
+          },
+          {
+            "src": "/images/gian-cescon-GxQ13MXLTHQ-unsplash.jpg",
+            "width": "288",
+            "height": "360",
+            "alt": "lorem",
+            "text": "Lorem Abiu Javaqui"
+          },
+          {
+            "src": "/images/tomas-jasovsky-d5SZqLkpIrY-unsplash.jpg",
+            "width": "250",
+            "height": "375",
+            "alt": "lorem",
+            "text": "Lorem Abiu Javaqui"
+          }
+        ]
+      }
     }
   }
 }

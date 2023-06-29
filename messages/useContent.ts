@@ -326,7 +326,7 @@ export function useContent() {
           paragraph: t('main.carousel.0.paragraph'),
           text: t('main.carousel.0.text'),
           title: t('main.carousel.0.title'),
-          bgColor: t('main.carousel.0.bg-color'),
+          bgColor: t('main.carousel.0.bgColor'),
           button: t('main.carousel.0.button'),
         },
         {
@@ -337,10 +337,37 @@ export function useContent() {
           paragraph: t('main.carousel.1.paragraph'),
           text: t('main.carousel.1.text'),
           title: t('main.carousel.1.title'),
-          bgColor: t('main.carousel.1.bg-color'),
+          bgColor: t('main.carousel.1.bgColor'),
           button: t('main.carousel.1.button'),
         },
       ],
+      gallery: {
+        title: t('main.gallery.title'),
+        subtitle: t('main.gallery.subtitle'),
+        images: [
+          {
+            src: t('main.gallery.images.0.src'),
+            width: t('main.gallery.images.0.width'),
+            height: t('main.gallery.images.0.height'),
+            alt: t('main.gallery.images.0.alt'),
+            text: t('main.gallery.images.0.text'),
+          },
+          {
+            src: t('main.gallery.images.1.src'),
+            width: t('main.gallery.images.1.width'),
+            height: t('main.gallery.images.1.height'),
+            alt: t('main.gallery.images.1.alt'),
+            text: t('main.gallery.images.1.text'),
+          },
+          {
+            src: t('main.gallery.images.2.src'),
+            width: t('main.gallery.images.2.width'),
+            height: t('main.gallery.images.2.height'),
+            alt: t('main.gallery.images.2.alt'),
+            text: t('main.gallery.images.2.text'),
+          },
+        ],
+      },
     },
   };
 }
@@ -484,6 +511,23 @@ export interface HeaderProps {
   }[];
 }
 
+export interface DropdownProps {
+  title: string;
+  image: {
+    src: string;
+    width: string;
+    height: string;
+    alt: string;
+    title: string;
+    text: string;
+    subtitle: string;
+  };
+  links: {
+    href: string;
+    label: string;
+  }[];
+}
+
 export interface CarouselProps {
   src: string;
   alt: string;
@@ -494,4 +538,16 @@ export interface CarouselProps {
   title: string;
   bgColor: string;
   button: string;
+}
+
+export interface GalleryProps {
+  title: string;
+  subtitle: string;
+  images: {
+    src: string;
+    width: string;
+    height: string;
+    alt: string;
+    text: string;
+  }[];
 }

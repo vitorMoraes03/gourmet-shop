@@ -1,13 +1,14 @@
 'use client';
 
 import SingleSlide from './singleSlide';
-import { useRef, useState } from 'react';
-import { imagesObjs } from './imagesObjs';
+import { useContext, useState } from 'react';
 import BtnSlide from './btnSlide';
 import { CarouselProps } from '../../../../messages/useContent';
+import { DropdownContext } from '@/contexts/dropdown';
 
 function Carousel({ content }: { content: CarouselProps[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { hover, setHover } = useContext(DropdownContext);
 
   function btnFirstImage() {
     setCurrentIndex(0);
@@ -19,7 +20,8 @@ function Carousel({ content }: { content: CarouselProps[] }) {
 
   return (
     <div
-      className="relative flex h-96 overflow-auto"
+      // className={`${hover ? '-z-10' : 'z-10'} relative flex h-96 overflow-auto`}
+      className={`relative flex h-96 overflow-auto`}
       style={
         {
           scrollbarWidth: 'none',
@@ -29,14 +31,12 @@ function Carousel({ content }: { content: CarouselProps[] }) {
       }
     >
       <SingleSlide
-        imageObj={imagesObjs[0]}
         testingStyles={''}
         current={currentIndex}
         index={0}
         text={content[0]}
       />
       <SingleSlide
-        imageObj={imagesObjs[1]}
         testingStyles={'translate-x-full'}
         current={currentIndex}
         index={1}

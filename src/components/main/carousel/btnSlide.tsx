@@ -3,29 +3,26 @@ import { useState } from 'react';
 function BtnSlide({
   handlerBtn,
   current,
-  index
+  index,
 }: {
   handlerBtn: () => void;
   current: number;
   index: number;
 }) {
-  const [borderActive, setBorderActive] = useState(false);
-  // criar um estado que vai determinar se tem border
-
   function handleClick() {
     handlerBtn();
-    setBorderActive(true);
   }
 
   return (
     <div
       className={`${
         current === index ? 'border' : ''
-      } rounded-full w-4 h-4 relative`}
+      } rounded-full md:w-4 md:h-4 w-3 h-3 relative`}
     >
       <button
-        className="bg-black w-3 h-3
-      rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        className="bg-black md:w-3 md:h-3 w-2 h-2
+      rounded-full absolute transform -translate-x-1/2 
+      -translate-y-1/2 top-1/2 left-1/2"
         onClick={() => handleClick()}
       />
     </div>
