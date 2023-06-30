@@ -371,6 +371,7 @@ export function useContent() {
       quote: {
         text: t('main.quote.text'),
         title: t('main.quote.title'),
+        span: t('main.quote.span'),
       },
     },
     footer: {
@@ -395,10 +396,6 @@ export function useContent() {
         {
           href: t('footer.links.4.href'),
           label: t('footer.links.4.label'),
-        },
-        {
-          href: t('footer.links.5.href'),
-          label: t('footer.links.5.label'),
         },
       ],
     },
@@ -588,6 +585,7 @@ export interface GalleryProps {
 export interface QuoteProps {
   text: string;
   title: string;
+  span: string;
 }
 
 export interface FooterProps {
