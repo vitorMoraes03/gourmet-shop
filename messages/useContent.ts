@@ -368,6 +368,39 @@ export function useContent() {
           },
         ],
       },
+      quote: {
+        text: t('main.quote.text'),
+        title: t('main.quote.title'),
+      },
+    },
+    footer: {
+      links: [
+        {
+          href: t('footer.links.0.href'),
+          label: t('footer.links.0.label'),
+        },
+        {
+          href: t('footer.links.1.href'),
+          label: t('footer.links.1.label'),
+        },
+        {
+          href: t('footer.links.2.href'),
+          label: t('footer.links.2.label'),
+        },
+        {
+          href: t('footer.links.3.href'),
+
+          label: t('footer.links.3.label'),
+        },
+        {
+          href: t('footer.links.4.href'),
+          label: t('footer.links.4.label'),
+        },
+        {
+          href: t('footer.links.5.href'),
+          label: t('footer.links.5.label'),
+        },
+      ],
     },
   };
 }
@@ -549,5 +582,17 @@ export interface GalleryProps {
     height: string;
     alt: string;
     text: string;
+  }[];
+}
+
+export interface QuoteProps {
+  text: string;
+  title: string;
+}
+
+export interface FooterProps {
+  links: {
+    href: string;
+    label: string;
   }[];
 }

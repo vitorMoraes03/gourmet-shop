@@ -286,7 +286,35 @@
             "text": "Lorem Abiu Javaqui"
           }
         ]
+      },
+      "quote": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        "title": "Lorem"
       }
+    },
+    "footer": {
+      "links": [
+        {
+          "href": "/about-us",
+          "label": "About us"
+        },
+        {
+          "href": "/contact-us",
+          "label": "Contact us"
+        },
+        {
+          "href": "/terms-and-conditions",
+          "label": "Terms and conditions"
+        },
+        {
+          "href": "/privacy-policy",
+          "label": "Privacy policy"
+        },
+        {
+          "href": "/faq",
+          "label": "FAQ"
+        }
+      ]
     }
   }
 }
