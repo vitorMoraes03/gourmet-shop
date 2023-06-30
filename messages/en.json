@@ -245,7 +245,7 @@
           "paragraph": "Amet elit.",
           "title": "Solor Sit",
           "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt.",
-          "bgColor": "bg-orange",
+          "bgColor": "orange",
           "button": "Click here"
         },
         {
@@ -256,7 +256,7 @@
           "paragraph": "Lorem ipsum",
           "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt.",
           "title": "Solor Sit",
-          "bgColor": "bg-green",
+          "bgColor": "green",
           "button": "Click here"
         }
       ],
