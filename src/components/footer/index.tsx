@@ -4,7 +4,7 @@ import { FooterProps } from '../../../messages/useContent';
 function Footer({ content }: { content: FooterProps }) {
   return (
     <footer
-      className="mb-2 flex w-full flex-wrap gap-3
+      className="absolute bottom-0 mb-2 flex w-full flex-wrap gap-3
      bg-darkerGreen px-4 py-4 text-white md:mb-6 
      md:justify-between md:px-14 md:py-2"
     >
