@@ -15,7 +15,7 @@ function SecondModalList({
 }) {
   return (
     <div
-      className={`absolute top-0 z-10 bg-gray 
+      className={`absolute top-0 z-10 bg-gray w-full 
       transition-transform duration-500 ease-in-out 
       ${
         secondHover ? 'translate-x-0' : 'translate-x-full'
@@ -28,7 +28,7 @@ function SecondModalList({
               <ArrowLeftIcon />
             </div>
             <h2 className="text-2xl font-semibold tracking-tight">
-              {objDropdown.title}
+              {objDropdown.title ? objDropdown.title : 'Return'}
             </h2>
           </div>
           <ul className="mt-7">

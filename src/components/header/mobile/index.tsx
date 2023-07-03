@@ -58,7 +58,7 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
                   <CloseIcon />
                 </button>
               </div>
-              <div className="relative">
+              <div className="relative border-l-red-200 z-50">
                 <FirstModalList
                   header={header}
                   setDropdownSelected={setDropdownSelected}
