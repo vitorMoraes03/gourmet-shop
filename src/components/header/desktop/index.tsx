@@ -2,10 +2,10 @@
 
 import LangSelector from '../langSelector';
 import { useState } from 'react';
-import Search from '../cart/search';
-import Profile from '../cart/profile';
+import Search from '../cartAndProfile/search';
+import Profile from '../cartAndProfile/profile';
 import Logo from '../logo';
-import Cart from '../cart/cart';
+import Cart from '../cartAndProfile/cart';
 import { HeaderProps } from '../../../../messages/useContent';
 import Banner from '../banner';
 import Dropdown from './dropdown';
@@ -22,13 +22,15 @@ function HeaderDesktop({
   >(null);
 
   return (
-    <header className="fixed inset-x-0 w-screen bg-gray z-40">
+    <header className="fixed inset-x-0 z-40 w-screen bg-gray">
       <Banner headerText={header} />
-      <div className="grid grid-cols-6 items-center px-5 h-20">
+      <div className="grid h-20 grid-cols-6 items-center px-5">
         <Logo logoText={header.logo} />
-        <div className="md:col-span-4 md:h-full">
+        <div className="md:col-span-3 md:h-full">
           <ul
-            className="font-title mt-4 md:mt-0 w-full cursor-pointer md:h-full md:font-subtitle md:text-sm md:flex md:uppercase md:font-semibold md:gap-2"
+            className="mt-4 w-full cursor-pointer pl-8 font-title md:mt-0 
+            md:flex md:h-full md:gap-2 md:font-subtitle md:text-xs md:font-semibold 
+            md:uppercase lg:text-sm"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
           >
@@ -44,7 +46,7 @@ function HeaderDesktop({
             )}
           </ul>
         </div>
-        <div className="col-span-1 h-20 flex gap-6 items-center">
+        <div className="col-span-2 flex h-20 items-center justify-end gap-6">
           <Search />
           <LangSelector />
           <Profile />

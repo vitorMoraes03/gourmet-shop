@@ -3,9 +3,9 @@
 
 import LangSelector from '../langSelector';
 import { useState, useEffect } from 'react';
-import Search from '../cart/search';
+import Search from '../cartAndProfile/search';
 import Logo from '../logo';
-import Cart from '../cart/cart';
+import Cart from '../cartAndProfile/cart';
 import { HeaderProps } from '../../../../messages/useContent';
 import Banner from '../banner';
 import CloseIcon from '../../icons/close';
@@ -33,9 +33,9 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
   }, [dropdownSelected]);
 
   return (
-    <header className="fixed inset-x-0 w-screen bg-gray z-40">
+    <header className="fixed inset-x-0 z-40 w-screen bg-gray">
       <Banner headerText={header} />
-      <div className="flex justify-between items-center px-4">
+      <div className="flex items-center justify-between px-4">
         <div className="flex gap-2">
           <button onClick={() => setFirstHover(true)}>
             <MenuOutlineIcon />
@@ -46,11 +46,11 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
             setModalState={setFirstHover}
           >
             <div
-              className={`bg-gray fixed top-0 left-0 w-screen h-screen transition-opacity ${
+              className={`fixed left-0 top-0 h-screen w-screen bg-gray transition-opacity ${
                 firstHover ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <div className="flex justify-end items-end">
+              <div className="flex items-end justify-end">
                 <button
                   onClick={() => setFirstHover(false)}
                   className="p-2"
@@ -58,7 +58,7 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
                   <CloseIcon />
                 </button>
               </div>
-              <div className="relative border-l-red-200 z-50">
+              <div className="relative z-50 border-l-red-200">
                 <FirstModalList
                   header={header}
                   setDropdownSelected={setDropdownSelected}
@@ -71,10 +71,10 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
                   setSecondHover={setSecondHover}
                 />
               </div>
-              <div className="text-center mt-32">
+              <div className="mt-32 text-center">
                 <button
                   type="button"
-                  className="bg-white uppercase text-xs font-semibold px-24 py-3 tracking-wider"
+                  className="bg-white px-24 py-3 text-xs font-semibold uppercase tracking-wider"
                 >
                   Login
                 </button>
@@ -82,7 +82,7 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
             </div>
           </Portal>
         </div>
-        <div className="flex gap-1 items-center">
+        <div className="flex items-center gap-1">
           <Search />
           <LangSelector />
           <Cart />
