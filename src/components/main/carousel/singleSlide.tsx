@@ -25,7 +25,7 @@ function SingleSlide({
   return (
     <div
       className={`${testingStyles} 
-      absolute grid grid-rows-2 md:grid-cols-2 md:grid-rows-1 h-96 
+      absolute grid grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 h-96 
       shrink-0 w-full transition-transform duration-500 ease-in-out`}
       style={{ transform: `translateX(${translateProps})` }}
     >
@@ -44,23 +44,24 @@ function SingleSlide({
         } 
         grid text-center grid-auto-flow-column grid-auto-columns-1fr text-sm place-items-center
         p-4 pb-8 px-2 
-        md:px-32 md:py-20
+        md:px-20 md:py-16
+        lg:px-32 lg:py-20
         `}
       >
-        <p className="uppercase text-xs -mb-2 font-semibold tracking-wider md:-mb-2">
+        <p className="uppercase text-xs -mb-2 font-semibold tracking-wider">
           {text.paragraph}
         </p>
         <h1 className="text-2xl md:text-5xl font-title tracking-tight">
           {text.title}
         </h1>
-        <p className="tracking-tight leading-4 px-7 text-sm md:text-base">
+        <p className="tracking-tight leading-4 md:px-7 px-10 text-sm md:text-base">
           {text.text}
         </p>
         <button
           type="button"
           className="bg-black text-white uppercase md:text-sm text-xs
-          font-bold w-3/5 justify-self-center md:self-start 
-          md:w-3/6 py-2 mt-2"
+          font-bold w-40 justify-self-center md:self-start 
+          md:w-48 py-2 mt-2"
         >
           {text.button}
         </button>

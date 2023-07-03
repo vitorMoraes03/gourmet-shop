@@ -1,14 +1,12 @@
 'use client';
 
 import SingleSlide from './singleSlide';
-import { useContext, useState } from 'react';
-import BtnSlide from './btnSlide';
+import { useState } from 'react';
+import BtnSlide from './button';
 import { CarouselProps } from '../../../../messages/useContent';
-import { DropdownContext } from '@/contexts/dropdown';
 
 function Carousel({ content }: { content: CarouselProps[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { hover, setHover } = useContext(DropdownContext);
 
   function btnFirstImage() {
     setCurrentIndex(0);

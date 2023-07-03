@@ -13,10 +13,10 @@ module.exports = {
         text: ['var(--font-cormorant)', 'sans-serif'],
       },
       screens: {
-        sm: '480px',
+        sm: '640px',
         md: '768px',
-        lg: '976px',
-        xl: '1440px',
+        lg: '1024px',
+        xl: '1280px',
       },
       colors: {
         green: 'rgb(21 128 61)',
