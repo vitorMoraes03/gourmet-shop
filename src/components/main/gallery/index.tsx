@@ -31,7 +31,7 @@ function Gallery({ content }: { content: GalleryProps }) {
         {content.images.map((image, index) => (
           <div
             key={`imgGallery-${index}`}
-            className="md:w-1/3 w-64 shrink-0"
+            className="lg:w-1/3 w-64 shrink-0"
           >
             <Image
               alt={image.alt}

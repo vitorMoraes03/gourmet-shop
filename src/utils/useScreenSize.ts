@@ -12,7 +12,6 @@ function useScreenSmallerThen({
       const mediaQuery = window.matchMedia(
         `(max-width: ${width}px)`
       );
-      console.log('mediaQuery.matches', mediaQuery.matches);
       setIsSmaller(mediaQuery.matches);
     }
 
