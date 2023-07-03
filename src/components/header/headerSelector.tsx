@@ -10,9 +10,9 @@ function HeaderScreenSelector({
 }: {
   headerContent: HeaderProps;
 }) {
-  const isScreenSmallerThen = useScreenSmallerThen({width: 800});
-
-  console.log('isScreenSmallerThen', isScreenSmallerThen);
+  const isScreenSmallerThen = useScreenSmallerThen({
+    width: 850,
+  });
 
   return (
     <>

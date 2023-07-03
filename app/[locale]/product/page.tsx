@@ -1,5 +1,7 @@
+import ProductsPage from '@/components/products';
+
 function Product() {
-  return <div className="text-xl pt-40">teste asa</div>;
+  return <ProductsPage />;
 }
 
 export default Product;
