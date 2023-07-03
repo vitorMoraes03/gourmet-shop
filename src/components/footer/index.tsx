@@ -18,7 +18,7 @@ function Footer({ content }: { content: FooterProps }) {
           {content.links.map((item, index) => (
             <li
               key={`liFoot-${index}`}
-              className='after:content-["|"]'
+              className='after:content-["|"] md:after:content-none'
             >
               <Link href={item.href}>{item.label} </Link>
             </li>
