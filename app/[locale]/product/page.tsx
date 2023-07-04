@@ -1,7 +1,10 @@
 import ProductsPage from '@/components/products';
+import { useContent } from '../../../messages/useContent';
 
 function Product() {
-  return <ProductsPage />;
+  const { productsPage } = useContent();
+
+  return <ProductsPage content={productsPage} />;
 }
 
 export default Product;

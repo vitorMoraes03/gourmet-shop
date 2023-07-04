@@ -330,7 +330,7 @@
           "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
           "price": "$99.99",
           "stars": "4",
-          "bestSeller": true
+          "bestSeller": "true"
         }
       ],
       "filters": {
