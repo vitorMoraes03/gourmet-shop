@@ -413,6 +413,10 @@
             }
           ]
         }
+      },
+      "selector": {
+        "first": "Filter",
+        "second": "Sort"
       }
     }
   }

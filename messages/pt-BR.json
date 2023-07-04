@@ -413,6 +413,10 @@
             }
           ]
         }
+      },
+      "selector": {
+        "first": "Filtros",
+        "second": "Ordenar por"
       }
     }
   }

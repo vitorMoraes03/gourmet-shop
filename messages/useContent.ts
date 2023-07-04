@@ -562,6 +562,10 @@ export function useContent() {
           ],
         },
       },
+      selector: {
+        first: t('productsPage.selector.first'),
+        second: t('productsPage.selector.second'),
+      },
     },
   };
 }
@@ -795,5 +799,9 @@ export interface ProductsProps {
         value: string;
       }[];
     };
+  };
+  selector: {
+    first: string;
+    second: string;
   };
 }

@@ -50,12 +50,12 @@ export default function RootLayout({
     <html lang={locale}>
       <body
         className={`${noto.variable} ${cormorant.variable} 
-        ${bodoni.variable} text-black relative`}
+        ${bodoni.variable} text-black relative tracking-tight`}
       >
         <div id="portal"></div>
         <HeaderScreenSelector headerContent={header} />
         {children}
-        <Footer content={footer} />
+        {/* <Footer content={footer} /> */}
       </body>
     </html>
   );
