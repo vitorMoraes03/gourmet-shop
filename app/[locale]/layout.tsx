@@ -47,10 +47,10 @@ export default function RootLayout({
   }
 
   return (
-    <html lang={locale} className='h-full'>
+    <html lang={locale}>
       <body
         className={`${noto.variable} ${cormorant.variable} 
-        ${bodoni.variable} text-black relative h-full`}
+        ${bodoni.variable} text-black relative`}
       >
         <div id="portal"></div>
         <HeaderScreenSelector headerContent={header} />
