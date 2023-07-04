@@ -334,76 +334,85 @@
         }
       ],
       "filters": {
-        "sorted": [
-          {
-            "label": "Mais vendidos",
-            "value": "bestSeller"
-          },
-          {
-            "label": "Menor preço",
-            "value": "price"
-          },
-          {
-            "label": "Maior preço",
-            "value": "price"
-          },
-          {
-            "label": "Recomendados",
-            "value": "recommended"
-          }
-        ],
-        "category": [
-          {
-            "label": "Vinhos",
-            "value": "Wines"
-          },
-          {
-            "label": "Cervejas",
-            "value": "Beers"
-          },
-          {
-            "label": "Conservas",
-            "value": "Preserves"
-          },
-          {
-            "label": "Azeites",
-            "value": "Olive oil"
-          },
-          {
-            "label": "Cafés",
-            "value": "Cofee"
-          },
-          {
-            "label": "Queijos",
-            "value": "Cheese"
-          }
-        ],
-        "country": [
-          {
-            "label": "Brasil",
-            "value": "Brazil"
-          },
-          {
-            "label": "Itália",
-            "value": "Italy"
-          },
-          {
-            "label": "França",
-            "value": "France"
-          },
-          {
-            "label": "Portugal",
-            "value": "Portugal"
-          },
-          {
-            "label": "Argentina",
-            "value": "Argentina"
-          },
-          {
-            "label": "Chile",
-            "value": "Chile"
-          }
-        ]
+        "sorted": {
+          "title": "Lorem ipsum",
+          "options": [
+            {
+              "label": "Mais vendidos",
+              "value": "bestSeller"
+            },
+            {
+              "label": "Preço mais baixo",
+              "value": "price"
+            },
+            {
+              "label": "Preço mais alto",
+              "value": "price"
+            },
+            {
+              "label": "Recomendados",
+              "value": "recommended"
+            }
+          ]
+        },
+        "category": {
+          "title": "Lorem ipsum",
+          "options": [
+            {
+              "label": "Vinhos",
+              "value": "Wines"
+            },
+            {
+              "label": "Cervejas",
+              "value": "Beers"
+            },
+            {
+              "label": "Conservas",
+              "value": "Preserves"
+            },
+            {
+              "label": "Azeites",
+              "value": "Olive oil"
+            },
+            {
+              "label": "Cafés",
+              "value": "Coffee"
+            },
+            {
+              "label": "Queijos",
+              "value": "Cheese"
+            }
+          ]
+        },
+        "country": {
+          "title": "Lorem ipsum",
+          "options": [
+            {
+              "label": "Brasil",
+              "value": "Brazil"
+            },
+            {
+              "label": "Itália",
+              "value": "Italy"
+            },
+            {
+              "label": "França",
+              "value": "France"
+            },
+            {
+              "label": "Portugal",
+              "value": "Portugal"
+            },
+            {
+              "label": "Argentina",
+              "value": "Argentina"
+            },
+            {
+              "label": "Chile",
+              "value": "Chile"
+            }
+          ]
+        }
       }
     }
   }

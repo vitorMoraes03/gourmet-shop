@@ -418,124 +418,149 @@ export function useContent() {
         },
       ],
       filters: {
-        sorted: [
-          {
-            label: t('productsPage.filters.sorted.0.label'),
-            value: t('productsPage.filters.sorted.0.value'),
-          },
-          {
-            label: t('productsPage.filters.sorted.1.label'),
-            value: t('productsPage.filters.sorted.1.value'),
-          },
-          {
-            label: t('productsPage.filters.sorted.2.label'),
-            value: t('productsPage.filters.sorted.2.value'),
-          },
-          {
-            label: t('productsPage.filters.sorted.3.label'),
-            value: t('productsPage.filters.sorted.3.value'),
-          },
-        ],
-        category: [
-          {
-            label: t(
-              'productsPage.filters.category.0.label'
-            ),
-            value: t(
-              'productsPage.filters.category.0.value'
-            ),
-          },
-          {
-            label: t(
-              'productsPage.filters.category.1.label'
-            ),
-            value: t(
-              'productsPage.filters.category.1.value'
-            ),
-          },
-          {
-            label: t(
-              'productsPage.filters.category.2.label'
-            ),
-            value: t(
-              'productsPage.filters.category.2.value'
-            ),
-          },
-          {
-            label: t(
-              'productsPage.filters.category.3.label'
-            ),
-            value: t(
-              'productsPage.filters.category.3.value'
-            ),
-          },
-          {
-            label: t(
-              'productsPage.filters.category.4.label'
-            ),
-            value: t(
-              'productsPage.filters.category.4.value'
-            ),
-          },
-          {
-            label: t(
-              'productsPage.filters.category.5.label'
-            ),
-            value: t(
-              'productsPage.filters.category.5.value'
-            ),
-          },
-        ],
-        country: [
-          {
-            label: t(
-              'productsPage.filters.country.0.label'
-            ),
-            value: t(
-              'productsPage.filters.country.0.value'
-            ),
-          },
-          {
-            label: t(
-              'productsPage.filters.country.1.label'
-            ),
-            value: t(
-              'productsPage.filters.country.1.value'
-            ),
-          },
-          {
-            label: t(
-              'productsPage.filters.country.2.label'
-            ),
-            value: t(
-              'productsPage.filters.country.2.value'
-            ),
-          },
-          {
-            label: t(
-              'productsPage.filters.country.3.label'
-            ),
-            value: t(
-              'productsPage.filters.country.3.value'
-            ),
-          },
-          {
-            label: t(
-              'productsPage.filters.country.4.label'
-            ),
-            value: t(
-              'productsPage.filters.country.4.value'
-            ),
-          },
-          {
-            label: t(
-              'productsPage.filters.country.5.label'
-            ),
-            value: t(
-              'productsPage.filters.country.5.value'
-            ),
-          },
-        ],
+        sorted: {
+          title: t('productsPage.filters.sorted.title'),
+          options: [
+            {
+              label: t(
+                'productsPage.filters.sorted.options.0.label'
+              ),
+              value: t(
+                'productsPage.filters.sorted.options.0.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.sorted.options.1.label'
+              ),
+              value: t(
+                'productsPage.filters.sorted.options.1.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.sorted.options.2.label'
+              ),
+              value: t(
+                'productsPage.filters.sorted.options.2.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.sorted.options.3.label'
+              ),
+              value: t(
+                'productsPage.filters.sorted.options.3.value'
+              ),
+            },
+          ],
+        },
+        category: {
+          title: t('productsPage.filters.category.title'),
+          options: [
+            {
+              label: t(
+                'productsPage.filters.category.options.0.label'
+              ),
+              value: t(
+                'productsPage.filters.category.options.0.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.category.options.1.label'
+              ),
+              value: t(
+                'productsPage.filters.category.options.1.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.category.options.2.label'
+              ),
+              value: t(
+                'productsPage.filters.category.options.2.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.category.options.3.label'
+              ),
+              value: t(
+                'productsPage.filters.category.options.3.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.category.options.4.label'
+              ),
+              value: t(
+                'productsPage.filters.category.options.4.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.category.options.5.label'
+              ),
+              value: t(
+                'productsPage.filters.category.options.5.value'
+              ),
+            },
+          ],
+        },
+        country: {
+          title: t('productsPage.filters.country.title'),
+          options: [
+            {
+              label: t(
+                'productsPage.filters.country.options.0.label'
+              ),
+              value: t(
+                'productsPage.filters.country.options.0.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.country.options.1.label'
+              ),
+              value: t(
+                'productsPage.filters.country.options.1.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.country.options.2.label'
+              ),
+              value: t(
+                'productsPage.filters.country.options.2.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.country.options.3.label'
+              ),
+              value: t(
+                'productsPage.filters.country.options.3.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.country.options.4.label'
+              ),
+              value: t(
+                'productsPage.filters.country.options.4.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.country.options.5.label'
+              ),
+              value: t(
+                'productsPage.filters.country.options.5.value'
+              ),
+            },
+          ],
+        },
       },
     },
   };
@@ -749,14 +774,26 @@ export interface ProductsProps {
     bestSeller: string;
   }[];
   filters: {
-    title: string;
+    sorted: {
+      title: string;
+      options: {
+        label: string;
+        value: string;
+      }[];
+    };
     category: {
-      label: string;
-      value: string;
-    }[];
+      title: string;
+      options: {
+        label: string;
+        value: string;
+      }[];
+    };
     country: {
-      label: string;
-      value: string;
-    }[];
+      title: string;
+      options: {
+        label: string;
+        value: string;
+      }[];
+    };
   };
 }

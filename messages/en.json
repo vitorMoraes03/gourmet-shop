@@ -334,76 +334,85 @@
         }
       ],
       "filters": {
-        "sorted": [
-          {
-            "label": "Best Sellers",
-            "value": "bestSeller"
-          },
-          {
-            "label": "Lowest Price",
-            "value": "price"
-          },
-          {
-            "label": "Highest Price",
-            "value": "price"
-          },
-          {
-            "label": "Recommended",
-            "value": "recommended"
-          }
-        ],
-        "category": [
-          {
-            "label": "Wines",
-            "value": "Wines"
-          },
-          {
-            "label": "Beers",
-            "value": "Beers"
-          },
-          {
-            "label": "Preserves",
-            "value": "Preserves"
-          },
-          {
-            "label": "Olive oil",
-            "value": "Olive oil"
-          },
-          {
-            "label": "Coffee",
-            "value": "Coffee"
-          },
-          {
-            "label": "Cheese",
-            "value": "Cheese"
-          }
-        ],
-        "country": [
-          {
-            "label": "Brazil",
-            "value": "Brazil"
-          },
-          {
-            "label": "Italy",
-            "value": "Italy"
-          },
-          {
-            "label": "France",
-            "value": "France"
-          },
-          {
-            "label": "Portugal",
-            "value": "Portugal"
-          },
-          {
-            "label": "Argentina",
-            "value": "Argentina"
-          },
-          {
-            "label": "Chile",
-            "value": "Chile"
-          }
-        ]
+        "sorted": {
+          "title": "Lorem ipsum",
+          "options": [
+            {
+              "label": "Best Sellers",
+              "value": "bestSeller"
+            },
+            {
+              "label": "Lowest Price",
+              "value": "price"
+            },
+            {
+              "label": "Highest Price",
+              "value": "price"
+            },
+            {
+              "label": "Recommended",
+              "value": "recommended"
+            }
+          ]
+        },
+        "category": {
+          "title": "Lorem ipsum",
+          "options": [
+            {
+              "label": "Wines",
+              "value": "Wines"
+            },
+            {
+              "label": "Beers",
+              "value": "Beers"
+            },
+            {
+              "label": "Preserves",
+              "value": "Preserves"
+            },
+            {
+              "label": "Olive oil",
+              "value": "Olive oil"
+            },
+            {
+              "label": "Coffee",
+              "value": "Coffee"
+            },
+            {
+              "label": "Cheese",
+              "value": "Cheese"
+            }
+          ]
+        },
+        "country": {
+          "title": "Lorem ipsum",
+          "options": [
+            {
+              "label": "Brazil",
+              "value": "Brazil"
+            },
+            {
+              "label": "Italy",
+              "value": "Italy"
+            },
+            {
+              "label": "France",
+              "value": "France"
+            },
+            {
+              "label": "Portugal",
+              "value": "Portugal"
+            },
+            {
+              "label": "Argentina",
+              "value": "Argentina"
+            },
+            {
+              "label": "Chile",
+              "value": "Chile"
+            }
+          ]
+        }
       }
     }
   }
