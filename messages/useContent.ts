@@ -399,6 +399,145 @@ export function useContent() {
         },
       ],
     },
+    productsPage: {
+      title: t('productsPage.title'),
+      subtitle: t('productsPage.subtitle'),
+      products: [
+        {
+          src: t('productsPage.products.0.src'),
+          width: t('productsPage.products.0.width'),
+          height: t('productsPage.products.0.height'),
+          alt: t('productsPage.products.0.alt'),
+          title: t('productsPage.products.0.title'),
+          subtitle: t('productsPage.products.0.subtitle'),
+          price: t('productsPage.products.0.price'),
+          stars: t('productsPage.products.0.stars'),
+          bestSeller: t(
+            'productsPage.products.0.bestSeller'
+          ),
+        },
+      ],
+      filters: {
+        sorted: [
+          {
+            label: t('productsPage.filters.sorted.0.label'),
+            value: t('productsPage.filters.sorted.0.value'),
+          },
+          {
+            label: t('productsPage.filters.sorted.1.label'),
+            value: t('productsPage.filters.sorted.1.value'),
+          },
+          {
+            label: t('productsPage.filters.sorted.2.label'),
+            value: t('productsPage.filters.sorted.2.value'),
+          },
+          {
+            label: t('productsPage.filters.sorted.3.label'),
+            value: t('productsPage.filters.sorted.3.value'),
+          },
+        ],
+        category: [
+          {
+            label: t(
+              'productsPage.filters.category.0.label'
+            ),
+            value: t(
+              'productsPage.filters.category.0.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.filters.category.1.label'
+            ),
+            value: t(
+              'productsPage.filters.category.1.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.filters.category.2.label'
+            ),
+            value: t(
+              'productsPage.filters.category.2.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.filters.category.3.label'
+            ),
+            value: t(
+              'productsPage.filters.category.3.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.filters.category.4.label'
+            ),
+            value: t(
+              'productsPage.filters.category.4.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.filters.category.5.label'
+            ),
+            value: t(
+              'productsPage.filters.category.5.value'
+            ),
+          },
+        ],
+        country: [
+          {
+            label: t(
+              'productsPage.filters.country.0.label'
+            ),
+            value: t(
+              'productsPage.filters.country.0.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.filters.country.1.label'
+            ),
+            value: t(
+              'productsPage.filters.country.1.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.filters.country.2.label'
+            ),
+            value: t(
+              'productsPage.filters.country.2.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.filters.country.3.label'
+            ),
+            value: t(
+              'productsPage.filters.country.3.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.filters.country.4.label'
+            ),
+            value: t(
+              'productsPage.filters.country.4.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.filters.country.5.label'
+            ),
+            value: t(
+              'productsPage.filters.country.5.value'
+            ),
+          },
+        ],
+      },
+    },
   };
 }
 
@@ -593,4 +732,31 @@ export interface FooterProps {
     href: string;
     label: string;
   }[];
+}
+
+export interface ProductsProps {
+  title: string;
+  subtitle: string;
+  products: {
+    src: string;
+    width: string;
+    height: string;
+    alt: string;
+    title: string;
+    subtitle: string;
+    price: string;
+    stars: string;
+    bestSeller: string;
+  }[];
+  filters: {
+    title: string;
+    category: {
+      label: string;
+      value: string;
+    }[];
+    country: {
+      label: string;
+      value: string;
+    }[];
+  };
 }

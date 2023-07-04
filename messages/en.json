@@ -316,6 +316,95 @@
           "label": "FAQ"
         }
       ]
+    },
+    "productsPage": {
+      "title": "Lorem ipsum",
+      "subtitle": "Sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "products": [
+        {
+          "src": "/images/alexander-mils-2LowviVHZ-E-unsplash.jpg",
+          "width": "600",
+          "height": "400",
+          "alt": "Image of a bottle of red wine",
+          "title": "Red Wine",
+          "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+          "price": "$99.99",
+          "stars": "4",
+          "bestSeller": true
+        }
+      ],
+      "filters": {
+        "sorted": [
+          {
+            "label": "Best Sellers",
+            "value": "bestSeller"
+          },
+          {
+            "label": "Lowest Price",
+            "value": "price"
+          },
+          {
+            "label": "Highest Price",
+            "value": "price"
+          },
+          {
+            "label": "Recommended",
+            "value": "recommended"
+          }
+        ],
+        "category": [
+          {
+            "label": "Wines",
+            "value": "Wines"
+          },
+          {
+            "label": "Beers",
+            "value": "Beers"
+          },
+          {
+            "label": "Preserves",
+            "value": "Preserves"
+          },
+          {
+            "label": "Olive oil",
+            "value": "Olive oil"
+          },
+          {
+            "label": "Coffee",
+            "value": "Coffee"
+          },
+          {
+            "label": "Cheese",
+            "value": "Cheese"
+          }
+        ],
+        "country": [
+          {
+            "label": "Brazil",
+            "value": "Brazil"
+          },
+          {
+            "label": "Italy",
+            "value": "Italy"
+          },
+          {
+            "label": "France",
+            "value": "France"
+          },
+          {
+            "label": "Portugal",
+            "value": "Portugal"
+          },
+          {
+            "label": "Argentina",
+            "value": "Argentina"
+          },
+          {
+            "label": "Chile",
+            "value": "Chile"
+          }
+        ]
+      }
     }
   }
 }

@@ -4,7 +4,7 @@ import Title from './title';
 
 function ProductsPage() {
   return (
-    <section className="pt-24 md:pt-32">
+    <section className="py-32 px-4 md:py-40 md:px-12 border ">
       <Title />
       <List />
       <Filter />

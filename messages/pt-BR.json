@@ -24,7 +24,7 @@
           "link1": "Nacionais",
           "link2": "Velho Mundo",
           "link3": "Novo Mundo",
-          "link4": "Sul-americanos",
+          "link4": "Sul americanos",
           "link5": "Naturais"
         },
         "preserves": {
@@ -147,7 +147,7 @@
             },
             {
               "href": "/vinhos/vinhos-sul-americanos",
-              "label": "Vinhos sul-americanos"
+              "label": "Vinhos sul americanos"
             },
             {
               "href": "/vinhos/vinhos-naturais",
@@ -316,6 +316,95 @@
           "label": "FAQ"
         }
       ]
+    },
+    "productsPage": {
+      "title": "Lorem ipsum",
+      "subtitle": "Sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "products": [
+        {
+          "src": "/images/alexander-mils-2LowviVHZ-E-unsplash.jpg",
+          "width": "600",
+          "height": "400",
+          "alt": "Imagem de uma garrafa de vinho tinto",
+          "title": "Vinho tinto",
+          "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+          "price": "R$ 99,99",
+          "stars": "4",
+          "bestSeller": true
+        }
+      ],
+      "filters": {
+        "sorted": [
+          {
+            "label": "Mais vendidos",
+            "value": "bestSeller"
+          },
+          {
+            "label": "Menor preço",
+            "value": "price"
+          },
+          {
+            "label": "Maior preço",
+            "value": "price"
+          },
+          {
+            "label": "Recomendados",
+            "value": "recommended"
+          }
+        ],
+        "category": [
+          {
+            "label": "Vinhos",
+            "value": "Wines"
+          },
+          {
+            "label": "Cervejas",
+            "value": "Beers"
+          },
+          {
+            "label": "Conservas",
+            "value": "Preserves"
+          },
+          {
+            "label": "Azeites",
+            "value": "Olive oil"
+          },
+          {
+            "label": "Cafés",
+            "value": "Cofee"
+          },
+          {
+            "label": "Queijos",
+            "value": "Cheese"
+          }
+        ],
+        "country": [
+          {
+            "label": "Brasil",
+            "value": "Brazil"
+          },
+          {
+            "label": "Itália",
+            "value": "Italy"
+          },
+          {
+            "label": "França",
+            "value": "France"
+          },
+          {
+            "label": "Portugal",
+            "value": "Portugal"
+          },
+          {
+            "label": "Argentina",
+            "value": "Argentina"
+          },
+          {
+            "label": "Chile",
+            "value": "Chile"
+          }
+        ]
+      }
     }
   }
 }
