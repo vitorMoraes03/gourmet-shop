@@ -322,13 +322,13 @@
       "subtitle": "Sit amet consectetur adipisicing elit. Quisquam, quos.",
       "products": [
         {
-          "src": "/images/alexander-mils-2LowviVHZ-E-unsplash.jpg",
-          "width": "600",
-          "height": "400",
+          "src": "/images/aesop-wines-yH6kh_DGBHY-unsplash.jpg",
+          "width": "382",
+          "height": "398",
           "alt": "Imagem de uma garrafa de vinho tinto",
           "title": "Vinho tinto",
-          "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-          "price": "R$ 99,99",
+          "subtitle": "dolor sit amet",
+          "price": "99,99",
           "stars": "4",
           "bestSeller": "true"
         }
