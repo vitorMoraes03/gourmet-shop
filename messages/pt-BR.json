@@ -425,11 +425,11 @@
           },
           {
             "label": "Preço mais baixo",
-            "value": "price"
+            "value": "lowestPrice"
           },
           {
             "label": "Preço mais alto",
-            "value": "price"
+            "value": "highestPrice"
           },
           {
             "label": "Recomendados",

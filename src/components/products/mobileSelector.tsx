@@ -56,7 +56,7 @@ function MobileSelector({
       </div>
       <Portal modalState={modalOpen}>
         <div
-          // className={`transition-transform ${
+          // className={`h-screen bg-white transition-transform duration-1000 ${
           //   modalOpen ? 'translate-y-0' : 'translate-y-full'
           // }`}
           className={`h-screen bg-white transition-transform duration-1000 ${delayedTransform}`}

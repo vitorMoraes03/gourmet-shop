@@ -23,7 +23,8 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
   const [objDropdown, setObjDropdown] =
     useState<DropdownProps | null>(null);
   const dropdown = header.dropdown;
-  const [delayedTransform, setDelayedTransform] = useState();
+  const [delayedTransform, setDelayedTransform] =
+    useState('');
 
   useEffect(() => {
     Object.entries(dropdown).find(([key, value]) => {
@@ -34,7 +35,11 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
   }, [dropdownSelected]);
 
   useEffect(() => {
-    
+    if (firstHover === true) {
+      setDelayedTransform('opacity-100');
+      return;
+    }
+    setDelayedTransform('opacity-0');
   }, [firstHover]);
 
   return (
@@ -48,9 +53,8 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
           <Logo logoText={header.logo} />
           <Portal modalState={firstHover}>
             <div
-              className={`fixed h-screen w-screen bg-gray transition-opacity ${
-                firstHover ? 'opacity-100' : 'opacity-0'
-              }`}
+              className={`fixed h-screen w-screen bg-gray 
+              transition-opacity duration-300 ${delayedTransform}`}
             >
               <div className="flex items-end justify-end">
                 <button
