@@ -16,8 +16,14 @@ interface ListProps {
 
 function List({ contentForTest }: { contentForTest: any }) {
   return (
-    <div className='border w-full sm:w-2/3 py-2'>
-      <ul>
+    <div className="w-full border-2 py-2 sm:w-2/3">
+      <ul className='grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4'>
+        <Card content={contentForTest[0]} />
+        <Card content={contentForTest[0]} />
+        <Card content={contentForTest[0]} />
+        <Card content={contentForTest[0]} />
+        <Card content={contentForTest[0]} />
+        <Card content={contentForTest[0]} />
         <Card content={contentForTest[0]} />
       </ul>
     </div>

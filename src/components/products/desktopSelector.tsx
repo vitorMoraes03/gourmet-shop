@@ -7,7 +7,7 @@ function DesktopSelector({
   content: SelectorProps;
 }) {
   return (
-    <div className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-normal">
+    <div className="flex items-center justify-end gap-2 text-[9px] font-bold uppercase tracking-normal">
       <div>
         <p>{content.desktop}</p>
       </div>

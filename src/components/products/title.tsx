@@ -6,7 +6,7 @@ function Title({
   subtitle: string;
 }) {
   return (
-    <div className="w-full px-5 py-2 text-center">
+    <div className="mb-6 w-full px-5 py-2 text-center">
       <h1 className="font-title text-3xl font-semibold tracking-tight md:text-4xl">
         {title}
       </h1>

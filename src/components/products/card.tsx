@@ -14,7 +14,7 @@ interface CardProps {
 
 function Card({ content }: { content: CardProps }) {
   return (
-    <div className="w-1/2 border sm:w-1/3">
+    <div>
       <div>
         <Image
           src={content.src}

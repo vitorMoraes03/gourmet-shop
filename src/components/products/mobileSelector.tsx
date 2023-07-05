@@ -18,11 +18,11 @@ function MobileSelector({
   return (
     <div
       className="flex justify-center border-y 
-    border-y-gray text-[8px] font-semibold"
+    border-y-gray text-[8px] font-bold"
     >
       <div className="my-[2px] w-full border-r border-r-gray p-1">
         <div className="flex items-center justify-between">
-          <button className="uppercase tracking-tight">
+          <button className="uppercase tracking-wider">
             {content.first}
           </button>
           <AddIcon />
@@ -31,7 +31,7 @@ function MobileSelector({
       </div>
       <div className="my-[2px] w-full p-1">
         <div className="flex items-center justify-between">
-          <button className="uppercase tracking-tight">
+          <button className="uppercase tracking-wider">
             {content.second}
           </button>
           <AddIcon />
