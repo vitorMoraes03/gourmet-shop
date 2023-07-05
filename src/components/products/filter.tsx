@@ -1,6 +1,6 @@
 import CheckedIcon from '../icons/checked';
 
-interface FilterProps {
+export interface FilterProps {
   sorted: {
     title: string;
     options: {
@@ -29,18 +29,24 @@ function Filter({ content }: { content: FilterProps }) {
     <div className="text-xs">
       {Object.keys(content).map((key, index) => {
         const validKey = key as keyof FilterProps;
+        const length = Object.keys(content).length;
         return (
-          <div key={`filter-${index}`} className='mb-5 tracking-tight'>
+          <div
+            key={`filter-${index}`}
+            className="mb-5 tracking-tight"
+          >
             <h3 className="font-semibold">
               {content[validKey].title}
             </h3>
-            <ul>
+            <ul
+              className={`w-fit border-b border-gray pb-4 sm:border-none sm:pb-0 ${
+                index === length - 1 && 'border-b-0'
+              }`}
+            >
               {content[validKey].options.map(
                 (item, index) => {
                   return (
-                    <li
-                      key={`${key}-${index}`}
-                    >
+                    <li key={`${key}-${index}`}>
                       <input
                         value={item.value}
                         type="checkbox"

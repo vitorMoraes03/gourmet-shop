@@ -418,6 +418,7 @@
         "first": "Filtros",
         "second": "Ordenar por",
         "desktop": "Sort By",
+        "mobileBtn": "Aplicar Filtros",
         "desktopOptions": [
           {
             "label": "Mais vendidos",

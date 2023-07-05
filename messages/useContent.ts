@@ -566,6 +566,7 @@ export function useContent() {
         first: t('productsPage.selector.first'),
         second: t('productsPage.selector.second'),
         desktop: t('productsPage.selector.desktop'),
+        mobileBtn: t('productsPage.selector.mobileBtn'),
         desktopOptions: [
           {
             label: t(
@@ -839,6 +840,7 @@ export interface ProductsProps {
     first: string;
     second: string;
     desktop: string;
+    mobileBtn: string;
     desktopOptions: {
       label: string;
       value: string;

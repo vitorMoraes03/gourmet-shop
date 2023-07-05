@@ -60,9 +60,9 @@ function SingleSlide({
         </p>
         <button
           type="button"
-          className="bg-black text-white uppercase md:text-sm text-xs
+          className="black-button py-2 md:text-sm text-xs
           font-bold w-40 justify-self-center md:self-start 
-          md:w-48 py-2 mt-2"
+          md:w-48 mt-2"
         >
           {text.button}
         </button>

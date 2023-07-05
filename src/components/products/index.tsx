@@ -25,20 +25,19 @@ function ProductsPage({
       />
 
       {isScreenSmallerThen ? (
-        <MobileSelector content={content.selector} />
+        <MobileSelector
+          content={content.selector}
+          filterContent={content.filters}
+        />
       ) : (
         <DesktopSelector content={content.selector} />
       )}
-      <div className="sm:flex mt-2 sm:mt-4">
+      <div className="mt-2 sm:mt-4 sm:flex">
         {!isScreenSmallerThen && (
           <Filter content={content.filters} />
         )}
         <List contentForTest={content.products} />
       </div>
-      {/* <Filter content={content.filters}/> */}
-      {/* <List contentForTest={content.products}/> */}
-      {/* <MobileSelector content={content.selector}/> */}
-      {/* <DesktopSelector content={content.selector}/> */}
     </section>
   );
 }

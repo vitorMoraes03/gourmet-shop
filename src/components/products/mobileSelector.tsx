@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react';
 import AddIcon from '../icons/add';
 import Portal from '../portal';
+import Filter from './filter';
+import { FilterProps } from './filter';
+import CloseIcon from '../icons/close';
 
 export interface SelectorProps {
   first: string;
   second: string;
   desktop: string;
+  mobileBtn: string;
   desktopOptions: {
     label: string;
     value: string;
@@ -14,18 +18,21 @@ export interface SelectorProps {
 
 function MobileSelector({
   content,
+  filterContent,
 }: {
   content: SelectorProps;
+  filterContent: FilterProps;
 }) {
   const [modalOpen, setModalOpen] = useState(false);
-  const [delayedTransform, setDelayedTransform] = useState(
-    'translate-y-full'
-  );
+  const [delayedTransform, setDelayedTransform] =
+    useState('');
 
   useEffect(() => {
     if (modalOpen) {
       setDelayedTransform('translate-y-0');
+      return;
     }
+    setDelayedTransform('translate-y-full');
   }, [modalOpen]);
 
   return (
@@ -56,16 +63,21 @@ function MobileSelector({
       </div>
       <Portal modalState={modalOpen}>
         <div
-          // className={`h-screen bg-white transition-transform duration-1000 ${
-          //   modalOpen ? 'translate-y-0' : 'translate-y-full'
-          // }`}
-          className={`h-screen bg-white transition-transform duration-1000 ${delayedTransform}`}
+          className={`h-screen bg-white px-3 py-4
+          transition-transform duration-500 ${delayedTransform}`}
         >
-          Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit. Rem molestias beatae est quae
-          vero explicabo, recusandae earum assumenda,
-          suscipit, incidunt quod fugiat nesciunt laborum
-          dicta hic! Delectus, explicabo laudantium. Natus.
+          <div className="mb-1 flex justify-end">
+            <button onClick={() => setModalOpen(false)}>
+              <CloseIcon />
+            </button>
+          </div>
+          <Filter content={filterContent} />
+          <button
+            className="black-button w-full py-1 
+          text-[10px] font-semibold tracking-wider"
+          >
+            {content.mobileBtn}
+          </button>
         </div>
       </Portal>
     </div>

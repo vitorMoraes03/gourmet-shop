@@ -18,4 +18,8 @@
   .custom-border {
     @apply flex h-10 items-center px-1 transition duration-300 ease-in-out hover:border-b hover:border-solid hover:border-black md:h-20;
   }
+
+  .black-button {
+    @apply bg-black text-white uppercase hover:text-darkerGray;
+  }
 }
