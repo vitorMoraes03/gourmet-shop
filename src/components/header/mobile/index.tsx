@@ -23,6 +23,7 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
   const [objDropdown, setObjDropdown] =
     useState<DropdownProps | null>(null);
   const dropdown = header.dropdown;
+  const [delayedTransform, setDelayedTransform] = useState();
 
   useEffect(() => {
     Object.entries(dropdown).find(([key, value]) => {
@@ -31,6 +32,10 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
       }
     });
   }, [dropdownSelected]);
+
+  useEffect(() => {
+    
+  }, [firstHover]);
 
   return (
     <header className="fixed inset-x-0 z-40 w-screen bg-gray">
@@ -41,12 +46,9 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
             <MenuOutlineIcon />
           </button>
           <Logo logoText={header.logo} />
-          <Portal
-            modalState={firstHover}
-            setModalState={setFirstHover}
-          >
+          <Portal modalState={firstHover}>
             <div
-              className={`fixed left-0 top-0 h-screen w-screen bg-gray transition-opacity ${
+              className={`fixed h-screen w-screen bg-gray transition-opacity ${
                 firstHover ? 'opacity-100' : 'opacity-0'
               }`}
             >

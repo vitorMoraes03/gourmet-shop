@@ -1,25 +1,15 @@
-import {
-  useRef,
-  useEffect,
-  useState,
-  ReactNode,
-  SetStateAction,
-  Dispatch,
-} from 'react';
+import { useRef, useEffect, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 
 interface PortalProps {
   children: ReactNode;
-  setModalState: Dispatch<SetStateAction<boolean>>;
   modalState: boolean;
 }
 
-const Portal = ({
-  children,
-  setModalState,
-  modalState,
-}: PortalProps) => {
+const Portal = ({ children, modalState }: PortalProps) => {
   const ref = useRef<Element | null>(null);
+  const overlayStyles =
+    'fixed left-0 top-0 z-50 h-screen w-screen bg-white bg-opacity-30';
 
   useEffect(() => {
     ref.current =
@@ -28,9 +18,7 @@ const Portal = ({
 
   return modalState && ref.current
     ? createPortal(
-        <div className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-40 z-50">
-          {children}
-        </div>,
+        <div className={overlayStyles}>{children}</div>,
         ref.current
       )
     : null;

@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import AddIcon from '../icons/add';
+import Portal from '../portal';
 
 export interface SelectorProps {
   first: string;
@@ -15,13 +17,27 @@ function MobileSelector({
 }: {
   content: SelectorProps;
 }) {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [delayedTransform, setDelayedTransform] = useState(
+    'translate-y-full'
+  );
+
+  useEffect(() => {
+    if (modalOpen) {
+      setDelayedTransform('translate-y-0');
+    }
+  }, [modalOpen]);
+
   return (
     <div
       className="flex justify-center border-y 
     border-y-gray text-[8px] font-bold"
     >
       <div className="my-[2px] w-full border-r border-r-gray p-1">
-        <div className="flex items-center justify-between">
+        <div
+          className="flex cursor-pointer items-center justify-between"
+          onClick={() => setModalOpen(true)}
+        >
           <button className="uppercase tracking-wider">
             {content.first}
           </button>
@@ -38,6 +54,20 @@ function MobileSelector({
         </div>
         <div></div>
       </div>
+      <Portal modalState={modalOpen}>
+        <div
+          // className={`transition-transform ${
+          //   modalOpen ? 'translate-y-0' : 'translate-y-full'
+          // }`}
+          className={`h-screen bg-white transition-transform duration-1000 ${delayedTransform}`}
+        >
+          Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Rem molestias beatae est quae
+          vero explicabo, recusandae earum assumenda,
+          suscipit, incidunt quod fugiat nesciunt laborum
+          dicta hic! Delectus, explicabo laudantium. Natus.
+        </div>
+      </Portal>
     </div>
   );
 }
