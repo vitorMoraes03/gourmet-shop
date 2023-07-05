@@ -1,4 +1,5 @@
 import { ProductsProps } from '../../../messages/useContent';
+import DesktopSelector from './desktopSelector';
 import Filter from './filter';
 import List from './list';
 import MobileSelector from './mobileSelector';
@@ -12,7 +13,8 @@ function ProductsPage({ content }: { content: ProductsProps }) {
       <Title title={content.title} subtitle={content.subtitle}/>
       {/* <Filter content={content.filters}/> */}
       {/* <List contentForTest={content.products}/> */}
-      <MobileSelector content={content.selector}/>
+      {/* <MobileSelector content={content.selector}/> */}
+      <DesktopSelector content={content.selector}/>
     </section>
   );
 }

@@ -565,6 +565,41 @@ export function useContent() {
       selector: {
         first: t('productsPage.selector.first'),
         second: t('productsPage.selector.second'),
+        desktop: t('productsPage.selector.desktop'),
+        desktopOptions: [
+          {
+            label: t(
+              'productsPage.selector.desktopOptions.0.label'
+            ),
+            value: t(
+              'productsPage.selector.desktopOptions.0.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.selector.desktopOptions.1.label'
+            ),
+            value: t(
+              'productsPage.selector.desktopOptions.1.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.selector.desktopOptions.2.label'
+            ),
+            value: t(
+              'productsPage.selector.desktopOptions.2.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.selector.desktopOptions.3.label'
+            ),
+            value: t(
+              'productsPage.selector.desktopOptions.3.value'
+            ),
+          },
+        ],
       },
     },
   };
@@ -803,5 +838,10 @@ export interface ProductsProps {
   selector: {
     first: string;
     second: string;
+    desktop: string;
+    desktopOptions: {
+      label: string;
+      value: string;
+    }[];
   };
 }

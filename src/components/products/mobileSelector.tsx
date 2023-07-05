@@ -1,14 +1,19 @@
 import AddIcon from '../icons/add';
 
-interface MobileSelectorProps {
+export interface SelectorProps {
   first: string;
   second: string;
+  desktop: string;
+  desktopOptions: {
+    label: string;
+    value: string;
+  }[];
 }
 
 function MobileSelector({
   content,
 }: {
-  content: MobileSelectorProps;
+  content: SelectorProps;
 }) {
   return (
     <div

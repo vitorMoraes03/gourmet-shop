@@ -41,6 +41,7 @@ function SingleSlide({
           text.bgColor === 'orange'
             ? 'bg-orange'
             : 'bg-green'
+            
         } 
         grid text-center grid-auto-flow-column grid-auto-columns-1fr text-sm place-items-center
         p-4 pb-8 px-2 

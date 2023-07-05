@@ -416,7 +416,26 @@
       },
       "selector": {
         "first": "Filtros",
-        "second": "Ordenar por"
+        "second": "Ordenar por",
+        "desktop": "Sort By",
+        "desktopOptions": [
+          {
+            "label": "Mais vendidos",
+            "value": "bestSeller"
+          },
+          {
+            "label": "Preço mais baixo",
+            "value": "price"
+          },
+          {
+            "label": "Preço mais alto",
+            "value": "price"
+          },
+          {
+            "label": "Recomendados",
+            "value": "recommended"
+          }
+        ]
       }
     }
   }
