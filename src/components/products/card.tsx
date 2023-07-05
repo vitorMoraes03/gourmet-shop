@@ -21,7 +21,7 @@ function Card({ content }: { content: CardProps }) {
           width={Number(content.width)}
           height={Number(content.height)}
           alt={content.alt}
-          className="h-36 object-cover"
+          className="object-cover"
         />
       </div>
       <div className="text-xs">
