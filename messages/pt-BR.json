@@ -416,9 +416,10 @@
       },
       "selector": {
         "first": "Filtros",
-        "second": "Ordenar por",
-        "desktop": "Sort By",
+        "second": "Ordenar",
+        "desktop": "Ordenar",
         "mobileBtn": "Aplicar Filtros",
+        "mobileSort": "Ordenar",
         "options": [
           {
             "label": "Mais vendidos",

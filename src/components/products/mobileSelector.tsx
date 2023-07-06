@@ -86,7 +86,7 @@ function MobileSelector({
             </button>
           </div>
           <div className="mb-5 tracking-tight">
-            <h3 className="font-semibold">adasd</h3>
+            <h3 className="font-semibold">{content.desktop}</h3>
             <ul className="pb-4">
               {content.options.map((option, index) => {
                 return (
@@ -103,7 +103,7 @@ function MobileSelector({
             className="black-button w-full py-1 
           text-[10px] font-semibold tracking-wider"
           >
-            teste
+            {content.mobileBtn}
           </button>
         </div>
       </Portal>

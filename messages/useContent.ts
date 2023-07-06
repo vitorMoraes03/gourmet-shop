@@ -567,6 +567,7 @@ export function useContent() {
         second: t('productsPage.selector.second'),
         desktop: t('productsPage.selector.desktop'),
         mobileBtn: t('productsPage.selector.mobileBtn'),
+        mobileSort: t('productsPage.selector.mobileSort'),
         options: [
           {
             label: t(
@@ -841,6 +842,7 @@ export interface ProductsProps {
     second: string;
     desktop: string;
     mobileBtn: string;
+    mobileSort: string;
     options: {
       label: string;
       value: string;
