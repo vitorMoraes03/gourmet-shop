@@ -22,7 +22,7 @@ function DesktopSelector({
             <option
               key={option.value}
               value={option.value}
-              className="bg-white hover:bg-white"
+              className="bg-white text-[9px] hover:bg-white"
               style={{
                 appearance: 'none',
               }}
