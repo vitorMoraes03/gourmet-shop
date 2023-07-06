@@ -18,7 +18,7 @@ function DesktopSelector({
             appearance: 'none',
           }}
         >
-          {content.desktopOptions.map((option) => (
+          {content.options.map((option) => (
             <option
               key={option.value}
               value={option.value}

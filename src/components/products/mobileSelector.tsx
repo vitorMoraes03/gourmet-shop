@@ -10,7 +10,7 @@ export interface SelectorProps {
   second: string;
   desktop: string;
   mobileBtn: string;
-  desktopOptions: {
+  options: {
     label: string;
     value: string;
   }[];
