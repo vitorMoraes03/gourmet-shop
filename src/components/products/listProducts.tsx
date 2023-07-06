@@ -14,7 +14,7 @@ interface ListProps {
   }[];
 }
 
-function List({ contentForTest }: { contentForTest: any }) {
+function ListProducts({ contentForTest }: { contentForTest: any }) {
   return (
     <div className="w-full py-2 sm:w-3/4 sm:ml-auto">
       <ul className='grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4'>
@@ -30,4 +30,4 @@ function List({ contentForTest }: { contentForTest: any }) {
   );
 }
 
-export default List;
+export default ListProducts;

@@ -1,4 +1,5 @@
 import CheckedIcon from '../icons/checked';
+import ListItem from './listItem';
 
 export interface FilterProps {
   sorted: {
@@ -46,23 +47,24 @@ function Filter({ content }: { content: FilterProps }) {
               {content[validKey].options.map(
                 (item, index) => {
                   return (
-                    <li key={`${key}-${index}`}>
-                      <input
-                        value={item.value}
-                        type="checkbox"
-                        name={item.value}
-                        style={{ opacity: 0 }}
-                      />
-                      <label
-                        className="flex items-center gap-1 font-light"
-                        htmlFor={item.value}
-                      >
-                        <div className="rounded-full bg-black p-[4px] text-white">
-                          <CheckedIcon />
-                        </div>
-                        {item.label}
-                      </label>
-                    </li>
+                    <ListItem item={item} index={index} key={`${key}-${index}`} />
+                    // <li key={`${key}-${index}`}>
+                    //   <input
+                    //     value={item.value}
+                    //     type="checkbox"
+                    //     name={item.value}
+                    //     style={{ opacity: 0 }}
+                    //   />
+                    //   <label
+                    //     className="flex items-center gap-1 font-light"
+                    //     htmlFor={item.value}
+                    //   >
+                    //     <div className="rounded-full bg-black p-[4px] text-white">
+                    //       <CheckedIcon />
+                    //     </div>
+                    //     {item.label}
+                    //   </label>
+                    // </li>
                   );
                 }
               )}

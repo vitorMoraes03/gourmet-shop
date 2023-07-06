@@ -3,7 +3,7 @@
 import { ProductsProps } from '../../../messages/useContent';
 import DesktopSelector from './desktopSelector';
 import Filter from './filter';
-import List from './list';
+import List from './listProducts';
 import MobileSelector from './mobileSelector';
 import Title from './title';
 import useScreenSmallerThen from '@/utils/useScreenSize';
@@ -23,7 +23,6 @@ function ProductsPage({
         title={content.title}
         subtitle={content.subtitle}
       />
-
       {isScreenSmallerThen ? (
         <MobileSelector
           content={content.selector}
