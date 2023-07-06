@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @layer base {
   .ionicon {
     cursor: pointer;
@@ -10,6 +16,10 @@
 
 @layer components {
   .custom-border {
-    @apply h-10 md:h-20 hover:border-b hover:border-solid hover:border-black transition ease-in-out duration-300 flex items-center px-1;
+    @apply flex h-10 items-center px-1 transition duration-300 ease-in-out hover:border-b hover:border-solid hover:border-black md:h-20;
+  }
+
+  .black-button {
+    @apply bg-black text-white uppercase hover:text-darkerGray;
   }
 }

@@ -31,7 +31,7 @@ function Gallery({ content }: { content: GalleryProps }) {
         {content.images.map((image, index) => (
           <div
             key={`imgGallery-${index}`}
-            className="md:w-1/3 w-64 shrink-0"
+            className="lg:w-1/3 w-64 shrink-0"
           >
             <Image
               alt={image.alt}
@@ -41,7 +41,7 @@ function Gallery({ content }: { content: GalleryProps }) {
               className="w-full h-[468px] object-cover"
             />
             <Link href={''}>
-              <p className="text-2xl font-title tracking-tight mt-3 hover:border-b-[1.5px] inline-block">
+              <p className="text-2xl md:h-8 h-7 font-title tracking-tight mt-3 hover:border-b-[1.5px] inline-block">
                 {image.text}
               </p>
             </Link>

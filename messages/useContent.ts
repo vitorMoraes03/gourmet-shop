@@ -368,6 +368,241 @@ export function useContent() {
           },
         ],
       },
+      quote: {
+        text: t('main.quote.text'),
+        title: t('main.quote.title'),
+        span: t('main.quote.span'),
+      },
+    },
+    footer: {
+      links: [
+        {
+          href: t('footer.links.0.href'),
+          label: t('footer.links.0.label'),
+        },
+        {
+          href: t('footer.links.1.href'),
+          label: t('footer.links.1.label'),
+        },
+        {
+          href: t('footer.links.2.href'),
+          label: t('footer.links.2.label'),
+        },
+        {
+          href: t('footer.links.3.href'),
+
+          label: t('footer.links.3.label'),
+        },
+        {
+          href: t('footer.links.4.href'),
+          label: t('footer.links.4.label'),
+        },
+      ],
+    },
+    productsPage: {
+      title: t('productsPage.title'),
+      subtitle: t('productsPage.subtitle'),
+      products: [
+        {
+          src: t('productsPage.products.0.src'),
+          width: t('productsPage.products.0.width'),
+          height: t('productsPage.products.0.height'),
+          alt: t('productsPage.products.0.alt'),
+          title: t('productsPage.products.0.title'),
+          subtitle: t('productsPage.products.0.subtitle'),
+          price: t('productsPage.products.0.price'),
+          stars: t('productsPage.products.0.stars'),
+          bestSeller: t(
+            'productsPage.products.0.bestSeller'
+          ),
+        },
+      ],
+      filters: {
+        sorted: {
+          title: t('productsPage.filters.sorted.title'),
+          options: [
+            {
+              label: t(
+                'productsPage.filters.sorted.options.0.label'
+              ),
+              value: t(
+                'productsPage.filters.sorted.options.0.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.sorted.options.1.label'
+              ),
+              value: t(
+                'productsPage.filters.sorted.options.1.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.sorted.options.2.label'
+              ),
+              value: t(
+                'productsPage.filters.sorted.options.2.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.sorted.options.3.label'
+              ),
+              value: t(
+                'productsPage.filters.sorted.options.3.value'
+              ),
+            },
+          ],
+        },
+        category: {
+          title: t('productsPage.filters.category.title'),
+          options: [
+            {
+              label: t(
+                'productsPage.filters.category.options.0.label'
+              ),
+              value: t(
+                'productsPage.filters.category.options.0.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.category.options.1.label'
+              ),
+              value: t(
+                'productsPage.filters.category.options.1.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.category.options.2.label'
+              ),
+              value: t(
+                'productsPage.filters.category.options.2.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.category.options.3.label'
+              ),
+              value: t(
+                'productsPage.filters.category.options.3.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.category.options.4.label'
+              ),
+              value: t(
+                'productsPage.filters.category.options.4.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.category.options.5.label'
+              ),
+              value: t(
+                'productsPage.filters.category.options.5.value'
+              ),
+            },
+          ],
+        },
+        country: {
+          title: t('productsPage.filters.country.title'),
+          options: [
+            {
+              label: t(
+                'productsPage.filters.country.options.0.label'
+              ),
+              value: t(
+                'productsPage.filters.country.options.0.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.country.options.1.label'
+              ),
+              value: t(
+                'productsPage.filters.country.options.1.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.country.options.2.label'
+              ),
+              value: t(
+                'productsPage.filters.country.options.2.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.country.options.3.label'
+              ),
+              value: t(
+                'productsPage.filters.country.options.3.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.country.options.4.label'
+              ),
+              value: t(
+                'productsPage.filters.country.options.4.value'
+              ),
+            },
+            {
+              label: t(
+                'productsPage.filters.country.options.5.label'
+              ),
+              value: t(
+                'productsPage.filters.country.options.5.value'
+              ),
+            },
+          ],
+        },
+      },
+      selector: {
+        first: t('productsPage.selector.first'),
+        second: t('productsPage.selector.second'),
+        desktop: t('productsPage.selector.desktop'),
+        mobileBtn: t('productsPage.selector.mobileBtn'),
+        mobileSort: t('productsPage.selector.mobileSort'),
+        options: [
+          {
+            label: t(
+              'productsPage.selector.options.0.label'
+            ),
+            value: t(
+              'productsPage.selector.options.0.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.selector.options.1.label'
+            ),
+            value: t(
+              'productsPage.selector.options.1.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.selector.options.2.label'
+            ),
+            value: t(
+              'productsPage.selector.options.2.value'
+            ),
+          },
+          {
+            label: t(
+              'productsPage.selector.options.3.label'
+            ),
+            value: t(
+              'productsPage.selector.options.3.value'
+            ),
+          },
+        ],
+      },
     },
   };
 }
@@ -550,4 +785,67 @@ export interface GalleryProps {
     alt: string;
     text: string;
   }[];
+}
+
+export interface QuoteProps {
+  text: string;
+  title: string;
+  span: string;
+}
+
+export interface FooterProps {
+  links: {
+    href: string;
+    label: string;
+  }[];
+}
+
+export interface ProductsProps {
+  title: string;
+  subtitle: string;
+  products: {
+    src: string;
+    width: string;
+    height: string;
+    alt: string;
+    title: string;
+    subtitle: string;
+    price: string;
+    stars: string;
+    bestSeller: string;
+  }[];
+  filters: {
+    sorted: {
+      title: string;
+      options: {
+        label: string;
+        value: string;
+      }[];
+    };
+    category: {
+      title: string;
+      options: {
+        label: string;
+        value: string;
+      }[];
+    };
+    country: {
+      title: string;
+      options: {
+        label: string;
+        value: string;
+      }[];
+    };
+  };
+  selector: {
+    first: string;
+    second: string;
+    desktop: string;
+    mobileBtn: string;
+    mobileSort: string;
+    options: {
+      label: string;
+      value: string;
+    }[];
+  };
 }

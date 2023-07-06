@@ -3,18 +3,20 @@
 import { HeaderProps } from '../../../messages/useContent';
 import HeaderDesktop from './desktop';
 import HeaderMobile from './mobile';
-import useIsSmallScreen from '@/utils/isSmallScreen';
+import useScreenSmallerThen from '@/utils/useScreenSize';
 
 function HeaderScreenSelector({
   headerContent,
 }: {
   headerContent: HeaderProps;
 }) {
-  const isSmallScreen = useIsSmallScreen();
+  const isScreenSmallerThen = useScreenSmallerThen({
+    width: 850,
+  });
 
   return (
     <>
-      {isSmallScreen ? (
+      {isScreenSmallerThen ? (
         <HeaderMobile header={headerContent} />
       ) : (
         <HeaderDesktop header={headerContent} />

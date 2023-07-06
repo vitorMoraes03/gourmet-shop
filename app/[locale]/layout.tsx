@@ -8,6 +8,7 @@ import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { useContent } from '../../messages/useContent';
 import HeaderScreenSelector from '@/components/header/headerSelector';
+import Footer from '@/components/footer';
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -39,7 +40,7 @@ export default function RootLayout({
   params: any;
 }) {
   const locale = useLocale();
-  const { header } = useContent();
+  const { header, footer } = useContent();
 
   if (params.locale !== locale) {
     notFound();
@@ -49,11 +50,12 @@ export default function RootLayout({
     <html lang={locale}>
       <body
         className={`${noto.variable} ${cormorant.variable} 
-        ${bodoni.variable} text-black`}
+        ${bodoni.variable} text-black relative tracking-tight`}
       >
         <div id="portal"></div>
         <HeaderScreenSelector headerContent={header} />
         {children}
+        {/* <Footer content={footer} /> */}
       </body>
     </html>
   );

@@ -245,7 +245,7 @@
           "paragraph": "Amet elit.",
           "title": "Solor Sit",
           "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt.",
-          "bgColor": "bg-orange",
+          "bgColor": "orange",
           "button": "Click here"
         },
         {
@@ -256,7 +256,7 @@
           "paragraph": "Lorem ipsum",
           "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt.",
           "title": "Solor Sit",
-          "bgColor": "bg-green",
+          "bgColor": "green",
           "button": "Click here"
         }
       ],
@@ -284,6 +284,158 @@
             "height": "375",
             "alt": "lorem",
             "text": "Lorem Abiu Javaqui"
+          }
+        ]
+      },
+      "quote": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        "title": "ipsu tanu",
+        "span": "Lorem"
+      }
+    },
+    "footer": {
+      "links": [
+        {
+          "href": "/about-us",
+          "label": "About us"
+        },
+        {
+          "href": "/contact-us",
+          "label": "Contact us"
+        },
+        {
+          "href": "/terms-and-conditions",
+          "label": "Terms and conditions"
+        },
+        {
+          "href": "/privacy-policy",
+          "label": "Privacy policy"
+        },
+        {
+          "href": "/faq",
+          "label": "FAQ"
+        }
+      ]
+    },
+    "productsPage": {
+      "title": "Lorem ipsum",
+      "subtitle": "Sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "products": [
+        {
+          "src": "/images/aesop-wines-yH6kh_DGBHY-unsplash.jpg",
+          "width": "382",
+          "height": "398",
+          "alt": "Image of a bottle of red wine",
+          "title": "Red Wine",
+          "subtitle": "dolor sit amet",
+          "price": "99.99",
+          "stars": "4",
+          "bestSeller": "true"
+        }
+      ],
+      "filters": {
+        "sorted": {
+          "title": "Lorem ipsum",
+          "options": [
+            {
+              "label": "Best Sellers",
+              "value": "bestSeller"
+            },
+            {
+              "label": "Lowest Price",
+              "value": "price"
+            },
+            {
+              "label": "Highest Price",
+              "value": "price"
+            },
+            {
+              "label": "Recommended",
+              "value": "recommended"
+            }
+          ]
+        },
+        "category": {
+          "title": "Lorem ipsum",
+          "options": [
+            {
+              "label": "Wines",
+              "value": "Wines"
+            },
+            {
+              "label": "Beers",
+              "value": "Beers"
+            },
+            {
+              "label": "Preserves",
+              "value": "Preserves"
+            },
+            {
+              "label": "Olive oil",
+              "value": "Olive oil"
+            },
+            {
+              "label": "Coffee",
+              "value": "Coffee"
+            },
+            {
+              "label": "Cheese",
+              "value": "Cheese"
+            }
+          ]
+        },
+        "country": {
+          "title": "Lorem ipsum",
+          "options": [
+            {
+              "label": "Brazil",
+              "value": "Brazil"
+            },
+            {
+              "label": "Italy",
+              "value": "Italy"
+            },
+            {
+              "label": "France",
+              "value": "France"
+            },
+            {
+              "label": "Portugal",
+              "value": "Portugal"
+            },
+            {
+              "label": "Argentina",
+              "value": "Argentina"
+            },
+            {
+              "label": "Chile",
+              "value": "Chile"
+            }
+          ]
+        }
+      },
+      "selector": {
+        "first": "Filter",
+        "second": "Sort",
+        "desktop": "Sort By",
+        "mobileBtn": "Apply Filter",
+        "mobileSort": "Sort",
+        "options": [
+          {
+            "label": "Best Sellers",
+            "value": "bestSeller"
+          },
+          {
+            "label": "Lowest Price",
+            "value": "lowestPrice"
+          },
+          {
+            "label": "Highest Price",
+            "value": "highestPrice"
+          },
+          {
+            "label": "Recommended",
+            "value": "recommended"
           }
         ]
       }

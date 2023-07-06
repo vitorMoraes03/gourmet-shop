@@ -1,11 +1,11 @@
-function CloseIcon({ styles }: { styles?: string }) {
+function AddIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={`ionicon ${styles}`}
+      className="ionicon"
       viewBox="0 0 512 512"
-      width={20}
-      height={20}
+      width={10}
+      height={10}
     >
       <path
         fill="none"
@@ -13,10 +13,10 @@ function CloseIcon({ styles }: { styles?: string }) {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="32"
-        d="M368 368L144 144M368 144L144 368"
+        d="M256 112v288M400 256H112"
       />
     </svg>
   );
 }
 
-export default CloseIcon;
+export default AddIcon;

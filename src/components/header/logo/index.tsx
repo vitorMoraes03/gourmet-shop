@@ -6,7 +6,7 @@ function Logo({ logoText }: { logoText: string }) {
       <Link href={'/'}>
         <h1
           className="font-title text-xl md:text-4xl 
-        font-semibold tracking-tight md:pl-10 md:mb-1"
+        font-semibold tracking-tight md:pl-2 lg:pl-8 md:mb-1"
         >
           {logoText}
         </h1>
