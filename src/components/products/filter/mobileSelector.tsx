@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import AddIcon from '../icons/add';
-import Portal from '../portal';
+import AddIcon from '../../icons/add';
+import Portal from '../../portal';
 import Filter from './filter';
 import { FilterProps } from './filter';
-import CloseIcon from '../icons/close';
+import CloseIcon from '../../icons/close';
 import ListItem from './listItem';
 
 export interface SelectorProps {
@@ -86,7 +86,9 @@ function MobileSelector({
             </button>
           </div>
           <div className="mb-5 tracking-tight">
-            <h3 className="font-semibold">{content.desktop}</h3>
+            <h3 className="font-semibold">
+              {content.desktop}
+            </h3>
             <ul className="pb-4">
               {content.options.map((option, index) => {
                 return (

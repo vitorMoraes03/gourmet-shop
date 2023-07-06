@@ -1,4 +1,4 @@
-import ArrorDownIcon from '../icons/arrowdown';
+import ArrorDownIcon from '../../icons/arrowdown';
 import { SelectorProps } from './mobileSelector';
 
 function DesktopSelector({
