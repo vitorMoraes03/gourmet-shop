@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation';
 import { useContent } from '../../messages/useContent';
 import HeaderScreenSelector from '@/components/header/headerSelector';
 import Footer from '@/components/footer';
+import ButtonTest from '@/components/testingapi/testing';
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -56,6 +57,7 @@ export default function RootLayout({
         <HeaderScreenSelector headerContent={header} />
         {children}
         {/* <Footer content={footer} /> */}
+        <ButtonTest />
       </body>
     </html>
   );
