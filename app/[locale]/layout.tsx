@@ -9,7 +9,8 @@ import { notFound } from 'next/navigation';
 import { useContent } from '../../messages/useContent';
 import HeaderScreenSelector from '@/components/header/headerSelector';
 import Footer from '@/components/footer';
-import ButtonTest from '@/components/testingapi/testing';
+
+const MONGODB_URI = process.env.MONGODB_URI as string;
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -51,13 +52,12 @@ export default function RootLayout({
     <html lang={locale}>
       <body
         className={`${noto.variable} ${cormorant.variable} 
-        ${bodoni.variable} text-black relative tracking-tight`}
+        ${bodoni.variable} relative tracking-tight text-black`}
       >
         <div id="portal"></div>
         <HeaderScreenSelector headerContent={header} />
         {children}
         {/* <Footer content={footer} /> */}
-        <ButtonTest />
       </body>
     </html>
   );

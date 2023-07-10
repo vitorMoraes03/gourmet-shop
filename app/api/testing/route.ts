@@ -1,14 +1,21 @@
 import { MongoClient } from 'mongodb';
-import { NextApiResponse, NextApiRequest } from 'next';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
+
+// testagem de rotas
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
-export async function GET(req: NextApiRequest) {
-  return new Response(
-    JSON.stringify({ message: 'Get route working' }),
-    { status: 201 }
-  );
+export async function GET(req: NextRequest) {
+  const client = await MongoClient.connect(MONGODB_URI);
+  const db = client.db();
+  const bananasss = await db
+    .collection('bananasss')
+    .find()
+    .toArray();
+  client.close();
+  return new Response(JSON.stringify(bananasss), {
+    status: 201,
+  });
 }
 
 export async function POST(req: NextRequest) {
