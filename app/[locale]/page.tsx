@@ -2,16 +2,8 @@ import Carousel from '@/components/main/carousel';
 import { useContent } from '../../messages/useContent';
 import Gallery from '@/components/main/gallery';
 import Quote from '@/components/main/quote';
-import { MongoClient } from 'mongodb';
-import ButtonTest, {
-  Bananas,
-} from '@/components/testingapi/testing';
 
-export default function Home({
-  bananasss,
-}: {
-  bananasss: Bananas[];
-}) {
+export default function Home() {
   const { main } = useContent();
   const carouselContent = main.carousel;
   const galleryContent = main.gallery;
@@ -22,15 +14,7 @@ export default function Home({
       <Carousel content={carouselContent} />
       <Gallery content={galleryContent} />
       <Quote content={quoteContent} />
-      {/* <ButtonTest /> */}
-      <div>
-        {bananasss?.map((bananas: Bananas) => (
-          <div key={bananas.id}>
-            <p>{bananas.userName}</p>
-            <p>{bananas.nickname}</p>
-          </div>
-        ))}
-      </div>
+      <div></div>
     </main>
   );
 }
