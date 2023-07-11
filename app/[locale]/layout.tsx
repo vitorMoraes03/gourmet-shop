@@ -10,8 +10,6 @@ import { useContent } from '../../messages/useContent';
 import HeaderScreenSelector from '@/components/header/headerSelector';
 import Footer from '@/components/footer';
 
-const MONGODB_URI = process.env.MONGODB_URI as string;
-
 const noto = Noto_Sans({
   subsets: ['latin'],
   weight: ['400', '700'],

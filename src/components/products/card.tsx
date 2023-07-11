@@ -1,40 +1,29 @@
+import { ProductInterface } from '@/utils/useFetchedData';
 import Image from 'next/image';
 
-interface CardProps {
-  src: string;
-  width: string;
-  height: string;
-  alt: string;
-  title: string;
-  subtitle: string;
-  price: string;
-  stars: string;
-  bestSeller: string;
-}
-
-function Card({ content }: { content: CardProps }) {
+function Card({ content }: { content: ProductInterface }) {
   return (
-    <div>
+    <>
       <div>
         <Image
-          src={content.src}
-          width={Number(content.width)}
-          height={Number(content.height)}
-          alt={content.alt}
+          src={content.image.url}
+          width={content.image.width}
+          height={content.image.height}
+          alt={content.image.alt.pt}
           className="object-cover"
         />
       </div>
       <div className="text-xs">
         <h3 className="font-title text-sm tracking-tighter">
-          {content.title}
+          {content.productName.pt}
         </h3>
-        <span>{content.stars}</span>
+        <span>{content.rating}</span>
         <p className="text-darkerGray">
-          {content.subtitle}
+          {content.description.pt}
         </p>
         <p>R${content.price}</p>
       </div>
-    </div>
+    </>
   );
 }
 

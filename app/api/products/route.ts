@@ -3,7 +3,7 @@ import { NextRequest } from 'next/server';
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
-interface Product {
+export interface ProductInterface {
     productName: {
       pt: string;
       en: string;
@@ -26,7 +26,7 @@ interface Product {
   }
 
 export async function POST(req: NextRequest) {
-  const data: Product = await req.json();
+  const data: ProductInterface = await req.json();
   const client = await MongoClient.connect(MONGODB_URI);
   const db = client.db();
   const contactCollection = db.collection('products');

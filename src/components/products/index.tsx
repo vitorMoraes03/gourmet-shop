@@ -7,11 +7,14 @@ import ListProducts from './listProducts';
 import MobileSelector from './filter/mobileSelector';
 import Title from './title';
 import useScreenSmallerThen from '@/utils/useScreenSize';
+import { ProductInterface } from '@/utils/useFetchedData';
 
 function ProductsPage({
   content,
+  data,
 }: {
   content: ProductsProps;
+  data: ProductInterface[];
 }) {
   const isScreenSmallerThen = useScreenSmallerThen({
     width: 640,
@@ -35,7 +38,7 @@ function ProductsPage({
         {!isScreenSmallerThen && (
           <Filter content={content.filters} />
         )}
-        <ListProducts contentForTest={content.products} />
+        <ListProducts fetchedContent={data} />
       </div>
     </section>
   );

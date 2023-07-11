@@ -29,7 +29,7 @@ export default async function ButtonTest() {
     });
 
     const responseData = await response.json();
-    console.log('Reponse no front:', responseData);
+    // console.log('Reponse no front:', responseData);
   }
 
   // if(!bananasss) return (<div>Carregando...</div>)
