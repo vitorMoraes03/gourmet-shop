@@ -11,7 +11,6 @@ async function Product() {
 
 function ProductPageWithContent({ data }: { data: ProductInterface[] }) {
   const { productsPage } = useContent();
-  console.log('productsPage', productsPage);
   return <ProductsPage content={productsPage} data={data} />;
 }
 

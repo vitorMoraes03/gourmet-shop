@@ -45,8 +45,6 @@ async function fetcherAll(): Promise<ProductInterface[]> {
     },
   }));
 
-  console.log('productArray', productArray);
-
   return productArray;
 }
 
