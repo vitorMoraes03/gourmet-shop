@@ -14,7 +14,7 @@ function ProductsPage({
   data,
 }: {
   content: ProductsProps;
-  data: ProductInterface[];
+  data: string;
 }) {
   const isScreenSmallerThen = useScreenSmallerThen({
     width: 640,
@@ -22,6 +22,7 @@ function ProductsPage({
 
   return (
     <section className="px-4 py-32 md:px-12 md:py-40">
+      a
       <Title
         title={content.title}
         subtitle={content.subtitle}

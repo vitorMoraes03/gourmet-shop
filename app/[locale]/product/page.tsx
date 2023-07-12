@@ -6,10 +6,10 @@ import useFetchedData, {
 
 async function Product() {
   const data = await useFetchedData();
-  return <ProductPageWithContent data={data} />;
+  return <ProductPageWithContent data={JSON.stringify(data)} />;
 }
 
-function ProductPageWithContent({ data }: { data: ProductInterface[] }) {
+function ProductPageWithContent({ data }: { data: string }) {
   const { productsPage } = useContent();
   return <ProductsPage content={productsPage} data={data} />;
 }
