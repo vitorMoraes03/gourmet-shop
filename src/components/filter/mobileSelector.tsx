@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import AddIcon from '../../icons/add';
-import Portal from '../../portal';
+import AddIcon from '../icons/add';
+import Portal from '../portal';
 import Filter from './filter';
 import { FilterProps } from './filter';
-import CloseIcon from '../../icons/close';
+import CloseIcon from '../icons/close';
 import ListItem from './listItem';
 
 export interface SelectorProps {

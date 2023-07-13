@@ -1,4 +1,4 @@
-import CheckedIcon from '../../icons/checked';
+import CheckedIcon from '../icons/checked';
 import ListItem from './listItem';
 
 export interface FilterProps {
