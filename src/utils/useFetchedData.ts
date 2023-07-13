@@ -3,10 +3,6 @@ import { MongoClient } from 'mongodb';
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
 async function useFetchedData() {
-  return await fetcherAll();
-}
-
-async function fetcherAll(): Promise<ProductInterface[]> {
   const client = await MongoClient.connect(MONGODB_URI);
   const db = client.db();
   const products = await db
@@ -15,36 +11,10 @@ async function fetcherAll(): Promise<ProductInterface[]> {
     .toArray();
   client.close();
 
-  const productArray = products.map((product) => ({
-    id: product._id.toString(),
-    productName: {
-      pt: product.productName.pt,
-      en: product.productName.en,
-    },
-    price: product.price,
-    rating: product.rating,
-    country: {
-      pt: product.country.pt,
-      en: product.country.en,
-    },
-    category: {
-      pt: product.category.pt,
-      en: product.category.en,
-    },
-    description: {
-      pt: product.description.pt,
-      en: product.description.en,
-    },
-    image: {
-      url: product.image.url,
-      alt: {
-        pt: product.image.alt.pt,
-        en: product.image.alt.en,
-      },
-      width: product.image.width,
-      height: product.image.height,
-    },
-  }));
+  const productArray = products.map((product) => {
+    const { _id, ...rest } = product;
+    return { id: _id.toString(), ...rest };
+  });
 
   return productArray;
 }
