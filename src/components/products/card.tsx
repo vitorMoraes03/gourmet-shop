@@ -13,17 +13,17 @@ function Card({
 }) {
   return (
     <>
-      <div>
+      <div className="h-4/6">
         <Image
           src={content.image.url}
           width={content.image.width}
           height={content.image.height}
           alt={content.image.alt.pt}
-          className="mb-2 h-[200px] w-[113px] object-cover sm:h-[325px] sm:w-[260px]"
+          className="mb-2 h-full w-full object-cover"
         />
       </div>
       <div className="text-sm sm:text-base">
-        <h3 className="font-title leading-relaxed tracking-tighter sm:text-2xl">
+        <h3 className="mt-1 font-title leading-relaxed tracking-tighter sm:mt-2 sm:text-2xl">
           {content.productName.pt}
         </h3>
         <div className="my-1 flex">
