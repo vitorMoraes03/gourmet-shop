@@ -16,6 +16,7 @@ async function fetcherAll(): Promise<ProductInterface[]> {
   client.close();
 
   const productArray = products.map((product) => ({
+    id: product._id.toString(),
     productName: {
       pt: product.productName.pt,
       en: product.productName.en,
@@ -49,6 +50,7 @@ async function fetcherAll(): Promise<ProductInterface[]> {
 }
 
 export interface ProductInterface {
+  id: string;
   productName: {
     pt: string;
     en: string;

@@ -2,8 +2,15 @@ import { ProductInterface } from '@/utils/useFetchedData';
 import Image from 'next/image';
 import Star from '../icons/star';
 import HalfStar from '../icons/halfStar';
+import RatingStars from '@/utils/ratingStars';
 
-function Card({ content }: { content: ProductInterface }) {
+function Card({
+  content,
+  idWhere,
+}: {
+  content: ProductInterface;
+  idWhere: string;
+}) {
   return (
     <>
       <div>
@@ -20,31 +27,15 @@ function Card({ content }: { content: ProductInterface }) {
           {content.productName.pt}
         </h3>
         <div className="my-1 flex">
-          {RatingStars(content.rating)}
+          {RatingStars(content.rating, content.id, idWhere)}
         </div>
-        <p className="text-xs sm:text-base leading-3 text-darkerGray">
+        <p className="text-xs leading-3 text-darkerGray sm:text-base">
           {content.description.pt}
         </p>
-        <p className='mt-1 italic'>R${content.price}</p>
+        <p className="mt-1 italic">R${content.price}</p>
       </div>
     </>
   );
-}
-
-function RatingStars(rating: number) {
-  const fullStars = Math.floor(rating);
-  const halfStar = rating - fullStars >= 0.5;
-
-  const stars = [];
-  for (let i = 0; i < fullStars; i++) {
-    stars.push(<Star key={i} />);
-  }
-
-  if (halfStar) {
-    stars.push(<HalfStar key={fullStars} />);
-  }
-
-  return <>{stars}</>;
 }
 
 export default Card;

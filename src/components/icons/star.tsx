@@ -1,4 +1,4 @@
-function Star() {
+function Star({ fillProp }: { fillProp: boolean }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ function Star() {
     >
       <path
         d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
-        fill="fill"
+        fill={fillProp ? 'fill' : 'none'}	
         stroke="currentColor"
         strokeLinejoin="round"
         strokeWidth="32"

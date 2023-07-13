@@ -7,7 +7,6 @@ import ListProducts from './listProducts';
 import MobileSelector from './filter/mobileSelector';
 import Title from './title';
 import useScreenSmallerThen from '@/utils/useScreenSize';
-import { ProductInterface } from '@/utils/useFetchedData';
 
 function ProductsPage({
   content,
@@ -45,3 +44,4 @@ function ProductsPage({
 }
 
 export default ProductsPage;
+
