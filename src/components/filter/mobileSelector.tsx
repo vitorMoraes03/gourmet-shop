@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import AddIcon from '../icons/add';
-import Portal from '../portal';
-import Filter from './filter';
 import { FilterProps } from './filter';
-import CloseIcon from '../icons/close';
-import ListItem from './listItem';
+import ModalSort from './mobileModalSort';
+import ModalFilter from './mobileModalFilter';
 
 export interface SelectorProps {
   first: string;
@@ -25,26 +23,7 @@ function MobileSelector({
   filterContent: FilterProps;
 }) {
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalTransform, setModalTransform] = useState('');
   const [sortModalOpen, setSortModalOpen] = useState(false);
-  const [sortModalTransform, setSortModalTransform] =
-    useState('');
-
-  useEffect(() => {
-    if (modalOpen) {
-      setModalTransform('translate-y-0');
-      return;
-    }
-    setModalTransform('translate-y-full');
-  }, [modalOpen]);
-
-  useEffect(() => {
-    if (sortModalOpen) {
-      setSortModalTransform('translate-y-0');
-      return;
-    }
-    setSortModalTransform('translate-y-full');
-  }, [sortModalOpen]);
 
   return (
     <div
@@ -75,59 +54,17 @@ function MobileSelector({
         </div>
         <div></div>
       </div>
-      <Portal modalState={sortModalOpen}>
-        <div
-          className={`h-screen bg-white px-3 py-4 text-xs
-          transition-transform duration-500 ${sortModalTransform}`}
-        >
-          <div className="mb-1 flex justify-end">
-            <button onClick={() => setSortModalOpen(false)}>
-              <CloseIcon />
-            </button>
-          </div>
-          <div className="mb-5 tracking-tight">
-            <h3 className="font-semibold">
-              {content.desktop}
-            </h3>
-            <ul className="pb-4">
-              {content.options.map((option, index) => {
-                return (
-                  <ListItem
-                    item={option}
-                    key={`${index}-${option.value}}`}
-                    index={index}
-                  />
-                );
-              })}
-            </ul>
-          </div>
-          <button
-            className="black-button w-full py-1 
-          text-[10px] font-semibold tracking-wider"
-          >
-            {content.mobileBtn}
-          </button>
-        </div>
-      </Portal>
-      <Portal modalState={modalOpen}>
-        <div
-          className={`h-screen bg-white px-3 py-4
-          transition-transform duration-500 ${modalTransform}`}
-        >
-          <div className="mb-1 flex justify-end">
-            <button onClick={() => setModalOpen(false)}>
-              <CloseIcon />
-            </button>
-          </div>
-          <Filter content={filterContent} />
-          <button
-            className="black-button w-full py-1 
-          text-[10px] font-semibold tracking-wider"
-          >
-            {content.mobileBtn}
-          </button>
-        </div>
-      </Portal>
+      <ModalSort
+        content={content}
+        sortModalOpen={sortModalOpen}
+        setSortModalOpen={setSortModalOpen}
+      />
+      <ModalFilter
+        content={content}
+        filterContent={filterContent}
+        modalOpen={modalOpen}
+        setModalOpen={setModalOpen}
+      />
     </div>
   );
 }
