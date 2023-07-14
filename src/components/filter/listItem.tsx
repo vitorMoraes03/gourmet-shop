@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import CheckedIcon from '../icons/checked';
+import { FilterContext } from '@/contexts/filter';
 
 function ListItem({
   item,
-  category
+  category,
 }: {
   item: {
     label: string;
@@ -12,11 +13,27 @@ function ListItem({
   category: string;
 }) {
   const [checked, setChecked] = useState(false);
+  const { filters, setFilters } = useContext(FilterContext);
+
+  useEffect(() => {
+    if (checked) {
+      setFilters([...filters, { [category]: item.value }]);
+    } else {
+      setFilters(
+        filters.filter(
+          (filter) => filter[category] !== item.value
+        )
+      );
+    }
+
+  }, [checked]);
 
   return (
-    <li onClick={() => {
-      setChecked(!checked)
-      }}>
+    <li
+      onClick={() => {
+        setChecked(!checked);
+      }}
+    >
       <input
         value={item.value}
         type="checkbox"
