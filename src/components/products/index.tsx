@@ -1,17 +1,19 @@
 'use client';
 
 import { ProductsProps } from '../../../messages/useContent';
-import DesktopSelector from './filter/desktopSelector';
-import Filter from './filter/filter';
-import List from './listProducts';
-import MobileSelector from './filter/mobileSelector';
+import DesktopSelector from '../filter/desktopSelector';
+import Filter from '../filter/filter';
+import ListProducts from './listProducts';
+import MobileSelector from '../filter/mobileSelector';
 import Title from './title';
 import useScreenSmallerThen from '@/utils/useScreenSize';
 
 function ProductsPage({
   content,
+  data,
 }: {
   content: ProductsProps;
+  data: string;
 }) {
   const isScreenSmallerThen = useScreenSmallerThen({
     width: 640,
@@ -35,7 +37,7 @@ function ProductsPage({
         {!isScreenSmallerThen && (
           <Filter content={content.filters} />
         )}
-        <List contentForTest={content.products} />
+        <ListProducts fetchedContent={data} />
       </div>
     </section>
   );

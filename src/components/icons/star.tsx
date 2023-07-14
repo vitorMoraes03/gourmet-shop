@@ -1,22 +1,21 @@
-function CheckedIcon({ styles }: { styles?: string }) {
+function Star({ fillProp }: { fillProp: boolean }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={`ionicon ${styles}`}
+      className="ioniconsm sm:w-4 sm:h-4"
       viewBox="0 0 512 512"
       width={12}
       height={12}
     >
       <path
-        fill="none"
+        d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+        fill={fillProp ? 'fill' : 'none'}	
         stroke="currentColor"
-        strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="32"
-        d="M416 128L192 384l-96-96"
       />
     </svg>
   );
 }
 
-export default CheckedIcon;
+export default Star;

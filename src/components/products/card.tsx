@@ -1,40 +1,40 @@
+import { ProductInterface } from '@/utils/useFetchedData';
 import Image from 'next/image';
+import Star from '../icons/star';
+import HalfStar from '../icons/halfStar';
+import RatingStars from '@/utils/ratingStars';
 
-interface CardProps {
-  src: string;
-  width: string;
-  height: string;
-  alt: string;
-  title: string;
-  subtitle: string;
-  price: string;
-  stars: string;
-  bestSeller: string;
-}
-
-function Card({ content }: { content: CardProps }) {
+function Card({
+  content,
+  idWhere,
+}: {
+  content: ProductInterface;
+  idWhere: string;
+}) {
   return (
-    <div>
-      <div>
+    <>
+      <div className="h-4/6">
         <Image
-          src={content.src}
-          width={Number(content.width)}
-          height={Number(content.height)}
-          alt={content.alt}
-          className="object-cover"
+          src={content.image.url}
+          width={content.image.width}
+          height={content.image.height}
+          alt={content.image.alt.pt}
+          className="mb-2 h-full w-full object-cover"
         />
       </div>
-      <div className="text-xs">
-        <h3 className="font-title text-sm tracking-tighter">
-          {content.title}
+      <div className="text-sm sm:text-base">
+        <h3 className="mt-1 font-title leading-relaxed tracking-tighter sm:mt-2 sm:text-2xl">
+          {content.productName.pt}
         </h3>
-        <span>{content.stars}</span>
-        <p className="text-darkerGray">
-          {content.subtitle}
+        <div className="my-1 flex">
+          {RatingStars(content.rating, content.id, idWhere)}
+        </div>
+        <p className="text-xs leading-3 text-darkerGray sm:text-base">
+          {content.description.pt}
         </p>
-        <p>R${content.price}</p>
+        <p className="mt-1 italic">R${content.price}</p>
       </div>
-    </div>
+    </>
   );
 }
 

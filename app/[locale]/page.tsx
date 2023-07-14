@@ -11,9 +11,10 @@ export default function Home() {
 
   return (
     <main className="pt-[88px] md:pt-[128px]">
-      <Carousel content={carouselContent}/>
-      <Gallery content={galleryContent}/>
-      <Quote content={quoteContent}/>
+      <Carousel content={carouselContent} />
+      <Gallery content={galleryContent} />
+      <Quote content={quoteContent} />
+      <div></div>
     </main>
   );
 }
