@@ -5,7 +5,7 @@ const MONGODB_URI = process.env.MONGODB_URI as string;
 // parametros?
 
 interface Filters {
-  [key: string]: string | number;
+  [key: string]: any;
 }
 
 async function useQuery(filters: Filters) {
