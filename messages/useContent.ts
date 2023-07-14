@@ -418,43 +418,6 @@ export function useContent() {
         },
       ],
       filters: {
-        sorted: {
-          title: t('productsPage.filters.sorted.title'),
-          options: [
-            {
-              label: t(
-                'productsPage.filters.sorted.options.0.label'
-              ),
-              value: t(
-                'productsPage.filters.sorted.options.0.value'
-              ),
-            },
-            {
-              label: t(
-                'productsPage.filters.sorted.options.1.label'
-              ),
-              value: t(
-                'productsPage.filters.sorted.options.1.value'
-              ),
-            },
-            {
-              label: t(
-                'productsPage.filters.sorted.options.2.label'
-              ),
-              value: t(
-                'productsPage.filters.sorted.options.2.value'
-              ),
-            },
-            {
-              label: t(
-                'productsPage.filters.sorted.options.3.label'
-              ),
-              value: t(
-                'productsPage.filters.sorted.options.3.value'
-              ),
-            },
-          ],
-        },
         category: {
           title: t('productsPage.filters.category.title'),
           options: [
@@ -815,13 +778,6 @@ export interface ProductsProps {
     bestSeller: string;
   }[];
   filters: {
-    sorted: {
-      title: string;
-      options: {
-        label: string;
-        value: string;
-      }[];
-    };
     category: {
       title: string;
       options: {

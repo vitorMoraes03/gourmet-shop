@@ -334,29 +334,8 @@
         }
       ],
       "filters": {
-        "sorted": {
-          "title": "Lorem ipsum",
-          "options": [
-            {
-              "label": "Best Sellers",
-              "value": "bestSeller"
-            },
-            {
-              "label": "Lowest Price",
-              "value": "price"
-            },
-            {
-              "label": "Highest Price",
-              "value": "price"
-            },
-            {
-              "label": "Recommended",
-              "value": "recommended"
-            }
-          ]
-        },
         "category": {
-          "title": "Lorem ipsum",
+          "title": "Sections",
           "options": [
             {
               "label": "Wines",
@@ -385,7 +364,7 @@
           ]
         },
         "country": {
-          "title": "Lorem ipsum",
+          "title": "Country",
           "options": [
             {
               "label": "Brazil",
