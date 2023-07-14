@@ -4,11 +4,11 @@ const MONGODB_URI = process.env.MONGODB_URI as string;
 
 // parametros?
 
-interface Filters {
+export interface FiltersInterface {
   [key: string]: any;
 }
 
-async function useQuery(filters: Filters) {
+async function useQuery(filters: FiltersInterface) {
   const client = await MongoClient.connect(MONGODB_URI);
   const db = client.db();
   const contactCollection = db.collection('products');

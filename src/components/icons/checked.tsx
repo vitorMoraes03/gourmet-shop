@@ -4,8 +4,8 @@ function CheckedIcon({ styles }: { styles?: string }) {
       xmlns="http://www.w3.org/2000/svg"
       className={`ionicon ${styles}`}
       viewBox="0 0 512 512"
-      width={10}
-      height={10}
+      width={12}
+      height={12}
     >
       <path
         fill="none"

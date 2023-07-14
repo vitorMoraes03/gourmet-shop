@@ -1,4 +1,3 @@
-import CheckedIcon from '../icons/checked';
 import ListItem from './listItem';
 
 export interface FilterProps {
@@ -27,7 +26,7 @@ export interface FilterProps {
 
 function Filter({ content }: { content: FilterProps }) {
   return (
-    <div className="text-xs">
+    <div className="text-base">
       {Object.keys(content).map((key, index) => {
         const validKey = key as keyof FilterProps;
         const length = Object.keys(content).length;
@@ -49,8 +48,8 @@ function Filter({ content }: { content: FilterProps }) {
                   return (
                     <ListItem
                       item={item}
-                      index={index}
-                      key={`${key}-${index}`}
+                      category={validKey}
+                      key={`${validKey}-${index}`}
                     />
                   );
                 }

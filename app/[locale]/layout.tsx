@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation';
 import { useContent } from '../../messages/useContent';
 import HeaderScreenSelector from '@/components/header/headerSelector';
 import Footer from '@/components/footer';
+import { FilterProvider } from '@/contexts/filter';
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -52,10 +53,12 @@ export default function RootLayout({
         className={`${noto.variable} ${cormorant.variable} 
         ${bodoni.variable} relative tracking-tight text-black`}
       >
-        <div id="portal"></div>
-        <HeaderScreenSelector headerContent={header} />
-        {children}
-        {/* <Footer content={footer} /> */}
+        <FilterProvider>
+          <div id="portal"></div>
+          <HeaderScreenSelector headerContent={header} />
+          {children}
+          {/* <Footer content={footer} /> */}
+        </FilterProvider>
       </body>
     </html>
   );
