@@ -339,11 +339,11 @@
           "options": [
             {
               "label": "Vinhos",
-              "value": "Wines"
+              "value": "Wine"
             },
             {
               "label": "Cervejas",
-              "value": "Beers"
+              "value": "Beer"
             },
             {
               "label": "Conservas",
@@ -351,7 +351,7 @@
             },
             {
               "label": "Azeites",
-              "value": "Olive oil"
+              "value": "OliveOil"
             },
             {
               "label": "Cafés",

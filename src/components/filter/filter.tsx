@@ -1,13 +1,6 @@
 import ListItem from './listItem';
 
 export interface FilterProps {
-  sorted: {
-    title: string;
-    options: {
-      label: string;
-      value: string;
-    }[];
-  };
   category: {
     title: string;
     options: {

@@ -22,11 +22,14 @@ function ListItem({
           (filter) => filter[category] !== item.value
         )
       );
-      console.log('filters', filters);
+      // console.log('filters', filters);
       return;
     }
-    setFilters([...filters, { [category]: item.value }]);
-    console.log('filters', filters);
+    setFilters([
+      ...filters,
+      { [category + '.en']: item.value },
+    ]);
+    // console.log('filters', filters);
   }, [checked]);
 
   return (
