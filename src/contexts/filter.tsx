@@ -5,8 +5,8 @@ import { useState } from 'react';
 import { FiltersInterface } from '@/utils/useQuery';
 
 export const FilterContext = React.createContext({
-  filters: [] as FiltersInterface[],
-  setFilters: (value: FiltersInterface[]) => {},
+  filters: {} as FiltersInterface,
+  setFilters: (value: FiltersInterface) => {},
 });
 
 interface FilterProviderProps {
@@ -17,8 +17,8 @@ export function FilterProvider({
   children,
 }: FilterProviderProps) {
   const [filters, setFilters] = useState<
-    FiltersInterface[]
-  >([]);
+    FiltersInterface
+  >({});
 
   return (
     <FilterContext.Provider value={{ filters, setFilters }}>

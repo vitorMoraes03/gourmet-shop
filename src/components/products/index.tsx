@@ -34,12 +34,12 @@ function ProductsPage({
 
   useEffect(() => {
     console.log('filters', filters);
-    const fetchData = async () => {
-      const promise = queryFunction(filters);
-      const resolve: ProductInterface[] | null = await promise;
-      setCurrentProducts(resolve);
-    };
-    fetchData();
+    // const fetchData = async () => {
+    //   const promise = queryFunction(filters);
+    //   const resolve: ProductInterface[] | null = await promise;
+    //   setCurrentProducts(resolve);
+    // };
+    // fetchData();
   }, [filters]);
 
   return (

@@ -4,15 +4,15 @@ import { ProductInterface } from './useFetchedData';
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
 export interface FiltersInterface {
-  [key: string]: string[];
+  [key: string]: any;
 }
 
 async function useQuery(
-  filters: FiltersInterface[]
-): Promise<ProductInterface[] | null> {
+  filters: FiltersInterface
+): Promise<ProductInterface | null> {
   'use server';
 
-  if (filters.length === 0) return null;
+  if (Object.keys(filters).length === 0) return null;
 
   // temos que implementar uma lógica que vai pegar valores com a mesma chave
   // e aplicar isso: 'country.pt': { $in: ['Itália', 'França']},
@@ -24,15 +24,15 @@ async function useQuery(
 
   // essa fn, transforma um array de objetos e um único objeto separado por virgulas
   // etapa final
-  const uniqueFilters = filters.reduce((acc, obj) => {
-    return { ...acc, ...obj };
-  });
+  // const uniqueFilters = filters.reduce((acc, obj) => {
+  //   return { ...acc, ...obj };
+  // });
 
   const client = await MongoClient.connect(MONGODB_URI);
   const db = client.db();
   const products = await db
     .collection('products')
-    .find(uniqueFilters)
+    .find(filters)
     .toArray();
   client.close();
 
@@ -41,7 +41,8 @@ async function useQuery(
     return { id: _id.toString(), ...rest };
   });
 
-  return productArray as ProductInterface[];
+  // return productArray as ProductInterface[];
+  return null;
 }
 
 export default useQuery;

@@ -1,6 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from 'react';
 import CheckedIcon from '../icons/checked';
 import { FilterContext } from '@/contexts/filter';
+import { FiltersInterface } from '@/utils/useQuery';
 
 function ListItem({
   item,
@@ -15,26 +17,39 @@ function ListItem({
   const [checked, setChecked] = useState(false);
   const { filters, setFilters } = useContext(FilterContext);
 
-  // se nao for checkado, remover do filters
-  // se for checkado, adicionar ao array de filter da categoria
-
-  // primeiro adicao basica
-  // adicao multiplos itens
-
-  // fn check if already exist
-  // filter.key comparado com category+.en
-
   useEffect(() => {
+    const categoryKey = category + '.en';
+
+    function currentValues(prev: FiltersInterface) {
+      return prev[categoryKey] || [];
+    }
+
     if (!checked) {
+      setFilters((prevFilters: FiltersInterface) => {
+        const updatedValues = currentValues(
+          prevFilters
+        ).filter((value: string) => value !== item.value);
+
+        return {
+          ...prevFilters,
+          [categoryKey]: updatedValues,
+        };
+      });
       return;
     }
 
-    const keys = filters.map((filter) => Object.keys(filter)[0]);
+    setFilters((prevFilters: FiltersInterface) => {
+      const categoryKey = category + '.en';
+      const updatedValues = [
+        ...currentValues(prevFilters),
+        item.value,
+      ];
 
-    setFilters([
-      ...filters,
-      { [category + '.en']: [item.value] },
-    ]);
+      return {
+        ...prevFilters,
+        [categoryKey]: updatedValues,
+      };
+    });
   }, [checked]);
 
   return (
