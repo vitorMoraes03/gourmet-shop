@@ -4,7 +4,7 @@ import { ProductInterface } from './useFetchedData';
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
 export interface FiltersInterface {
-  [key: string]: any;
+  [key: string]: string[];
 }
 
 async function useQuery(

@@ -15,21 +15,19 @@ function ListItem({
   const [checked, setChecked] = useState(false);
   const { filters, setFilters } = useContext(FilterContext);
 
+  // se nao for checkado, remover do filters
+  // se for checkado, adicionar ao array de filter da categoria
+
+  // primeiro adicao basica
+
   useEffect(() => {
     if (!checked) {
-      setFilters(
-        filters.filter(
-          (filter) => filter[category] !== item.value
-        )
-      );
-      // console.log('filters', filters);
       return;
     }
     setFilters([
       ...filters,
-      { [category + '.en']: item.value },
+      { [category + '.en']: [item.value] },
     ]);
-    // console.log('filters', filters);
   }, [checked]);
 
   return (
