@@ -19,11 +19,18 @@ function ListItem({
   // se for checkado, adicionar ao array de filter da categoria
 
   // primeiro adicao basica
+  // adicao multiplos itens
+
+  // fn check if already exist
+  // filter.key comparado com category+.en
 
   useEffect(() => {
     if (!checked) {
       return;
     }
+
+    const keys = filters.map((filter) => Object.keys(filter)[0]);
+
     setFilters([
       ...filters,
       { [category + '.en']: [item.value] },
