@@ -32,13 +32,15 @@ function ProductsPage({
     ProductInterface[] | null
   >([]);
 
+  // implementar o 'country.pt': { $in: ['Itália', 'França']}
+
   useEffect(() => {
     console.log('filters', filters);
     const fetchData = async () => {
       const promise = queryFunction(filters);
       const resolve: ProductInterface[] | null = await promise;
       setCurrentProducts(resolve);
-      console.log('resolve', resolve);
+      // console.log('resolve', resolve);
     };
     fetchData();
   }, [filters]);

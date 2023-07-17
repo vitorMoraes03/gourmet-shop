@@ -14,6 +14,16 @@ async function useQuery(
 
   if (filters.length === 0) return null;
 
+  // temos que implementar uma lógica que vai pegar valores com a mesma chave
+  // e aplicar isso: 'country.pt': { $in: ['Itália', 'França']},
+  // antes queremos um array de objetos na mesma.... mas com essa modificacao...
+
+  // {'country.pt': 'Itália'}, {'country.pt': 'França'}
+  // {'country.pt': ['Itália', 'França']}
+  // 'country.pt': { $in: ['Itália', 'França']},
+
+  // essa fn, transforma um array de objetos e um único objeto separado por virgulas
+  // etapa final
   const uniqueFilters = filters.reduce((acc, obj) => {
     return { ...acc, ...obj };
   });
