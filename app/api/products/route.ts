@@ -26,11 +26,13 @@ export interface ProductInterface {
   }
 
 export async function POST(req: NextRequest) {
-  const data: ProductInterface = await req.json();
+  const data: ProductInterface[] = await req.json();
+  // const data: ProductInterface = await req.json();
   const client = await MongoClient.connect(MONGODB_URI);
   const db = client.db();
   const contactCollection = db.collection('products');
-  await contactCollection.insertOne(data);
+  await contactCollection.insertMany(data);
+  // await contactCollection.insertOne(data);
   client.close();
 
   return new Response(
