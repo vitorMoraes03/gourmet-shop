@@ -1,4 +1,4 @@
-import { ProductInterface } from '@/utils/useFetchedData';
+import { ProductInterface } from '@/utils/useFirstFetch';
 import Image from 'next/image';
 import Star from '../icons/star';
 import HalfStar from '../icons/halfStar';

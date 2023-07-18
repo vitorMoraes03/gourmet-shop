@@ -1,9 +1,11 @@
 import ProductsPage from '@/components/products';
 import { useContent } from '../../../messages/useContent';
-import useFetchedData, {
+import useFirstFetch, {
   ProductInterface,
-} from '@/utils/useFetchedData';
-import useQuery, { FiltersInterface } from '@/utils/useQuery';
+} from '@/utils/useFirstFetch';
+import useQuery, {
+  FiltersInterface,
+} from '@/utils/useQuery';
 
 function ProductPageWithContent({
   data,
@@ -11,26 +13,27 @@ function ProductPageWithContent({
 }: {
   data: string;
   queryFunction: (
-    filters: FiltersInterface[]
-  ) => Promise<ProductInterface[] | null>;
+    filters: FiltersInterface
+  ) => Promise<ProductInterface[] | null | void>;
 }) {
   const { productsPage } = useContent();
   return (
-    <ProductsPage content={productsPage} data={data} queryFunction={queryFunction} />
+    <ProductsPage
+      content={productsPage}
+      data={data}
+      queryFunction={queryFunction}
+    />
   );
 }
 
 async function Product() {
-  // const queryObj = {
-  //   'category.pt': 'Vinho',
-  //   'country.pt': { $in: ['Itália', 'França']},
-  //   price: { $gt: 70, $lt: 100 },
-  // };
+  const data = await useFirstFetch();
 
-  const data = await useFetchedData();
-  // const query = await useQuery(queryObj);
   return (
-    <ProductPageWithContent data={JSON.stringify(data)} queryFunction={useQuery} />
+    <ProductPageWithContent
+      data={JSON.stringify(data)}
+      queryFunction={useQuery}
+    />
   );
 }
 

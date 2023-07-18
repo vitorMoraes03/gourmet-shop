@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb';
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
-async function useFetchedData() {
+async function useFirstFetch() {
   const client = await MongoClient.connect(MONGODB_URI);
   const db = client.db();
   const products = await db
@@ -50,4 +50,4 @@ export interface ProductInterface {
   };
 }
 
-export default useFetchedData;
+export default useFirstFetch;

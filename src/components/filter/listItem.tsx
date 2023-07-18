@@ -18,6 +18,7 @@ function ListItem({
   const { filters, setFilters } = useContext(FilterContext);
 
   useEffect(() => {
+    console.log('filters', filters);
     const categoryKey = category + '.en';
 
     function currentValues(prev: FiltersInterface) {

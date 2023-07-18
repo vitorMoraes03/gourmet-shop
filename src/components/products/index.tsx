@@ -10,8 +10,11 @@ import Title from './title';
 import useScreenSmallerThen from '@/utils/useScreenSize';
 import { useEffect, useContext, useState } from 'react';
 import { FilterContext } from '@/contexts/filter';
-import { ProductInterface } from '@/utils/useFetchedData';
-import { FiltersInterface } from '@/utils/useQuery';
+import { ProductInterface } from '@/utils/useFirstFetch';
+import {
+  FiltersInterface,
+  QueryResult,
+} from '@/utils/useQuery';
 
 function ProductsPage({
   content,
@@ -21,26 +24,32 @@ function ProductsPage({
   content: ProductsProps;
   data: string;
   queryFunction: (
-    filters: FiltersInterface[]
-  ) => Promise<ProductInterface[] | null>;
+    filters: FiltersInterface
+  ) => Promise<QueryResult>;
 }) {
   const isScreenSmallerThen = useScreenSmallerThen({
     width: 640,
   });
-  const { filters, setFilters } = useContext(FilterContext);
+  const { filters } = useContext(FilterContext);
   const [currentProducts, setCurrentProducts] = useState<
-    ProductInterface[] | null
+    ProductInterface[]
   >([]);
 
   useEffect(() => {
     console.log('filters', filters);
-    // const fetchData = async () => {
-    //   const promise = queryFunction(filters);
-    //   const resolve: ProductInterface[] | null = await promise;
-    //   setCurrentProducts(resolve);
-    // };
-    // fetchData();
+    const fetchData = async () => {
+      const promise = queryFunction(filters);
+      const { products }: QueryResult =
+        await promise;
+      if (products === null) return;
+      setCurrentProducts(products);
+    };
+    fetchData();
   }, [filters]);
+
+  useEffect(() => {
+    setCurrentProducts(JSON.parse(data));
+  }, []);
 
   return (
     <section className="px-4 py-32 md:px-12 md:py-40">
@@ -60,7 +69,7 @@ function ProductsPage({
         {!isScreenSmallerThen && (
           <Filter content={content.filters} />
         )}
-        <ListProducts fetchedContent={data} />
+        <ListProducts fetchedContent={currentProducts} />
       </div>
     </section>
   );
