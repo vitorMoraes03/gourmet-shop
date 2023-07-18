@@ -8,6 +8,8 @@ export interface FiltersInterface {
 }
 
 export interface QueryResult {
+  map(arg0: (product: any, index: any) => import("react").JSX.Element): import("react").ReactNode;
+  length: number;
   products: ProductInterface[] | null;
 }
 
