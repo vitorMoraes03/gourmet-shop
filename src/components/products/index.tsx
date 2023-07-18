@@ -36,13 +36,22 @@ function ProductsPage({
   >([]);
 
   useEffect(() => {
+    if (
+      Object.values(filters).every(
+        (value) => value.length === 0
+      )
+    ) {
+      setCurrentProducts(JSON.parse(data));
+      return;
+    }
+
     const fetchData = async () => {
       const promise = queryFunction(filters);
-      const { products }: QueryResult =
-        await promise;
+      const { products }: QueryResult = await promise;
       if (products === null) return;
       setCurrentProducts(products);
     };
+
     fetchData();
   }, [filters]);
 

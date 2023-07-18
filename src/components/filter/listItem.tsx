@@ -18,7 +18,6 @@ function ListItem({
   const { filters, setFilters } = useContext(FilterContext);
 
   useEffect(() => {
-    console.log('filters', filters);
     const categoryKey = category + '.en';
 
     function currentValues(prev: FiltersInterface) {
@@ -30,6 +29,11 @@ function ListItem({
         const updatedValues = currentValues(
           prevFilters
         ).filter((value: string) => value !== item.value);
+
+        if (updatedValues.length === 0) {
+          const { [categoryKey]: _, ...rest } = prevFilters;
+          return rest;
+        }
 
         return {
           ...prevFilters,

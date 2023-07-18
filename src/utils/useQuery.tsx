@@ -42,10 +42,12 @@ async function useQuery(
       .collection('products')
       .find(queryObj)
       .toArray();
-    console.log('products', products, typeof products);
     client.close();
 
-    const productArray = productIdConversion(products);
+    const productArray = products.map((product) => {
+      const { _id, ...rest } = product;
+      return { id: _id.toString(), ...rest } as ProductInterface;
+    });
 
     return { products: productArray };
   } catch (error) {
@@ -54,14 +56,13 @@ async function useQuery(
   }
 }
 
-export function productIdConversion(product: any) {
-  const { _id, ...rest } = product;
-  if (!_id)
-    throw new Error('productMapper: _id is undefined');
-  return {
-    id: _id.toString(),
-    ...rest,
-  } as ProductInterface[];
-}
+// export function productIdConversion(product: any) {
+//   const { _id, ...rest } = product;
+//   console.log('_id', _id);
+//   return {
+//     id: _id.toString(),
+//     ...rest,
+//   } as ProductInterface[];
+// }
 
 export default useQuery;
