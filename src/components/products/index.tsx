@@ -36,7 +36,6 @@ function ProductsPage({
   >([]);
 
   useEffect(() => {
-    console.log('filters', filters);
     const fetchData = async () => {
       const promise = queryFunction(filters);
       const { products }: QueryResult =

@@ -27,7 +27,7 @@ function Card({
           {content.productName.pt}
         </h3>
         <div className="my-1 flex">
-          {RatingStars(content.rating, content.id, idWhere)}
+          {RatingStars(content.rating, content.id!, idWhere)}
         </div>
         <p className="text-xs leading-3 text-darkerGray sm:text-base">
           {content.description.pt}
