@@ -1,5 +1,5 @@
 import { MongoClient, Filter } from 'mongodb';
-import { ProductInterface } from './useFirstFetch';
+import { ProductInterface } from '@/components/products';
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
 

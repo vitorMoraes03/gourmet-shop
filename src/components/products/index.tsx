@@ -10,11 +10,42 @@ import Title from './title';
 import useScreenSmallerThen from '@/utils/useScreenSize';
 import { useEffect, useContext, useState } from 'react';
 import { FilterContext } from '@/contexts/filter';
-import { ProductInterface } from '@/utils/useFirstFetch';
 import {
   FiltersInterface,
   QueryResult,
 } from '@/utils/useQuery';
+
+export interface ProductInterface {
+  id?: string;
+  _id?: string;
+  productName: {
+    pt: string;
+    en: string;
+  };
+  price: number;
+  rating: number;
+  country: {
+    pt: string;
+    en: string;
+  };
+  category: {
+    pt: string;
+    en: string;
+  };
+  description: {
+    pt: string;
+    en: string;
+  };
+  image: {
+    url: string;
+    alt: {
+      pt: string;
+      en: string;
+    };
+    width: number;
+    height: number;
+  };
+}
 
 function ProductsPage({
   content,
@@ -37,7 +68,16 @@ function ProductsPage({
     ProductInterface[]
   >([]);
 
+  // poderiamos no contexto de filter adicionar algo true/false para verificar se 
+  // modal esta aberto ou nao
+  // se for false segue esse comportamento já estabelecido
+  // se for true, precisa estar off para acontecer
+  // logo btn troca isso
+  // trocar true e false?
+
   useEffect(() => {
+    console.log('filters', filters);
+    console.log('sortOptions', sortOptions);
     const fetchData = async () => {
       const promise = queryFunction(filters, sortOptions);
       const { products }: QueryResult = await promise;
@@ -53,7 +93,7 @@ function ProductsPage({
   }, []);
 
   return (
-    <section className="px-4 py-32 md:px-12 md:py-40">
+    <section className="px-4 sm:px-10 xl:px-16 py-32 md:py-40">
       <Title
         title={content.title}
         subtitle={content.subtitle}

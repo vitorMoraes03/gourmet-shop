@@ -3,6 +3,7 @@ import CloseIcon from '../icons/close';
 import Portal from '../portal';
 import ListItem from './listItem';
 import { SelectorProps } from './mobileSelector';
+import { divModalStyle } from './mobileModalFilter';
 
 function ModalSort({
   content,
@@ -21,16 +22,17 @@ function ModalSort({
   useEffect(() => {
     if (sortModalOpen) {
       setSortModalTransform('translate-y-0');
+      document.body.style.overflowY = 'hidden';
       return;
     }
     setSortModalTransform('translate-y-full');
+    document.body.style.overflowY = 'hidden';
   }, [sortModalOpen]);
 
   return (
     <Portal modalState={sortModalOpen}>
       <div
-        className={`h-screen bg-white px-3 py-4 text-xs
-      transition-transform duration-500 ${sortModalTransform}`}
+        className={`${divModalStyle} ${sortModalTransform}`}
       >
         <div className="mb-1 flex justify-end">
           <button onClick={() => setSortModalOpen(false)}>
@@ -47,7 +49,7 @@ function ModalSort({
                 <ListItem
                   item={option}
                   key={`${index}-${option.value}}`}
-                  index={index}
+                  category='sort'
                 />
               );
             })}

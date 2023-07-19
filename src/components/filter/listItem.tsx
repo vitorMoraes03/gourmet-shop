@@ -62,12 +62,13 @@ function ListItem({
       onClick={() => {
         setChecked(!checked);
       }}
+      className='-mb-3'
     >
       <input
         value={item.value}
         type="checkbox"
         name={item.value}
-        style={{ opacity: 0 }}
+        style={{ opacity: 0, height: 0, width: 0 }}
       />
       <label
         className="flex cursor-pointer items-center gap-1 font-light"

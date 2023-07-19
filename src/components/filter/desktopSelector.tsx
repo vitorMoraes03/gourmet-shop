@@ -32,7 +32,7 @@ function DesktopSelector({
   }, [currentOption]);
 
   return (
-    <div className="flex items-center justify-end gap-2 text-[9px] font-bold uppercase tracking-normal">
+    <div className="flex items-center justify-end gap-2 text-[9px] md:text-xs font-bold uppercase tracking-normal">
       <div>
         <p>{content.desktop}</p>
       </div>

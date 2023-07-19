@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -13,10 +15,8 @@ module.exports = {
         text: ['var(--font-cormorant)', 'sans-serif'],
       },
       screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1440px',
+        'xs': '475px',
+        ...defaultTheme.screens,
       },
       colors: {
         green: 'rgb(21 128 61)',

@@ -4,6 +4,9 @@ import Portal from '../portal';
 import Filter, { FilterProps } from './filter';
 import { SelectorProps } from './mobileSelector';
 
+export const divModalStyle =
+  'h-screen bg-white px-3 py-4 transition-transform duration-500 overflow-y-auto';
+
 function ModalFilter({
   content,
   filterContent,
@@ -22,16 +25,17 @@ function ModalFilter({
   useEffect(() => {
     if (modalOpen) {
       setModalTransform('translate-y-0');
+      document.body.style.overflowY = 'hidden';
       return;
     }
     setModalTransform('translate-y-full');
+    document.body.style.overflowY = 'hidden';
   }, [modalOpen]);
 
   return (
     <Portal modalState={modalOpen}>
       <div
-        className={`h-screen bg-white px-3 py-4
-      transition-transform duration-500 ${modalTransform}`}
+        className={`${divModalStyle} ${modalTransform}`}
       >
         <div className="mb-1 flex justify-end">
           <button onClick={() => setModalOpen(false)}>

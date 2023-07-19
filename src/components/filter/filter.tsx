@@ -19,7 +19,7 @@ export interface FilterProps {
 
 function Filter({ content }: { content: FilterProps }) {
   return (
-    <div className="text-base">
+    <div className="text-lg lg:pl-4">
       {Object.keys(content).map((key, index) => {
         const validKey = key as keyof FilterProps;
         const length = Object.keys(content).length;
@@ -28,11 +28,11 @@ function Filter({ content }: { content: FilterProps }) {
             key={`filter-${index}`}
             className="mb-5 tracking-tight"
           >
-            <h3 className="font-semibold">
+            <h3 className="text-xl font-semibold">
               {content[validKey].title}
             </h3>
             <ul
-              className={`w-fit border-b border-gray pb-4 sm:border-none sm:pb-0 ${
+              className={`mb-12 w-fit border-b border-gray sm:border-none sm:pb-0 ${
                 index === length - 1 && 'border-b-0'
               }`}
             >

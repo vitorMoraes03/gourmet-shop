@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Card from './card';
-import { ProductInterface } from '@/utils/useFirstFetch';
+import { ProductInterface } from '.';
 
 function ListProducts({
   fetchedContent,
@@ -25,12 +25,9 @@ function ListProducts({
     setTotalPages(pageArray);
   }, [fetchedContent]);
 
-  const buttonStyles =
-    'black-button rounded-full px-3 py-3';
-
   return (
     <div className="w-full py-2 sm:ml-auto sm:w-3/4">
-      <ul className="grid grid-cols-2 gap-2 sm:gap-4 md:grid-cols-3">
+      <ul className="grid grid-cols-1 gap-2 xs:grid-cols-2 sm:gap-4 lg:grid-cols-3">
         {currentContent.map((product, index) => {
           if (
             index >=
@@ -38,7 +35,10 @@ function ListProducts({
             index < totalItems * currentPage
           ) {
             return (
-              <li key={`${product.productName}-${index}`}>
+              <li
+                key={`${product.productName}-${index}`}
+                className="h-[450px] sm:h-[650px] md:h-[700px] lg:h-[750px] xl:h-[600px] 2xl:h-[500px]"
+              >
                 <Card
                   content={product}
                   idWhere={'listProducts'}
@@ -49,13 +49,21 @@ function ListProducts({
           return null;
         })}
       </ul>
-      <div className="flex justify-center gap-2">
+      <div className="mt-8 flex justify-center gap-2">
         {totalPages?.map((page) => {
           return (
             <button
-              className={`${buttonStyles} black-button`}
-              onClick={() => setCurrentPage(page)}
-              key={`btnLoadMore-${page}`}
+              className={`rounded-full bg-black px-2 py-1 text-xs 
+              uppercase text-white hover:opacity-70 sm:px-3 sm:text-base md:text-lg  
+              ${
+                page === currentPage
+                  ? 'cursor-default bg-gray'
+                  : ''
+              }`}
+              onClick={() => {
+                setCurrentPage(page);
+              }}
+              key={`btnPage-${page}`}
             >
               {page}
             </button>
