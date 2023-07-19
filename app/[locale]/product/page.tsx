@@ -1,10 +1,8 @@
 import ProductsPage from '@/components/products';
 import { useContent } from '../../../messages/useContent';
-import useFirstFetch, {
-  ProductInterface,
-} from '@/utils/useFirstFetch';
 import useQuery, {
   FiltersInterface,
+  QueryResult,
 } from '@/utils/useQuery';
 
 function ProductPageWithContent({
@@ -13,8 +11,9 @@ function ProductPageWithContent({
 }: {
   data: string;
   queryFunction: (
-    filters: FiltersInterface
-  ) => Promise<ProductInterface[] | null | void>;
+    filters: FiltersInterface,
+    sortOptions: {}
+  ) => Promise<QueryResult>;
 }) {
   const { productsPage } = useContent();
   return (
@@ -27,11 +26,11 @@ function ProductPageWithContent({
 }
 
 async function Product() {
-  const data = await useFirstFetch();
+  const { products } = await useQuery({}, {});
 
   return (
     <ProductPageWithContent
-      data={JSON.stringify(data)}
+      data={JSON.stringify(products)}
       queryFunction={useQuery}
     />
   );

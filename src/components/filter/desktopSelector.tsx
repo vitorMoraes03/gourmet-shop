@@ -1,11 +1,36 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useContext, useEffect, useState } from 'react';
 import ArrorDownIcon from '../icons/arrowdown';
 import { SelectorProps } from './mobileSelector';
+import { FilterContext } from '@/contexts/filter';
 
 function DesktopSelector({
   content,
 }: {
   content: SelectorProps;
 }) {
+  const { sortOptions, setSortOptions } = useContext(FilterContext);
+  const [currentOption, setCurrentOption] = useState(
+    content.options[0].value
+  );
+
+  useEffect(() => {
+    switch (currentOption) {
+      case 'highestPrice':
+        setSortOptions({price: -1})
+        break;
+      case 'lowestPrice':
+        setSortOptions({price: 1})
+        break;
+      case 'bestSeller':
+        setSortOptions({rating: -1})
+        break;
+      case 'recommended':
+        setSortOptions({_id: -1})
+        break;
+    }
+  }, [currentOption]);
+
   return (
     <div className="flex items-center justify-end gap-2 text-[9px] font-bold uppercase tracking-normal">
       <div>
@@ -17,6 +42,7 @@ function DesktopSelector({
           style={{
             appearance: 'none',
           }}
+          onChange={(e) => setCurrentOption(e.target.value)}
         >
           {content.options.map((option) => (
             <option

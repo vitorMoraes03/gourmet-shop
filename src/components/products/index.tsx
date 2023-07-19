@@ -24,36 +24,29 @@ function ProductsPage({
   content: ProductsProps;
   data: string;
   queryFunction: (
-    filters: FiltersInterface
+    filters: FiltersInterface,
+    sortOptions: {}
   ) => Promise<QueryResult>;
 }) {
   const isScreenSmallerThen = useScreenSmallerThen({
     width: 640,
   });
-  const { filters } = useContext(FilterContext);
+  const { filters, sortOptions } =
+    useContext(FilterContext);
   const [currentProducts, setCurrentProducts] = useState<
     ProductInterface[]
   >([]);
 
   useEffect(() => {
-    if (
-      Object.values(filters).every(
-        (value) => value.length === 0
-      )
-    ) {
-      setCurrentProducts(JSON.parse(data));
-      return;
-    }
-
     const fetchData = async () => {
-      const promise = queryFunction(filters);
+      const promise = queryFunction(filters, sortOptions);
       const { products }: QueryResult = await promise;
       if (products === null) return;
       setCurrentProducts(products);
     };
 
     fetchData();
-  }, [filters]);
+  }, [filters, sortOptions]);
 
   useEffect(() => {
     setCurrentProducts(JSON.parse(data));
