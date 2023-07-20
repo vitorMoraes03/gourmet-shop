@@ -7,12 +7,14 @@ import { FiltersInterface } from '@/utils/useQuery';
 function ListItem({
   item,
   category,
+  setOptions,
 }: {
   item: {
     label: string;
     value: string;
   };
   category: string;
+  setOptions?: (value: string) => void;
 }) {
   const [checked, setChecked] = useState(false);
   const { filters, setFilters } = useContext(FilterContext);
@@ -62,7 +64,7 @@ function ListItem({
       onClick={() => {
         setChecked(!checked);
       }}
-      className='-mb-3'
+      className="-mb-3"
     >
       <input
         value={item.value}
@@ -73,6 +75,7 @@ function ListItem({
       <label
         className="flex cursor-pointer items-center gap-1 font-light"
         htmlFor={item.value}
+        onClick={() => setOptions && setOptions(item.value)}
       >
         <div
           className={`h-5 w-5 rounded-full ${

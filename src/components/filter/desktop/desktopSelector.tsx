@@ -1,38 +1,41 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from 'react';
-import ArrorDownIcon from '../icons/arrowdown';
-import { SelectorProps } from './mobileSelector';
+import ArrorDownIcon from '../../icons/arrowdown';
+import { SelectorProps } from '../mobile/mobileSelector';
 import { FilterContext } from '@/contexts/filter';
 
 function DesktopSelector({
   content,
+  setOptions,
 }: {
   content: SelectorProps;
+  setOptions: (value: string) => void;
 }) {
-  const { sortOptions, setSortOptions } = useContext(FilterContext);
-  const [currentOption, setCurrentOption] = useState(
-    content.options[0].value
-  );
+  // const { sortOptions, setSortOptions } =
+  //   useContext(FilterContext);
+  // const [currentOption, setCurrentOption] = useState(
+  //   content.options[0].value
+  // );
 
-  useEffect(() => {
-    switch (currentOption) {
-      case 'highestPrice':
-        setSortOptions({price: -1})
-        break;
-      case 'lowestPrice':
-        setSortOptions({price: 1})
-        break;
-      case 'bestSeller':
-        setSortOptions({rating: -1})
-        break;
-      case 'recommended':
-        setSortOptions({_id: -1})
-        break;
-    }
-  }, [currentOption]);
+  // useEffect(() => {
+  //   switch (currentOption) {
+  //     case 'highestPrice':
+  //       setSortOptions({ price: -1 });
+  //       break;
+  //     case 'lowestPrice':
+  //       setSortOptions({ price: 1 });
+  //       break;
+  //     case 'bestSeller':
+  //       setSortOptions({ rating: -1 });
+  //       break;
+  //     case 'recommended':
+  //       setSortOptions({ _id: -1 });
+  //       break;
+  //   }
+  // }, [currentOption]);
 
   return (
-    <div className="flex items-center justify-end gap-2 text-[9px] md:text-xs font-bold uppercase tracking-normal">
+    <div className="flex items-center justify-end gap-2 text-[9px] font-bold uppercase tracking-normal md:text-xs">
       <div>
         <p>{content.desktop}</p>
       </div>
@@ -42,7 +45,7 @@ function DesktopSelector({
           style={{
             appearance: 'none',
           }}
-          onChange={(e) => setCurrentOption(e.target.value)}
+          onChange={(e) => setOptions(e.target.value)}
         >
           {content.options.map((option) => (
             <option
