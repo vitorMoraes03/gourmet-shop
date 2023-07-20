@@ -62,13 +62,13 @@ function ProductsPage({
   const isScreenSmallerThen = useScreenSmallerThen({
     width: 640,
   });
-  const { filters, sortOptions } =
+  const { filters, sortOptions, mobileFilter } =
     useContext(FilterContext);
   const [currentProducts, setCurrentProducts] = useState<
     ProductInterface[]
   >([]);
 
-  // poderiamos no contexto de filter adicionar algo true/false para verificar se 
+  // poderiamos no contexto de filter adicionar algo true/false para verificar se
   // modal esta aberto ou nao
   // se for false segue esse comportamento já estabelecido
   // se for true, precisa estar off para acontecer
@@ -76,8 +76,8 @@ function ProductsPage({
   // trocar true e false?
 
   useEffect(() => {
-    console.log('filters', filters);
-    console.log('sortOptions', sortOptions);
+    if (mobileFilter) return;
+
     const fetchData = async () => {
       const promise = queryFunction(filters, sortOptions);
       const { products }: QueryResult = await promise;
@@ -93,7 +93,7 @@ function ProductsPage({
   }, []);
 
   return (
-    <section className="px-4 sm:px-10 xl:px-16 py-32 md:py-40">
+    <section className="px-4 py-32 sm:px-10 md:py-40 xl:px-16">
       <Title
         title={content.title}
         subtitle={content.subtitle}

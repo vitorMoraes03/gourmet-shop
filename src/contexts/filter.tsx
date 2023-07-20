@@ -9,6 +9,8 @@ export const FilterContext = React.createContext({
   setFilters: (_: FiltersInterface) => {},
   sortOptions: {} as SortOptionsInterface,
   setSortOptions: (_: SortOptionsInterface) => {},
+  mobileFilter: false,
+  setMobileFilter: (_: boolean) => {},
 });
 
 interface SortOptionsInterface {
@@ -27,6 +29,7 @@ export function FilterProvider({
   );
   const [sortOptions, setSortOptions] =
     useState<SortOptionsInterface>({ rating: -1 });
+  const [mobileFilter, setMobileFilter] = useState(false);
 
   return (
     <FilterContext.Provider
@@ -35,6 +38,8 @@ export function FilterProvider({
         setFilters,
         sortOptions,
         setSortOptions,
+        mobileFilter,
+        setMobileFilter,
       }}
     >
       {children}
