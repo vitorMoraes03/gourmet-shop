@@ -6,6 +6,8 @@ import ModalWrapper from './mobileModalWrapper';
 import IndividualSelector from './individualSelector';
 import { ProductInterface } from '@/components/products';
 import { ProductsProps } from '../../../../messages/useContent';
+import SelectorWrapper from './selectorWrapper';
+import FilterContainer from './filterContainer';
 
 export interface SelectorProps {
   first: string;
@@ -37,17 +39,18 @@ function MobileSelector({
       className="flex justify-center border-y 
     border-y-gray text-[8px] font-bold"
     >
-      <IndividualSelector
-        id="filter"
-        content={content}
+      <SelectorWrapper
+        content={selectorContent}
         setModal={setModalOpen}
         uniqueStyles={'border-r border-r-gray'}
-      />
-      <IndividualSelector
+      >
+        <FilterContainer content={filterContent}/>
+      </SelectorWrapper>
+      {/* <IndividualSelector
         id="sort"
         content={content}
         setModal={setSortModalOpen}
-      />
+      /> */}
       <ModalWrapper
         content={selectorContent}
         modalOpen={modalOpen}
