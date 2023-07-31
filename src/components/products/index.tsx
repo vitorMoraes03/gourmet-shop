@@ -3,7 +3,7 @@
 
 import { ProductsProps } from '../../../messages/useContent';
 import DesktopSelector from '../filter/desktop/desktopSelector';
-import Filter from '../filter/filter';
+import FilterDesktop from '../filter/filter';
 import ListProducts from './listProducts';
 import MobileSelector from '../filter/mobile/mobileSelector';
 import Title from './title';
@@ -109,7 +109,7 @@ function ProductsPage({
       />
       <div className="mt-2 sm:mt-4 sm:flex">
         {!isScreenSmallerThen && (
-          <Filter content={content.filters} />
+          <FilterDesktop content={content.filters} />
         )}
         <ListProducts fetchedContent={currentProducts} />
       </div>

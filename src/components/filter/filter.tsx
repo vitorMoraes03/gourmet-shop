@@ -17,7 +17,7 @@ export interface FilterProps {
   };
 }
 
-function Filter({ content }: { content: FilterProps }) {
+function FilterDesktop({ content }: { content: FilterProps }) {
   return (
     <div className="text-lg lg:pl-4">
       {Object.keys(content).map((key, index) => {
@@ -55,4 +55,4 @@ function Filter({ content }: { content: FilterProps }) {
   );
 }
 
-export default Filter;
+export default FilterDesktop;

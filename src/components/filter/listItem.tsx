@@ -4,6 +4,11 @@ import CheckedIcon from '../icons/checked';
 import { FilterContext } from '@/contexts/filter';
 import { FiltersInterface } from '@/utils/useQuery';
 
+// eu gosto desse ListItem assim
+// mas acho que deveria ter um diferente para o Sort
+// o Sort, ora funciona como um select com aparência de checkbox, ora funciona
+// como um select padrão
+
 function ListItem({
   item,
   category,
