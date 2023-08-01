@@ -8,7 +8,6 @@ function SortModal({
   content: SelectorProps;
   setOptions: (value: string) => void;
 }) {
-
   return (
     <div className="mb-5 tracking-tight">
       <h3 className="text-xl font-semibold">

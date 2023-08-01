@@ -2,6 +2,7 @@
 import { useContext, useEffect, useState } from 'react';
 import CheckedIcon from '../../../icons/checked';
 import { FilterContext } from '@/contexts/filter';
+import { translateSortToString } from '@/utils/translateSort/sortToString';
 
 function SortItem({
   item,
@@ -16,26 +17,8 @@ function SortItem({
   const [checked, setChecked] = useState(false);
   const { sortOptions } = useContext(FilterContext);
 
-  function translateSortOptions(obj: {
-    [key: string]: number;
-  }) {
-    const { price, rating, _id } = obj;
-    if (price === -1) {
-      return 'highestPrice';
-    }
-    if (price === 1) {
-      return 'lowestPrice';
-    }
-    if (rating === -1) {
-      return 'bestSeller';
-    }
-    if (_id === -1) {
-      return 'recommended';
-    }
-  }
-
   useEffect(() => {
-    const translation = translateSortOptions(sortOptions);
+    const translation = translateSortToString(sortOptions);
     if (translation === item.value) {
       setChecked(true);
       return;

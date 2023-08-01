@@ -9,14 +9,29 @@ function PickedFilterTags({
   content: FilterProps;
 }) {
   const { filters } = useContext(FilterContext);
-  const [currentItems, setCurrentItems] = useState<string[]>([]);
-  const options = content.category.options;
+  const [currentItems, setCurrentItems] = useState<
+    string[]
+  >([]);
+  const allOptions = [...content.category.options, ...content.country.options];
+
+  function getAllFilters() {
+    const filterCategory = filters['category.en'];
+    const filterCountry = filters['country.en'];
+    if (filterCategory && filterCountry) {
+      return [...filterCategory, ...filterCountry];
+    }
+    if (filterCategory) {
+      return filterCategory;
+    }
+    if (filterCountry) {
+      return filterCountry;
+    }
+    return [];
+  }
 
   useEffect(() => {
-    console.log('currentItems', currentItems);
-    const [filtersDestructured] = Object.values(filters);
-    options.forEach((element) => {
-      if (filtersDestructured?.includes(element.value)) {
+    allOptions.forEach((element) => {
+      if (getAllFilters().includes(element.value)) {
         setCurrentItems([...currentItems, element.label]);
       }
     });

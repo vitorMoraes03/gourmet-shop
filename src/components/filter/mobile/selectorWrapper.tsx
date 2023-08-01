@@ -1,5 +1,4 @@
 import AddIcon from '@/components/icons/add';
-import { SelectorProps } from '.';
 
 function SelectorWrapper({
   content,
