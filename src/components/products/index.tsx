@@ -2,10 +2,10 @@
 'use client';
 
 import { ProductsProps } from '../../../messages/useContent';
-import DesktopSelector from '../filter/desktop/desktopSelector';
-import FilterDesktop from '../filter/filter';
+import DesktopSelector from '../filter/desktop/desktopSortSelector';
+import FilterDesktop from '../filter/filterList';
 import ListProducts from './listProducts';
-import MobileSelector from '../filter/mobile/mobileSelector';
+import MobileSelector from '../filter/mobile';
 import Title from './title';
 import useScreenSmallerThen from '@/utils/useScreenSize';
 import { useEffect, useContext, useState } from 'react';
@@ -14,7 +14,7 @@ import {
   FiltersInterface,
   QueryResult,
 } from '@/utils/useQuery';
-import FilterSelectors from '../filter/filterSelectors';
+import FilterSelectors from '../filter';
 
 export interface ProductInterface {
   id?: string;

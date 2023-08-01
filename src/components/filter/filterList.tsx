@@ -1,3 +1,4 @@
+import FilterItem from './filterItem';
 import ListItem from './listItem';
 
 export interface FilterProps {
@@ -17,7 +18,7 @@ export interface FilterProps {
   };
 }
 
-function FilterDesktop({ content }: { content: FilterProps }) {
+function FilterList({ content }: { content: FilterProps }) {
   return (
     <div className="text-lg lg:pl-4">
       {Object.keys(content).map((key, index) => {
@@ -39,7 +40,7 @@ function FilterDesktop({ content }: { content: FilterProps }) {
               {content[validKey].options.map(
                 (item, index) => {
                   return (
-                    <ListItem
+                    <FilterItem
                       item={item}
                       category={validKey}
                       key={`${validKey}-${index}`}
@@ -55,4 +56,4 @@ function FilterDesktop({ content }: { content: FilterProps }) {
   );
 }
 
-export default FilterDesktop;
+export default FilterList;

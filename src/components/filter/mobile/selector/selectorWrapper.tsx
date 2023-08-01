@@ -1,5 +1,5 @@
 import AddIcon from '@/components/icons/add';
-import { SelectorProps } from './mobileSelector';
+import { SelectorProps } from '..';
 
 function SelectorWrapper({
   content,
@@ -7,7 +7,7 @@ function SelectorWrapper({
   uniqueStyles,
   children,
 }: {
-  content: SelectorProps;
+  content: string;
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
   uniqueStyles?: string;
   children: React.ReactNode;
@@ -19,7 +19,7 @@ function SelectorWrapper({
         onClick={() => setModal(true)}
       >
         <button className="uppercase tracking-wider">
-          {content.second}
+          {content}
         </button>
         <AddIcon />
       </div>

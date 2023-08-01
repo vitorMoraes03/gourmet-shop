@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from 'react';
 import { ProductsProps } from '../../../messages/useContent';
-import DesktopSelector from './desktop/desktopSelector';
-import MobileSelector from './mobile/mobileSelector';
+import DesktopSortSelector from './desktop/desktopSortSelector';
+import MobileSelector from './mobile';
 import { FilterContext } from '@/contexts/filter';
 
 function FilterSelectors({
@@ -44,7 +44,7 @@ function FilterSelectors({
       setOptions={setCurrentOption}
     />
   ) : (
-    <DesktopSelector
+    <DesktopSortSelector
       content={content.selector}
       setOptions={setCurrentOption}
     />

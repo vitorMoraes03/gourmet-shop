@@ -1,13 +1,10 @@
 import { useState } from 'react';
-import { FilterProps } from '../filter';
-import Filter from '../filter';
-import MobileModalSort from './mobileModalSort';
-import ModalWrapper from './mobileModalWrapper';
-import IndividualSelector from './individualSelector';
-import { ProductInterface } from '@/components/products';
+import FilterList from '../filterList';
+import SortModal from './modal/sortModal';
+import ModalWrapper from './modal/wrapperModal';
 import { ProductsProps } from '../../../../messages/useContent';
-import SelectorWrapper from './selectorWrapper';
-import FilterContainer from './filterContainer';
+import SelectorWrapper from './selector/selectorWrapper';
+import PickedFilterTags from './selector/PickedFilterTags';
 
 export interface SelectorProps {
   first: string;
@@ -40,24 +37,26 @@ function MobileSelector({
     border-y-gray text-[8px] font-bold"
     >
       <SelectorWrapper
-        content={selectorContent}
+        content={selectorContent.first}
         setModal={setModalOpen}
         uniqueStyles={'border-r border-r-gray'}
       >
-        <FilterContainer content={filterContent}/>
+        <PickedFilterTags content={filterContent} />
       </SelectorWrapper>
-      {/* <IndividualSelector
-        id="sort"
-        content={content}
+      <SelectorWrapper
+        content={selectorContent.second}
         setModal={setSortModalOpen}
-      /> */}
+      >
+        {/* Aqui tem q ser algo especifico para sort */}
+        {/* <PickedFilterTags content={filterContent} /> */}
+      </SelectorWrapper>
       <ModalWrapper
         content={selectorContent}
         modalOpen={modalOpen}
         setModalOpen={setModalOpen}
         applyFilter={applyFilter}
       >
-        <Filter content={filterContent} />
+        <FilterList content={filterContent} />
       </ModalWrapper>
       <ModalWrapper
         content={selectorContent}
@@ -65,7 +64,7 @@ function MobileSelector({
         setModalOpen={setSortModalOpen}
         applyFilter={applyFilter}
       >
-        <MobileModalSort
+        <SortModal
           content={selectorContent}
           setOptions={setOptions}
         />
