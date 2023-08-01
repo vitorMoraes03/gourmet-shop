@@ -10,11 +10,7 @@ function SortModal({
   content: SelectorProps;
   setOptions: (value: string) => void;
 }) {
-  const [indexChecked, setIndexChecked] = useState<
-    number | null
-  >(null);
 
-  console.log('indexChecked', indexChecked);
 
   return (
     <div className="mb-5 tracking-tight">
