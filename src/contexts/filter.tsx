@@ -13,7 +13,7 @@ export const FilterContext = React.createContext({
   setMobileFilter: (_: boolean) => {},
 });
 
-interface SortOptionsInterface {
+export interface SortOptionsInterface {
   [key: string]: number;
 }
 

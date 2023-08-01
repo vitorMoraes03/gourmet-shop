@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import CloseIcon from '@/components/icons/close';
 import Portal from '@/components/portal';
-import { SelectorProps } from '..';
+import { SelectorProps } from '.';
 
 function ModalWrapper({
   content,

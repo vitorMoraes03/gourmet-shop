@@ -1,9 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from 'react';
 import { ProductsProps } from '../../../messages/useContent';
-import DesktopSortSelector from './desktop/desktopSortSelector';
+import DesktopSortSelector from './desktopSort';
 import MobileSelector from './mobile';
 import { FilterContext } from '@/contexts/filter';
+import { translateStringToSort } from '@/utils/translateSort/stringToSort';
 
 function FilterSelectors({
   content,
@@ -21,20 +22,8 @@ function FilterSelectors({
   );
 
   useEffect(() => {
-    switch (currentOption) {
-      case 'highestPrice':
-        setSortOptions({ price: -1 });
-        break;
-      case 'lowestPrice':
-        setSortOptions({ price: 1 });
-        break;
-      case 'bestSeller':
-        setSortOptions({ rating: -1 });
-        break;
-      case 'recommended':
-        setSortOptions({ _id: -1 });
-        break;
-    }
+    const translated = translateStringToSort(currentOption);
+    setSortOptions(translated);
   }, [currentOption]);
 
   return isScreenSmall ? (

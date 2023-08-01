@@ -1,5 +1,4 @@
 import FilterItem from './filterItem';
-import ListItem from './listItem';
 
 export interface FilterProps {
   category: {

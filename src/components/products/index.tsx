@@ -2,8 +2,8 @@
 'use client';
 
 import { ProductsProps } from '../../../messages/useContent';
-import DesktopSelector from '../filter/desktop/desktopSortSelector';
-import FilterDesktop from '../filter/filterList';
+import DesktopSelector from '../filter/desktopSort';
+import FilterList from '../filter/filterList';
 import ListProducts from './listProducts';
 import MobileSelector from '../filter/mobile';
 import Title from './title';
@@ -109,7 +109,7 @@ function ProductsPage({
       />
       <div className="mt-2 sm:mt-4 sm:flex">
         {!isScreenSmallerThen && (
-          <FilterDesktop content={content.filters} />
+          <FilterList content={content.filters} />
         )}
         <ListProducts fetchedContent={currentProducts} />
       </div>

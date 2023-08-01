@@ -9,10 +9,11 @@ function PickedFilterTags({
   content: FilterProps;
 }) {
   const { filters } = useContext(FilterContext);
-  const [currentItems, setCurrentItems] = useState<any>([]);
+  const [currentItems, setCurrentItems] = useState<string[]>([]);
   const options = content.category.options;
 
   useEffect(() => {
+    console.log('currentItems', currentItems);
     const [filtersDestructured] = Object.values(filters);
     options.forEach((element) => {
       if (filtersDestructured?.includes(element.value)) {

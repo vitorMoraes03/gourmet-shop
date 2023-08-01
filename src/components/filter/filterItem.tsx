@@ -15,45 +15,49 @@ function FilterItem({
   category: string;
 }) {
   const [checked, setChecked] = useState(false);
-  const { filters, setFilters } = useContext(FilterContext);
+  const { setFilters } = useContext(FilterContext);
 
   useEffect(() => {
-    // console.log('filters', filters);
-    const categoryKey = category + '.en';
+    const categoryKeyAcess = category + '.en';
 
-    function currentValues(prev: FiltersInterface) {
-      return prev[categoryKey] || [];
+    function getObjValuesByCategory(
+      prev: FiltersInterface
+    ) {
+      return prev[categoryKeyAcess] || [];
     }
 
     if (!checked) {
       setFilters((prevFilters: FiltersInterface) => {
-        const updatedValues = currentValues(
+        const valuesAfterUncheck = getObjValuesByCategory(
           prevFilters
         ).filter((value: string) => value !== item.value);
 
-        if (updatedValues.length === 0) {
-          const { [categoryKey]: _, ...rest } = prevFilters;
-          return rest;
+        if (valuesAfterUncheck.length === 0) {
+          const {
+            [categoryKeyAcess]: _,
+            ...otherCategories
+          } = prevFilters;
+          return otherCategories;
         }
 
         return {
           ...prevFilters,
-          [categoryKey]: updatedValues,
+          [categoryKeyAcess]: valuesAfterUncheck,
         };
       });
       return;
     }
 
     setFilters((prevFilters: FiltersInterface) => {
-      const categoryKey = category + '.en';
+      // const categoryKey = category + '.en';
       const updatedValues = [
-        ...currentValues(prevFilters),
+        ...getObjValuesByCategory(prevFilters),
         item.value,
       ];
 
       return {
         ...prevFilters,
-        [categoryKey]: updatedValues,
+        [categoryKeyAcess]: updatedValues,
       };
     });
   }, [checked]);

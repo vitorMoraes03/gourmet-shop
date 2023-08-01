@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import FilterList from '../filterList';
-import SortModal from './modal/sortModal';
-import ModalWrapper from './modal/wrapperModal';
+import SortModal from './sort/sortModal';
+import ModalWrapper from './wrapperModal';
 import { ProductsProps } from '../../../../messages/useContent';
-import SelectorWrapper from './selector/selectorWrapper';
-import PickedFilterTags from './selector/PickedFilterTags';
+import SelectorWrapper from './selectorWrapper';
+import PickedFilterTags from './tags/PickedFilterTags';
+import PickedSortTags from './tags/PickedSortTags';
 
 export interface SelectorProps {
   first: string;
@@ -47,8 +48,7 @@ function MobileSelector({
         content={selectorContent.second}
         setModal={setSortModalOpen}
       >
-        {/* Aqui tem q ser algo especifico para sort */}
-        {/* <PickedFilterTags content={filterContent} /> */}
+        <PickedSortTags content={selectorContent} />
       </SelectorWrapper>
       <ModalWrapper
         content={selectorContent}

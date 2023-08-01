@@ -6,14 +6,12 @@ import { FilterContext } from '@/contexts/filter';
 function SortItem({
   item,
   setOptions,
-  index,
 }: {
   item: {
     label: string;
     value: string;
   };
   setOptions: (value: string) => void;
-  index: number;
 }) {
   const [checked, setChecked] = useState(false);
   const { sortOptions } = useContext(FilterContext);

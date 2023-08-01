@@ -1,7 +1,5 @@
-import ListItem from '../../listItem';
 import SortItem from './sortItem';
 import { SelectorProps } from '..';
-import { useState } from 'react';
 
 function SortModal({
   content,
@@ -10,7 +8,6 @@ function SortModal({
   content: SelectorProps;
   setOptions: (value: string) => void;
 }) {
-
 
   return (
     <div className="mb-5 tracking-tight">
@@ -22,7 +19,6 @@ function SortModal({
           <SortItem
             key={`${item.label}-${index}`}
             item={item}
-            index={index}
             setOptions={setOptions}
           />
         ))}
