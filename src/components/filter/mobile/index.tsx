@@ -4,8 +4,8 @@ import SortModal from './sort/sortModal';
 import ModalWrapper from './wrapperModal';
 import { ProductsProps } from '../../../../messages/useContent';
 import SelectorWrapper from './selectorWrapper';
-import PickedFilterTags from './tags/PickedFilterTags';
-import PickedSortTags from './tags/PickedSortTags';
+import PickedFilterTags from './tags/pickedFilterTags';
+import PickedSortTags from './tags/pickedSortTags';
 
 export interface SelectorProps {
   first: string;

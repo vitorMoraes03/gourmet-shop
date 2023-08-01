@@ -3,62 +3,38 @@ import { useContext, useEffect, useState } from 'react';
 import CheckedIcon from '../icons/checked';
 import { FilterContext } from '@/contexts/filter';
 import { FiltersInterface } from '@/utils/useQuery';
+import { handleUncheckFilter } from '@/utils/handleFilter/handleUncheck';
+import { handleCheckFilter } from '@/utils/handleFilter/handleCheck';
+
+export interface ItemInterface {
+  label: string;
+  value: string;
+}
 
 function FilterItem({
   item,
   category,
 }: {
-  item: {
-    label: string;
-    value: string;
-  };
+  item: ItemInterface;
   category: string;
 }) {
   const [checked, setChecked] = useState(false);
-  const { setFilters } = useContext(FilterContext);
+  const { setFilters, filters } = useContext(FilterContext);
 
   useEffect(() => {
-    const categoryKeyAcess = category + '.en';
-
-    function getObjValuesByCategory(
-      prev: FiltersInterface
-    ) {
-      return prev[categoryKeyAcess] || [];
-    }
-
     if (!checked) {
       setFilters((prevFilters: FiltersInterface) => {
-        const valuesAfterUncheck = getObjValuesByCategory(
+        return handleUncheckFilter(
+          category,
+          item,
           prevFilters
-        ).filter((value: string) => value !== item.value);
-
-        if (valuesAfterUncheck.length === 0) {
-          const {
-            [categoryKeyAcess]: _,
-            ...otherCategories
-          } = prevFilters;
-          return otherCategories;
-        }
-
-        return {
-          ...prevFilters,
-          [categoryKeyAcess]: valuesAfterUncheck,
-        };
+        );
       });
       return;
     }
 
     setFilters((prevFilters: FiltersInterface) => {
-      // const categoryKey = category + '.en';
-      const updatedValues = [
-        ...getObjValuesByCategory(prevFilters),
-        item.value,
-      ];
-
-      return {
-        ...prevFilters,
-        [categoryKeyAcess]: updatedValues,
-      };
+      return handleCheckFilter(category, item, prevFilters);
     });
   }, [checked]);
 

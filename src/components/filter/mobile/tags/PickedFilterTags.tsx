@@ -2,6 +2,8 @@
 import { FilterContext } from '@/contexts/filter';
 import { useContext, useEffect, useState } from 'react';
 import { FilterProps } from '../../filterList';
+import CloseIcon from '@/components/icons/close';
+import TagWrapper from './tagWrapper';
 
 function PickedFilterTags({
   content,
@@ -12,7 +14,10 @@ function PickedFilterTags({
   const [currentItems, setCurrentItems] = useState<
     string[]
   >([]);
-  const allOptions = [...content.category.options, ...content.country.options];
+  const allOptions = [
+    ...content.category.options,
+    ...content.country.options,
+  ];
 
   function getAllFilters() {
     const filterCategory = filters['category.en'];
@@ -37,7 +42,17 @@ function PickedFilterTags({
     });
   }, [filters]);
 
-  return <div>{currentItems}</div>;
+  return (
+    <>
+      {currentItems.map((item, index) => (
+        <TagWrapper
+          item={item}
+          index={index}
+          key={`${item}-${index}`}
+        />
+      ))}
+    </>
+  );
 }
 
 export default PickedFilterTags;
