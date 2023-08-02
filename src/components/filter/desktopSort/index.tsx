@@ -1,13 +1,16 @@
-import ArrorDownIcon from '../icons/arrowdown';
-import { SelectorProps } from './mobileSelector';
+/* eslint-disable react-hooks/exhaustive-deps */
+import ArrorDownIcon from '../../icons/arrowdown';
+import { SelectorProps } from '../mobile';
 
-function DesktopSelector({
+function DesktopSortSelector({
   content,
+  setOptions,
 }: {
   content: SelectorProps;
+  setOptions: (value: string) => void;
 }) {
   return (
-    <div className="flex items-center justify-end gap-2 text-[9px] font-bold uppercase tracking-normal">
+    <div className="flex items-center justify-end gap-2 text-[9px] font-bold uppercase tracking-normal md:text-xs">
       <div>
         <p>{content.desktop}</p>
       </div>
@@ -17,6 +20,7 @@ function DesktopSelector({
           style={{
             appearance: 'none',
           }}
+          onChange={(e) => setOptions(e.target.value)}
         >
           {content.options.map((option) => (
             <option
@@ -40,4 +44,4 @@ function DesktopSelector({
   );
 }
 
-export default DesktopSelector;
+export default DesktopSortSelector;

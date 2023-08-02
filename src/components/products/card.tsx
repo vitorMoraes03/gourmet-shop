@@ -1,7 +1,5 @@
-import { ProductInterface } from '@/utils/useFetchedData';
+import { ProductInterface } from '.';
 import Image from 'next/image';
-import Star from '../icons/star';
-import HalfStar from '../icons/halfStar';
 import RatingStars from '@/utils/ratingStars';
 
 function Card({
@@ -13,7 +11,7 @@ function Card({
 }) {
   return (
     <>
-      <div className="h-4/6">
+      <div className="h-3/5">
         <Image
           src={content.image.url}
           width={content.image.width}
@@ -22,14 +20,18 @@ function Card({
           className="mb-2 h-full w-full object-cover"
         />
       </div>
-      <div className="text-sm sm:text-base">
-        <h3 className="mt-1 font-title leading-relaxed tracking-tighter sm:mt-2 sm:text-2xl">
+      <div className="px-1 pt-1 text-sm sm:text-base">
+        <h3 className="my-1 leading-relaxed tracking-tighter  sm:mt-2 sm:text-lg md:font-title md:text-2xl">
           {content.productName.pt}
         </h3>
         <div className="my-1 flex">
-          {RatingStars(content.rating, content.id, idWhere)}
+          {RatingStars(
+            content.rating,
+            content.id!,
+            idWhere
+          )}
         </div>
-        <p className="text-xs leading-3 text-darkerGray sm:text-base">
+        <p className="my-2 text-xs leading-tight text-darkerGray sm:text-[1rem]">
           {content.description.pt}
         </p>
         <p className="mt-1 italic">R${content.price}</p>

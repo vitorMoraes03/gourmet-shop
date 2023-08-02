@@ -334,33 +334,12 @@
         }
       ],
       "filters": {
-        "sorted": {
-          "title": "Lorem ipsum",
-          "options": [
-            {
-              "label": "Mais vendidos",
-              "value": "bestSeller"
-            },
-            {
-              "label": "Preço mais baixo",
-              "value": "price"
-            },
-            {
-              "label": "Preço mais alto",
-              "value": "price"
-            },
-            {
-              "label": "Recomendados",
-              "value": "recommended"
-            }
-          ]
-        },
         "category": {
-          "title": "Lorem ipsum",
+          "title": "Categoria",
           "options": [
             {
               "label": "Vinhos",
-              "value": "Wines"
+              "value": "Wine"
             },
             {
               "label": "Cervejas",
@@ -372,7 +351,7 @@
             },
             {
               "label": "Azeites",
-              "value": "Olive oil"
+              "value": "OliveOil"
             },
             {
               "label": "Cafés",
@@ -385,7 +364,7 @@
           ]
         },
         "country": {
-          "title": "Lorem ipsum",
+          "title": "País",
           "options": [
             {
               "label": "Brasil",

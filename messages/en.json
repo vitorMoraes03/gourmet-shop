@@ -334,33 +334,12 @@
         }
       ],
       "filters": {
-        "sorted": {
-          "title": "Lorem ipsum",
-          "options": [
-            {
-              "label": "Best Sellers",
-              "value": "bestSeller"
-            },
-            {
-              "label": "Lowest Price",
-              "value": "price"
-            },
-            {
-              "label": "Highest Price",
-              "value": "price"
-            },
-            {
-              "label": "Recommended",
-              "value": "recommended"
-            }
-          ]
-        },
         "category": {
-          "title": "Lorem ipsum",
+          "title": "Sections",
           "options": [
             {
               "label": "Wines",
-              "value": "Wines"
+              "value": "Wine"
             },
             {
               "label": "Beers",
@@ -372,7 +351,7 @@
             },
             {
               "label": "Olive oil",
-              "value": "Olive oil"
+              "value": "OliveOil"
             },
             {
               "label": "Coffee",
@@ -385,7 +364,7 @@
           ]
         },
         "country": {
-          "title": "Lorem ipsum",
+          "title": "Country",
           "options": [
             {
               "label": "Brazil",
