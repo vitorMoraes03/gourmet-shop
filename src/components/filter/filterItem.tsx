@@ -38,6 +38,18 @@ function FilterItem({
     });
   }, [checked]);
 
+  useEffect(() => {
+    const keyAcess = category + '.en';
+    if (filters[keyAcess]) {
+      const filter = filters[keyAcess].find(
+        (filterItem: string) => filterItem === item.value
+      );
+      if (filter) {
+        setChecked(true);
+      }
+    }
+  }, []);
+
   return (
     <li
       onClick={() => {

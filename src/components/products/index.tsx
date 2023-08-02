@@ -75,6 +75,7 @@ function ProductsPage({
 
   const fetchData = async () => {
     const promise = queryFunction(filters, sortOptions);
+    // console.log('filters', filters);
     const { products }: QueryResult = await promise;
     if (products === null) return;
     setCurrentProducts(products);
