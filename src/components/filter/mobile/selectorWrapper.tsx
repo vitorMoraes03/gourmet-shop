@@ -22,9 +22,9 @@ function SelectorWrapper({
         </button>
         <AddIcon />
       </div>
-      <div className="mt-2 flex flex-col gap-1">
+      {/* <div className="flex flex-col gap-1"> */}
         {children}
-      </div>
+      {/* </div> */}
     </div>
   );
 }

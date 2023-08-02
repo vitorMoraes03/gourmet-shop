@@ -3,8 +3,8 @@ import { useContext, useEffect, useState } from 'react';
 import CheckedIcon from '../icons/checked';
 import { FilterContext } from '@/contexts/filter';
 import { FiltersInterface } from '@/utils/useQuery';
-import { handleUncheckFilter } from '@/utils/handleFilter/handleUncheck';
-import { handleCheckFilter } from '@/utils/handleFilter/handleCheck';
+import { handleUncheckFilter } from '@/utils/filter/handleUncheck';
+import { handleCheckFilter } from '@/utils/filter/handleCheck';
 
 export interface ItemInterface {
   label: string;
@@ -36,7 +36,11 @@ function FilterItem({
     }
 
     setFilters((prevFilters: FiltersInterface) => {
-      return handleCheckFilter(category, item.value, prevFilters);
+      return handleCheckFilter(
+        category,
+        item.value,
+        prevFilters
+      );
     });
   }, [checked]);
 

@@ -3,7 +3,7 @@ import { FilterContext } from '@/contexts/filter';
 import { useContext, useEffect, useState } from 'react';
 import { SelectorProps } from '..';
 import { translateSortToString } from '@/utils/translateSort/sortToString';
-import TagWrapper from './tagWrapper';
+import TagSelected from './tagSelected';
 import { ItemInterface } from '../../filterItem';
 
 function PickedSortTags({
@@ -11,7 +11,8 @@ function PickedSortTags({
 }: {
   content: SelectorProps;
 }) {
-  const { sortOptions } = useContext(FilterContext);
+  const { sortOptions, setSortOptions } =
+    useContext(FilterContext);
   const [currentItems, setCurrentItems] = useState<
     ItemInterface[]
   >([]);
@@ -25,16 +26,26 @@ function PickedSortTags({
     });
   }, [sortOptions]);
 
+  function handleCloseSort() {
+    setSortOptions({});
+    setCurrentItems([]);
+  }
+
   return (
-    <>
+    <div
+      className={`flex flex-col gap-1 ${
+        Object.keys(sortOptions).length === 0 ? '' : 'mt-2'
+      }`}
+    >
       {currentItems.map((item, index) => (
-        <TagWrapper
+        <TagSelected
           item={item}
           index={index}
           key={`${item}-${index}`}
+          applyFilter={() => handleCloseSort()}
         />
       ))}
-    </>
+    </div>
   );
 }
 
