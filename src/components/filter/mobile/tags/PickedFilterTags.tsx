@@ -2,7 +2,6 @@
 import { FilterContext } from '@/contexts/filter';
 import { useContext, useEffect, useState } from 'react';
 import { FilterProps } from '../../filterList';
-import CloseIcon from '@/components/icons/close';
 import TagWrapper from './tagWrapper';
 
 function PickedFilterTags({
@@ -35,11 +34,13 @@ function PickedFilterTags({
   }
 
   useEffect(() => {
+    const currentItems: string[] = [];
     allOptions.forEach((element) => {
       if (getAllFilters().includes(element.value)) {
-        setCurrentItems([...currentItems, element.label]);
+        currentItems.push(element.label);
       }
     });
+    setCurrentItems(currentItems);
   }, [filters]);
 
   return (
