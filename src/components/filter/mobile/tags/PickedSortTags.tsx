@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from 'react';
 import { SelectorProps } from '..';
 import { translateSortToString } from '@/utils/translateSort/sortToString';
 import TagWrapper from './tagWrapper';
+import { ItemInterface } from '../../filterItem';
 
 function PickedSortTags({
   content,
@@ -12,14 +13,14 @@ function PickedSortTags({
 }) {
   const { sortOptions } = useContext(FilterContext);
   const [currentItems, setCurrentItems] = useState<
-    string[]
+    ItemInterface[]
   >([]);
 
   useEffect(() => {
     const translated = translateSortToString(sortOptions);
     content.options.forEach((element) => {
       if (element.value === translated) {
-        setCurrentItems([element.label]);
+        setCurrentItems([element]);
       }
     });
   }, [sortOptions]);

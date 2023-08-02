@@ -3,6 +3,8 @@ import { FilterContext } from '@/contexts/filter';
 import { useContext, useEffect, useState } from 'react';
 import { FilterProps } from '../../filterList';
 import TagWrapper from './tagWrapper';
+import { handleUncheckFilter } from '@/utils/handleFilter/handleUncheck';
+import { ItemInterface } from '../../filterItem';
 
 function PickedFilterTags({
   content,
@@ -11,7 +13,7 @@ function PickedFilterTags({
 }) {
   const { filters } = useContext(FilterContext);
   const [currentItems, setCurrentItems] = useState<
-    string[]
+    ItemInterface[]
   >([]);
   const allOptions = [
     ...content.category.options,
@@ -34,10 +36,10 @@ function PickedFilterTags({
   }
 
   useEffect(() => {
-    const currentItems: string[] = [];
+    const currentItems: ItemInterface[] = [];
     allOptions.forEach((element) => {
       if (getAllFilters().includes(element.value)) {
-        currentItems.push(element.label);
+        currentItems.push(element);
       }
     });
     setCurrentItems(currentItems);

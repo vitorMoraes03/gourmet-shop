@@ -28,7 +28,7 @@ function FilterItem({
       setFilters((prevFilters: FiltersInterface) => {
         return handleUncheckFilter(
           category,
-          item,
+          item.value,
           prevFilters
         );
       });
@@ -36,7 +36,7 @@ function FilterItem({
     }
 
     setFilters((prevFilters: FiltersInterface) => {
-      return handleCheckFilter(category, item, prevFilters);
+      return handleCheckFilter(category, item.value, prevFilters);
     });
   }, [checked]);
 

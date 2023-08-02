@@ -4,7 +4,7 @@ import { getObjValuesByCategory } from './getObjValues';
 
 export function handleUncheckFilter(
   category: string,
-  item: ItemInterface,
+  itemValue: string,
   previousFilters: FiltersInterface
 ) {
   const values = getObjValuesByCategory(
@@ -14,7 +14,7 @@ export function handleUncheckFilter(
   const categoryKeyAcess = category + '.en';
 
   const valuesAfterUncheck = values.filter(
-    (value: string) => value !== item.value
+    (value: string) => value !== itemValue
   );
 
   if (valuesAfterUncheck.length === 0) {

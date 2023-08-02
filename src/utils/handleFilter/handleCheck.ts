@@ -4,19 +4,20 @@ import { getObjValuesByCategory } from './getObjValues';
 
 export function handleCheckFilter(
   category: string,
-  item: ItemInterface,
+  itemValue: string,
   previousFilters: FiltersInterface
 ) {
 
   const updatedValues = [
     ...getObjValuesByCategory(category, previousFilters),
-    item.value,
+    itemValue,
   ];
 
   const updatedFilters = {
     ...previousFilters,
     [category + '.en']: updatedValues,
   }
+  console.log('updatedFilters', updatedFilters);
 
   return updatedFilters;
 }
