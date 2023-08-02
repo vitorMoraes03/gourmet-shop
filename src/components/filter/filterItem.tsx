@@ -21,8 +21,6 @@ function FilterItem({
   const [checked, setChecked] = useState(false);
   const { setFilters, filters } = useContext(FilterContext);
 
-  // esse useEffect funciona perfeitamente para desktop
-  // no mobile queremos basear num btn que ta num nivel acima
   useEffect(() => {
     if (!checked) {
       setFilters((prevFilters: FiltersInterface) => {
