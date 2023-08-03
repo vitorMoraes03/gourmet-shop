@@ -4,11 +4,19 @@ import { ProductInterface } from '@/components/products';
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
 export interface FiltersInterface {
-  [key: string]: any;
+  [key: string]: string[];
 }
 
 export interface QueryResult {
   products: ProductInterface[] | null;
+}
+
+export interface QueryObjInterface {
+  [key: string]: {
+    $in?: string[];
+    $regex?: string;
+    $options?: string;
+  };
 }
 
 async function useQuery(
@@ -17,28 +25,12 @@ async function useQuery(
 ): Promise<QueryResult> {
   'use server';
 
-  function defaultSortOptions(sortOptions: {}) {
-    if (Object.keys(sortOptions).length === 0)
-      return { rating: -1 };
-    return sortOptions;
-  }
-
   try {
-    let queryObj: {
-      [key in keyof FiltersInterface]: {
-        $in: FiltersInterface[key];
-      };
-    } = {};
+    let queryObj: QueryObjInterface = {};
+    console.log('filters', filters);
 
-    if (Object.keys(filters).length === 0) {
-      queryObj = {};
-    } else {
-      for (const [key, value] of Object.entries(filters)) {
-        if (value.length === 0) continue;
-        queryObj[key as keyof FiltersInterface] = {
-          $in: value,
-        };
-      }
+    if (checkIfCategoryOrCountry(filters)) {
+      createQueryObjWithIn(filters, queryObj);
     }
 
     const client = await MongoClient.connect(MONGODB_URI);
@@ -63,6 +55,37 @@ async function useQuery(
     console.log('error useQuery', error);
     return { products: null };
   }
+}
+
+function createQueryObjWithIn(
+  filters: FiltersInterface,
+  queryObj: QueryObjInterface
+) {
+  for (const [key, value] of Object.entries(filters)) {
+    if (value.length === 0) continue;
+    queryObj[key as keyof FiltersInterface] = {
+      $in: value,
+    };
+  }
+}
+
+function defaultSortOptions(sortOptions: {}) {
+  if (Object.keys(sortOptions).length === 0)
+    return { rating: -1 };
+  return sortOptions;
+}
+
+function checkIfCategoryOrCountry(
+  filters: FiltersInterface
+): FiltersInterface {
+  let objFilter: FiltersInterface = {};
+  Object.keys(filters).forEach((key) => {
+    const keySplit = key.split('.')[0];
+    if (keySplit === 'category' || keySplit === 'country') {
+      objFilter[key] = filters[key];
+    }
+  });
+  return objFilter;
 }
 
 export default useQuery;

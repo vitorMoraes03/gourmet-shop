@@ -7,7 +7,7 @@ import {
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { useContent } from '../../messages/useContent';
-import HeaderScreenSelector from '@/components/header/headerSelector';
+import HeaderScreenSelector from '@/components/header';
 import Footer from '@/components/footer';
 import { FilterProvider } from '@/contexts/filter';
 

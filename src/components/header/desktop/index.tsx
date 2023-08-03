@@ -2,10 +2,10 @@
 
 import LangSelector from '../langSelector';
 import { useState } from 'react';
-import Search from '../cartAndProfile/search';
-import Profile from '../cartAndProfile/profile';
+import Search from '../search';
+import Profile from '../profile';
 import Logo from '../logo';
-import Cart from '../cartAndProfile/cart';
+import Cart from '../cart';
 import { HeaderProps } from '../../../../messages/useContent';
 import Banner from '../banner';
 import Dropdown from './dropdown';

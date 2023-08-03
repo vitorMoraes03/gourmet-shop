@@ -3,9 +3,9 @@
 
 import LangSelector from '../langSelector';
 import { useState, useEffect } from 'react';
-import Search from '../cartAndProfile/search';
+import Search from '../search';
 import Logo from '../logo';
-import Cart from '../cartAndProfile/cart';
+import Cart from '../cart';
 import { HeaderProps } from '../../../../messages/useContent';
 import Banner from '../banner';
 import CloseIcon from '../../icons/close';
