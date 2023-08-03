@@ -1,13 +1,16 @@
+import {
+  LanguageContext,
+  LanguageProvider,
+} from '@/contexts/language';
 import Link from 'next-intl/link';
-import { useState } from 'react';
+import { useContext } from 'react';
 
 function LangSelector() {
-  const [defaultLang, setDefaultLang] = useState<
-    'pt-BR' | 'en'
-  >('pt-BR');
+  const { defaultLang, setDefaultLang } =
+    useContext(LanguageContext);
 
   return (
-    <div className="font-bold flex gap-2 md:text-lg">
+    <div className="flex gap-2 font-bold md:text-lg">
       {defaultLang === 'pt-BR' ? (
         <Link
           href={'/'}

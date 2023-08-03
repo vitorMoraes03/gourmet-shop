@@ -1,25 +1,23 @@
 import SearchIcon from '@/components/icons/search';
 import { FilterContext } from '@/contexts/filter';
 import { useContext } from 'react';
-
-// parece que posso fazer todo o role search aqui, o que vou precisar?
-// setFilter!
+import { LanguageContext } from '@/contexts/language';
 
 function Search() {
   const { filters, setFilters } = useContext(FilterContext);
+  const { defaultLang } = useContext(LanguageContext);
+
+  const abreviation = defaultLang === 'pt-BR' ? 'pt' : 'en';
+  const key = `description.${abreviation}`;
 
   return (
     <div
       className="custom-border"
       onClick={() => {
-        // eu tenho que dar um setFilter tipos assim: 'description.pt': ['lorem ipsum']
-        // setFilters({
-        //   ...filters,
-        //   'description.pt': {
-        //     $regex: 'gorgonzola',
-        //     $options: 'i',
-        //   },
-        // });
+        setFilters({
+          ...filters,
+          [key]: ['gorgonzola'],
+        });
       }}
     >
       <SearchIcon />

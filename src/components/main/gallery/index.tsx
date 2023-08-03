@@ -40,7 +40,7 @@ function Gallery({ content }: { content: GalleryProps }) {
               height={Number(image.height)}
               className="w-full h-[468px] object-cover"
             />
-            <Link href={''}>
+            <Link href={'/teste'}>
               <p className="text-2xl md:h-8 h-7 font-title tracking-tight mt-3 hover:border-b-[1.5px] inline-block">
                 {image.text}
               </p>

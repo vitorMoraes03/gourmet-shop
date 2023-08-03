@@ -10,6 +10,7 @@ import { useContent } from '../../messages/useContent';
 import HeaderScreenSelector from '@/components/header';
 import Footer from '@/components/footer';
 import { FilterProvider } from '@/contexts/filter';
+import { LanguageProvider } from '@/contexts/language';
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -54,10 +55,12 @@ export default function RootLayout({
         ${bodoni.variable} relative tracking-tight text-black`}
       >
         <FilterProvider>
-          <div id="portal"></div>
-          <HeaderScreenSelector headerContent={header} />
-          {children}
-          {/* <Footer content={footer} /> */}
+          <LanguageProvider>
+            <div id="portal"></div>
+            <HeaderScreenSelector headerContent={header} />
+            {children}
+            {/* <Footer content={footer} /> */}
+          </LanguageProvider>
         </FilterProvider>
       </body>
     </html>

@@ -33,6 +33,9 @@ async function useQuery(
       createQueryObjWithIn(filters, queryObj);
     }
 
+    // agora preciso criar uma checagem para titulo e categoria, com outro comportamento
+    // mas antes preciso inserir esse tipo de dado no filter
+
     const client = await MongoClient.connect(MONGODB_URI);
     const db = client.db();
     const products = await db
