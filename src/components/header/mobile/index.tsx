@@ -14,6 +14,7 @@ import Portal from '../../portal';
 import { DropdownProps } from '../../../../messages/useContent';
 import FirstModalList from './firstModal';
 import SecondModalList from './secondModal';
+import SearchModal from '../search/modal';
 
 function HeaderMobile({ header }: { header: HeaderProps }) {
   const [firstHover, setFirstHover] = useState(false);
@@ -25,6 +26,8 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
   const dropdown = header.dropdown;
   const [delayedTransform, setDelayedTransform] =
     useState('');
+  const [searchModalOpen, setSearchModalOpen] =
+    useState(false);
 
   useEffect(() => {
     Object.entries(dropdown).find(([key, value]) => {
@@ -89,11 +92,16 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
           </Portal>
         </div>
         <div className="flex items-center gap-1">
-          <Search />
+          <Search
+            setModalOpen={setSearchModalOpen}
+            modalOpen={searchModalOpen}
+            screenSize="mobile"
+          />
           <LangSelector />
           <Cart />
         </div>
       </div>
+      {searchModalOpen && <SearchModal />}
     </header>
   );
 }

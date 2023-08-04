@@ -10,6 +10,7 @@ import { HeaderProps } from '../../../../messages/useContent';
 import Banner from '../banner';
 import Dropdown from './dropdown';
 import NavLinks from './navLinks';
+import SearchModal from '../search/modal';
 
 function HeaderDesktop({
   header,
@@ -20,6 +21,8 @@ function HeaderDesktop({
   const [dropdownSelected, setDropdownSelected] = useState<
     string | null
   >(null);
+  const [searchModalOpen, setSearchModalOpen] =
+    useState(false);
 
   return (
     <header className="fixed inset-x-0 z-40 w-screen bg-gray">
@@ -47,7 +50,7 @@ function HeaderDesktop({
           </ul>
         </div>
         <div className="col-span-2 flex h-20 items-center justify-end gap-6">
-          <Search />
+          <Search setModalOpen={setSearchModalOpen} screenSize='desktop'/>
           <LangSelector />
           <Profile />
           <Cart />
@@ -62,6 +65,7 @@ function HeaderDesktop({
           setHover={setHover}
         />
       )}
+      {searchModalOpen && <SearchModal />}
     </header>
   );
 }
