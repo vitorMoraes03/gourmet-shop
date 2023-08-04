@@ -1,11 +1,5 @@
 import SearchIcon from '@/components/icons/search';
-import { FilterContext } from '@/contexts/filter';
-import {
-  Dispatch,
-  SetStateAction,
-  useContext,
-} from 'react';
-import { LanguageContext } from '@/contexts/language';
+import { Dispatch, SetStateAction } from 'react';
 
 function Search({
   screenSize,
@@ -16,42 +10,25 @@ function Search({
   setModalOpen: Dispatch<SetStateAction<boolean>>;
   modalOpen?: boolean;
 }) {
-  const { filters, setFilters } = useContext(FilterContext);
-  const { defaultLang } = useContext(LanguageContext);
-
-  const abreviation = defaultLang === 'pt-BR' ? 'pt' : 'en';
-  const key = `search.${abreviation}`;
-
-  function handleMouseEnter() {
-    if (screenSize === 'mobile') return;
-    setModalOpen(true);
-  }
-
-  function handleMouseLeave() {
-    if (screenSize === 'mobile') return;
-    setModalOpen(false);
-  }
-
-  function handleClick() {
-    if (screenSize === 'desktop') return;
-    setModalOpen(!modalOpen);
-  }
-
   return (
     <div
-      className="custom-border"
-      onMouseEnter={() => handleMouseEnter()}
-      onMouseLeave={() => handleMouseLeave()}
-      onClick={() => handleClick()}
-      // onClick={() => {
-      //   setFilters({
-      //     ...filters,
-      //     // test only
-      //     [key]: ['gorgonzola'],
-      //   });
-      // }}
+      className="sm:pl-14 sm:pr-5"
+      onMouseEnter={() =>
+        screenSize === 'desktop' && setModalOpen(true)
+      }
+      onMouseLeave={() =>
+        screenSize === 'desktop' && setModalOpen(false)
+      }
     >
-      <SearchIcon />
+      <div
+        className="custom-border"
+        onClick={() =>
+          screenSize === 'mobile' &&
+          setModalOpen(!modalOpen)
+        }
+      >
+        <SearchIcon />
+      </div>
     </div>
   );
 }

@@ -50,7 +50,10 @@ function HeaderDesktop({
           </ul>
         </div>
         <div className="col-span-2 flex h-20 items-center justify-end gap-6">
-          <Search setModalOpen={setSearchModalOpen} screenSize='desktop'/>
+          <Search
+            setModalOpen={setSearchModalOpen}
+            screenSize="desktop"
+          />
           <LangSelector />
           <Profile />
           <Cart />
@@ -65,7 +68,12 @@ function HeaderDesktop({
           setHover={setHover}
         />
       )}
-      {searchModalOpen && <SearchModal />}
+      {searchModalOpen && (
+        <SearchModal
+          setModalOpen={setSearchModalOpen}
+          screenSize="desktop"
+        />
+      )}
     </header>
   );
 }
