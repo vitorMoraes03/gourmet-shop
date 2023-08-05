@@ -12,29 +12,11 @@ export interface QueryResult {
   products: ProductInterface[] | null;
 }
 
-// const queryObj = {
-//   $or: [
-//     { 'description.pt': { $regex: 'gorgonzola', $options: 'i' } },
-//     { 'title.pt': { $regex: 'gorgonzola', $options: 'i' } }
-//   ]
-// };
-
-// interface QueryObject {
-//   [key: string]:
-//     | string
-//     | { $regex: string; $options: string }
-//     | { $in: string[] };
-// }
-
 export interface QueryObjInterface {
   [key: string]:
     | string
     | { $regex: string; $options: string }
     | { $in: string[] };
-  // [key: string]:
-  //   | string[]
-  //   | { $regex: string; $options: string }[]
-  //   | { $in: string[] };
 }
 
 export interface BiggerQueryObjInterface {
@@ -52,7 +34,6 @@ async function useQuery(
     const categoryOrCountry =
       checkIfCategoryOrCountry(filters);
     const search = checkIfIsSearch(filters);
-    console.log('filters', filters);
 
     if (!checkEmpty(categoryOrCountry)) {
       createQueryObjWithIn(categoryOrCountry, queryObj);
@@ -81,7 +62,6 @@ async function useQuery(
 
     return { products: productArray };
   } catch (error) {
-    console.log('error useQuery', error);
     return { products: null };
   }
 }
@@ -98,8 +78,6 @@ function createQueryObjWithIn(
   }
 }
 
-// 'description.pt': { $regex: 'acabate', $options: 'i' }
-
 function createQueryObjWithRegex(
   filters: FiltersInterface,
   queryObj: any
@@ -109,22 +87,27 @@ function createQueryObjWithRegex(
     if (value.length === 0) continue;
     queryObj['$or'] = [];
     const keyLang = key.split('.')[1];
-    queryObj['$or'].push({
-      ['description.' + keyLang]: {
-        $regex: value[0],
-        $options: 'i',
+    console.log('value[0]', value[0]);
+    queryObj['$or'].push(
+      {
+        ['description.' + keyLang]: {
+          $regex: value[0],
+          $options: 'i',
+        },
       },
-      ['productName.' + keyLang]: {
-        $regex: value[0],
-        $options: 'i',
-      },
-    });
-    // queryObj[key as keyof FiltersInterface] = {
-    //   $regex: value[0],
-    //   $options: 'i',
-    // };
+      {
+        ['productName.' + keyLang]: {
+          $regex: value[0],
+          $options: 'i',
+        },
+      }
+    );
   }
   console.log('queryObj', queryObj);
+  console.log(
+    'descrip',
+    queryObj['$or'][0]['description.pt']
+  );
 }
 
 function defaultSortOptions(sortOptions: {}) {

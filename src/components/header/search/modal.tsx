@@ -3,6 +3,7 @@ import { FilterContext } from '@/contexts/filter';
 import { LanguageContext } from '@/contexts/language';
 import {
   Dispatch,
+  FormEvent,
   SetStateAction,
   useContext,
   useState,
@@ -27,6 +28,14 @@ function SearchModal({
     setInputSearch(value);
   }
 
+  function handleSubmit(e: FormEvent | MouseEvent) {
+    e.preventDefault();
+    setFilters({
+      ...filters,
+      [key]: [inputSearch],
+    });
+  }
+
   return (
     <div
       className="absolute w-full bg-gray px-8 pb-6 pt-2 
@@ -35,27 +44,26 @@ function SearchModal({
         screenSize === 'desktop' && setModalOpen(true)
       }
       onMouseLeave={() =>
-        screenSize === 'desktop' && setModalOpen(false)
+        screenSize === 'desktop' &&
+        inputSearch === '' &&
+        setModalOpen(false)
       }
     >
-      <div className="flex items-center border-b">
+      <form
+        onSubmit={(e) => handleSubmit(e)}
+        className="flex items-center border-b"
+      >
         <input
-          className="w-full bg-gray"
+          className="w-full bg-gray outline-none"
           placeholder="Search"
+          type='text'
           value={inputSearch}
           onChange={(e) => handleInput(e)}
         />
-        <button
-          onClick={() =>
-            setFilters({
-              ...filters,
-              [key]: [inputSearch],
-            })
-          }
-        >
+        <button onClick={(e) => handleSubmit(e)}>
           <ArrowRightIcon />
         </button>
-      </div>
+      </form>
     </div>
   );
 }
