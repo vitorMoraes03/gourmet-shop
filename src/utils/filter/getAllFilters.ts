@@ -1,4 +1,4 @@
-import { FiltersInterface } from '../useQuery';
+import { FiltersInterface } from '../query/useQuery';
 
 function getAllFilters(filters: FiltersInterface) {
   const allFilters: string[] = [];

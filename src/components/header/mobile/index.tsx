@@ -101,7 +101,12 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
           <Cart />
         </div>
       </div>
-      {searchModalOpen && <SearchModal />}
+      {searchModalOpen && (
+        <SearchModal
+          setModalOpen={setSearchModalOpen}
+          screenSize="mobile"
+        />
+      )}
     </header>
   );
 }

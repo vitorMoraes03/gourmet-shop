@@ -13,7 +13,7 @@ import { FilterContext } from '@/contexts/filter';
 import {
   FiltersInterface,
   QueryResult,
-} from '@/utils/useQuery';
+} from '@/utils/query/useQuery';
 import FilterSelectors from '../filter';
 
 export interface ProductInterface {

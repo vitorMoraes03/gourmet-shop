@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { FiltersInterface } from '@/utils/useQuery';
+import { FiltersInterface } from '@/utils/query/useQuery';
 
 export const FilterContext = React.createContext({
   filters: {} as FiltersInterface,

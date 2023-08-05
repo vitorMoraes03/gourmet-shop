@@ -5,7 +5,7 @@ import { FilterProps } from '../../filterList';
 import TagSelected from './tagSelected';
 import { handleUncheckFilter } from '@/utils/filter/handleUncheck';
 import { ItemInterface } from '../../filterItem';
-import { FiltersInterface } from '@/utils/useQuery';
+import { FiltersInterface } from '@/utils/query/useQuery';
 import getAllOptions from '@/utils/filter/getAllOptions';
 import getAllFilters from '@/utils/filter/getAllFilters';
 

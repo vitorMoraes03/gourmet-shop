@@ -2,7 +2,7 @@
 import { useContext, useEffect, useState } from 'react';
 import CheckedIcon from '../icons/checked';
 import { FilterContext } from '@/contexts/filter';
-import { FiltersInterface } from '@/utils/useQuery';
+import { FiltersInterface } from '@/utils/query/useQuery';
 import { handleUncheckFilter } from '@/utils/filter/handleUncheck';
 import { handleCheckFilter } from '@/utils/filter/handleCheck';
 

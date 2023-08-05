@@ -1,4 +1,4 @@
-import { FiltersInterface } from '../useQuery';
+import { FiltersInterface } from '../query/useQuery';
 
 export function getObjValuesByCategory(
   category: string,

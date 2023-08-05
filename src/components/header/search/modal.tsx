@@ -30,6 +30,7 @@ function SearchModal({
 
   function handleSubmit(e: FormEvent | MouseEvent) {
     e.preventDefault();
+    setModalOpen(false);
     setFilters({
       ...filters,
       [key]: [inputSearch],
@@ -56,7 +57,7 @@ function SearchModal({
         <input
           className="w-full bg-gray outline-none"
           placeholder="Search"
-          type='text'
+          type="text"
           value={inputSearch}
           onChange={(e) => handleInput(e)}
         />

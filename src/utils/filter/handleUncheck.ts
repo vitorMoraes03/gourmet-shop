@@ -1,5 +1,5 @@
 import { ItemInterface } from '@/components/filter/filterItem';
-import { FiltersInterface } from '../useQuery';
+import { FiltersInterface } from '../query/useQuery';
 import { getObjValuesByCategory } from './getObjValues';
 
 export function handleUncheckFilter(

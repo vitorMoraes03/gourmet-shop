@@ -3,7 +3,7 @@ import { useContent } from '../../../messages/useContent';
 import useQuery, {
   FiltersInterface,
   QueryResult,
-} from '@/utils/useQuery';
+} from '@/utils/query/useQuery';
 
 function ProductPageWithContent({
   data,
