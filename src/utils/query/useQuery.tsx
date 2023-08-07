@@ -9,7 +9,7 @@ import { createQueryObjWithRegex } from './createQuery/withRegex';
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
 export interface FiltersInterface {
-  [key: string]: string[];
+  [key: string]: string[] | boolean;
 }
 
 export interface QueryResult {

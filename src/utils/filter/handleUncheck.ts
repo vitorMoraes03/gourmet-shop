@@ -6,7 +6,7 @@ export function handleUncheckFilter(
   category: string,
   itemValue: string,
   previousFilters: FiltersInterface
-) {
+): FiltersInterface {
   const values = getObjValuesByCategory(
     category,
     previousFilters
