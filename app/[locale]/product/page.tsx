@@ -5,7 +5,7 @@ import useQuery, {
   QueryResult,
 } from '@/utils/query/useQuery';
 
-function ProductPageWithContent({
+export function ProductPageWithContent({
   data,
   queryFunction,
 }: {
