@@ -1,7 +1,7 @@
 'use client';
 
 import LangSelector from '../langSelector';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Search from '../search';
 import Profile from '../profile';
 import Logo from '../logo';
@@ -12,6 +12,7 @@ import Dropdown from './dropdown';
 import NavLinks, { styleLi } from './navLinks';
 import SearchModal from '../search/modal';
 import Link from 'next/link';
+import { FilterContext } from '@/contexts/filter';
 
 function HeaderDesktop({
   header,
@@ -26,6 +27,7 @@ function HeaderDesktop({
   >(null);
   const [searchModalOpen, setSearchModalOpen] =
     useState(false);
+  const { setFilters } = useContext(FilterContext);
 
   return (
     <header className="fixed inset-x-0 z-40 w-screen bg-gray">
@@ -49,7 +51,10 @@ function HeaderDesktop({
                 />
               )
             )}
-            <li className={styleLi}>
+            <li
+              className={styleLi}
+              onClick={() => setFilters({})}
+            >
               <Link href="/product">
                 {header.nav.allProducts}
               </Link>

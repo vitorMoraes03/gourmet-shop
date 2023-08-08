@@ -1,6 +1,8 @@
 import ArrowRightIcon from '@/components/icons/arrowright';
 import Link from 'next/link';
 import { HeaderProps } from '../../../../messages/useContent';
+import { FilterContext } from '@/contexts/filter';
+import { useContext } from 'react';
 
 function FirstModalList({
   header,
@@ -15,6 +17,7 @@ function FirstModalList({
 }) {
   const liStyle =
     'px-4 mb-2 flex items-center justify-between';
+  const { setFilters } = useContext(FilterContext);
 
   return (
     <div>
@@ -36,7 +39,10 @@ function FirstModalList({
         )}
         <li
           className={liStyle}
-          onClick={() => setfirstHover(false)}
+          onClick={() => {
+            setfirstHover(false);
+            setFilters({});
+          }}
         >
           <Link href="/product">
             <h3>{header.nav.allProducts}</h3>
