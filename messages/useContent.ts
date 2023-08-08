@@ -12,48 +12,8 @@ export function useContent() {
           wines: t('header.nav.links.wines'),
           preserves: t('header.nav.links.preserves'),
           cheeses: t('header.nav.links.cheeses'),
-          all: t('header.nav.links.all'),
         },
-        blog: {
-          title: t('header.nav.blog.title'),
-          link1: t('header.nav.blog.link1'),
-          link2: t('header.nav.blog.link2'),
-          link3: t('header.nav.blog.link3'),
-          link4: t('header.nav.blog.link4'),
-          link5: t('header.nav.blog.link5'),
-        },
-        wines: {
-          title: t('header.nav.wines.title'),
-          link1: t('header.nav.wines.link1'),
-          link2: t('header.nav.wines.link2'),
-          link3: t('header.nav.wines.link3'),
-          link4: t('header.nav.wines.link4'),
-          link5: t('header.nav.wines.link5'),
-        },
-        preserves: {
-          title: t('header.nav.preserves.title'),
-          link1: t('header.nav.preserves.link1'),
-          link2: t('header.nav.preserves.link2'),
-          link3: t('header.nav.preserves.link3'),
-          link4: t('header.nav.preserves.link4'),
-          link5: t('header.nav.preserves.link5'),
-        },
-        cheeses: {
-          title: t('header.nav.cheeses.title'),
-          link1: t('header.nav.cheeses.link1'),
-          link2: t('header.nav.cheeses.link2'),
-          link3: t('header.nav.cheeses.link3'),
-          link4: t('header.nav.cheeses.link4'),
-          link5: t('header.nav.cheeses.link5'),
-        },
-        all: {
-          title: t('header.nav.all.title'),
-          link1: t('header.nav.all.link1'),
-          link2: t('header.nav.all.link2'),
-          link3: t('header.nav.all.link3'),
-          link4: t('header.nav.all.link4'),
-          link5: t('header.nav.all.link5'),
-        },
+        allProducts: t('header.nav.allProducts'),
       },
       dropdown: {
         blog: {
@@ -198,12 +158,6 @@ export function useContent() {
                 'header.dropdown.wines.links.3.label'
               ),
             },
-            {
-              href: t('header.dropdown.wines.links.4.href'),
-              label: t(
-                'header.dropdown.wines.links.4.label'
-              ),
-            },
           ],
         },
         preserves: {
@@ -257,15 +211,7 @@ export function useContent() {
               label: t(
                 'header.dropdown.preserves.links.3.label'
               ),
-            },
-            {
-              href: t(
-                'header.dropdown.preserves.links.4.href'
-              ),
-              label: t(
-                'header.dropdown.preserves.links.4.label'
-              ),
-            },
+            }
           ],
         },
         all: {
@@ -578,48 +524,8 @@ export interface HeaderProps {
       wines: string;
       preserves: string;
       cheeses: string;
-      all: string;
     };
-    blog: {
-      title: string;
-      link1: string;
-      link2: string;
-      link3: string;
-      link4: string;
-      link5: string;
-    };
-    wines: {
-      title: string;
-      link1: string;
-      link2: string;
-      link3: string;
-      link4: string;
-      link5: string;
-    };
-    preserves: {
-      title: string;
-      link1: string;
-      link2: string;
-      link3: string;
-      link4: string;
-      link5: string;
-    };
-    cheeses: {
-      title: string;
-      link1: string;
-      link2: string;
-      link3: string;
-      link4: string;
-      link5: string;
-    };
-    all: {
-      title: string;
-      link1: string;
-      link2: string;
-      link3: string;
-      link4: string;
-      link5: string;
-    };
+    allProducts: string;
   };
   dropdown: {
     blog: {

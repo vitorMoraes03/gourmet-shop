@@ -33,6 +33,7 @@ function PickedFilterTags({
     let currentCategory = '';
 
     Object.entries(filters).forEach(([key, value]) => {
+      if (!Array.isArray(value)) return;
       if (value.includes(item.value)) {
         currentCategory = key.split('.')[0];
       }

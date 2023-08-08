@@ -9,8 +9,9 @@ import Cart from '../cart';
 import { HeaderProps } from '../../../../messages/useContent';
 import Banner from '../banner';
 import Dropdown from './dropdown';
-import NavLinks from './navLinks';
+import NavLinks, { styleLi } from './navLinks';
 import SearchModal from '../search/modal';
+import Link from 'next/link';
 
 function HeaderDesktop({
   header,
@@ -36,8 +37,6 @@ function HeaderDesktop({
             className="mt-4 w-full cursor-pointer pl-8 font-title md:mt-0 
             md:flex md:h-full md:gap-2 md:font-subtitle md:text-xs md:font-semibold 
             md:uppercase lg:text-sm"
-            onMouseEnter={() => setDropdown(true)}
-            onMouseLeave={() => setDropdown(false)}
           >
             {Object.entries(header.nav.links).map(
               ([key, value]) => (
@@ -46,9 +45,15 @@ function HeaderDesktop({
                   id={key}
                   value={value}
                   setDropdownSelected={setDropdownSelected}
+                  setDropdown={setDropdown}
                 />
               )
             )}
+            <li className={styleLi}>
+              <Link href="/product">
+                {header.nav.allProducts}
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="col-span-2 flex h-20 items-center justify-end gap-6">

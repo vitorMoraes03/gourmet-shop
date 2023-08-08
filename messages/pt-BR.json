@@ -8,49 +8,9 @@
           "blog": "Blog",
           "wines": "Vinhos",
           "preserves": "Conservas",
-          "cheeses": "Queijos",
-          "all": "Todos os produtos"
+          "cheeses": "Queijos"
         },
-        "blog": {
-          "title": "Mais visualizados",
-          "link1": "Top 10 vinhos nacionais",
-          "link2": "Receitas de São João",
-          "link3": "Risoto: diferentes tipos de arroz",
-          "link4": "Como preservar suas carnes",
-          "link5": "Um guia de cervejas artesanais de Petrópolis"
-        },
-        "wines": {
-          "title": "Vinhos para todos os gostos",
-          "link1": "Nacionais",
-          "link2": "Velho Mundo",
-          "link3": "Novo Mundo",
-          "link4": "Sul americanos",
-          "link5": "Naturais"
-        },
-        "preserves": {
-          "title": "Nossas conservas especiais",
-          "link1": "Nacionais",
-          "link2": "Internacionais",
-          "link3": "Portuguesas",
-          "link4": "Orgânicas",
-          "link5": "Veganas"
-        },
-        "cheeses": {
-          "title": "Nossos queijos especiais",
-          "link1": "Queijos nacionais",
-          "link2": "Queijos importados",
-          "link3": "Queijos veganos",
-          "link4": "Queijos azuis",
-          "link5": "Queijos maturados"
-        },
-        "all": {
-          "title": "",
-          "link1": "Novos produtos",
-          "link2": "Mais vendidos",
-          "link3": "Assinaturas",
-          "link4": "Acessórios",
-          "link5": "Ver todos os produtos"
-        }
+        "allProducts": "Todos os produtos"
       },
       "dropdown": {
         "blog": {
@@ -142,10 +102,6 @@
               "label": "Vinhos velho mundo"
             },
             {
-              "href": "/vinhos/vinhos-novo-mundo",
-              "label": "Vinhos novo mundo"
-            },
-            {
               "href": "/vinhos/vinhos-sul-americanos",
               "label": "Vinhos sul americanos"
             },
@@ -169,7 +125,7 @@
           "links": [
             {
               "href": "/conservas/conservas-nacionais",
-              "label": "Conservas nacionais"
+              "label": "Conservas regionais"
             },
             {
               "href": "/conservas/conservas-importadas",
@@ -182,10 +138,6 @@
             {
               "href": "/conservas/conservas-organicos",
               "label": "Conservas orgânicos"
-            },
-            {
-              "href": "/conservas/conservas-vegetarianos",
-              "label": "Conservas vegetarianos"
             }
           ]
         },

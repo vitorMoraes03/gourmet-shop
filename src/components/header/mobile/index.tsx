@@ -71,6 +71,7 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
                 <FirstModalList
                   header={header}
                   setDropdownSelected={setDropdownSelected}
+                  setfirstHover={setFirstHover}
                   setSecondHover={setSecondHover}
                 />
                 <SecondModalList

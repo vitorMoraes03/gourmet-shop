@@ -44,8 +44,11 @@ function FilterItem({
 
   useEffect(() => {
     const keyAcess = category + '.en';
-    if (filters[keyAcess]) {
-      const filter = filters[keyAcess].find(
+    const filterAcess = filters[keyAcess];
+
+    if (filterAcess && Array.isArray(filterAcess)) {
+      const array = filterAcess as string[];
+      const filter = array.find(
         (filterItem: string) => filterItem === item.value
       );
       if (filter) {

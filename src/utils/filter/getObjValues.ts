@@ -4,5 +4,8 @@ export function getObjValuesByCategory(
   category: string,
   previousFilters: FiltersInterface
 ): string[] {
-  return previousFilters[category + '.en'] || [];
+  if (Array.isArray(previousFilters[category + '.en'])) {
+    return previousFilters[category + '.en'] as string[];
+  }
+  return [];
 }
