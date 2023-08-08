@@ -11,6 +11,10 @@ import HeaderScreenSelector from '@/components/header';
 import Footer from '@/components/footer';
 import { FilterProvider } from '@/contexts/filter';
 import { LanguageProvider } from '@/contexts/language';
+import { ProductsProvider } from '@/contexts/products';
+import ContextWrapper from '@/contexts/wrapper';
+import useQuery from '@/utils/query/useQuery';
+import { makeRequest } from '@/utils/query/makeRequest';
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -54,15 +58,29 @@ export default function RootLayout({
         className={`${noto.variable} ${cormorant.variable} 
         ${bodoni.variable} relative tracking-tight text-black`}
       >
-        <FilterProvider>
-          <LanguageProvider>
-            <div id="portal"></div>
-            <HeaderScreenSelector headerContent={header} />
-            {children}
-            {/* <Footer content={footer} /> */}
-          </LanguageProvider>
-        </FilterProvider>
+        <ContextWrapper>
+          <div id="portal"></div>
+          <HeaderScreenSelector
+            headerContent={header}
+            reqFunction={makeRequest}
+          />
+          {children}
+          {/* <Footer content={footer} /> */}
+        </ContextWrapper>
       </body>
     </html>
   );
 }
+
+// {/* <FilterProvider>
+// <LanguageProvider>
+//   <ProductsProvider>
+//     <div id="portal"></div>
+//     <HeaderScreenSelector
+//       headerContent={header}
+//     />
+//     {children}
+//     {/* <Footer content={footer} /> */
+//     </ProductsProvider>
+//     </LanguageProvider>
+//     </FilterProvider> */}

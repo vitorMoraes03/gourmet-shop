@@ -5,7 +5,6 @@ export function checkIfIsSearch(
 ): FiltersInterface {
   let objFilter: FiltersInterface = {};
   Object.keys(filters).forEach((key) => {
-    console.log('key', key);
     const keySplit = key.split('.')[0];
     const keyLang = key.split('.')[1];
     if (keySplit === 'search') {

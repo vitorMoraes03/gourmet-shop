@@ -23,13 +23,11 @@ export interface SortOptionsInterface {
   [key: string]: number;
 }
 
-interface FilterProviderProps {
-  children: React.ReactNode;
-}
-
 export function FilterProvider({
   children,
-}: FilterProviderProps) {
+}: {
+  children: React.ReactNode;
+}) {
   const [filters, setFilters] = useState<FiltersInterface>(
     {}
   );

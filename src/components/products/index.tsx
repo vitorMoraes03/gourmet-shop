@@ -11,6 +11,10 @@ import useScreenSmallerThen from '@/utils/useScreenSize';
 import { useEffect, useContext, useState } from 'react';
 import { FilterContext } from '@/contexts/filter';
 import {
+  ProductsContext,
+  ProductsProvider,
+} from '@/contexts/products';
+import {
   FiltersInterface,
   QueryResult,
 } from '@/utils/query/useQuery';
@@ -69,9 +73,8 @@ function ProductsPage({
     mobileFilter,
     setMobileFilter,
   } = useContext(FilterContext);
-  const [currentProducts, setCurrentProducts] = useState<
-    ProductInterface[]
-  >([]);
+  const { currentProducts, setCurrentProducts } =
+    useContext(ProductsContext);
 
   const fetchData = async () => {
     const promise = queryFunction(filters, sortOptions);

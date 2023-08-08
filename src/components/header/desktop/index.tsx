@@ -14,10 +14,12 @@ import SearchModal from '../search/modal';
 
 function HeaderDesktop({
   header,
+  setLink,
 }: {
   header: HeaderProps;
+  setLink: any;
 }) {
-  const [hover, setHover] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
   const [dropdownSelected, setDropdownSelected] = useState<
     string | null
   >(null);
@@ -34,8 +36,8 @@ function HeaderDesktop({
             className="mt-4 w-full cursor-pointer pl-8 font-title md:mt-0 
             md:flex md:h-full md:gap-2 md:font-subtitle md:text-xs md:font-semibold 
             md:uppercase lg:text-sm"
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
+            onMouseEnter={() => setDropdown(true)}
+            onMouseLeave={() => setDropdown(false)}
           >
             {Object.entries(header.nav.links).map(
               ([key, value]) => (
@@ -59,13 +61,14 @@ function HeaderDesktop({
           <Cart />
         </div>
       </div>
-      {hover && dropdownSelected && (
+      {dropdown && dropdownSelected && (
         <Dropdown
           identifier={
             dropdownSelected as keyof typeof header.dropdown
           }
           headerText={header}
-          setHover={setHover}
+          setDropdown={setDropdown}
+          setLink={setLink}
         />
       )}
       {searchModalOpen && (

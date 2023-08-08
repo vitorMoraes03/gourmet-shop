@@ -1,15 +1,18 @@
-import { MongoClient } from 'mongodb';
 import { ProductInterface } from '@/components/products';
 import checkEmpty from '../checkObjEmpty';
 import { checkIfCategoryOrCountry } from './checkCondition/categoryOrCountry';
 import { checkIfIsSearch } from './checkCondition/isSearch';
 import { createQueryObjWithIn } from './createQuery/withIn';
 import { createQueryObjWithRegex } from './createQuery/withRegex';
-
-const MONGODB_URI = process.env.MONGODB_URI as string;
+import { makeRequest } from './makeRequest';
 
 export interface FiltersInterface {
-  [key: string]: string[] | boolean;
+  [key: string]:
+    | string[]
+    | boolean
+    | { $regex: string; $options: string }
+    | { $ne: string }
+    | { $in: string[] };
 }
 
 export interface QueryResult {
@@ -50,33 +53,12 @@ async function useQuery(
       createQueryObjWithRegex(search, queryObj);
     }
 
-    const client = await MongoClient.connect(MONGODB_URI);
-    const db = client.db();
-    const products = await db
-      .collection('products')
-      .find(queryObj)
-      .sort(defaultSortOptions(sortOptions))
-      .toArray();
-    client.close();
+    console.log('queryObj', queryObj);
 
-    const productArray = products.map((product) => {
-      const { _id, ...rest } = product;
-      return {
-        id: _id.toString(),
-        ...rest,
-      } as ProductInterface;
-    });
-
-    return { products: productArray };
+    return await makeRequest(queryObj, sortOptions);
   } catch (error) {
     return { products: null };
   }
-}
-
-function defaultSortOptions(sortOptions: {}) {
-  if (Object.keys(sortOptions).length === 0)
-    return { rating: -1 };
-  return sortOptions;
 }
 
 export default useQuery;
