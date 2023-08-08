@@ -4,6 +4,12 @@ import { MongoClient } from 'mongodb';
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
+export interface ReqFunctionInterface {
+  (queryObj: QueryObjInterface, sortOptions: {}): Promise<{
+    products: ProductInterface[];
+  }>;
+}
+
 export async function makeRequest(
   queryObj: QueryObjInterface,
   sortOptions: {}

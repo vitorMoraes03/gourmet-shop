@@ -8,13 +8,14 @@ import HeaderMobile from './mobile';
 import useScreenSmallerThen from '@/utils/useScreenSize';
 import { ProductsContext } from '@/contexts/products';
 import { selectProducts } from '@/utils/selectProducts';
+import { ReqFunctionInterface } from '@/utils/query/makeRequest';
 
 function HeaderScreenSelector({
   headerContent,
   reqFunction,
 }: {
   headerContent: HeaderProps;
-  reqFunction: any;
+  reqFunction: ReqFunctionInterface;
 }) {
   const isScreenSmallerThen = useScreenSmallerThen({
     width: 850,

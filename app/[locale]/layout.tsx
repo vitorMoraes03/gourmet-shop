@@ -43,7 +43,7 @@ export default function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: any;
+  params: { locale: string };
 }) {
   const locale = useLocale();
   const { header, footer } = useContent();

@@ -17,7 +17,7 @@ function HeaderDesktop({
   setLink,
 }: {
   header: HeaderProps;
-  setLink: any;
+  setLink: (link: string) => void;
 }) {
   const [dropdown, setDropdown] = useState(false);
   const [dropdownSelected, setDropdownSelected] = useState<
