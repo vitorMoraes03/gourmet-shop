@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Card from './card';
 import { ProductInterface } from '.';
+import Link from 'next/link';
 
 function ListProducts({
   fetchedContent,
@@ -35,15 +36,24 @@ function ListProducts({
             index < totalItems * currentPage
           ) {
             return (
-              <li
+              <Link
                 key={`${product.productName}-${index}`}
-                className="h-[450px] sm:h-[650px] md:h-[700px] lg:h-[750px] xl:h-[600px] 2xl:h-[500px]"
+                className="opacity-9 transition-all hover:scale-[1.01] hover:opacity-100"
+                href={
+                  '/product/' +
+                  product.productName.en
+                    .toLowerCase()
+                    .split(' ')
+                    .join('-')
+                }
               >
-                <Card
-                  content={product}
-                  idWhere={'listProducts'}
-                />
-              </li>
+                <li className="h-[450px] sm:h-[650px] md:h-[700px] lg:h-[750px] xl:h-[600px] 2xl:h-[500px]">
+                  <Card
+                    content={product}
+                    idWhere={'listProducts'}
+                  />
+                </li>
+              </Link>
             );
           }
           return null;

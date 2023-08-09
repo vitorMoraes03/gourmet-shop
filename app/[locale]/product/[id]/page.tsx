@@ -1,26 +1,31 @@
-import { ProductPageWithContent } from '../page';
-import useQuery from '@/utils/query/useQuery';
-
-// DELETAR //
+import { makeRequest } from '@/utils/query/makeRequest';
 
 async function ProductDynamic({
   params,
 }: {
   params: { id: string };
 }) {
-  const { products } = await useQuery({}, {});
-  const id = params.id;
+  const id = capitalizeWords(params.id.replace(/-/g, ' '));
 
-  // se eu tenho o id aqui
-  // agora eu vou ter que fazer um useQuery direcionado
-  // como??
-
-  return (
-    <ProductPageWithContent
-      data={JSON.stringify(products)}
-      queryFunction={useQuery}
-    />
+  const { products } = await makeRequest(
+    { 'productName.en': { $in: [id] } },
+    {}
   );
+
+  console.log('products', products);
+
+  // pq o codigo dessa pagina parece estar rodando, só de passar o mouse nos produtos???
+
+  return <div>{products[0].productName.en}</div>;
+}
+
+function capitalizeWords(s: string) {
+  const words = s.split(' ');
+  const capitalizedWords = words.map(
+    (word) => word.charAt(0).toUpperCase() + word.slice(1)
+  );
+  const result = capitalizedWords.join(' ');
+  return result;
 }
 
 export default ProductDynamic;
