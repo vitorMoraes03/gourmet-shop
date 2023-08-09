@@ -370,6 +370,12 @@
           }
         ]
       }
+    },
+    "blog": {
+      "header": {
+        "title": "Blog Gourmet",
+        "subtitle": "Blog with the best tips for your kitchen"
+      }
     }
   }
 }

@@ -1,6 +1,8 @@
 import { ProductPageWithContent } from '../page';
 import useQuery from '@/utils/query/useQuery';
 
+// DELETAR //
+
 async function ProductDynamic({
   params,
 }: {

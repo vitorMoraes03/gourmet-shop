@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { title } from 'process';
 
 export function useContent() {
   const t = useTranslations('Index');
@@ -211,7 +212,7 @@ export function useContent() {
               label: t(
                 'header.dropdown.preserves.links.3.label'
               ),
-            }
+            },
           ],
         },
         all: {
@@ -513,6 +514,12 @@ export function useContent() {
         ],
       },
     },
+    blog: {
+      header: {
+        title: t('blog.header.title'),
+        subtitle: t('blog.header.subtitle'),
+      },
+    },
   };
 }
 
@@ -709,5 +716,12 @@ export interface ProductsProps {
       label: string;
       value: string;
     }[];
+  };
+}
+
+export interface BlogProps {
+  header: {
+    title: string;
+    subtitle: string;
   };
 }
