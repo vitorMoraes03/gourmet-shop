@@ -22,4 +22,12 @@
   .black-button {
     @apply bg-black py-2 font-bold uppercase tracking-wider text-white hover:text-darkerGray;
   }
+
+  .header-spacing {
+    @apply pt-[88px] md:pt-[128px];
+  }
+
+  .default-x-padding {
+    @apply px-4 sm:px-10 xl:px-16;
+  }
 }

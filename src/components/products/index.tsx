@@ -101,21 +101,23 @@ function ProductsPage({
   }, []);
 
   return (
-    <section className="px-4 py-32 sm:px-10 md:py-40 xl:px-16">
-      <Title
-        title={content.title}
-        subtitle={content.subtitle}
-      />
-      <FilterSelectors
-        content={content}
-        isScreenSmall={isScreenSmallerThen}
-        applyFillter={applyFillter}
-      />
-      <div className="mt-2 sm:mt-4 sm:flex">
-        {!isScreenSmallerThen && (
-          <FilterList content={content.filters} />
-        )}
-        <ListProducts fetchedContent={currentProducts} />
+    <section className="header-spacing px-4 default-x-padding">
+      <div className='py-8'>
+        <Title
+          title={content.title}
+          subtitle={content.subtitle}
+        />
+        <FilterSelectors
+          content={content}
+          isScreenSmall={isScreenSmallerThen}
+          applyFillter={applyFillter}
+        />
+        <div className="mt-2 sm:mt-4 sm:flex">
+          {!isScreenSmallerThen && (
+            <FilterList content={content.filters} />
+          )}
+          <ListProducts fetchedContent={currentProducts} />
+        </div>
       </div>
     </section>
   );
