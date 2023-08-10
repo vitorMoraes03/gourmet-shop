@@ -1,5 +1,6 @@
 import { ProductInterface } from '../products';
 import Button from './button';
+import PurchaseInfo from './purchaseInfo';
 import TextInfo from './textInfos';
 import Image from 'next/image';
 
@@ -13,12 +14,12 @@ function ProductInfo({
 
   // adicionar uma parte extra?
   // comprar agora, adicionar ao carrinho
-  // devolução em até sete dias grátis, 
+  // devolução em até sete dias grátis,
 
   return (
     <section className="header-spacing default-x-padding">
       <div className="grid grid-cols-2 gap-10 pt-20">
-        <div className="justify-self-end col-span-1 max-h-[500px]">
+        <div className="col-span-1 max-h-[500px] justify-self-end">
           <Image
             alt={products.image.alt.en}
             src={products.image.url}
@@ -29,6 +30,7 @@ function ProductInfo({
         </div>
         <div className="col-span-1">
           <TextInfo products={products} />
+          <PurchaseInfo />
           <Button />
         </div>
       </div>
