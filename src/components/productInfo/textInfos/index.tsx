@@ -10,9 +10,9 @@ export function TextInfo({
 }) {
   return (
     <div>
-      <Link href={'/product'} className="text-sm">
-        Shop All /
-      </Link>
+      <div className="mb-8 text-sm">
+        <Link href={'/product'}>/ Shop All </Link>
+      </div>
       <Title products={products} />
       <TextTags products={products} />
     </div>

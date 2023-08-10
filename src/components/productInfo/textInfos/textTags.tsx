@@ -22,9 +22,8 @@ function TextTags({
   products: ProductInterface;
 }) {
   return (
-    // estilo TEMPORARIO width 50%
-    <div className="w-1/2">
-      <ul className="divide-y divide-gray">
+    <div className="mt-10 border border-gray border-opacity-60">
+      <ul className="divide-y divide-gray px-1">
         {tagsHardCode.map((tag, index) => {
           return (
             <SingleTag
