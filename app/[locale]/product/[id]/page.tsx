@@ -1,3 +1,4 @@
+import ProductInfo from '@/components/productInfo';
 import { makeRequest } from '@/utils/query/makeRequest';
 
 async function ProductDynamic({
@@ -14,9 +15,7 @@ async function ProductDynamic({
 
   console.log('products', products);
 
-  // pq o codigo dessa pagina parece estar rodando, só de passar o mouse nos produtos???
-
-  return <div>{products[0].productName.en}</div>;
+  return <ProductInfo products={products[0]}/>;
 }
 
 function capitalizeWords(s: string) {

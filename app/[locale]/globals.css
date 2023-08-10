@@ -20,6 +20,6 @@
   }
 
   .black-button {
-    @apply bg-black text-white uppercase hover:text-darkerGray;
+    @apply bg-black py-2 font-bold uppercase tracking-wider text-white hover:text-darkerGray;
   }
 }

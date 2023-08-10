@@ -45,7 +45,7 @@ function ModalWrapper({
         {children}
         <button
           className="black-button mt-2 w-full 
-    py-2 text-sm font-semibold tracking-wider"
+    text-sm"
           onClick={() => {
             applyFilter();
             setModalOpen(false);
