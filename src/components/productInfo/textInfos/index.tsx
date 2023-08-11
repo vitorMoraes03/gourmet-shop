@@ -9,7 +9,7 @@ export function TextInfo({
   products: ProductInterface;
 }) {
   return (
-    <div>
+    <div className='h-2/3'>
       <div className="mb-8 text-sm">
         <Link href={'/product'}>/ Shop All </Link>
       </div>

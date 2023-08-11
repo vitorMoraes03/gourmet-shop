@@ -23,6 +23,10 @@
     @apply bg-black py-2 font-bold uppercase tracking-wider text-white hover:text-darkerGray;
   }
 
+  .white-button {
+    @apply border bg-white py-2 font-bold uppercase tracking-wider text-black hover:text-darkerGray;
+  }
+
   .header-spacing {
     @apply pt-[88px] md:pt-[128px];
   }

@@ -1,7 +1,7 @@
-function Button() {
+function Button({ stylesBtn, text }: { stylesBtn: string, text: string }) {
   return (
-    <button className="black-button w-40 text-sm">
-      teste
+    <button className={`${stylesBtn} w-full text-sm`}>
+      {text}
     </button>
   );
 }
