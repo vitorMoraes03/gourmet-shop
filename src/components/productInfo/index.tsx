@@ -12,14 +12,6 @@ function ProductInfo({
   products: ProductInterface;
   content: ProductIndividualProps;
 }) {
-  console.log('width', products.image.width);
-  console.log('height', products.image.height);
-
-  // nao gostei disso, talvez pegar algum dado do proprio produto, p ficar mais estavel
-  function randomNum() {
-    return Math.floor(Math.random() * 100);
-  }
-
   return (
     <section className="header-spacing default-x-padding">
       <div className="grid grid-cols-2 gap-10 pt-20">

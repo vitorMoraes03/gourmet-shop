@@ -8,6 +8,9 @@ export const LanguageContext = React.createContext({
   setDefaultLang: (lang: 'pt-BR' | 'en') => {},
 });
 
+// Temos um problema aqui, talvez preciso de useEffect, e/ou LocalStorage
+// Quando inicia a página locale é 'en' e defaultLang é 'pt-BR'
+
 export function LanguageProvider({
   children,
 }: {

@@ -20,9 +20,13 @@ import {
 } from '@/utils/query/useQuery';
 import FilterSelectors from '../filter';
 
-export interface ProductInterface {
+export interface ProductInterface
+  extends ProductInterfaceNoID {
   id?: string;
   _id?: string;
+}
+
+export interface ProductInterfaceNoID {
   productName: {
     pt: string;
     en: string;
@@ -50,6 +54,43 @@ export interface ProductInterface {
     width: number;
     height: number;
   };
+  tags: {
+    firstTag: {
+      label: {
+        pt: string;
+        en: string;
+      };
+      content: {
+        pt: string[];
+        en: string[];
+      };
+    };
+    secondTag: {
+      label: {
+        pt: string;
+        en: string;
+      };
+      content: {
+        pt: string;
+        en: string;
+      };
+    };
+    thirdTag: {
+      label: {
+        pt: string;
+        en: string;
+      };
+      content: {
+        pt: string;
+        en: string;
+      };
+    };
+  };
+  fakeNumbers: {
+    review: number;
+    stock: number;
+  };
+  vegan: boolean;
 }
 
 function ProductsPage({
@@ -101,8 +142,8 @@ function ProductsPage({
   }, []);
 
   return (
-    <section className="header-spacing px-4 default-x-padding">
-      <div className='py-8'>
+    <section className="header-spacing default-x-padding px-4">
+      <div className="py-8">
         <Title
           title={content.title}
           subtitle={content.subtitle}

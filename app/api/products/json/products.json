@@ -27,6 +27,46 @@
       "width": 333,
       "height": 500
     },
+    "subtitle": {
+      "pt": "Azeite extra virgem",
+      "en": "Extra virgin olive oil"
+    },
+    "fakeNumbers": {
+      "review": 123,
+      "stock": 12
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Picante", "Verde", "Frutado"],
+          "en": ["Spicy", "Green", "Fruity"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "West Thurrock",
+          "en": "West Thurrock"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
     "vegan": true
   },
   {
@@ -56,6 +96,46 @@
       },
       "width": 333,
       "height": 500
+    },
+    "subtitle": {
+      "pt": "Conserva de frutos do mar",
+      "en": "Seafood preserves"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Picante", "Salgado", "Defumado"],
+          "en": ["Spicy", "Salty", "Smoked"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Lisboa",
+          "en": "Lisbon"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
     },
     "vegan": false
   },
@@ -87,6 +167,46 @@
       "width": 333,
       "height": 500
     },
+    "subtitle": {
+      "pt": "Queijo artesanal",
+      "en": "Artisanal cheese"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Salgado", "Defumado", "Cremoso"],
+          "en": ["Salty", "Smoked", "Creamy"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Bretanha",
+          "en": "Brittany"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
     "vegan": false
   },
   {
@@ -116,6 +236,46 @@
       },
       "width": 333,
       "height": 500
+    },
+    "subtitle": {
+      "pt": "Cerveja artesanal",
+      "en": "Craft beer"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Frutado", "Amargo", "Cítrico"],
+          "en": ["Fruity", "Bitter", "Citrus"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "São Paulo",
+          "en": "São Paulo"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
     },
     "vegan": true
   },
@@ -147,6 +307,46 @@
       "width": 333,
       "height": 500
     },
+    "subtitle": {
+      "pt": "Café especial",
+      "en": "Special coffee"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Encorpado", "Intenso", "Caramelo"],
+          "en": ["Full-bodied", "Intense", "Caramel"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Minas Gerais",
+          "en": "Minas Gerais"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
     "vegan": true
   },
   {
@@ -176,6 +376,46 @@
       },
       "width": 333,
       "height": 500
+    },
+    "subtitle": {
+      "pt": "Azeite extra virgem",
+      "en": "Extra virgin olive oil"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Picante", "Frutado", "Verde"],
+          "en": ["Spicy", "Fruity", "Green"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Toscana",
+          "en": "Tuscany"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
     },
     "vegan": true
   },
@@ -207,6 +447,46 @@
       "width": 333,
       "height": 500
     },
+    "subtitle": {
+      "pt": "Conserva mediterrânea",
+      "en": "Mediterranean preserves"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Picante", "Salgado", "Defumado"],
+          "en": ["Spicy", "Salty", "Smoked"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Lisboa",
+          "en": "Lisbon"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
+    },
     "vegan": true
   },
   {
@@ -236,6 +516,46 @@
       },
       "width": 333,
       "height": 500
+    },
+    "subtitle": {
+      "pt": "Queijo artesanal",
+      "en": "Artisanal cheese"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Picante", "Salgado", "Defumado"],
+          "en": ["Spicy", "Salty", "Smoked"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Bretanha",
+          "en": "Brittany"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
     },
     "vegan": false
   },
@@ -267,6 +587,46 @@
       "width": 333,
       "height": 500
     },
+    "subtitle": {
+      "pt": "Cerveja stout",
+      "en": "Stout beer"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Encorpado", "Chocolate", "Café"],
+          "en": ["Full-bodied", "Chocolate", "Coffee"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "São Paulo",
+          "en": "São Paulo"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
+    },
     "vegan": true
   },
   {
@@ -296,6 +656,46 @@
       },
       "width": 333,
       "height": 500
+    },
+    "subtitle": {
+      "pt": "Café orgânico",
+      "en": "Organic coffee"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Suave", "Frutado", "Caramelo"],
+          "en": ["Smooth", "Fruity", "Caramel"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Minas Gerais",
+          "en": "Minas Gerais"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
     },
     "vegan": true
   },
@@ -327,6 +727,46 @@
       "width": 333,
       "height": 500
     },
+    "subtitle": {
+      "pt": "Azeite extra virgem",
+      "en": "Extra virgin olive oil"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Picante", "Verde", "Frutado"],
+          "en": ["Spicy", "Green", "Fruity"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Region",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "West Thurrock",
+          "en": "West Thurrock"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Year",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
     "vegan": true
   },
   {
@@ -356,6 +796,46 @@
       },
       "width": 333,
       "height": 500
+    },
+    "subtitle": {
+      "pt": "Conserva de pimenta",
+      "en": "Pepper preserve"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Picante", "Salgado", "Defumado"],
+          "en": ["Spicy", "Salty", "Smoked"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Region",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Salvador",
+          "en": "Salvador"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Year",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
     },
     "vegan": true
   },
@@ -387,6 +867,46 @@
       "width": 333,
       "height": 500
     },
+    "subtitle": {
+      "pt": "Queijo gorgonzola",
+      "en": "Gorgonzola cheese"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Picante", "Salgado", "Defumado"],
+          "en": ["Spicy", "Salty", "Smoked"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Region",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Lombardia",
+          "en": "Lombardy"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Year",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
     "vegan": false
   },
   {
@@ -416,6 +936,46 @@
       },
       "width": 333,
       "height": 500
+    },
+    "subtitle": {
+      "pt": "Cerveja de trigo",
+      "en": "Wheat beer"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Frutado", "Cítrico", "Cremoso"],
+          "en": ["Fruity", "Citrus", "Creamy"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Region",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Yorkshire",
+          "en": "Yorkshire"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Year",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
     },
     "vegan": true
   },
@@ -447,6 +1007,46 @@
       "width": 333,
       "height": 500
     },
+    "subtitle": {
+      "pt": "Café premium",
+      "en": "Premium coffee"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Encorpado", "Caramelo", "Cítrico"],
+          "en": ["Full-bodied", "Caramel", "Citrus"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Region",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Cundinamarca",
+          "en": "Cundinamarca"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Year",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
     "vegan": true
   },
   {
@@ -476,6 +1076,46 @@
       },
       "width": 333,
       "height": 500
+    },
+    "subtitle": {
+      "pt": "Queijo parmesão",
+      "en": "Parmesan cheese"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Salgado", "Defumado", "Picante"],
+          "en": ["Salty", "Smoked", "Spicy"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Region",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Parma",
+          "en": "Parma"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Year",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
     },
     "vegan": false
   }

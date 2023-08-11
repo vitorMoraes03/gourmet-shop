@@ -1,3 +1,7 @@
+import {
+  ProductInterface,
+  ProductInterfaceNoID,
+} from '@/components/products';
 import { MongoClient } from 'mongodb';
 import { NextRequest } from 'next/server';
 
@@ -5,30 +9,8 @@ import { NextRequest } from 'next/server';
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
-export interface ProductInterfacePost {
-  productName: {
-    pt: string;
-    en: string;
-  };
-  price: number;
-  rating: number;
-  country: {
-    pt: string;
-    en: string;
-  };
-  category: {
-    pt: string;
-    en: string;
-  };
-  description: {
-    pt: string;
-    en: string;
-  };
-  url: string;
-}
-
 export async function POST(req: NextRequest) {
-  const data: ProductInterfacePost[] = await req.json();
+  const data: ProductInterfaceNoID[] = await req.json();
   // const data: ProductInterface = await req.json();
   const client = await MongoClient.connect(MONGODB_URI);
   const db = client.db();
