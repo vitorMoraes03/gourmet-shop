@@ -1,3 +1,4 @@
+import { ProductIndividualProps } from '../../../messages/useContent';
 import { ProductInterface } from '../products';
 import Button from './button';
 import PurchaseInfo from './purchaseInfo';
@@ -6,8 +7,10 @@ import Image from 'next/image';
 
 function ProductInfo({
   products,
+  content,
 }: {
   products: ProductInterface;
+  content: ProductIndividualProps;
 }) {
   console.log('width', products.image.width);
   console.log('height', products.image.height);
@@ -30,11 +33,11 @@ function ProductInfo({
           />
         </div>
         <div className="col-span-1 h-full">
-          <TextInfo products={products} />
+          <TextInfo products={products} content={content} />
           <div className="grid h-1/3 grid-cols-2">
-            <PurchaseInfo />
+            <PurchaseInfo content={content} />
             <div className="flex flex-col justify-center gap-2">
-              <p className='mb-1 italic text-sm'>
+              <p className="mb-1 text-sm italic">
                 Estoque disponível:{' '}
                 <span className="font-semibold">
                   {randomNum()} unidades
@@ -42,11 +45,11 @@ function ProductInfo({
               </p>
               <Button
                 stylesBtn="black-button"
-                text="Compre agora"
+                text={content.buttons.buyNow}
               />
               <Button
                 stylesBtn="white-button"
-                text="Adicionar ao carrinho"
+                text={content.buttons.addToCart}
               />
             </div>
           </div>

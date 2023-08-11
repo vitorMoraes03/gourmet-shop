@@ -1,5 +1,30 @@
 import ProductInfo from '@/components/productInfo';
 import { makeRequest } from '@/utils/query/makeRequest';
+import {
+  ProductIndividualProps,
+  useContent,
+} from '../../../../messages/useContent';
+import { ProductInterface } from '@/components/products';
+
+function ProductDynamicWithContent({
+  // params,
+  products,
+}: {
+  // params: { id: string };
+  products: ProductInterface;
+}) {
+  //  const id = capitalizeWords(params.id.replace(/-/g, ' '));
+  const { productIndividual } = useContent();
+
+  // const { products } = await makeRequest(
+  //   { 'productName.en': { $in: [id] } },
+  //   {}
+  // );
+
+  return (
+    <ProductInfo products={products} content={productIndividual} />
+  );
+}
 
 async function ProductDynamic({
   params,
@@ -7,15 +32,18 @@ async function ProductDynamic({
   params: { id: string };
 }) {
   const id = capitalizeWords(params.id.replace(/-/g, ' '));
+  
 
   const { products } = await makeRequest(
     { 'productName.en': { $in: [id] } },
     {}
   );
 
-  console.log('products', products);
-
-  return <ProductInfo products={products[0]}/>;
+  return (
+    <ProductDynamicWithContent
+      products={products[0]}
+    />
+  );
 }
 
 function capitalizeWords(s: string) {

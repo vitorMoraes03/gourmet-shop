@@ -1,0 +1,70 @@
+{
+  "productName": {
+    "pt": "The Oil Guys",
+    "en": "The Oil Guys"
+  },
+  "subtitle": {
+    "pt": "Azeite extra virgem",
+    "en": "Extra virgin olive oil"
+  },
+  "price": 72.3,
+  "rating": 4.0,
+  "fakeNumbers": {
+    "review": 123,
+    "stock": 12
+  },
+  "country": {
+    "pt": "Inglaterra",
+    "en": "England"
+  },
+  "category": {
+    "pt": "Azeites",
+    "en": "Olive Oil"
+  },
+  "description": {
+    "pt": "Azeite de alta qualidade produzido pela The Oil Guys. Possui um sabor frutado e suave, perfeito para realçar o sabor de pratos gourmet. Extraído de azeitonas cultivadas nas belas colinas da Inglaterra.",
+    "en": "High-quality olive oil produced by The Oil Guys. It has a fruity and mild flavor, perfect for enhancing the taste of gourmet dishes. Extracted from olives grown in the beautiful hills of England."
+  },
+  "tags": {
+    "firstTag": {
+      "label": {
+        "pt": "Flavors",
+        "en": "Flavors"
+      },
+      "content": {
+        "pt": ["Picante", "Verde", "Frutado"],
+        "en": ["Spicy", "Green", "Fruity"]
+      }
+    },
+    "secondTag": {
+      "label": {
+        "pt": "Garrafas produzidas",
+        "en": "Bottles produced"
+      },
+      "content": {
+        "pt": "10000",
+        "en": "10000"
+      }
+    },
+    "thirdTag": {
+      "label": {
+        "pt": "Ano",
+        "en": "Year"
+      },
+      "content": {
+        "pt": "2020",
+        "en": "2020"
+      }
+    }
+  },
+  "image": {
+    "url": "https://live.staticflickr.com/65535/53055045789_ed90e1951e.jpg",
+    "alt": {
+      "pt": "Embalagem de azeite em uma mesa de madeira.",
+      "en": "Olive oil bottle on a wooden table."
+    },
+    "width": 333,
+    "height": 500
+  },
+  "vegan": true
+}

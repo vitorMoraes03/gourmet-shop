@@ -397,6 +397,10 @@
           "span": "Tax",
           "text": "Free delivery for purchases over $ 100"
         }
+      },
+      "buttons": {
+        "addToCart": "Add to cart",
+        "buyNow": "Buy now"
       }
     }
   }

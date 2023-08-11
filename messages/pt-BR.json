@@ -397,6 +397,10 @@
           "span": "Taxa",
           "text": "Entrega gratuita para compras acima de $100"
         }
+      },
+      "buttons": {
+        "addToCart": "Adicionar ao carrinho",
+        "buyNow": "Comprar agora"
       }
     }
   }

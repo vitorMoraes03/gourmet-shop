@@ -524,21 +524,41 @@ export function useContent() {
       reviews: t('productIndividual.reviews'),
       purchaseInfo: {
         home: {
-          span: t('purchaseInfo.home.span'),
-          text: t('purchaseInfo.home.text'),
+          span: t(
+            'productIndividual.purchaseInfo.home.span'
+          ),
+          text: t(
+            'productIndividual.purchaseInfo.home.text'
+          ),
         },
         quality: {
-          span: t('purchaseInfo.quality.span'),
-          text: t('purchaseInfo.quality.text'),
+          span: t(
+            'productIndividual.purchaseInfo.quality.span'
+          ),
+          text: t(
+            'productIndividual.purchaseInfo.quality.text'
+          ),
         },
         points: {
-          span: t('purchaseInfo.points.span'),
-          text: t('purchaseInfo.points.text'),
+          span: t(
+            'productIndividual.purchaseInfo.points.span'
+          ),
+          text: t(
+            'productIndividual.purchaseInfo.points.text'
+          ),
         },
         delivery: {
-          span: t('purchaseInfo.delivery.span'),
-          text: t('purchaseInfo.delivery.text'),
+          span: t(
+            'productIndividual.purchaseInfo.delivery.span'
+          ),
+          text: t(
+            'productIndividual.purchaseInfo.delivery.text'
+          ),
         },
+      },
+      buttons: {
+        addToCart: t('productIndividual.buttons.addToCart'),
+        buyNow: t('productIndividual.buttons.buyNow'),
       },
     },
   };
@@ -767,5 +787,9 @@ export interface ProductIndividualProps {
       span: string;
       text: string;
     };
+  };
+  buttons: {
+    addToCart: string;
+    buyNow: string;
   };
 }

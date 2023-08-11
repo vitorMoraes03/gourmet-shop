@@ -26,7 +26,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": true
   },
   {
     "productName": {
@@ -55,7 +56,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": false
   },
   {
     "productName": {
@@ -84,7 +86,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": false
   },
   {
     "productName": {
@@ -113,7 +116,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": true
   },
   {
     "productName": {
@@ -142,7 +146,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": true
   },
   {
     "productName": {
@@ -171,7 +176,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": true
   },
   {
     "productName": {
@@ -200,7 +206,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": true
   },
   {
     "productName": {
@@ -229,7 +236,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": false
   },
   {
     "productName": {
@@ -258,7 +266,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": true
   },
   {
     "productName": {
@@ -287,7 +296,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": true
   },
   {
     "productName": {
@@ -316,7 +326,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": true
   },
   {
     "productName": {
@@ -345,7 +356,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": true
   },
   {
     "productName": {
@@ -374,7 +386,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": false
   },
   {
     "productName": {
@@ -403,7 +416,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": true
   },
   {
     "productName": {
@@ -432,7 +446,8 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": true
   },
   {
     "productName": {
@@ -461,6 +476,7 @@
       },
       "width": 333,
       "height": 500
-    }
+    },
+    "vegan": false
   }
 ]
