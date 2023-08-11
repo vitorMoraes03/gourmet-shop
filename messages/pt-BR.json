@@ -376,6 +376,28 @@
         "title": "Blog Gourmet",
         "subtitle": "Blog com dicas de harmonização, receitas e muito mais!"
       }
+    },
+    "productIndividual": {
+      "returnLink": "Shop All",
+      "reviews": "Reviews",
+      "purchaseInfo": {
+        "home": {
+          "span": "Entrega",
+          "text": "24 horas na sua casa"
+        },
+        "quality": {
+          "span": "Excelência",
+          "text": "Produtos frescos e selecionados"
+        },
+        "points": {
+          "span": "Pontos",
+          "text": "Ganhe pontos com suas compras"
+        },
+        "delivery": {
+          "span": "Taxa",
+          "text": "Entrega gratuita para compras acima de $100"
+        }
+      }
     }
   }
 }

@@ -376,6 +376,28 @@
         "title": "Blog Gourmet",
         "subtitle": "Blog with the best tips for your kitchen"
       }
+    },
+    "productIndividual": {
+      "returnLink": "Shop All",
+      "reviews": "Reviews",
+      "purchaseInfo": {
+        "home": {
+          "span": "Delivery",
+          "text": "24 hours to your home"
+        },
+        "quality": {
+          "span": "Excellence",
+          "text": "Fresh and selected products"
+        },
+        "points": {
+          "span": "Points",
+          "text": "Earn points with your purchases"
+        },
+        "delivery": {
+          "span": "Tax",
+          "text": "Free delivery for purchases over $ 100"
+        }
+      }
     }
   }
 }

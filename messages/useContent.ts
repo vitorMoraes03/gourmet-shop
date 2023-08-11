@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import { title } from 'process';
 
 export function useContent() {
   const t = useTranslations('Index');
@@ -520,6 +519,28 @@ export function useContent() {
         subtitle: t('blog.header.subtitle'),
       },
     },
+    productIndividual: {
+      returnLink: t('productIndividual.returnLink'),
+      reviews: t('productIndividual.reviews'),
+      purchaseInfo: {
+        home: {
+          span: t('purchaseInfo.home.span'),
+          text: t('purchaseInfo.home.text'),
+        },
+        quality: {
+          span: t('purchaseInfo.quality.span'),
+          text: t('purchaseInfo.quality.text'),
+        },
+        points: {
+          span: t('purchaseInfo.points.span'),
+          text: t('purchaseInfo.points.text'),
+        },
+        delivery: {
+          span: t('purchaseInfo.delivery.span'),
+          text: t('purchaseInfo.delivery.text'),
+        },
+      },
+    },
   };
 }
 
@@ -723,5 +744,28 @@ export interface BlogProps {
   header: {
     title: string;
     subtitle: string;
+  };
+}
+
+export interface ProductIndividualProps {
+  returnLink: string;
+  reviews: string;
+  purchaseInfo: {
+    home: {
+      span: string;
+      text: string;
+    };
+    quality: {
+      span: string;
+      text: string;
+    };
+    points: {
+      span: string;
+      text: string;
+    };
+    delivery: {
+      span: string;
+      text: string;
+    };
   };
 }
