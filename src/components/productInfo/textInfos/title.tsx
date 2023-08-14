@@ -8,13 +8,8 @@ function Title({
 }: {
   products: ProductInterface;
 }) {
-  const idWhere = 'productInfo';
   const { defaultLang } = useContext(LanguageContext);
   const lang = defaultLang === 'en' ? 'en' : 'pt';
-
-  function randonNumber() {
-    return Math.floor(Math.random() * 1000);
-  }
 
   return (
     <div>
@@ -29,7 +24,7 @@ function Title({
           {RatingStars(
             products.rating,
             products.id!,
-            idWhere
+            'productInfo'
           )}
         </div>
         <div>

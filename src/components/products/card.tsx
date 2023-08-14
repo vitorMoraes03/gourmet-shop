@@ -26,9 +26,12 @@ function Card({
         />
       </div>
       <div className="px-1 pt-1 text-sm sm:text-base">
-        <h3 className="my-1 leading-relaxed tracking-tighter  sm:mt-2 sm:text-lg md:font-title md:text-2xl">
+        <h3 className="leading-relaxed tracking-tighter  sm:mt-2 sm:text-lg md:font-title md:text-2xl">
           {content.productName[lang]}
         </h3>
+        <p className="text-xs font-semibold uppercase tracking-widest">
+          {content.subtitle[lang]}
+        </p>
         <div className="my-1 flex">
           {RatingStars(
             content.rating,

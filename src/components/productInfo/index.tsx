@@ -14,6 +14,8 @@ function ProductInfo({
   products: ProductInterface;
   content: ProductIndividualProps;
 }) {
+  console.log('products', products);
+
   return (
     <section className="header-spacing default-x-padding">
       <div className="grid grid-cols-2 gap-10 pt-20">
