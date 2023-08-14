@@ -1,13 +1,9 @@
-import {
-  LanguageContext,
-  LanguageProvider,
-} from '@/contexts/language';
+import { LanguageContext } from '@/contexts/language';
 import Link from 'next-intl/link';
 import { useContext } from 'react';
 
 function LangSelector() {
-  const { defaultLang, setDefaultLang } =
-    useContext(LanguageContext);
+  const { defaultLang } = useContext(LanguageContext);
 
   return (
     <div className="flex gap-2 font-bold md:text-lg">
@@ -16,7 +12,6 @@ function LangSelector() {
           href={'/'}
           locale="en"
           className="custom-border"
-          onClick={() => setDefaultLang('en')}
         >
           EN
         </Link>
@@ -25,7 +20,6 @@ function LangSelector() {
           href={'/'}
           locale="pt-BR"
           className="custom-border"
-          onClick={() => setDefaultLang('pt-BR')}
         >
           PT
         </Link>

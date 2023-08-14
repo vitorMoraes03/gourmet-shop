@@ -2,17 +2,14 @@
 'use client';
 
 import { ProductsProps } from '../../../messages/useContent';
-import DesktopSelector from '../filter/desktopSort';
 import FilterList from '../filter/filterList';
 import ListProducts from './listProducts';
-import MobileSelector from '../filter/mobile';
 import Title from './title';
 import useScreenSmallerThen from '@/utils/useScreenSize';
-import { useEffect, useContext, useState } from 'react';
+import { useEffect, useContext } from 'react';
 import { FilterContext } from '@/contexts/filter';
 import {
-  ProductsContext,
-  ProductsProvider,
+  ProductsContext
 } from '@/contexts/products';
 import {
   FiltersInterface,

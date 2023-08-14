@@ -9,11 +9,7 @@ import { notFound } from 'next/navigation';
 import { useContent } from '../../messages/useContent';
 import HeaderScreenSelector from '@/components/header';
 import Footer from '@/components/footer';
-import { FilterProvider } from '@/contexts/filter';
-import { LanguageProvider } from '@/contexts/language';
-import { ProductsProvider } from '@/contexts/products';
 import ContextWrapper from '@/contexts/wrapper';
-import useQuery from '@/utils/query/useQuery';
 import { makeRequest } from '@/utils/query/makeRequest';
 
 const noto = Noto_Sans({
@@ -58,7 +54,7 @@ export default function RootLayout({
         className={`${noto.variable} ${cormorant.variable} 
         ${bodoni.variable} relative tracking-tight text-black`}
       >
-        <ContextWrapper>
+        <ContextWrapper lang={locale}>
           <div id="portal"></div>
           <HeaderScreenSelector
             headerContent={header}
@@ -71,16 +67,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-// {/* <FilterProvider>
-// <LanguageProvider>
-//   <ProductsProvider>
-//     <div id="portal"></div>
-//     <HeaderScreenSelector
-//       headerContent={header}
-//     />
-//     {children}
-//     {/* <Footer content={footer} /> */
-//     </ProductsProvider>
-//     </LanguageProvider>
-//     </FilterProvider> */}

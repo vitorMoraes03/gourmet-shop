@@ -5,20 +5,17 @@ import { useState } from 'react';
 
 export const LanguageContext = React.createContext({
   defaultLang: 'pt-BR',
-  setDefaultLang: (lang: 'pt-BR' | 'en') => {},
+  setDefaultLang: (lang: string) => {},
 });
-
-// Temos um problema aqui, talvez preciso de useEffect, e/ou LocalStorage
-// Quando inicia a página locale é 'en' e defaultLang é 'pt-BR'
 
 export function LanguageProvider({
   children,
+  lang,
 }: {
   children: React.ReactNode;
+  lang: string;
 }) {
-  const [defaultLang, setDefaultLang] = useState<
-    'pt-BR' | 'en'
-  >('pt-BR');
+  const [defaultLang, setDefaultLang] = useState(lang);
 
   return (
     <LanguageContext.Provider
