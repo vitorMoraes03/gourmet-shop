@@ -110,14 +110,6 @@ export function useContent() {
                 'header.dropdown.cheeses.links.3.label'
               ),
             },
-            {
-              href: t(
-                'header.dropdown.cheeses.links.4.href'
-              ),
-              label: t(
-                'header.dropdown.cheeses.links.4.label'
-              ),
-            },
           ],
         },
         wines: {
@@ -202,14 +194,6 @@ export function useContent() {
               ),
               label: t(
                 'header.dropdown.preserves.links.2.label'
-              ),
-            },
-            {
-              href: t(
-                'header.dropdown.preserves.links.3.href'
-              ),
-              label: t(
-                'header.dropdown.preserves.links.3.label'
               ),
             },
           ],

@@ -68,10 +68,6 @@
               "label": "Queijos importados"
             },
             {
-              "href": "/queijos/queijos-veganos",
-              "label": "Queijos veganos"
-            },
-            {
               "href": "/queijos/queijos-azuis",
               "label": "Queijos azuis"
             },
@@ -94,8 +90,8 @@
           },
           "links": [
             {
-              "href": "/vinhos/vinhos-nacionais",
-              "label": "Vinhos nacionais"
+              "href": "/vinhos/vinhos-franceses",
+              "label": "Vinhos franceses"
             },
             {
               "href": "/vinhos/vinhos-velho-mundo",
@@ -106,8 +102,8 @@
               "label": "Vinhos sul americanos"
             },
             {
-              "href": "/vinhos/vinhos-naturais",
-              "label": "Vinhos naturais"
+              "href": "/vinhos/vinhos-organicos",
+              "label": "Vinhos orgânicos"
             }
           ]
         },
@@ -134,10 +130,6 @@
             {
               "href": "/conservas/conservas-veganos",
               "label": "Conservas veganos"
-            },
-            {
-              "href": "/conservas/conservas-organicos",
-              "label": "Conservas orgânicos"
             }
           ]
         },

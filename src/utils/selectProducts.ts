@@ -18,7 +18,7 @@ export function selectProducts(
         'country.en': { $in: ['Italy', 'France'] },
       };
     case 'South American wines':
-    case 'Vinhos sul-americanos':
+    case 'Vinhos sul americanos':
       return {
         'category.en': { $in: ['Wine'] },
         'country.en': { $in: ['Chile', 'Argentina'] },

@@ -25,16 +25,16 @@ function HeaderScreenSelector({
     useContext(ProductsContext);
 
   useEffect(() => {
-    // console.log('linkSelected', linkSelected);
+    console.log('linkSelected', linkSelected);
     if (!linkSelected) return;
     const filterObj = selectProducts(linkSelected);
-    // console.log('filterObj', filterObj);
+    console.log('filterObj', filterObj);
     fetchProducts(filterObj);
   }, [linkSelected]);
 
   const fetchProducts = async (filters: any) => {
     const { products } = await reqFunction(filters, {});
-    // console.log('products', products);
+    console.log('products', products);
     setCurrentProducts(products);
   };
 
