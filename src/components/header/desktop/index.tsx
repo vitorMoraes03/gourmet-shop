@@ -48,6 +48,7 @@ function HeaderDesktop({
                   value={value}
                   setDropdownSelected={setDropdownSelected}
                   setDropdown={setDropdown}
+                  setLink={setLink}
                 />
               )
             )}

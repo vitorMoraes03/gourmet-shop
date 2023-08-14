@@ -141,22 +141,22 @@
   },
   {
     "productName": {
-      "pt": "St. Vilegnon",
-      "en": "St. Vilegnon"
+      "pt": "Serrinha de Minas",
+      "en": "Serrinha de Minas"
     },
     "price": 35.9,
     "rating": 4.5,
     "country": {
-      "pt": "França",
-      "en": "France"
+      "pt": "Brasil",
+      "en": "Brazil"
     },
     "category": {
       "pt": "Queijos",
       "en": "Cheese"
     },
     "description": {
-      "pt": "Um queijo gourmet artesanal produzido nas fazendas francesas. Com uma textura cremosa e sabor rico e complexo, é perfeito para degustações e harmonizações.",
-      "en": "An artisanal gourmet cheese produced in French farms. With a creamy texture and a rich, complex flavor, it's perfect for tastings and pairings."
+      "pt": "Um queijo gourmet artesanal, com uma textura cremosa, sabor rico e complexo, é perfeito para degustações e harmonizações.",
+      "en": "A gourmet artisanal cheese, with a creamy texture, rich and complex flavor, is perfect for tastings and pairings."
     },
     "image": {
       "url": "https://live.staticflickr.com/65535/53055046194_1fc8d2136c_k.jpg",
@@ -192,8 +192,8 @@
           "en": "Region"
         },
         "content": {
-          "pt": "Bretanha",
-          "en": "Brittany"
+          "pt": "Betim",
+          "en": "Betim"
         }
       },
       "thirdTag": {

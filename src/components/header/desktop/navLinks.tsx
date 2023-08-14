@@ -5,11 +5,13 @@ function NavLinks({
   value,
   setDropdownSelected,
   setDropdown,
+  setLink,
 }: {
   id: string;
   value: string;
   setDropdownSelected: (value: string) => void;
   setDropdown: (value: boolean) => void;
+  setLink: (link: string) => void;
 }) {
   return (
     <li
@@ -19,8 +21,12 @@ function NavLinks({
         setDropdown(true);
       }}
       onMouseLeave={() => setDropdown(false)}
+      onClick={() => {
+        setDropdown(false);
+        setLink(value);
+      }}
     >
-      <Link href={id}>{value}</Link>
+      <Link href={'/product'}>{value}</Link>
     </li>
   );
 }
