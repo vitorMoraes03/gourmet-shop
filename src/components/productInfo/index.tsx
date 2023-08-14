@@ -32,7 +32,7 @@ function ProductInfo({
               <p className="mb-1 text-sm italic">
                 Estoque disponível:{' '}
                 <span className="font-semibold">
-                  {randomNum()} unidades
+                  {products.fakeNumbers.stock} unidades
                 </span>
               </p>
               <Button

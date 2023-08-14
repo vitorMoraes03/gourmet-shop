@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 export const LanguageContext = React.createContext({
@@ -16,6 +16,10 @@ export function LanguageProvider({
   lang: string;
 }) {
   const [defaultLang, setDefaultLang] = useState(lang);
+
+  useEffect(() => {
+    console.log('defaultLang: ', defaultLang);
+  }, [defaultLang]);
 
   return (
     <LanguageContext.Provider
