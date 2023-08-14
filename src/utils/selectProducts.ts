@@ -3,24 +3,28 @@ import { FiltersInterface } from './query/useQuery';
 export function selectProducts(
   labelStr: string
 ): FiltersInterface {
-  console.log('labelStr', labelStr);
+  // console.log('labelStr', labelStr);
   switch (labelStr) {
-    case 'National wines' || 'Vinhos Nacionais':
+    case 'National wines':
+    case 'Vinhos nacionais':
       return {
         'country.en': { $in: ['Brazil'] },
         'category.en': { $in: ['Wine'] },
       };
-    case 'Old world wines' || 'Vinhos velho mundo':
+    case 'Old world wines':
+    case 'Vinhos velho mundo':
       return {
         'category.en': { $in: ['Wine'] },
         'country.en': { $in: ['Italy', 'France'] },
       };
-    case 'South American wines' || 'Vinhos sul americanos':
+    case 'South American wines':
+    case 'Vinhos sul-americanos':
       return {
         'category.en': { $in: ['Wine'] },
         'country.en': { $in: ['Chile', 'Argentina'] },
       };
-    case 'Natural wines' || 'Vinhos naturais':
+    case 'Natural wines':
+    case 'Vinhos naturais':
       return {
         'category.en': { $in: ['Wine'] },
         'description.en': {
@@ -28,19 +32,26 @@ export function selectProducts(
           $options: 'i',
         },
       };
-    case 'Local preserves' || 'Conservas regionais':
+    case 'Local preserves':
+    case 'Conservas locais':
       return {
         'category.en': { $in: ['Preserves'] },
         'country.en': { $in: ['Brazil'] },
       };
-    case 'Imported preserves' || 'Conservas importadas':
+    case 'Imported preserves':
+    case 'Conservas importados':
       return {
         'category.en': { $in: ['Preserves'] },
         'country.en': { $ne: 'Brazil' },
       };
-    case 'Vegan preserves' || 'Conservas veganos':
-      return { vegan: true };
-    case 'Organic preserves' || 'Conservas orgânicos':
+    case 'Vegan preserves':
+    case 'Conservas veganos':
+      return {
+        'category.en': { $in: ['Preserves'] },
+        vegan: true,
+      };
+    case 'Organic preserves':
+    case 'Conservas orgânicos':
       return {
         'category.en': ['Preserves'],
         'description.en': {
@@ -48,27 +59,32 @@ export function selectProducts(
           $options: 'i',
         },
       };
-    case 'National cheeses' || 'Queijos nacionais':
+    case 'National cheeses':
+    case 'Queijos nacionais':
       return {
         'category.en': { $in: ['Cheese'] },
         'country.en': { $in: ['Brazil'] },
       };
-    case 'Imported cheeses' || 'Queijos importados':
+    case 'Imported cheeses':
+    case 'Queijos importados':
       return {
         'category.en': { $in: ['Cheese'] },
         'country.en': { $ne: 'Brazil' },
       };
-    case 'Vegan cheeses' || 'Queijos veganos':
+    case 'Vegan cheeses':
+    case 'Queijos veganos':
       return { vegan: true };
-    case 'Blue cheeses' || 'Queijos azuis':
+    case 'Blue cheeses':
+    case 'Queijos azuis':
       return {
         'category.en': { $in: ['Cheese'] },
         'description.en': {
           $regex: 'blue',
-          $options: 'i',  
+          $options: 'i',
         },
       };
-    case 'Aged cheeses' || 'Queijos maturados':
+    case 'Aged cheeses':
+    case 'Queijos maturados':
       return {
         'category.en': { $in: ['Cheese'] },
         'description.en': {
@@ -76,7 +92,6 @@ export function selectProducts(
           $options: 'i',
         },
       };
-
     default:
       return {};
   }

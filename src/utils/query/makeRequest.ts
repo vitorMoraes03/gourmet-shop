@@ -16,8 +16,6 @@ export async function makeRequest(
 ) {
   'use server';
 
-  console.log('queryObj', queryObj);
-
   // const objHardCoded = {
   //   'category.en': ['Wine'],
   //   'country.en': { $in: ['Italy', 'France'] },
@@ -31,6 +29,8 @@ export async function makeRequest(
     .sort(defaultSortOptions(sortOptions))
     .toArray();
   client.close();
+
+  console.log('products', products);
 
   const productArray = products.map((product) => {
     const { _id, ...rest } = product;
