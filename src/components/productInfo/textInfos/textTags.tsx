@@ -1,41 +1,34 @@
 import { ProductInterface } from '@/components/products';
 import SingleTag from './singleTag';
-
-const tagsHardCode = [
-  {
-    title: 'Flavors',
-    text: ['Chocolate', 'Caramel', 'Vanilla'],
-  },
-  {
-    title: 'Producer',
-    text: 'Antonio Costa',
-  },
-  {
-    title: 'Curiosities',
-    text: 'O filho do produtor da uma cuspidela no vinho para dar sorte',
-  },
-];
+import { LanguageContext } from '@/contexts/language';
+import { useContext } from 'react';
 
 function TextTags({
   products,
 }: {
   products: ProductInterface;
 }) {
+  const { defaultLang } = useContext(LanguageContext);
+  const lang = defaultLang === 'en' ? 'en' : 'pt';
+
   return (
     <div className="mt-10 border border-gray border-opacity-60">
       <ul className="divide-y divide-gray px-1">
-        {tagsHardCode.map((tag, index) => {
+        {Object.keys(products.tags).map((key) => {
+          const typedKey =
+            key as keyof typeof products.tags;
+          const tag = products.tags[typedKey];
           return (
             <SingleTag
-              key={index}
-              title={tag.title}
-              text={tag.text}
+              key={`${key}-tags}`}
+              title={tag.label[lang]}
+              text={tag.content[lang]}
             />
           );
         })}
         <SingleTag
           title="Description"
-          text={products.description.en}
+          text={products.description[lang]}
         />
       </ul>
     </div>

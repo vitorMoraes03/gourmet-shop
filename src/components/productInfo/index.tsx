@@ -1,3 +1,5 @@
+'use client'
+
 import { ProductIndividualProps } from '../../../messages/useContent';
 import { ProductInterface } from '../products';
 import Button from './button';

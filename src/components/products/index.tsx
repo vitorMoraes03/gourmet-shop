@@ -8,9 +8,7 @@ import Title from './title';
 import useScreenSmallerThen from '@/utils/useScreenSize';
 import { useEffect, useContext } from 'react';
 import { FilterContext } from '@/contexts/filter';
-import {
-  ProductsContext
-} from '@/contexts/products';
+import { ProductsContext } from '@/contexts/products';
 import {
   FiltersInterface,
   QueryResult,
@@ -50,6 +48,10 @@ export interface ProductInterfaceNoID {
     };
     width: number;
     height: number;
+  };
+  subtitle: {
+    pt: string;
+    en: string;
   };
   tags: {
     firstTag: {
