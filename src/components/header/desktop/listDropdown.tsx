@@ -4,18 +4,20 @@ import { HeaderProps } from '../../../../messages/useContent';
 function ListDropdown({
   identifier,
   headerText,
+  setLink,
+  setDropdown,
 }: {
   identifier: keyof typeof headerText.dropdown;
   headerText: HeaderProps;
+  setLink: (value: string) => void;
+  setDropdown: (value: boolean) => void;
 }) {
   const content = headerText.dropdown[identifier];
-
-  if (!content) return null;
 
   return (
     <ul>
       {content.title && (
-        <h2 className="text-2xl mb-7 font-semibold tracking-tight">
+        <h2 className="mb-7 text-2xl font-semibold tracking-tight">
           {content.title}
         </h2>
       )}
@@ -24,7 +26,15 @@ function ListDropdown({
           key={`${identifier}-${href}`}
           className="my-4 font-subtitle leading-5"
         >
-          <Link href={href}>{label}</Link>
+          <Link
+            href={'/product'}
+            onClick={() => {
+              setLink(label);
+              setDropdown(false);
+            }}
+          >
+            {label}
+          </Link>
         </li>
       ))}
     </ul>

@@ -7,9 +7,10 @@ import {
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { useContent } from '../../messages/useContent';
-import HeaderScreenSelector from '@/components/header/headerSelector';
+import HeaderScreenSelector from '@/components/header';
 import Footer from '@/components/footer';
-import { FilterProvider } from '@/contexts/filter';
+import ContextWrapper from '@/contexts/wrapper';
+import { makeRequest } from '@/utils/query/makeRequest';
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -38,7 +39,7 @@ export default function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: any;
+  params: { locale: string };
 }) {
   const locale = useLocale();
   const { header, footer } = useContent();
@@ -53,12 +54,15 @@ export default function RootLayout({
         className={`${noto.variable} ${cormorant.variable} 
         ${bodoni.variable} relative tracking-tight text-black`}
       >
-        <FilterProvider>
+        <ContextWrapper lang={locale}>
           <div id="portal"></div>
-          <HeaderScreenSelector headerContent={header} />
+          <HeaderScreenSelector
+            headerContent={header}
+            reqFunction={makeRequest}
+          />
           {children}
           {/* <Footer content={footer} /> */}
-        </FilterProvider>
+        </ContextWrapper>
       </body>
     </html>
   );

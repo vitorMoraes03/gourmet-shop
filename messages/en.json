@@ -8,49 +8,9 @@
           "blog": "Blog",
           "wines": "Wines",
           "preserves": "Preserves",
-          "cheeses": "Cheeses",
-          "all": "All products"
+          "cheeses": "Cheeses"
         },
-        "blog": {
-          "title": "Most viewed",
-          "link1": "Top 10 national wines",
-          "link2": "St Jhon Recipes",
-          "link3": "Risotto: different tipes of rice",
-          "link4": "How to preserve your meats",
-          "link5": "A guide of craft beers from Petrópolis"
-        },
-        "wines": {
-          "title": "Wines for all tastes",
-          "link1": "National",
-          "link2": "Old World",
-          "link3": "New World",
-          "link4": "South American",
-          "link5": "Natural"
-        },
-        "preserves": {
-          "title": "Our special preserves",
-          "link1": "National",
-          "link2": "International",
-          "link3": "Portuguese",
-          "link4": "Organic",
-          "link5": "Vegan"
-        },
-        "cheeses": {
-          "title": "Our special cheeses",
-          "link1": "National Cheeses",
-          "link2": "Imported Cheeses",
-          "link3": "Vegan Cheeses",
-          "link4": "Blue Cheeses",
-          "link5": "Matured Cheeses"
-        },
-        "all": {
-          "title": "",
-          "link1": "New Products",
-          "link2": "Best Sellers",
-          "link3": "Subscriptions",
-          "link4": "Acessories",
-          "link5": "See all products"
-        }
+        "allProducts": "All products"
       },
       "dropdown": {
         "blog": {
@@ -108,10 +68,6 @@
               "label": "Imported cheeses"
             },
             {
-              "href": "/cheeses/vegan-cheeses",
-              "label": "Vegan cheeses"
-            },
-            {
               "href": "/cheeses/blue-cheeses",
               "label": "Blue cheeses"
             },
@@ -134,24 +90,20 @@
           },
           "links": [
             {
-              "href": "/wines/national-wines",
-              "label": "National wines"
+              "href": "/wines/french-wines",
+              "label": "French wines"
             },
             {
               "href": "/wines/old-world-wines",
               "label": "Old world wines"
             },
             {
-              "href": "/wines/new-world-wines",
-              "label": "New world wines"
-            },
-            {
               "href": "/wines/south-american-wines",
               "label": "South American wines"
             },
             {
-              "href": "/wines/natural-wines",
-              "label": "Natural wines"
+              "href": "/wines/organic-wines",
+              "label": "Organic wines"
             }
           ]
         },
@@ -169,7 +121,7 @@
           "links": [
             {
               "href": "/preserves/national-preserves",
-              "label": "National preserves"
+              "label": "Local preserves"
             },
             {
               "href": "/preserves/imported-preserves",
@@ -178,14 +130,6 @@
             {
               "href": "/preserves/vegan-preserves",
               "label": "Vegan preserves"
-            },
-            {
-              "href": "/preserves/organic-preserves",
-              "label": "Organic preserves"
-            },
-            {
-              "href": "/preserves/vegetarian-preserves",
-              "label": "Vegetarian preserves"
             }
           ]
         },
@@ -351,7 +295,7 @@
             },
             {
               "label": "Olive oil",
-              "value": "OliveOil"
+              "value": "Olive Oil"
             },
             {
               "label": "Coffee",
@@ -417,6 +361,40 @@
             "value": "recommended"
           }
         ]
+      }
+    },
+    "blog": {
+      "header": {
+        "title": "Blog Gourmet",
+        "subtitle": "Blog with the best tips for your kitchen"
+      }
+    },
+    "productIndividual": {
+      "returnLink": "Back",
+      "reviews": "Reviews",
+      "description": "Description",
+      "stockMsg": "In stock",
+      "purchaseInfo": {
+        "home": {
+          "span": "Delivery",
+          "text": "24 hours to your home"
+        },
+        "quality": {
+          "span": "Excellence",
+          "text": "Fresh and selected products"
+        },
+        "points": {
+          "span": "Points",
+          "text": "Earn points with your purchases"
+        },
+        "delivery": {
+          "span": "Tax",
+          "text": "Free delivery for purchases over $ 100"
+        }
+      },
+      "buttons": {
+        "addToCart": "Add to cart",
+        "buyNow": "Buy now"
       }
     }
   }

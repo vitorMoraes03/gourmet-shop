@@ -1,12 +1,12 @@
 import { ItemInterface } from '@/components/filter/filterItem';
-import { FiltersInterface } from '../useQuery';
+import { FiltersInterface } from '../query/useQuery';
 import { getObjValuesByCategory } from './getObjValues';
 
 export function handleUncheckFilter(
   category: string,
   itemValue: string,
   previousFilters: FiltersInterface
-) {
+): FiltersInterface {
   const values = getObjValuesByCategory(
     category,
     previousFilters

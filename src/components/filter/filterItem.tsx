@@ -2,7 +2,7 @@
 import { useContext, useEffect, useState } from 'react';
 import CheckedIcon from '../icons/checked';
 import { FilterContext } from '@/contexts/filter';
-import { FiltersInterface } from '@/utils/useQuery';
+import { FiltersInterface } from '@/utils/query/useQuery';
 import { handleUncheckFilter } from '@/utils/filter/handleUncheck';
 import { handleCheckFilter } from '@/utils/filter/handleCheck';
 
@@ -44,8 +44,11 @@ function FilterItem({
 
   useEffect(() => {
     const keyAcess = category + '.en';
-    if (filters[keyAcess]) {
-      const filter = filters[keyAcess].find(
+    const filterAcess = filters[keyAcess];
+
+    if (filterAcess && Array.isArray(filterAcess)) {
+      const array = filterAcess as string[];
+      const filter = array.find(
         (filterItem: string) => filterItem === item.value
       );
       if (filter) {

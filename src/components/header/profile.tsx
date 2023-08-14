@@ -1,4 +1,4 @@
-import ProfileIcon from '../../icons/profile';
+import ProfileIcon from "../icons/profile";
 
 function Profile() {
   return (

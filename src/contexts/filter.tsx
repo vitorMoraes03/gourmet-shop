@@ -1,12 +1,18 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState } from 'react';
-import { FiltersInterface } from '@/utils/useQuery';
+import { FiltersInterface } from '@/utils/query/useQuery';
 
 export const FilterContext = React.createContext({
   filters: {} as FiltersInterface,
-  setFilters: (_: FiltersInterface) => {},
+  setFilters: (
+    _:
+      | FiltersInterface
+      | ((
+          prevFilters: FiltersInterface
+        ) => FiltersInterface)
+  ) => {},
   sortOptions: {} as SortOptionsInterface,
   setSortOptions: (_: SortOptionsInterface) => {},
   mobileFilter: false,
@@ -17,13 +23,11 @@ export interface SortOptionsInterface {
   [key: string]: number;
 }
 
-interface FilterProviderProps {
-  children: React.ReactNode;
-}
-
 export function FilterProvider({
   children,
-}: FilterProviderProps) {
+}: {
+  children: React.ReactNode;
+}) {
   const [filters, setFilters] = useState<FiltersInterface>(
     {}
   );

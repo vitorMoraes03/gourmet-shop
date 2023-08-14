@@ -2,23 +2,26 @@
 'use client';
 
 import { ProductsProps } from '../../../messages/useContent';
-import DesktopSelector from '../filter/desktopSort';
 import FilterList from '../filter/filterList';
 import ListProducts from './listProducts';
-import MobileSelector from '../filter/mobile';
 import Title from './title';
 import useScreenSmallerThen from '@/utils/useScreenSize';
-import { useEffect, useContext, useState } from 'react';
+import { useEffect, useContext } from 'react';
 import { FilterContext } from '@/contexts/filter';
+import { ProductsContext } from '@/contexts/products';
 import {
   FiltersInterface,
   QueryResult,
-} from '@/utils/useQuery';
+} from '@/utils/query/useQuery';
 import FilterSelectors from '../filter';
 
-export interface ProductInterface {
+export interface ProductInterface
+  extends ProductInterfaceNoID {
   id?: string;
   _id?: string;
+}
+
+export interface ProductInterfaceNoID {
   productName: {
     pt: string;
     en: string;
@@ -46,6 +49,47 @@ export interface ProductInterface {
     width: number;
     height: number;
   };
+  subtitle: {
+    pt: string;
+    en: string;
+  };
+  tags: {
+    firstTag: {
+      label: {
+        pt: string;
+        en: string;
+      };
+      content: {
+        pt: string[];
+        en: string[];
+      };
+    };
+    secondTag: {
+      label: {
+        pt: string;
+        en: string;
+      };
+      content: {
+        pt: string;
+        en: string;
+      };
+    };
+    thirdTag: {
+      label: {
+        pt: string;
+        en: string;
+      };
+      content: {
+        pt: string;
+        en: string;
+      };
+    };
+  };
+  fakeNumbers: {
+    review: number;
+    stock: number;
+  };
+  vegan: boolean;
 }
 
 function ProductsPage({
@@ -69,9 +113,8 @@ function ProductsPage({
     mobileFilter,
     setMobileFilter,
   } = useContext(FilterContext);
-  const [currentProducts, setCurrentProducts] = useState<
-    ProductInterface[]
-  >([]);
+  const { currentProducts, setCurrentProducts } =
+    useContext(ProductsContext);
 
   const fetchData = async () => {
     const promise = queryFunction(filters, sortOptions);
@@ -98,21 +141,23 @@ function ProductsPage({
   }, []);
 
   return (
-    <section className="px-4 py-32 sm:px-10 md:py-40 xl:px-16">
-      <Title
-        title={content.title}
-        subtitle={content.subtitle}
-      />
-      <FilterSelectors
-        content={content}
-        isScreenSmall={isScreenSmallerThen}
-        applyFillter={applyFillter}
-      />
-      <div className="mt-2 sm:mt-4 sm:flex">
-        {!isScreenSmallerThen && (
-          <FilterList content={content.filters} />
-        )}
-        <ListProducts fetchedContent={currentProducts} />
+    <section className="header-spacing default-x-padding px-4">
+      <div className="py-8">
+        <Title
+          title={content.title}
+          subtitle={content.subtitle}
+        />
+        <FilterSelectors
+          content={content}
+          isScreenSmall={isScreenSmallerThen}
+          applyFillter={applyFillter}
+        />
+        <div className="mt-2 sm:mt-4 sm:flex">
+          {!isScreenSmallerThen && (
+            <FilterList content={content.filters} />
+          )}
+          <ListProducts fetchedContent={currentProducts} />
+        </div>
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ import { FilterProps } from '../../filterList';
 import TagSelected from './tagSelected';
 import { handleUncheckFilter } from '@/utils/filter/handleUncheck';
 import { ItemInterface } from '../../filterItem';
-import { FiltersInterface } from '@/utils/useQuery';
+import { FiltersInterface } from '@/utils/query/useQuery';
 import getAllOptions from '@/utils/filter/getAllOptions';
 import getAllFilters from '@/utils/filter/getAllFilters';
 
@@ -33,6 +33,7 @@ function PickedFilterTags({
     let currentCategory = '';
 
     Object.entries(filters).forEach(([key, value]) => {
+      if (!Array.isArray(value)) return;
       if (value.includes(item.value)) {
         currentCategory = key.split('.')[0];
       }

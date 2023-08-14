@@ -10,7 +10,7 @@ export default function Home() {
   const quoteContent = main.quote;
 
   return (
-    <main className="pt-[88px] md:pt-[128px]">
+    <main className="header-spacing">
       <Carousel content={carouselContent} />
       <Gallery content={galleryContent} />
       <Quote content={quoteContent} />

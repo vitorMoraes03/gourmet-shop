@@ -1,0 +1,1612 @@
+[
+  {
+    "productName": {
+      "pt": "The Oil Guys",
+      "en": "The Oil Guys"
+    },
+    "price": 72.3,
+    "rating": 4.0,
+    "country": {
+      "pt": "Inglaterra",
+      "en": "England"
+    },
+    "category": {
+      "pt": "Azeites",
+      "en": "Olive Oil"
+    },
+    "description": {
+      "pt": "Azeite de alta qualidade produzido pela The Oil Guys. Possui um sabor frutado e suave, perfeito para realçar o sabor de pratos gourmet. Extraído de azeitonas cultivadas nas belas colinas da Inglaterra.",
+      "en": "High-quality olive oil produced by The Oil Guys. It has a fruity and mild flavor, perfect for enhancing the taste of gourmet dishes. Extracted from olives grown in the beautiful hills of England."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53055045789_ed90e1951e.jpg",
+      "alt": {
+        "pt": "Embalagem de azeite em uma mesa de madeira.",
+        "en": "Olive oil bottle on a wooden table."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Azeite extra virgem",
+      "en": "Extra virgin olive oil"
+    },
+    "fakeNumbers": {
+      "review": 123,
+      "stock": 12
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Picante", "Verde", "Frutado"],
+          "en": ["Spicy", "Green", "Fruity"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "West Thurrock",
+          "en": "West Thurrock"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Delícia do Mar",
+      "en": "Delícia do Mar"
+    },
+    "price": 18.5,
+    "rating": 3.8,
+    "country": {
+      "pt": "Portugal",
+      "en": "Portugal"
+    },
+    "category": {
+      "pt": "Conservas",
+      "en": "Preserves"
+    },
+    "description": {
+      "pt": "Conserva de frutos do mar de alta qualidade, preparada com ingredientes frescos colhidos no litoral de Portugal. É uma opção deliciosa para petiscos e pratos principais.",
+      "en": "High-quality seafood preserves prepared with fresh ingredients harvested from the coast of Portugal. It's a delightful option for snacks and main dishes."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53054863816_1e71053660_k.jpg",
+      "alt": {
+        "pt": "Latas de conserva de frutos do mar em uma prateleira.",
+        "en": "Cans of seafood preserves on a shelf."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Conserva de frutos do mar",
+      "en": "Seafood preserves"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Picante", "Salgado", "Defumado"],
+          "en": ["Spicy", "Salty", "Smoked"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Lisboa",
+          "en": "Lisbon"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
+    },
+    "vegan": false
+  },
+  {
+    "productName": {
+      "pt": "Serrinha de Minas",
+      "en": "Serrinha de Minas"
+    },
+    "price": 35.9,
+    "rating": 4.5,
+    "country": {
+      "pt": "Brasil",
+      "en": "Brazil"
+    },
+    "category": {
+      "pt": "Queijos",
+      "en": "Cheese"
+    },
+    "description": {
+      "pt": "Um queijo gourmet artesanal, com uma textura cremosa, sabor rico e complexo, é perfeito para degustações e harmonizações.",
+      "en": "A gourmet artisanal cheese, with a creamy texture, rich and complex flavor, is perfect for tastings and pairings."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53055046194_1fc8d2136c_k.jpg",
+      "alt": {
+        "pt": "Fatia de queijo gourmet em uma tábua de madeira.",
+        "en": "Slice of gourmet cheese on a wooden board."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Queijo artesanal",
+      "en": "Artisanal cheese"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Salgado", "Defumado", "Cremoso"],
+          "en": ["Salty", "Smoked", "Creamy"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Betim",
+          "en": "Betim"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
+    "vegan": false
+  },
+  {
+    "productName": {
+      "pt": "Flysian IPA",
+      "en": "Flysian IPA"
+    },
+    "price": 22.5,
+    "rating": 4.2,
+    "country": {
+      "pt": "Brasil",
+      "en": "Brazil"
+    },
+    "category": {
+      "pt": "Cervejas",
+      "en": "Beers"
+    },
+    "description": {
+      "pt": "Uma cerveja artesanal refrescante, produzida no Brasil com maltes selecionados e um lúpulo especial. Apresenta uma cor dourada e um sabor equilibrado, com notas frutadas e um amargor suave.",
+      "en": "A refreshing craft beer produced in Brazil with selected malts and a special hop. It has a golden color and a balanced flavor with fruity notes and a mild bitterness."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53055341343_0b7236458b_k.jpg",
+      "alt": {
+        "pt": "Garrafa de cerveja artesanal em um balcão de bar.",
+        "en": "Craft beer bottle on a bar counter."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Cerveja artesanal",
+      "en": "Craft beer"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Frutado", "Amargo", "Cítrico"],
+          "en": ["Fruity", "Bitter", "Citrus"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "São Paulo",
+          "en": "São Paulo"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Fazenda São Matos",
+      "en": "São Matos Farm"
+    },
+    "price": 42.8,
+    "rating": 4.7,
+    "country": {
+      "pt": "Brasil",
+      "en": "Brazil"
+    },
+    "category": {
+      "pt": "Cafés",
+      "en": "Coffee"
+    },
+    "description": {
+      "pt": "Um café especial produzido em uma fazenda brasileira de renome. Com grãos cuidadosamente selecionados, apresenta um sabor encorpado, aroma intenso e notas de chocolate e caramelo.",
+      "en": "A special coffee produced in a renowned Brazilian farm. With carefully selected beans, it has a full-bodied flavor, intense aroma, and notes of chocolate and caramel."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53055240615_0533941d8b_k.jpg",
+      "alt": {
+        "pt": "Xícara de café com grãos de café ao redor.",
+        "en": "Cup of coffee with coffee beans around."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Café especial",
+      "en": "Special coffee"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Encorpado", "Intenso", "Caramelo"],
+          "en": ["Full-bodied", "Intense", "Caramel"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Minas Gerais",
+          "en": "Minas Gerais"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Etolea",
+      "en": "Etolea"
+    },
+    "price": 64.9,
+    "rating": 4.3,
+    "country": {
+      "pt": "Itália",
+      "en": "Italy"
+    },
+    "category": {
+      "pt": "Azeites",
+      "en": "Olive Oil"
+    },
+    "description": {
+      "pt": "Um azeite de alta qualidade produzido nas ensolaradas colinas da Toscana, na Itália. Possui um sabor frutado e picante, ideal para finalizar pratos tradicionais italianos.",
+      "en": "A high-quality olive oil produced in the sunny hills of Tuscany, Italy. It has a fruity and spicy flavor, ideal for finishing traditional Italian dishes."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53055340808_6fd84ab46b_k.jpg",
+      "alt": {
+        "pt": "Garrafa de azeite em uma plantação de oliveiras na Toscana.",
+        "en": "Olive oil bottle in an olive grove in Tuscany."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Azeite extra virgem",
+      "en": "Extra virgin olive oil"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Picante", "Frutado", "Verde"],
+          "en": ["Spicy", "Fruity", "Green"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Toscana",
+          "en": "Tuscany"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Raiz",
+      "en": "Raiz"
+    },
+    "price": 15.8,
+    "rating": 4.1,
+    "country": {
+      "pt": "Portugal",
+      "en": "Portugal"
+    },
+    "category": {
+      "pt": "Conservas",
+      "en": "Preserves"
+    },
+    "description": {
+      "pt": "Uma conserva com inspiração mediterrânea, preparada com azeitonas, pimentões e especiarias frescas colhidas nas ensolaradas terras portuguesas. É uma explosão de sabores e aromas em cada mordida.",
+      "en": "A Mediterranean-inspired preserve prepared with olives, bell peppers, and fresh spices harvested from the sunny lands of Portugal. It's an explosion of flavors and aromas in every bite."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53054863821_f548dec1fa_k.jpg",
+      "alt": {
+        "pt": "Tigela de conserva mediterrânea com azeitonas e pimentões.",
+        "en": "Bowl of Mediterranean preserves with olives and bell peppers."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Conserva mediterrânea",
+      "en": "Mediterranean preserves"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Picante", "Salgado", "Defumado"],
+          "en": ["Spicy", "Salty", "Smoked"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Lisboa",
+          "en": "Lisbon"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "La Montagne",
+      "en": "La Montagne"
+    },
+    "price": 28.5,
+    "rating": 4.6,
+    "country": {
+      "pt": "França",
+      "en": "France"
+    },
+    "category": {
+      "pt": "Queijos",
+      "en": "Cheese"
+    },
+    "description": {
+      "pt": "Um queijo de cabra artesanal, produzido em pequenas fazendas na região francesa. Com uma textura macia e um sabor suave e levemente picante, é perfeito para apreciadores de queijo de cabra.",
+      "en": "An artisanal goat cheese, produced in small farms in the French region. With a creamy texture and a mild, slightly tangy flavor, it's perfect for goat cheese enthusiasts."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53055240800_7a2ff5a57d_k.jpg",
+      "alt": {
+        "pt": "Fatia de queijo de cabra artesanal em uma tábua de madeira.",
+        "en": "Slice of artisanal goat cheese on a wooden board."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Queijo artesanal",
+      "en": "Artisanal cheese"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Picante", "Salgado", "Defumado"],
+          "en": ["Spicy", "Salty", "Smoked"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Bretanha",
+          "en": "Brittany"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
+    "vegan": false
+  },
+  {
+    "productName": {
+      "pt": "Arkell",
+      "en": "Arkell"
+    },
+    "price": 19.9,
+    "rating": 4.4,
+    "country": {
+      "pt": "Brasil",
+      "en": "Brazil"
+    },
+    "category": {
+      "pt": "Cervejas",
+      "en": "Beers"
+    },
+    "description": {
+      "pt": "Uma cerveja estilo stout, produzida no Brasil com maltes torrados e uma seleção especial de lúpulos. Possui um sabor encorpado, notas de chocolate e café, e um leve amargor.",
+      "en": "A dark stout beer produced in Brazil with roasted malts and a special selection of hops. It has a full-bodied flavor, notes of chocolate and coffee, and a slight bitterness."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53055046349_c64e400a90_k.jpg",
+      "alt": {
+        "pt": "Garrafa de cerveja stout em um balcão de bar.",
+        "en": "Stout beer bottle on a bar counter."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Cerveja stout",
+      "en": "Stout beer"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Encorpado", "Chocolate", "Café"],
+          "en": ["Full-bodied", "Chocolate", "Coffee"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "São Paulo",
+          "en": "São Paulo"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Buna",
+      "en": "Buna"
+    },
+    "price": 49.5,
+    "rating": 4.8,
+    "country": {
+      "pt": "Brasil",
+      "en": "Brazil"
+    },
+    "category": {
+      "pt": "Cafés",
+      "en": "Coffee"
+    },
+    "description": {
+      "pt": "Um café orgânico cultivado nas altas montanhas do Brasil, em harmonia com a natureza. Com grãos selecionados e um processo de torrefação especial, apresenta um sabor suave e notas frutadas.",
+      "en": "An organic coffee grown in the high mountains of Brazil, in harmony with nature. With selected beans and a special roasting process, it has a smooth flavor and fruity notes."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53054864401_0c2acad5ba_k.jpg",
+      "alt": {
+        "pt": "Xícara de café orgânico com grãos de café ao redor.",
+        "en": "Cup of organic coffee with coffee beans around."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Café orgânico",
+      "en": "Organic coffee"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Suave", "Frutado", "Caramelo"],
+          "en": ["Smooth", "Fruity", "Caramel"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Minas Gerais",
+          "en": "Minas Gerais"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Kuku Vaja",
+      "en": "Kuku Vaja"
+    },
+    "price": 56.7,
+    "rating": 4.2,
+    "country": {
+      "pt": "Portugal",
+      "en": "Portugal"
+    },
+    "category": {
+      "pt": "Azeites",
+      "en": "Olive Oil"
+    },
+    "description": {
+      "pt": "Um azeite de qualidade superior, com sabor intenso e equilibrado, produzido nas ensolaradas terras de Portugal. É perfeito para realçar o sabor de saladas e pratos mediterrâneos.",
+      "en": "A premium olive oil with an intense and balanced flavor, produced in the sunny lands of Portugal. It's perfect for enhancing the taste of salads and Mediterranean dishes."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53055340788_98aab6e9e5_k.jpg",
+      "alt": {
+        "pt": "Garrafa de azeite sobre um fundo branco.",
+        "en": "Olive oil bottle on a white background."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Azeite extra virgem",
+      "en": "Extra virgin olive oil"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Picante", "Verde", "Frutado"],
+          "en": ["Spicy", "Green", "Fruity"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Region",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "West Thurrock",
+          "en": "West Thurrock"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Year",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Mule",
+      "en": "Mule"
+    },
+    "price": 14.2,
+    "rating": 3.9,
+    "country": {
+      "pt": "Brasil",
+      "en": "Brazil"
+    },
+    "category": {
+      "pt": "Conservas",
+      "en": "Preserves"
+    },
+    "description": {
+      "pt": "Uma conserva de pimenta picante, preparada com pimentas selecionadas e um toque especial de especiarias. É perfeita para dar um toque ardente a pratos e petiscos.",
+      "en": "A spicy pepper preserve, prepared with selected peppers and a special blend of spices. It's perfect for adding a fiery touch to dishes and snacks."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53054660357_f1453fa8c3_k.jpg",
+      "alt": {
+        "pt": "Colocando gotas de frasco de pimenta em pedaço de frango.",
+        "en": "Adding drops of pepper sauce from a bottle onto a piece of chicken."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Conserva de pimenta",
+      "en": "Pepper preserve"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Picante", "Salgado", "Defumado"],
+          "en": ["Spicy", "Salty", "Smoked"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Region",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Salvador",
+          "en": "Salvador"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Year",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Frederico Giuseppe",
+      "en": "Frederico Giuseppe"
+    },
+    "price": 32.8,
+    "rating": 4.7,
+    "country": {
+      "pt": "Itália",
+      "en": "Italy"
+    },
+    "category": {
+      "pt": "Queijos",
+      "en": "Cheese"
+    },
+    "description": {
+      "pt": "Um queijo gorgonzola de origem italiana, com sabor marcante e uma textura cremosa. Perfeito para ser apreciado em tábuas de queijo e harmonizado com vinhos encorpados.",
+      "en": "An Italian gorgonzola cheese with a distinctive flavor and a creamy texture. Perfect for enjoying on cheese boards and pairing with full-bodied wines."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53055341123_530c7d992d_k.jpg",
+      "alt": {
+        "pt": "Queijo Gorgonzola com nozes e figos.",
+        "en": "Gorgonzola Cheese with walnuts and figs."
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Queijo gorgonzola",
+      "en": "Gorgonzola cheese"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Picante", "Salgado", "Defumado"],
+          "en": ["Spicy", "Salty", "Smoked"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Region",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Lombardia",
+          "en": "Lombardy"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Year",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
+    "vegan": false
+  },
+  {
+    "productName": {
+      "pt": "Yorkshire Terrier",
+      "en": "Yorkshire Terrier"
+    },
+    "price": 21.5,
+    "rating": 4.3,
+    "country": {
+      "pt": "Inglaterra",
+      "en": "England"
+    },
+    "category": {
+      "pt": "Cervejas",
+      "en": "Beers"
+    },
+    "description": {
+      "pt": "Uma cerveja de trigo estilo Weissbier, produzida na Inglaterra com maltes de trigo selecionados e uma levedura especial. Apresenta uma cor clara, sabor frutado e uma espuma cremosa.",
+      "en": "A wheat beer in Weissbier style, produced in England with selected wheat malts and a special yeast. It has a light color, fruity flavor, and a creamy foam."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53055240985_5b74a6ab64_k.jpg",
+      "alt": {
+        "pt": "Cerveja em copo largo de vidro",
+        "en": "Beer in a wide glass cup"
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Cerveja de trigo",
+      "en": "Wheat beer"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Frutado", "Cítrico", "Cremoso"],
+          "en": ["Fruity", "Citrus", "Creamy"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Region",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Yorkshire",
+          "en": "Yorkshire"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Year",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Buenos niños",
+      "en": "Buenos niños"
+    },
+    "price": 47.6,
+    "rating": 4.9,
+    "country": {
+      "pt": "Colômbia",
+      "en": "Colombia"
+    },
+    "category": {
+      "pt": "Cafés",
+      "en": "Coffee"
+    },
+    "description": {
+      "pt": "Um café premium cultivado nas altas montanhas da Colômbia, famosa por seus cafés de qualidade. Com um sabor rico e aromático, apresenta notas de caramelo e uma acidez equilibrada.",
+      "en": "A premium coffee grown in the high mountains of Colombia, famous for its quality coffees. With a rich and aromatic flavor, it has notes of caramel and a balanced acidity."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53054864446_25151c5af4_k.jpg",
+      "alt": {
+        "pt": "Café ao lado de pote de vidro de graõs de café",
+        "en": "Coffee next to a glass jar of coffee beans"
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Café premium",
+      "en": "Premium coffee"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Encorpado", "Caramelo", "Cítrico"],
+          "en": ["Full-bodied", "Caramel", "Citrus"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Region",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Cundinamarca",
+          "en": "Cundinamarca"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Year",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2020",
+          "en": "2020"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Fattoria Paulina",
+      "en": "Fattoria Paulina"
+    },
+    "price": 38.7,
+    "rating": 4.7,
+    "country": {
+      "pt": "Itália",
+      "en": "Italy"
+    },
+    "category": {
+      "pt": "Queijos",
+      "en": "Cheese"
+    },
+    "description": {
+      "pt": "Um queijo parmesão autêntico, produzido na região italiana de Parma. Com uma textura granulada e um sabor marcante, é perfeito para ralar sobre massas e risotos.",
+      "en": "An authentic Parmesan cheese, produced in the Italian region of Parma. With a granulated texture and a distinctive flavor, it's perfect for grating over pastas and risottos."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53055240785_0126ff29d0_k.jpg",
+      "alt": {
+        "pt": "Queijo Parmesão com romã e mel",
+        "en": "Parmesan Cheese with pomegranate and honey"
+      },
+      "width": 333,
+      "height": 500
+    },
+    "subtitle": {
+      "pt": "Queijo parmesão",
+      "en": "Parmesan cheese"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Flavors",
+          "en": "Flavors"
+        },
+        "content": {
+          "pt": ["Salgado", "Defumado", "Picante"],
+          "en": ["Salty", "Smoked", "Spicy"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Region",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Parma",
+          "en": "Parma"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Year",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
+    },
+    "vegan": false
+  },
+  {
+    "productName": {
+      "pt": "Onderplaas Pinotage 2016",
+      "en": "Onderplaas Pinotage 2016"
+    },
+    "price": 92.12,
+    "rating": 4.5,
+    "country": {
+      "pt": "África do Sul",
+      "en": "South Africa"
+    },
+    "category": {
+      "pt": "Vinho",
+      "en": "Wine"
+    },
+    "description": {
+      "pt": "Madeira, frutas pretas, corpo médio.",
+      "en": "Wood, black berries, medium body."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53037159278_32506ae641_b.jpg",
+      "alt": {
+        "pt": "Garrafa de vinho tinto, taça e prato com bife.",
+        "en": "Red wine bottle, glass and dish with beef."
+      },
+      "width": 224,
+      "height": 298
+    },
+    "subtitle": {
+      "pt": "Vinho tinto",
+      "en": "Red wine"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Madeira", "Frutas pretas", "Corpo médio"],
+          "en": ["Wood", "Black berries", "Medium body"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Stellenbosch",
+          "en": "Stellenbosch"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2016",
+          "en": "2016"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Aesop",
+      "en": "Aesop"
+    },
+    "price": 85.99,
+    "rating": 4.2,
+    "country": {
+      "pt": "Austrália",
+      "en": "Australia"
+    },
+    "category": {
+      "pt": "Vinho",
+      "en": "Wine"
+    },
+    "description": {
+      "pt": "Aesop é um vinho tinto da Austrália, com uvas selecionadas e sabor encorpado.",
+      "en": "Aesop is a red wine from Australia, made with selected grapes and full-bodied flavor."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53036675161_8002888468_b.jpg",
+      "alt": {
+        "pt": "Garrafa de vinho tinto Aesop, taça e prato com acompanhamentos.",
+        "en": "Red wine bottle Aesop, glass, and plate with pairings."
+      },
+      "width": 377,
+      "height": 479
+    },
+    "subtitle": {
+      "pt": "Vinho tinto",
+      "en": "Red wine"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Encorpado", "Frutado", "Cítrico"],
+          "en": ["Full-bodied", "Fruity", "Citrus"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Victoria",
+          "en": "Victoria"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2018",
+          "en": "2018"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Il Castagno",
+      "en": "Il Castagno"
+    },
+    "price": 112.75,
+    "rating": 4.7,
+    "country": {
+      "pt": "Itália",
+      "en": "Italy"
+    },
+    "category": {
+      "pt": "Vinho",
+      "en": "Wine"
+    },
+    "description": {
+      "pt": "Il Castagno é um vinho tinto italiano produzido com uvas da variedade Syrah, famoso pela sua riqueza de sabores e aromas intensos.",
+      "en": "Il Castagno is an Italian red wine produced with Syrah grapes, famous for its richness of flavors and intense aromas."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53037159463_eb76b4b801_b.jpg",
+      "alt": {
+        "pt": "Garrafa de vinho tinto Il Castagno, taça e queijo italiano.",
+        "en": "Red wine bottle Il Castagno, glass, and Italian cheese."
+      },
+      "width": 316,
+      "height": 396
+    },
+    "subtitle": {
+      "pt": "Vinho tinto",
+      "en": "Red wine"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Encorpado", "Frutado", "Cítrico"],
+          "en": ["Full-bodied", "Fruity", "Citrus"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Toscana",
+          "en": "Tuscany"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2017",
+          "en": "2017"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Corvo 2010",
+      "en": "Corvo 2010"
+    },
+    "price": 67.8,
+    "rating": 4.0,
+    "country": {
+      "pt": "Itália",
+      "en": "Italy"
+    },
+    "category": {
+      "pt": "Vinho",
+      "en": "Wine"
+    },
+    "description": {
+      "pt": "Corvo 2010 é um vinho tinto italiano da região da Sicília, que apresenta uma combinação única de sabores frutados e terrosos.",
+      "en": "Corvo 2010 is an Italian red wine from the region of Sicily, which offers a unique combination of fruity and earthy flavors."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53036675126_040df1b5f0_b.jpg",
+      "alt": {
+        "pt": "Garrafa de vinho tinto Corvo 2010, taça e prato com massa italiana.",
+        "en": "Red wine bottle Corvo 2010, glass, and plate with Italian pasta."
+      },
+      "width": 345,
+      "height": 518
+    },
+    "subtitle": {
+      "pt": "Vinho tinto",
+      "en": "Red wine"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Frutado", "Terroso", "Encorpado"],
+          "en": ["Fruity", "Earthy", "Full-bodied"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Sicília",
+          "en": "Sicily"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2010",
+          "en": "2010"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Campo Viejo 2019",
+      "en": "Campo Viejo 2019"
+    },
+    "price": 49.9,
+    "rating": 4.5,
+    "country": {
+      "pt": "Espanha",
+      "en": "Spain"
+    },
+    "category": {
+      "pt": "Vinho",
+      "en": "Wine"
+    },
+    "description": {
+      "pt": "Campo Viejo 2019 é um vinho tinto espanhol, produzido com cuidado e paixão, destacando-se por sua suavidade e elegância.",
+      "en": "Campo Viejo 2019 is a Spanish red wine, crafted with care and passion, known for its smoothness and elegance."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53037066570_6e29aa232a_b.jpg",
+      "alt": {
+        "pt": "Garrafa de vinho tinto Campo Viejo 2019, taça e tábua de tapas espanholas.",
+        "en": "Red wine bottle Campo Viejo 2019, glass, and Spanish tapas platter."
+      },
+      "width": 416,
+      "height": 624
+    },
+    "subtitle": {
+      "pt": "Vinho tinto",
+      "en": "Red wine"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Frutado", "Encorpado", "Cítrico"],
+          "en": ["Fruity", "Full-bodied", "Citrus"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Rioja",
+          "en": "Rioja"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2019",
+          "en": "2019"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Baco Noit 2018",
+      "en": "Baco Noit 2018"
+    },
+    "price": 64.25,
+    "rating": 4.1,
+    "country": {
+      "pt": "Canadá",
+      "en": "Canada"
+    },
+    "category": {
+      "pt": "Vinho",
+      "en": "Wine"
+    },
+    "description": {
+      "pt": "Baco Noit 2018 é um vinho tinto canadense, produzido com uvas selecionadas do país, resultando em uma experiência refinada e agradável.",
+      "en": "Baco Noit 2018 is a Canadian red wine made with carefully selected grapes from the country, resulting in a refined and enjoyable experience."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53037159298_d803103030_b.jpg",
+      "alt": {
+        "pt": "Garrafa de vinho tinto Baco Noit 2018, taça e paisagem canadense.",
+        "en": "Red wine bottle Baco Noit 2018, glass, and Canadian landscape."
+      },
+      "width": 246,
+      "height": 301
+    },
+    "subtitle": {
+      "pt": "Vinho tinto",
+      "en": "Red wine"
+    },
+    "fakeNumbers": {
+      "review": 231,
+      "stock": 8
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Frutado", "Encorpado", "Cítrico"],
+          "en": ["Fruity", "Full-bodied", "Citrus"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Ontário",
+          "en": "Ontario"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2018",
+          "en": "2018"
+        }
+      }
+    },
+    "vegan": true
+  },
+  {
+    "productName": {
+      "pt": "Rasteau",
+      "en": "Rasteau"
+    },
+    "price": 78.5,
+    "rating": 4.3,
+    "country": {
+      "pt": "França",
+      "en": "France"
+    },
+    "category": {
+      "pt": "Vinho",
+      "en": "Wine"
+    },
+    "description": {
+      "pt": "Rasteau é um vinho tinto francês com origem na região de Rhône, conhecido pela sua estrutura robusta e rica paleta de sabores.",
+      "en": "Rasteau is a French red wine originating from the Rhône region, renowned for its robust structure and rich flavor profile."
+    },
+    "image": {
+      "url": "https://live.staticflickr.com/65535/53036094062_f53e59b6c9_b.jpg",
+      "alt": {
+        "pt": "Garrafa de vinho tinto Rasteau, taça e queijos franceses.",
+        "en": "Red wine bottle Rasteau, glass, and French cheeses."
+      },
+      "width": 337,
+      "height": 505
+    },
+    "subtitle": {
+      "pt": "Vinho tinto",
+      "en": "Red wine"
+    },
+    "fakeNumbers": {
+      "review": 321,
+      "stock": 5
+    },
+    "tags": {
+      "firstTag": {
+        "label": {
+          "pt": "Sabor",
+          "en": "Flavor"
+        },
+        "content": {
+          "pt": ["Encorpado", "Frutado", "Cítrico"],
+          "en": ["Full-bodied", "Fruity", "Citrus"]
+        }
+      },
+      "secondTag": {
+        "label": {
+          "pt": "Região",
+          "en": "Region"
+        },
+        "content": {
+          "pt": "Rhône",
+          "en": "Rhône"
+        }
+      },
+      "thirdTag": {
+        "label": {
+          "pt": "Ano",
+          "en": "Year"
+        },
+        "content": {
+          "pt": "2017",
+          "en": "2017"
+        }
+      }
+    },
+    "vegan": true
+  }
+]

@@ -12,48 +12,8 @@ export function useContent() {
           wines: t('header.nav.links.wines'),
           preserves: t('header.nav.links.preserves'),
           cheeses: t('header.nav.links.cheeses'),
-          all: t('header.nav.links.all'),
         },
-        blog: {
-          title: t('header.nav.blog.title'),
-          link1: t('header.nav.blog.link1'),
-          link2: t('header.nav.blog.link2'),
-          link3: t('header.nav.blog.link3'),
-          link4: t('header.nav.blog.link4'),
-          link5: t('header.nav.blog.link5'),
-        },
-        wines: {
-          title: t('header.nav.wines.title'),
-          link1: t('header.nav.wines.link1'),
-          link2: t('header.nav.wines.link2'),
-          link3: t('header.nav.wines.link3'),
-          link4: t('header.nav.wines.link4'),
-          link5: t('header.nav.wines.link5'),
-        },
-        preserves: {
-          title: t('header.nav.preserves.title'),
-          link1: t('header.nav.preserves.link1'),
-          link2: t('header.nav.preserves.link2'),
-          link3: t('header.nav.preserves.link3'),
-          link4: t('header.nav.preserves.link4'),
-          link5: t('header.nav.preserves.link5'),
-        },
-        cheeses: {
-          title: t('header.nav.cheeses.title'),
-          link1: t('header.nav.cheeses.link1'),
-          link2: t('header.nav.cheeses.link2'),
-          link3: t('header.nav.cheeses.link3'),
-          link4: t('header.nav.cheeses.link4'),
-          link5: t('header.nav.cheeses.link5'),
-        },
-        all: {
-          title: t('header.nav.all.title'),
-          link1: t('header.nav.all.link1'),
-          link2: t('header.nav.all.link2'),
-          link3: t('header.nav.all.link3'),
-          link4: t('header.nav.all.link4'),
-          link5: t('header.nav.all.link5'),
-        },
+        allProducts: t('header.nav.allProducts'),
       },
       dropdown: {
         blog: {
@@ -150,14 +110,6 @@ export function useContent() {
                 'header.dropdown.cheeses.links.3.label'
               ),
             },
-            {
-              href: t(
-                'header.dropdown.cheeses.links.4.href'
-              ),
-              label: t(
-                'header.dropdown.cheeses.links.4.label'
-              ),
-            },
           ],
         },
         wines: {
@@ -196,12 +148,6 @@ export function useContent() {
               href: t('header.dropdown.wines.links.3.href'),
               label: t(
                 'header.dropdown.wines.links.3.label'
-              ),
-            },
-            {
-              href: t('header.dropdown.wines.links.4.href'),
-              label: t(
-                'header.dropdown.wines.links.4.label'
               ),
             },
           ],
@@ -248,22 +194,6 @@ export function useContent() {
               ),
               label: t(
                 'header.dropdown.preserves.links.2.label'
-              ),
-            },
-            {
-              href: t(
-                'header.dropdown.preserves.links.3.href'
-              ),
-              label: t(
-                'header.dropdown.preserves.links.3.label'
-              ),
-            },
-            {
-              href: t(
-                'header.dropdown.preserves.links.4.href'
-              ),
-              label: t(
-                'header.dropdown.preserves.links.4.label'
               ),
             },
           ],
@@ -567,6 +497,56 @@ export function useContent() {
         ],
       },
     },
+    blog: {
+      header: {
+        title: t('blog.header.title'),
+        subtitle: t('blog.header.subtitle'),
+      },
+    },
+    productIndividual: {
+      returnLink: t('productIndividual.returnLink'),
+      reviews: t('productIndividual.reviews'),
+      description: t('productIndividual.description'),
+      stockMsg: t('productIndividual.stockMsg'),
+      purchaseInfo: {
+        home: {
+          span: t(
+            'productIndividual.purchaseInfo.home.span'
+          ),
+          text: t(
+            'productIndividual.purchaseInfo.home.text'
+          ),
+        },
+        quality: {
+          span: t(
+            'productIndividual.purchaseInfo.quality.span'
+          ),
+          text: t(
+            'productIndividual.purchaseInfo.quality.text'
+          ),
+        },
+        points: {
+          span: t(
+            'productIndividual.purchaseInfo.points.span'
+          ),
+          text: t(
+            'productIndividual.purchaseInfo.points.text'
+          ),
+        },
+        delivery: {
+          span: t(
+            'productIndividual.purchaseInfo.delivery.span'
+          ),
+          text: t(
+            'productIndividual.purchaseInfo.delivery.text'
+          ),
+        },
+      },
+      buttons: {
+        addToCart: t('productIndividual.buttons.addToCart'),
+        buyNow: t('productIndividual.buttons.buyNow'),
+      },
+    },
   };
 }
 
@@ -578,48 +558,8 @@ export interface HeaderProps {
       wines: string;
       preserves: string;
       cheeses: string;
-      all: string;
     };
-    blog: {
-      title: string;
-      link1: string;
-      link2: string;
-      link3: string;
-      link4: string;
-      link5: string;
-    };
-    wines: {
-      title: string;
-      link1: string;
-      link2: string;
-      link3: string;
-      link4: string;
-      link5: string;
-    };
-    preserves: {
-      title: string;
-      link1: string;
-      link2: string;
-      link3: string;
-      link4: string;
-      link5: string;
-    };
-    cheeses: {
-      title: string;
-      link1: string;
-      link2: string;
-      link3: string;
-      link4: string;
-      link5: string;
-    };
-    all: {
-      title: string;
-      link1: string;
-      link2: string;
-      link3: string;
-      link4: string;
-      link5: string;
-    };
+    allProducts: string;
   };
   dropdown: {
     blog: {
@@ -803,5 +743,41 @@ export interface ProductsProps {
       label: string;
       value: string;
     }[];
+  };
+}
+
+export interface BlogProps {
+  header: {
+    title: string;
+    subtitle: string;
+  };
+}
+
+export interface ProductIndividualProps {
+  returnLink: string;
+  reviews: string;
+  description: string;
+  stockMsg: string;
+  purchaseInfo: {
+    home: {
+      span: string;
+      text: string;
+    };
+    quality: {
+      span: string;
+      text: string;
+    };
+    points: {
+      span: string;
+      text: string;
+    };
+    delivery: {
+      span: string;
+      text: string;
+    };
+  };
+  buttons: {
+    addToCart: string;
+    buyNow: string;
   };
 }
