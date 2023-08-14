@@ -17,7 +17,7 @@ export function TextInfo({
         <Link href={'/product'}>/ {content.returnLink} </Link>
       </div>
       <Title products={products} />
-      <TextTags products={products} />
+      <TextTags products={products} content={content.description}/>
     </div>
   );
 }

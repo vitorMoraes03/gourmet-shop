@@ -522,6 +522,8 @@ export function useContent() {
     productIndividual: {
       returnLink: t('productIndividual.returnLink'),
       reviews: t('productIndividual.reviews'),
+      description: t('productIndividual.description'),
+      stockMsg: t('productIndividual.stockMsg'),
       purchaseInfo: {
         home: {
           span: t(
@@ -770,6 +772,8 @@ export interface BlogProps {
 export interface ProductIndividualProps {
   returnLink: string;
   reviews: string;
+  description: string;
+  stockMsg: string;
   purchaseInfo: {
     home: {
       span: string;

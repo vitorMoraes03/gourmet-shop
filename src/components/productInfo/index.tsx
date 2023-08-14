@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { ProductIndividualProps } from '../../../messages/useContent';
 import { ProductInterface } from '../products';
@@ -32,9 +32,9 @@ function ProductInfo({
             <PurchaseInfo content={content} />
             <div className="flex flex-col justify-center gap-2">
               <p className="mb-1 text-sm italic">
-                Estoque disponível:{' '}
+                {content.stockMsg}:{' '}
                 <span className="font-semibold">
-                  {products.fakeNumbers.stock} unidades
+                  {products.fakeNumbers.stock}
                 </span>
               </p>
               <Button

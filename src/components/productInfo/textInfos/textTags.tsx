@@ -2,11 +2,14 @@ import { ProductInterface } from '@/components/products';
 import SingleTag from './singleTag';
 import { LanguageContext } from '@/contexts/language';
 import { useContext } from 'react';
+import { ProductIndividualProps } from '../../../../messages/useContent';
 
 function TextTags({
   products,
+  content,
 }: {
   products: ProductInterface;
+  content: string;
 }) {
   const { defaultLang } = useContext(LanguageContext);
   const lang = defaultLang === 'en' ? 'en' : 'pt';
@@ -27,7 +30,7 @@ function TextTags({
           );
         })}
         <SingleTag
-          title="Description"
+          title={content}
           text={products.description[lang]}
         />
       </ul>

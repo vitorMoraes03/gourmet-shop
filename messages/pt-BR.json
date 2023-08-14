@@ -378,8 +378,10 @@
       }
     },
     "productIndividual": {
-      "returnLink": "Shop All",
+      "returnLink": "Voltar",
       "reviews": "Reviews",
+      "description": "Descrição",
+      "stockMsg": "Estoque disponível",
       "purchaseInfo": {
         "home": {
           "span": "Entrega",
