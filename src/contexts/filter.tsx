@@ -17,6 +17,8 @@ export const FilterContext = React.createContext({
   setSortOptions: (_: SortOptionsInterface) => {},
   mobileFilter: false,
   setMobileFilter: (_: boolean) => {},
+  clearInputs: false,
+  setClearInputs: (_: boolean) => {},
 });
 
 export interface SortOptionsInterface {
@@ -34,6 +36,13 @@ export function FilterProvider({
   const [sortOptions, setSortOptions] =
     useState<SortOptionsInterface>({ rating: -1 });
   const [mobileFilter, setMobileFilter] = useState(false);
+  const [clearInputs, setClearInputs] = useState(false); // CLEAR INPUT PROBLEMATIC
+
+  // Clear input é um 'remendo' e precisa ser alterado. Os links da nav, renderizam
+  // produtos sem se lidar com o Filter. Mas o comportamento geral da app e alterar
+  // o filter primeiro, para modificar os produtos renderizados.
+
+  // Não faria mais sentido, os links trabalharem com filter diretamente???
 
   return (
     <FilterContext.Provider
@@ -44,6 +53,8 @@ export function FilterProvider({
         setSortOptions,
         mobileFilter,
         setMobileFilter,
+        clearInputs,
+        setClearInputs,
       }}
     >
       {children}

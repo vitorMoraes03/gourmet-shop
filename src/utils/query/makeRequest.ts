@@ -30,8 +30,6 @@ export async function makeRequest(
     .toArray();
   client.close();
 
-  console.log('products', products);
-
   const productArray = products.map((product) => {
     const { _id, ...rest } = product;
     return {

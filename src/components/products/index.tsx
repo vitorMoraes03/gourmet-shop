@@ -112,13 +112,13 @@ function ProductsPage({
     sortOptions,
     mobileFilter,
     setMobileFilter,
+    clearInputs,
   } = useContext(FilterContext);
   const { currentProducts, setCurrentProducts } =
     useContext(ProductsContext);
 
   const fetchData = async () => {
     const promise = queryFunction(filters, sortOptions);
-    // console.log('filters', filters);
     const { products }: QueryResult = await promise;
     if (products === null) return;
     setCurrentProducts(products);
@@ -128,8 +128,11 @@ function ProductsPage({
     fetchData();
   };
 
+  // CLEAR INPUT PROBLEMATIC
+
   useEffect(() => {
     if (mobileFilter) return;
+    if(clearInputs) return;
     fetchData();
   }, [filters, sortOptions]);
 

@@ -38,7 +38,7 @@ function HeaderScreenSelector({
   return (
     <>
       {isScreenSmallerThen ? (
-        <HeaderMobile header={headerContent} />
+        <HeaderMobile header={headerContent} setLink={setLinkSelected} />
       ) : (
         <HeaderDesktop
           header={headerContent}

@@ -53,8 +53,6 @@ async function useQuery(
       createQueryObjWithRegex(search, queryObj);
     }
 
-    console.log('queryObj', queryObj);
-
     return await makeRequest(queryObj, sortOptions);
   } catch (error) {
     return { products: null };

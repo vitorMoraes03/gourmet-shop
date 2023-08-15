@@ -27,7 +27,7 @@ function HeaderDesktop({
   >(null);
   const [searchModalOpen, setSearchModalOpen] =
     useState(false);
-  const { setFilters } = useContext(FilterContext);
+  const { setClearInputs } = useContext(FilterContext);
 
   return (
     <header className="fixed inset-x-0 z-40 w-screen bg-gray">
@@ -54,7 +54,10 @@ function HeaderDesktop({
             )}
             <li
               className={styleLi}
-              onClick={() => setFilters({})}
+              onClick={() => {
+                setClearInputs(true);
+                setLink('allProducts');
+              }}
             >
               <Link href="/product">
                 {header.nav.allProducts}

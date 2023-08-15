@@ -1,18 +1,26 @@
 import Link from 'next/link';
 import { DropdownProps } from '../../../../messages/useContent';
 import ArrowLeftIcon from '@/components/icons/arrowleft';
+import { FilterContext } from '@/contexts/filter';
+import { useContext } from 'react';
 
 function SecondModalList({
   objDropdown,
   dropdownSelected,
   secondHover,
   setSecondHover,
+  setFirstHover,
+  setLink,
 }: {
   objDropdown: DropdownProps | null;
   dropdownSelected: string;
   secondHover: boolean;
   setSecondHover: (value: boolean) => void;
+  setFirstHover: (value: boolean) => void;
+  setLink: (link: string) => void;
 }) {
+  const { setClearInputs } = useContext(FilterContext);
+
   return (
     <div
       className={`absolute top-0 z-10 bg-gray w-full 
@@ -36,8 +44,14 @@ function SecondModalList({
               <li
                 key={`${dropdownSelected}-${href}`}
                 className="mb-2 flex items-center justify-between"
+                onClick={() => {
+                  setFirstHover(false);
+                  setSecondHover(false);
+                  setClearInputs(true);
+                  setLink(label);
+                }}
               >
-                <Link href={href}>{label}</Link>
+                <Link href={'/product'}>{label}</Link>
               </li>
             ))}
           </ul>

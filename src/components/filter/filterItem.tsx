@@ -19,9 +19,22 @@ function FilterItem({
   category: string;
 }) {
   const [checked, setChecked] = useState(false);
-  const { setFilters, filters } = useContext(FilterContext);
+  // CLEAR INPUT PROBLEMATIC
+  const { setFilters, filters, clearInputs, setClearInputs } =
+    useContext(FilterContext);
 
   useEffect(() => {
+    if (clearInputs) {
+      setChecked(false);
+      setFilters({});
+    }
+  }, [clearInputs]);
+
+  useEffect(() => {
+    if(clearInputs) {
+      setClearInputs(false);
+      return;
+    };
     if (!checked) {
       setFilters((prevFilters: FiltersInterface) => {
         return handleUncheckFilter(
