@@ -90,14 +90,14 @@ function HeaderMobile({
                   setLink={setLink}
                 />
               </div>
-              <div className="mt-32 text-center">
+              {/* <div className="mt-32 text-center">
                 <button
                   type="button"
                   className="bg-white px-24 py-3 text-xs font-semibold uppercase tracking-wider"
                 >
                   Login
                 </button>
-              </div>
+              </div> */}
             </div>
           </Portal>
         </div>

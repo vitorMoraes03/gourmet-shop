@@ -8,7 +8,7 @@ export function useContent() {
       logo: t('header.logo'),
       nav: {
         links: {
-          blog: t('header.nav.links.blog'),
+          // blog: t('header.nav.links.blog'),
           wines: t('header.nav.links.wines'),
           preserves: t('header.nav.links.preserves'),
           cheeses: t('header.nav.links.cheeses'),
@@ -554,7 +554,7 @@ export interface HeaderProps {
   logo: string;
   nav: {
     links: {
-      blog: string;
+      // blog: string;
       wines: string;
       preserves: string;
       cheeses: string;

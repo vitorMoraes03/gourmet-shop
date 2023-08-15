@@ -71,7 +71,7 @@ function HeaderDesktop({
             screenSize="desktop"
           />
           <LangSelector />
-          <Profile />
+          {/* <Profile /> */}
           <Cart />
         </div>
       </div>
