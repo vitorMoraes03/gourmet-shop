@@ -6,6 +6,8 @@ import Button from './button';
 import PurchaseInfo from './purchaseInfo';
 import TextInfo from './textInfos';
 import Image from 'next/image';
+import { useContext } from 'react';
+import { ProductsContext } from '@/contexts/products';
 
 function ProductInfo({
   products,
@@ -14,6 +16,12 @@ function ProductInfo({
   products: ProductInterface;
   content: ProductIndividualProps;
 }) {
+  const { cart, setCart } = useContext(ProductsContext);
+
+  function addCart() {
+    setCart([...cart, products]);
+  }
+
   return (
     <section className="header-spacing default-x-padding">
       <div className="grid grid-cols-2 gap-10 pt-20">
@@ -37,13 +45,14 @@ function ProductInfo({
                   {products.fakeNumbers.stock}
                 </span>
               </p>
-              <Button
+              {/* <Button
                 stylesBtn="black-button"
                 text={content.buttons.buyNow}
-              />
+              /> */}
               <Button
                 stylesBtn="white-button"
                 text={content.buttons.addToCart}
+                handleClick={addCart}
               />
             </div>
           </div>

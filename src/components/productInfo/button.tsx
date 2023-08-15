@@ -1,6 +1,17 @@
-function Button({ stylesBtn, text }: { stylesBtn: string, text: string }) {
+function Button({
+  stylesBtn,
+  text,
+  handleClick,
+}: {
+  stylesBtn: string;
+  text: string;
+  handleClick: () => void;
+}) {
   return (
-    <button className={`${stylesBtn} w-full text-sm`}>
+    <button
+      className={`${stylesBtn} w-full text-sm`}
+      onClick={() => handleClick()}
+    >
       {text}
     </button>
   );
