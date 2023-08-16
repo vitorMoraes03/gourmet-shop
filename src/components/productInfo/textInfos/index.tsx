@@ -13,7 +13,7 @@ export function TextInfo({
 }) {
   return (
     <div className='h-2/3'>
-      <div className="mb-8 text-sm">
+      <div className="sm:mb-8 mb-2 text-sm">
         <Link href={'/product'}>/ {content.returnLink} </Link>
       </div>
       <Title products={products} />

@@ -23,9 +23,9 @@ function ProductInfo({
   }
 
   return (
-    <section className="header-spacing default-x-padding">
-      <div className="grid grid-cols-2 gap-10 pt-20">
-        <div className="col-span-1 h-[630px] w-[420px] justify-self-end">
+    <section className="header-spacing">
+      <div className="grid gap-3 sm:grid-cols-2 sm:pt-20 lg:gap-10">
+        <div className="col-span-1 w-screen justify-self-end sm:h-[630px] sm:w-[420px]">
           <Image
             alt={products.image.alt.en}
             src={products.image.url}
@@ -34,13 +34,13 @@ function ProductInfo({
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="col-span-1 h-full">
+        <div className="default-x-padding col-span-1 h-full">
           <TextInfo products={products} content={content} />
-          <div className="grid h-1/3 grid-cols-2">
+          <div className="grid h-1/3 lg:grid-cols-2">
             <PurchaseInfo content={content} />
-            <div className="flex flex-col justify-center gap-2">
-              <p className="mb-1 text-sm italic">
-                {content.stockMsg}:{' '}
+            <div className="order-first flex flex-col justify-center gap-2 lg:order-last">
+              <p className="mb-1 hidden text-sm italic lg:inline-block">
+                {content.stockMsg}:
                 <span className="font-semibold">
                   {products.fakeNumbers.stock}
                 </span>
