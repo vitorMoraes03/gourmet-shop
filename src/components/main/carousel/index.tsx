@@ -18,7 +18,7 @@ function Carousel({ content }: { content: CarouselProps[] }) {
 
   return (
     <div
-      className={`relative flex h-96 overflow-auto`}
+      className={`relative flex h-96 overflow-hidden`}
       style={
         {
           scrollbarWidth: 'none',
