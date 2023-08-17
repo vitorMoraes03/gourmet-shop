@@ -20,21 +20,23 @@ function FilterItem({
 }) {
   const [checked, setChecked] = useState(false);
   // CLEAR INPUT PROBLEMATIC
-  const { setFilters, filters, clearInputs, setClearInputs } =
-    useContext(FilterContext);
+  const {
+    setFilters,
+    filters,
+    clearInputs,
+    setClearInputs,
+  } = useContext(FilterContext);
 
   useEffect(() => {
     if (clearInputs) {
       setChecked(false);
-      setFilters({});
     }
   }, [clearInputs]);
 
   useEffect(() => {
-    if(clearInputs) {
+    if (clearInputs) {
       setClearInputs(false);
-      return;
-    };
+    }
     if (!checked) {
       setFilters((prevFilters: FiltersInterface) => {
         return handleUncheckFilter(

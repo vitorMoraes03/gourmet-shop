@@ -3,7 +3,6 @@
 import LangSelector from '../langSelector';
 import { useContext, useState } from 'react';
 import Search from '../search';
-import Profile from '../profile';
 import Logo from '../logo';
 import Cart from '../cart';
 import { HeaderProps } from '../../../../messages/useContent';
@@ -55,7 +54,7 @@ function HeaderDesktop({
             <li
               className={styleLi}
               onClick={() => {
-                setClearInputs(true);
+                setClearInputs(true); 
                 setLink('allProducts');
               }}
             >

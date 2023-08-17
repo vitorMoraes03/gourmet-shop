@@ -15,11 +15,15 @@ function FilterSelectors({
   isScreenSmall: boolean;
   applyFillter: () => void;
 }) {
-  const { sortOptions, setSortOptions } =
+  const { clearInputs, setSortOptions, setFilters } =
     useContext(FilterContext);
   const [currentOption, setCurrentOption] = useState(
     content.selector.options[0].value
   );
+
+  useEffect(() => {
+    setFilters({});
+  }, [clearInputs]);
 
   useEffect(() => {
     const translated = translateStringToSort(currentOption);
