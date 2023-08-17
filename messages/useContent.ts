@@ -301,7 +301,6 @@ export function useContent() {
       quote: {
         text: t('main.quote.text'),
         title: t('main.quote.title'),
-        span: t('main.quote.span'),
       },
     },
     footer: {
@@ -694,7 +693,6 @@ export interface GalleryProps {
 export interface QuoteProps {
   text: string;
   title: string;
-  span: string;
 }
 
 export interface FooterProps {
