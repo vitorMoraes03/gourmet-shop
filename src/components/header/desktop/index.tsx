@@ -36,7 +36,7 @@ function HeaderDesktop({
         <div className="md:col-span-3 md:h-full">
           <ul
             className="mt-4 w-full cursor-pointer pl-8 font-title md:mt-0 
-            md:flex md:h-full md:gap-2 md:font-subtitle md:text-xs md:font-semibold 
+            md:flex md:h-full md:font-subtitle md:text-xs md:font-semibold 
             md:uppercase lg:text-sm"
           >
             {Object.entries(header.nav.links).map(
