@@ -170,12 +170,12 @@
       },
       "banner": [
         {
-          "span": "lorem",
-          "text": "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+          "span": "Awards",
+          "text": "We were selected as the best wine shop of Brazil in 2020."
         },
         {
-          "span": "lorem",
-          "text": "asdasdasd adasdasdasd asdasdasdasdasd asda."
+          "span": "Sales",
+          "text": "Last chance to buy your favorite products at a discount."
         }
       ]
     },
@@ -186,9 +186,9 @@
           "alt": "Board with cheese and wine",
           "width": "390",
           "height": "244",
-          "paragraph": "Amet elit.",
-          "title": "Solor Sit",
-          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt.",
+          "paragraph": "International products",
+          "title": "Best quality",
+          "text": "Our team of experts selects the best products from around the world to offer you the best experience.",
           "bgColor": "orange",
           "button": "Click here"
         },
@@ -197,16 +197,16 @@
           "alt": "Bottles of wine in dark storage",
           "width": "600",
           "height": "400",
-          "paragraph": "Lorem ipsum",
-          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt.",
-          "title": "Solor Sit",
+          "paragraph": "More than 1000 labels",
+          "text": "We have a wide selection of wines from the best producers in the world.",
+          "title": "Wine Selection",
           "bgColor": "green",
           "button": "Click here"
         }
       ],
       "gallery": {
-        "title": "Lorem your lorem",
-        "subtitle": "Lorem lorem psiu",
+        "title": "Taste it before you buy it",
+        "subtitle": "Small Delicacies served in the store",
         "images": [
           {
             "src": "/images/ginny-rose-stewart-_kUCAyYFVBI-unsplash.jpg",
@@ -232,8 +232,8 @@
         ]
       },
       "quote": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-        "title": "ipsu tanu",
+        "text": "The largest store in the country, where you will find all kinds of products, without sacrificing the quality and care of a small supplier..",
+        "title": "Chef Luan Passard - 2 Michelin stars",
         "span": "Lorem"
       }
     },
@@ -262,8 +262,8 @@
       ]
     },
     "productsPage": {
-      "title": "Lorem ipsum",
-      "subtitle": "Sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "title": "Our products",
+      "subtitle": "A special selection for you.",
       "notFound": "No products found",
       "products": [
         {

@@ -170,12 +170,12 @@
       },
       "banner": [
         {
-          "span": "lorem",
-          "text": "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+          "span": "Prêmios",
+          "text": "Nós fomos selecionandos como a melhor loja de vinhos do Brasil em 2020."
         },
         {
-          "span": "lorem",
-          "text": "asdasdasd adasdasdasd asdasdasdasdasd asda."
+          "span": "Promoções",
+          "text": "Última chance para comprar seus produtos favoritos com desconto."
         }
       ]
     },
@@ -186,9 +186,9 @@
           "alt": "Tábua com queijo e vinho",
           "width": "390",
           "height": "244",
-          "paragraph": "Amet elit.",
-          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt.",
-          "title": "Solor Sit",
+          "paragraph": "Produtos internacionais",
+          "text": "Nossa equipe de especialistas seleciona os melhores produtos do mundo para oferecer a você a melhor experiência.",
+          "title": "Melhor qualidade",
           "bgColor": "orange",
           "button": "Clique aqui"
         },
@@ -197,16 +197,16 @@
           "alt": "Garrafas de vinho em depósito escuro",
           "width": "600",
           "height": "400",
-          "paragraph": "Lorem ipsum",
-          "text": "Amet consectetur adipisicing elit. Ex nostru voluptas sunt.",
-          "title": "Solor Sit",
+          "paragraph": "Mais de 1000 rótulos",
+          "text": "Temos uma ampla seleção de vinhos dos melhores produtores do mundo.",
+          "title": "Seleção de vinhos",
           "bgColor": "green",
           "button": "Clique aqui"
         }
       ],
       "gallery": {
-        "title": "Lorem your lorem",
-        "subtitle": "Lorem lorem psiu",
+        "title": "Prove antes de comprar",
+        "subtitle": "Realizamos pequenas degustações na loja",
         "images": [
           {
             "src": "/images/ginny-rose-stewart-_kUCAyYFVBI-unsplash.jpg",
@@ -232,8 +232,8 @@
         ]
       },
       "quote": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-        "title": "ipsu tanu",
+        "text": "A maior loja do país, onde você vai encontrar todo tipo de produto, sem perder a qualidade e o cuidado de um pequeno fornecedor.",
+        "title": "Chef Luan Passard - 2 estrelas Michelin",
         "span": "Lorem"
       }
     },
@@ -262,8 +262,8 @@
       ]
     },
     "productsPage": {
-      "title": "Lorem ipsum",
-      "subtitle": "Sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "title": "Nossos produtos",
+      "subtitle": "Uma seleção especial para você.",
       "notFound": "Nenhum produto encontrado",
       "products": [
         {
