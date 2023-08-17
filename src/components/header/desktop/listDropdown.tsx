@@ -27,7 +27,7 @@ function ListDropdown({
       {content.links.map(({ href, label }) => (
         <li
           key={`${identifier}-${href}`}
-          className="my-4 font-subtitle leading-5"
+          className="my-4 leading-5"
         >
           <Link
             href={'/product'}
