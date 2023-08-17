@@ -264,6 +264,7 @@
     "productsPage": {
       "title": "Lorem ipsum",
       "subtitle": "Sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "notFound": "Nenhum produto encontrado",
       "products": [
         {
           "src": "/images/aesop-wines-yH6kh_DGBHY-unsplash.jpg",

@@ -332,6 +332,7 @@ export function useContent() {
     productsPage: {
       title: t('productsPage.title'),
       subtitle: t('productsPage.subtitle'),
+      notFound: t('productsPage.notFound'),
       products: [
         {
           src: t('productsPage.products.0.src'),
@@ -706,6 +707,7 @@ export interface FooterProps {
 export interface ProductsProps {
   title: string;
   subtitle: string;
+  notFound: string;
   products: {
     src: string;
     width: string;

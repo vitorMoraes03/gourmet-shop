@@ -120,6 +120,7 @@ function ProductsPage({
   const fetchData = async () => {
     const promise = queryFunction(filters, sortOptions);
     const { products }: QueryResult = await promise;
+    console.log('products', products);
     if (products === null) return;
     setCurrentProducts(products);
   };
@@ -132,7 +133,7 @@ function ProductsPage({
 
   useEffect(() => {
     if (mobileFilter) return;
-    if(clearInputs) return;
+    if (clearInputs) return;
     fetchData();
   }, [filters, sortOptions]);
 
@@ -159,7 +160,10 @@ function ProductsPage({
           {!isScreenSmallerThen && (
             <FilterList content={content.filters} />
           )}
-          <ListProducts fetchedContent={currentProducts} />
+          <ListProducts
+            fetchedContent={currentProducts}
+            notFoundMsg={content.notFound}
+          />
         </div>
       </div>
     </section>
