@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { HeaderProps } from '../../../../messages/useContent';
+import { FilterContext } from '@/contexts/filter';
+import { useContext } from 'react';
 
 function ListDropdown({
   identifier,
@@ -13,6 +15,7 @@ function ListDropdown({
   setDropdown: (value: boolean) => void;
 }) {
   const content = headerText.dropdown[identifier];
+  const { setClearInputs } = useContext(FilterContext);
 
   return (
     <ul>
@@ -29,6 +32,7 @@ function ListDropdown({
           <Link
             href={'/product'}
             onClick={() => {
+              setClearInputs(true);
               setLink(label);
               setDropdown(false);
             }}

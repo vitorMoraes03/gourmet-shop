@@ -34,9 +34,6 @@ function FilterItem({
   }, [clearInputs]);
 
   useEffect(() => {
-    if (clearInputs) {
-      setClearInputs(false);
-    }
     if (!checked) {
       setFilters((prevFilters: FiltersInterface) => {
         return handleUncheckFilter(
@@ -76,6 +73,7 @@ function FilterItem({
     <li
       onClick={() => {
         setChecked(!checked);
+        setClearInputs(false);
       }}
       className="-mb-3"
     >

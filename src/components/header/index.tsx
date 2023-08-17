@@ -9,6 +9,7 @@ import useScreenSmallerThen from '@/utils/useScreenSize';
 import { ProductsContext } from '@/contexts/products';
 import { selectProducts } from '@/utils/selectProducts';
 import { ReqFunctionInterface } from '@/utils/query/makeRequest';
+import { FilterContext } from '@/contexts/filter';
 
 function HeaderScreenSelector({
   headerContent,
@@ -38,7 +39,10 @@ function HeaderScreenSelector({
   return (
     <>
       {isScreenSmallerThen ? (
-        <HeaderMobile header={headerContent} setLink={setLinkSelected} />
+        <HeaderMobile
+          header={headerContent}
+          setLink={setLinkSelected}
+        />
       ) : (
         <HeaderDesktop
           header={headerContent}

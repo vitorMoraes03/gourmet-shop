@@ -22,6 +22,7 @@ function FilterSelectors({
   );
 
   useEffect(() => {
+    if(!clearInputs) return;
     setFilters({});
   }, [clearInputs]);
 
