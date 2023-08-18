@@ -8,6 +8,8 @@ import {
   useContext,
   useState,
 } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 function SearchModal({
   setModalOpen,
@@ -19,6 +21,7 @@ function SearchModal({
   const [inputSearch, setInputSearch] = useState('');
   const { filters, setFilters } = useContext(FilterContext);
   const { defaultLang } = useContext(LanguageContext);
+  const router = useRouter();
 
   const abreviation = defaultLang === 'pt-BR' ? 'pt' : 'en';
   const key = `search.${abreviation}`;
@@ -30,6 +33,8 @@ function SearchModal({
 
   function handleSubmit(e: FormEvent | MouseEvent) {
     e.preventDefault();
+    if (inputSearch === '') return;
+    router.push('/product');
     setModalOpen(false);
     setFilters({
       ...filters,
