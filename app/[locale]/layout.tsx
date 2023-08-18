@@ -19,8 +19,9 @@ const noto = Noto_Sans({
 });
 
 const bodoni = Bodoni_Moda({
-  variable: '--font-bodoni',
   subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-bodoni',
 });
 
 const cormorant = Cormorant_Garamond({
