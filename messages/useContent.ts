@@ -332,21 +332,6 @@ export function useContent() {
       title: t('productsPage.title'),
       subtitle: t('productsPage.subtitle'),
       notFound: t('productsPage.notFound'),
-      products: [
-        {
-          src: t('productsPage.products.0.src'),
-          width: t('productsPage.products.0.width'),
-          height: t('productsPage.products.0.height'),
-          alt: t('productsPage.products.0.alt'),
-          title: t('productsPage.products.0.title'),
-          subtitle: t('productsPage.products.0.subtitle'),
-          price: t('productsPage.products.0.price'),
-          stars: t('productsPage.products.0.stars'),
-          bestSeller: t(
-            'productsPage.products.0.bestSeller'
-          ),
-        },
-      ],
       filters: {
         category: {
           title: t('productsPage.filters.category.title'),
@@ -706,17 +691,6 @@ export interface ProductsProps {
   title: string;
   subtitle: string;
   notFound: string;
-  products: {
-    src: string;
-    width: string;
-    height: string;
-    alt: string;
-    title: string;
-    subtitle: string;
-    price: string;
-    stars: string;
-    bestSeller: string;
-  }[];
   filters: {
     category: {
       title: string;

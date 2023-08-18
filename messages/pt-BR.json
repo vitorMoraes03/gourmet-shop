@@ -264,19 +264,6 @@
       "title": "Nossos produtos",
       "subtitle": "Uma seleção especial para você.",
       "notFound": "Nenhum produto encontrado",
-      "products": [
-        {
-          "src": "/images/aesop-wines-yH6kh_DGBHY-unsplash.jpg",
-          "width": "382",
-          "height": "398",
-          "alt": "Imagem de uma garrafa de vinho tinto",
-          "title": "Vinho tinto",
-          "subtitle": "dolor sit amet",
-          "price": "99,99",
-          "stars": "4",
-          "bestSeller": "true"
-        }
-      ],
       "filters": {
         "category": {
           "title": "Categoria",
