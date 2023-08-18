@@ -20,14 +20,14 @@ function ListDropdown({
   return (
     <ul>
       {content.title && (
-        <h2 className="mb-7 text-2xl font-semibold tracking-tight">
+        <h2 className="mb-4 text-2xl font-semibold tracking-tight lg:mb-7">
           {content.title}
         </h2>
       )}
       {content.links.map(({ href, label }) => (
         <li
           key={`${identifier}-${href}`}
-          className="my-4 leading-5"
+          className="my-2 leading-5 lg:my-4"
         >
           <Link
             href={'/product'}

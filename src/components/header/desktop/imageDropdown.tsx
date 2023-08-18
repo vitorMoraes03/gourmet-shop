@@ -13,27 +13,24 @@ function ImageDropdown({
   if (!content) return null;
 
   return (
-    <div
-      className="col-span-2 grid gap-4 h-fit justify-end"
-      style={{ gridTemplateColumns: '380px 250px' }}
-    >
-      <div>
+    <div className="col-span-2 grid h-fit grid-cols-5 justify-end gap-4">
+      <div className="col-span-3">
         <Image
           src={content.image.src}
           alt={content.image.alt}
           width={Number(content.image.width)}
           height={Number(content.image.height)}
-          className="w-96 h-60"
+          className="h-40 w-64 object-cover px-2 lg:h-60 lg:w-96"
         />
       </div>
-      <div className="flex flex-col text-center justify-center gap-2">
-        <p className="text-sm font-subtitle text-green font-bold uppercase tracking-wider">
+      <div className="col-span-2 flex flex-col justify-center gap-1 text-center lg:gap-2">
+        <p className="font-subtitle text-sm font-bold uppercase tracking-wider text-green">
           {content.image.subtitle}
         </p>
-        <h3 className="font-semibold text-xl tracking-tight leading-tight">
+        <h3 className="text-xl font-semibold leading-tight tracking-tight">
           {content.image.title}
         </h3>
-        <p className="text-sm font-subtitle mt-1 leading-snug">
+        <p className="mt-1 font-subtitle text-sm leading-snug">
           {content.image.text}
         </p>
       </div>

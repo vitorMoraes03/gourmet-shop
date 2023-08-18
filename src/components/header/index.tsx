@@ -9,7 +9,6 @@ import useScreenSmallerThen from '@/utils/useScreenSize';
 import { ProductsContext } from '@/contexts/products';
 import { selectProducts } from '@/utils/selectProducts';
 import { ReqFunctionInterface } from '@/utils/query/makeRequest';
-import { FilterContext } from '@/contexts/filter';
 
 function HeaderScreenSelector({
   headerContent,
