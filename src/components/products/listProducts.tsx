@@ -73,11 +73,11 @@ function ListProducts({
           return (
             <button
               className={`rounded-full bg-black px-2 py-1 text-xs 
-              uppercase text-white hover:opacity-70 sm:px-3 sm:text-base md:text-lg  
+              uppercase text-white sm:px-3 sm:text-base md:text-lg  
               ${
                 page === currentPage
-                  ? 'cursor-default bg-gray'
-                  : ''
+                  ? 'cursor-default opacity-20'
+                  : 'hover:opacity-70'
               }`}
               onClick={() => {
                 setCurrentPage(page);
