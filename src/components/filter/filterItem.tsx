@@ -19,7 +19,19 @@ function FilterItem({
   category: string;
 }) {
   const [checked, setChecked] = useState(false);
-  const { setFilters, filters } = useContext(FilterContext);
+  // CLEAR INPUT PROBLEMATIC
+  const {
+    setFilters,
+    filters,
+    clearInputs,
+    setClearInputs,
+  } = useContext(FilterContext);
+
+  useEffect(() => {
+    if (clearInputs) {
+      setChecked(false);
+    }
+  }, [clearInputs]);
 
   useEffect(() => {
     if (!checked) {
@@ -61,6 +73,7 @@ function FilterItem({
     <li
       onClick={() => {
         setChecked(!checked);
+        setClearInputs(false);
       }}
       className="-mb-3"
     >

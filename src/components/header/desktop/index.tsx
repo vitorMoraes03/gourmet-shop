@@ -3,7 +3,6 @@
 import LangSelector from '../langSelector';
 import { useContext, useState } from 'react';
 import Search from '../search';
-import Profile from '../profile';
 import Logo from '../logo';
 import Cart from '../cart';
 import { HeaderProps } from '../../../../messages/useContent';
@@ -27,7 +26,7 @@ function HeaderDesktop({
   >(null);
   const [searchModalOpen, setSearchModalOpen] =
     useState(false);
-  const { setFilters } = useContext(FilterContext);
+  const { setClearInputs } = useContext(FilterContext);
 
   return (
     <header className="fixed inset-x-0 z-40 w-screen bg-gray">
@@ -37,7 +36,7 @@ function HeaderDesktop({
         <div className="md:col-span-3 md:h-full">
           <ul
             className="mt-4 w-full cursor-pointer pl-8 font-title md:mt-0 
-            md:flex md:h-full md:gap-2 md:font-subtitle md:text-xs md:font-semibold 
+            md:flex md:h-full md:font-subtitle md:text-xs md:font-semibold 
             md:uppercase lg:text-sm"
           >
             {Object.entries(header.nav.links).map(
@@ -54,7 +53,10 @@ function HeaderDesktop({
             )}
             <li
               className={styleLi}
-              onClick={() => setFilters({})}
+              onClick={() => {
+                setClearInputs(true); 
+                setLink('allProducts');
+              }}
             >
               <Link href="/product">
                 {header.nav.allProducts}
@@ -68,7 +70,7 @@ function HeaderDesktop({
             screenSize="desktop"
           />
           <LangSelector />
-          <Profile />
+          {/* <Profile /> */}
           <Cart />
         </div>
       </div>

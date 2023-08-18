@@ -61,7 +61,7 @@ export default function RootLayout({
             reqFunction={makeRequest}
           />
           {children}
-          {/* <Footer content={footer} /> */}
+          <Footer content={footer} />
         </ContextWrapper>
       </body>
     </html>

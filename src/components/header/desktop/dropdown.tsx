@@ -15,8 +15,8 @@ function Dropdown({
 }) {
   return (
     <div
-      className={`grid grid-cols-3 w-full pt-14 h-96 px-20 absolute
-       bg-gray font-title text-lg transition duration-500`}
+      className={`absolute grid h-96 w-full grid-cols-3 bg-gray px-20
+       pt-14 font-title text-lg transition duration-500`}
       onMouseEnter={() => setDropdown(true)}
       onMouseLeave={() => setDropdown(false)}
     >

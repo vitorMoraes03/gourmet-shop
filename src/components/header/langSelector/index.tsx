@@ -1,6 +1,7 @@
 import { LanguageContext } from '@/contexts/language';
 import Link from 'next-intl/link';
 import { useContext } from 'react';
+import Image from 'next/image';
 
 function LangSelector() {
   const { defaultLang } = useContext(LanguageContext);
@@ -13,7 +14,13 @@ function LangSelector() {
           locale="en"
           className="custom-border"
         >
-          EN
+          <Image
+            src="/images/us.png"
+            alt="teste"
+            width={20}
+            height={20}
+            title="English"
+          />
         </Link>
       ) : (
         <Link
@@ -21,7 +28,13 @@ function LangSelector() {
           locale="pt-BR"
           className="custom-border"
         >
-          PT
+          <Image
+            src="/images/br.png"
+            alt="teste"
+            width={20}
+            height={20}
+            title="Português"
+          />
         </Link>
       )}
     </div>

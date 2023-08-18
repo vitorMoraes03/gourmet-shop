@@ -5,8 +5,8 @@ function Logo({ logoText }: { logoText: string }) {
     <div className="col-span-1">
       <Link href={'/'}>
         <h1
-          className="font-title text-xl md:text-4xl 
-        font-semibold tracking-tight md:pl-2 lg:pl-8 md:mb-1"
+          className="font-title font-semibold text-lg tracking-tighter
+         md:mb-2 md:pl-2 md:text-3xl lg:pl-8"
         >
           {logoText}
         </h1>

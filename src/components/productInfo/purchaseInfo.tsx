@@ -53,7 +53,7 @@ function ListItem({
   text: string;
 }) {
   return (
-    <li className="mb-4 flex items-center gap-2">
+    <li className="sm:mb-2 md:mb-4 flex items-center gap-2">
       {children}
       <p className="text-xs text-darkerGray opacity-70">
         <span className="text-blue-500">{span}. </span>

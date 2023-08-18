@@ -8,7 +8,7 @@ export function useContent() {
       logo: t('header.logo'),
       nav: {
         links: {
-          blog: t('header.nav.links.blog'),
+          // blog: t('header.nav.links.blog'),
           wines: t('header.nav.links.wines'),
           preserves: t('header.nav.links.preserves'),
           cheeses: t('header.nav.links.cheeses'),
@@ -301,7 +301,6 @@ export function useContent() {
       quote: {
         text: t('main.quote.text'),
         title: t('main.quote.title'),
-        span: t('main.quote.span'),
       },
     },
     footer: {
@@ -332,6 +331,7 @@ export function useContent() {
     productsPage: {
       title: t('productsPage.title'),
       subtitle: t('productsPage.subtitle'),
+      notFound: t('productsPage.notFound'),
       products: [
         {
           src: t('productsPage.products.0.src'),
@@ -554,7 +554,7 @@ export interface HeaderProps {
   logo: string;
   nav: {
     links: {
-      blog: string;
+      // blog: string;
       wines: string;
       preserves: string;
       cheeses: string;
@@ -693,7 +693,6 @@ export interface GalleryProps {
 export interface QuoteProps {
   text: string;
   title: string;
-  span: string;
 }
 
 export interface FooterProps {
@@ -706,6 +705,7 @@ export interface FooterProps {
 export interface ProductsProps {
   title: string;
   subtitle: string;
+  notFound: string;
   products: {
     src: string;
     width: string;

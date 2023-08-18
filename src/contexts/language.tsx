@@ -17,10 +17,6 @@ export function LanguageProvider({
 }) {
   const [defaultLang, setDefaultLang] = useState(lang);
 
-  useEffect(() => {
-    console.log('defaultLang: ', defaultLang);
-  }, [defaultLang]);
-
   return (
     <LanguageContext.Provider
       value={{ defaultLang, setDefaultLang }}

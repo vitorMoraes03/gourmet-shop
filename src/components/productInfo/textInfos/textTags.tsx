@@ -15,8 +15,8 @@ function TextTags({
   const lang = defaultLang === 'en' ? 'en' : 'pt';
 
   return (
-    <div className="mt-10 border border-gray border-opacity-60">
-      <ul className="divide-y divide-gray px-1">
+    <div className="lg:mt-10 mt-6 border border-gray border-opacity-60">
+      <ul className="divide-y divide-gray px-1 mb-2">
         {Object.keys(products.tags).map((key) => {
           const typedKey =
             key as keyof typeof products.tags;

@@ -16,7 +16,13 @@ import FirstModalList from './firstModal';
 import SecondModalList from './secondModal';
 import SearchModal from '../search/modal';
 
-function HeaderMobile({ header }: { header: HeaderProps }) {
+function HeaderMobile({
+  header,
+  setLink,
+}: {
+  header: HeaderProps;
+  setLink: (link: string) => void;
+}) {
   const [firstHover, setFirstHover] = useState(false);
   const [secondHover, setSecondHover] = useState(false);
   const [dropdownSelected, setDropdownSelected] =
@@ -73,22 +79,25 @@ function HeaderMobile({ header }: { header: HeaderProps }) {
                   setDropdownSelected={setDropdownSelected}
                   setfirstHover={setFirstHover}
                   setSecondHover={setSecondHover}
+                  setLink={setLink}
                 />
                 <SecondModalList
                   objDropdown={objDropdown}
                   dropdownSelected={dropdownSelected}
                   secondHover={secondHover}
                   setSecondHover={setSecondHover}
+                  setFirstHover={setFirstHover}
+                  setLink={setLink}
                 />
               </div>
-              <div className="mt-32 text-center">
+              {/* <div className="mt-32 text-center">
                 <button
                   type="button"
                   className="bg-white px-24 py-3 text-xs font-semibold uppercase tracking-wider"
                 >
                   Login
                 </button>
-              </div>
+              </div> */}
             </div>
           </Portal>
         </div>

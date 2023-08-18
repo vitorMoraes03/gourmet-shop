@@ -16,7 +16,6 @@ export function handleCheckFilter(
     ...previousFilters,
     [category + '.en']: updatedValues,
   };
-  console.log('updatedFilters', updatedFilters);
 
   return updatedFilters;
 }

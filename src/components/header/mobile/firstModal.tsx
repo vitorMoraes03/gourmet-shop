@@ -9,15 +9,17 @@ function FirstModalList({
   setDropdownSelected,
   setSecondHover,
   setfirstHover,
+  setLink,
 }: {
   header: HeaderProps;
   setDropdownSelected: (value: string) => void;
   setSecondHover: (value: boolean) => void;
   setfirstHover: (value: boolean) => void;
+  setLink: (link: string) => void;
 }) {
   const liStyle =
     'px-4 mb-2 flex items-center justify-between';
-  const { setFilters } = useContext(FilterContext);
+  const { setClearInputs } = useContext(FilterContext);
 
   return (
     <div>
@@ -40,8 +42,9 @@ function FirstModalList({
         <li
           className={liStyle}
           onClick={() => {
+            setClearInputs(true);
+            setLink('allProducts');
             setfirstHover(false);
-            setFilters({});
           }}
         >
           <Link href="/product">

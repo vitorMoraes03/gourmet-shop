@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { useContext } from 'react';
+import { FilterContext } from '@/contexts/filter';
 
 function NavLinks({
   id,
@@ -13,6 +15,9 @@ function NavLinks({
   setDropdown: (value: boolean) => void;
   setLink: (link: string) => void;
 }) {
+  // CLEAR INPUT PROBLEMATIC
+  const { setClearInputs } = useContext(FilterContext);
+
   return (
     <li
       className={styleLi}
@@ -22,6 +27,7 @@ function NavLinks({
       }}
       onMouseLeave={() => setDropdown(false)}
       onClick={() => {
+        setClearInputs(true);
         setDropdown(false);
         setLink(value);
       }}
@@ -32,6 +38,6 @@ function NavLinks({
 }
 
 export const styleLi =
-  'md:custom-border mb-2 flex items-center justify-between px-4 md:mb-0 md:flex-none md:px-2';
+  'md:custom-border mb-2 flex items-center justify-between px-2 md:mb-0 md:flex-none md:px-4 tracking-wider';
 
 export default NavLinks;

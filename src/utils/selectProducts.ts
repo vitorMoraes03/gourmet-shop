@@ -25,6 +25,8 @@ export function selectProducts(
         'country.en': { $in: ['France'] },
         'category.en': { $in: ['Wine'] },
       };
+    case 'allProducts':
+      return {};
     case 'Old world wines':
     case 'Vinhos velho mundo':
       return {

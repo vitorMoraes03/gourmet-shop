@@ -12,14 +12,14 @@ function Title({
   const lang = defaultLang === 'en' ? 'en' : 'pt';
 
   return (
-    <div>
-      <h1 className="font-title text-3xl tracking-tight">
+    <div className='text-center sm:text-start'>
+      <h1 className="font-title text-2xl lg:text-3xl tracking-tight">
         {products.productName[lang]}
       </h1>
-      <h3 className="py-1 text-xs font-semibold uppercase tracking-widest">
+      <h3 className="lg:py-1 text-xs font-semibold uppercase tracking-widest">
         {products.subtitle[lang]}
       </h3>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 justify-center sm:justify-start">
         <div className="flex">
           {RatingStars(
             products.rating,

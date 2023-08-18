@@ -32,13 +32,15 @@ function Banner({
   if (!bannerText) return null;
 
   return (
-    <div className="bg-black h-12 py-3 px-4 text-center text-xs overflow-hidden">
-      <Link href={'/future'} className="text-white ">
+    <div className="flex h-12 items-center justify-center overflow-hidden bg-black px-4 text-xs text-white">
+      <div>
+        {/* <Link href={'/future'}"> */}
         <span className="font-bold uppercase">
           {bannerText.span}:
         </span>
         {` ${bannerText.text}`}
-      </Link>
+        {/* </Link> */}
+      </div>
     </div>
   );
 }
