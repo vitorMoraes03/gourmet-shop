@@ -25,6 +25,7 @@ async function ProductDynamic({
 }) {
   const decoded = decodeURI(params.id);
   const id = capitalizeWords(decoded.replace(/-/g, ' '));
+  console.log(id);
   const { products } = await makeRequest(
     { 'productName.en': { $in: [id] } },
     {}

@@ -42,7 +42,7 @@ function ProductInfo({
               <p className="mb-1 hidden text-sm italic lg:inline-block">
                 {content.stockMsg}:
                 <span className="font-semibold">
-                  {products.fakeNumbers.stock}
+                  {' ' + products.fakeNumbers.stock}
                 </span>
               </p>
               {/* <Button

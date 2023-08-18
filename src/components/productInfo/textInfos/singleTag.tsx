@@ -7,10 +7,10 @@ function SingleTag({
 }) {
   return (
     <div className="grid w-full grid-cols-3 py-4 font-subtitle">
-      <h4 className="text-xs font-semibold uppercase tracking-wide">
+      <h4 className="text-xs sm:text-[10px] md:text-xs font-semibold uppercase tracking-wide">
         {title}
       </h4>
-      <p className="col-span-2 text-sm leading-4 tracking-tighter">
+      <p className="col-span-2 text-sm sm:text-xs md:text-sm leading-4 tracking-tighter">
         {dealWithText(text)}
       </p>
     </div>
