@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { CarouselProps } from '../../../../messages/useContent';
+import Link from 'next/link';
 
 interface SingleSlideProps {
   testingStyles?: string;
@@ -34,7 +35,7 @@ function SingleSlide({
         alt={text.alt}
         width={Number(text.width)}
         height={Number(text.height)}
-        className="h-full w-full object-cover"
+        className="h-full w-full object-cover opacity-90"
       />
       <div
         className={`${
@@ -59,14 +60,16 @@ function SingleSlide({
         <p className="text-sm leading-4 tracking-tight md:text-base">
           {text.text}
         </p>
-        <button
-          type="button"
-          className="black-button mt-2 w-40
+        <Link href={'/product'}>
+          <button
+            type="button"
+            className="black-button mt-2 w-40
            justify-self-center text-xs md:w-48 
           md:self-start md:text-sm"
-        >
-          {text.button}
-        </button>
+          >
+            {text.button}
+          </button>
+        </Link>
       </div>
     </div>
   );

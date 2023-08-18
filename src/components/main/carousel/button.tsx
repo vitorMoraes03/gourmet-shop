@@ -1,3 +1,5 @@
+
+
 function BtnSlide({
   handlerBtn,
   current,
@@ -15,12 +17,12 @@ function BtnSlide({
     <div
       className={`${
         current === index ? 'border' : ''
-      } rounded-full md:w-4 md:h-4 w-3 h-3 relative`}
+      } relative h-3 w-3 rounded-full md:h-4 md:w-4`}
     >
       <button
-        className="bg-black md:w-3 md:h-3 w-2 h-2
-      rounded-full absolute transform -translate-x-1/2 
-      -translate-y-1/2 top-1/2 left-1/2"
+        className="absolute left-1/2 top-1/2 h-2 w-2
+      -translate-x-1/2 -translate-y-1/2 transform rounded-full 
+      bg-black md:h-3 md:w-3"
         onClick={() => handleClick()}
       />
     </div>
