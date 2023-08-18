@@ -264,19 +264,6 @@
       "title": "Our products",
       "subtitle": "A special selection for you.",
       "notFound": "No products found",
-      "products": [
-        {
-          "src": "/images/aesop-wines-yH6kh_DGBHY-unsplash.jpg",
-          "width": "382",
-          "height": "398",
-          "alt": "Image of a bottle of red wine",
-          "title": "Red Wine",
-          "subtitle": "dolor sit amet",
-          "price": "99.99",
-          "stars": "4",
-          "bestSeller": "true"
-        }
-      ],
       "filters": {
         "category": {
           "title": "Sections",
