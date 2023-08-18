@@ -23,7 +23,7 @@ function ProductInfo({
   }
 
   return (
-    <section className="header-spacing">
+    <section className="header-spacing pb-10 sm:pb-20">
       <div className="grid gap-3 sm:grid-cols-2 sm:pt-20 lg:gap-10">
         <div className="col-span-1 w-screen justify-self-end sm:h-[630px] sm:w-[420px]">
           <Image
