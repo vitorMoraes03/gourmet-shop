@@ -38,6 +38,6 @@ function NavLinks({
 }
 
 export const styleLi =
-  'md:custom-border mb-2 flex items-center justify-between px-2 md:mb-0 md:flex-none md:px-4';
+  'md:custom-border mb-2 flex items-center justify-between px-2 md:mb-0 md:flex-none md:px-4 tracking-wider';
 
 export default NavLinks;
