@@ -23,35 +23,45 @@ function SecondModalList({
 
   return (
     <div
-      className={`absolute top-0 z-10 bg-gray w-full 
+      className={`absolute top-0 z-10 w-full bg-gray 
       transition-transform duration-500 ease-in-out 
       ${
         secondHover ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
       {objDropdown && (
-        <div className="font-title mt-4 w-full cursor-pointer px-5">
-          <div className="relative inline-block" onClick={() => setSecondHover(false)}>
+        <div className="mt-4 w-full cursor-pointer px-5 font-title">
+          <div
+            className="relative inline-block"
+            onClick={() => setSecondHover(false)}
+          >
             <div className="absolute -left-4 bottom-1/2 translate-y-1/2">
               <ArrowLeftIcon />
             </div>
             <h2 className="text-2xl font-semibold tracking-tight">
-              {objDropdown.title ? objDropdown.title : 'Return'}
+              {objDropdown.title
+                ? objDropdown.title
+                : 'Return'}
             </h2>
           </div>
           <ul className="mt-7">
             {objDropdown.links.map(({ href, label }) => (
               <li
                 key={`${dropdownSelected}-${href}`}
-                className="mb-2 flex items-center justify-between"
-                onClick={() => {
-                  setFirstHover(false);
-                  setSecondHover(false);
-                  setClearInputs(true);
-                  setLink(label);
-                }}
+                className="mb-2 flex cursor-default items-center justify-between"
               >
-                <Link href={'/product'}>{label}</Link>
+                <Link
+                  href={'/product'}
+                  className="z-10"
+                  onClick={() => {
+                    setFirstHover(false);
+                    setSecondHover(false);
+                    setClearInputs(true);
+                    setLink(label);
+                  }}
+                >
+                  {label}
+                </Link>
               </li>
             ))}
           </ul>
