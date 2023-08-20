@@ -133,11 +133,11 @@ function ProductsPage({
   useEffect(() => {
     if (mobileFilter) return;
     if (clearInputs) return;
-    // fetchData();
+    fetchData();
   }, [filters, sortOptions]);
 
   useEffect(() => {
-    setCurrentProducts(JSON.parse(data));
+    // setCurrentProducts(JSON.parse(data));
     isScreenSmallerThen
       ? setMobileFilter(true)
       : setMobileFilter(false);
