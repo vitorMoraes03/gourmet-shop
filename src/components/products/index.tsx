@@ -118,9 +118,10 @@ function ProductsPage({
     useContext(ProductsContext);
 
   const fetchData = async () => {
-    const promise = await queryFunction(filters, sortOptions);
-    const { products }: QueryResult = promise;
+    const { products } = await queryFunction(filters, sortOptions);
+    console.log('fetchData feito');
     if (products === null) return;
+    console.log('products nao esta vazio, setando...');
     setCurrentProducts(products);
   };
 
