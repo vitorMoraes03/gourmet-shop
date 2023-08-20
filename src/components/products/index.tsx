@@ -159,10 +159,6 @@ function ProductsPage({
           {!isScreenSmallerThen && (
             <FilterList content={content.filters} />
           )}
-          <ListProducts
-            fetchedContent={currentProducts}
-            notFoundMsg={content.notFound}
-          />
         </div>
       </div>
     </section>
