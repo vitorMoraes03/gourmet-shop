@@ -118,10 +118,11 @@ function ProductsPage({
     useContext(ProductsContext);
 
   const fetchData = async () => {
-    const { products } = await queryFunction(filters, sortOptions);
-    console.log('fetchData feito');
+    const { products } = await queryFunction(
+      filters,
+      sortOptions
+    );
     if (products === null) return;
-    console.log('products nao esta vazio, setando...');
     setCurrentProducts(products);
   };
 
@@ -161,11 +162,11 @@ function ProductsPage({
           {!isScreenSmallerThen && (
             <FilterList content={content.filters} />
           )}
+          <ListProducts
+            fetchedContent={currentProducts}
+            notFoundMsg={content.notFound}
+          />
         </div>
-        <ListProducts
-          fetchedContent={currentProducts}
-          notFoundMsg={content.notFound}
-        />
       </div>
     </section>
   );
