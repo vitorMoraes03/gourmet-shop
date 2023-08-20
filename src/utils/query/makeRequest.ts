@@ -2,7 +2,8 @@ import { ProductInterface } from '@/components/products';
 import { QueryObjInterface } from './useQuery';
 import { MongoClient } from 'mongodb';
 
-const MONGODB_URI = process.env.MONGODB_URI as string;
+// const MONGODB_URI = process.env.MONGODB_URI as string;
+const MONGODB_URI = "mongodb+srv://vitoristvan:Moraes89!@cluster0.jtcq2do.mongodb.net/Gourmet?retryWrites=true&w=majority";
 
 export interface ReqFunctionInterface {
   (queryObj: QueryObjInterface, sortOptions: {}): Promise<{
