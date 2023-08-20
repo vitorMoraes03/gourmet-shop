@@ -160,6 +160,10 @@ function ProductsPage({
             <FilterList content={content.filters} />
           )}
         </div>
+        <ListProducts
+          fetchedContent={currentProducts}
+          notFoundMsg={content.notFound}
+        />
       </div>
     </section>
   );
