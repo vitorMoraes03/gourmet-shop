@@ -30,7 +30,7 @@ function ListProducts({
 
   return (
     <div className="w-full py-2 sm:ml-auto sm:w-3/4">
-      {currentContent.length > 0 ? (
+      {currentContent?.length > 0 ? (
         <ul className="grid grid-cols-1 gap-2 xs:grid-cols-2 sm:gap-4 lg:grid-cols-3">
           {currentContent.map((product, index) => {
             if (
