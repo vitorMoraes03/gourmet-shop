@@ -118,8 +118,8 @@ function ProductsPage({
     useContext(ProductsContext);
 
   const fetchData = async () => {
-    const promise = queryFunction(filters, sortOptions);
-    const { products }: QueryResult = await promise;
+    const promise = await queryFunction(filters, sortOptions);
+    const { products }: QueryResult = promise;
     if (products === null) return;
     setCurrentProducts(products);
   };
