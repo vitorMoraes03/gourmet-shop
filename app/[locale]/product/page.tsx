@@ -1,4 +1,4 @@
-import ProductsPage from '@/components/products';
+import ProductsPage, { ProductInterface } from '@/components/products';
 import { useContent } from '../../../messages/useContent';
 import useQuery, {
   FiltersInterface,
@@ -9,7 +9,7 @@ function ProductPageWithContent({
   data,
   queryFunction,
 }: {
-  data: string;
+  data: ProductInterface[] | null;
   queryFunction: (
     filters: FiltersInterface,
     sortOptions: {}
@@ -30,7 +30,7 @@ async function Product() {
 
   return (
     <ProductPageWithContent
-      data={JSON.stringify(products)}
+      data={products}
       queryFunction={useQuery}
     />
   );

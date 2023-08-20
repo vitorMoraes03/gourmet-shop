@@ -98,7 +98,7 @@ function ProductsPage({
   queryFunction,
 }: {
   content: ProductsProps;
-  data: string;
+  data: ProductInterface[] | null;
   queryFunction: (
     filters: FiltersInterface,
     sortOptions: {}
@@ -138,7 +138,7 @@ function ProductsPage({
 
   useEffect(() => {
     if (data === null) return;
-    setCurrentProducts(JSON.parse(data));
+    setCurrentProducts(data);
     isScreenSmallerThen
       ? setMobileFilter(true)
       : setMobileFilter(false);
