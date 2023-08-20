@@ -133,7 +133,7 @@ function ProductsPage({
   useEffect(() => {
     if (mobileFilter) return;
     if (clearInputs) return;
-    fetchData();
+    // fetchData();
   }, [filters, sortOptions]);
 
   useEffect(() => {
