@@ -98,7 +98,7 @@ function ProductsPage({
   queryFunction,
 }: {
   content: ProductsProps;
-  data: string;
+  data: ProductInterface[] | null;
   queryFunction: (
     filters: FiltersInterface,
     sortOptions: {}
@@ -118,9 +118,10 @@ function ProductsPage({
     useContext(ProductsContext);
 
   const fetchData = async () => {
-    const promise = queryFunction(filters, sortOptions);
-    const { products }: QueryResult = await promise;
+    const { products } = await queryFunction(filters, sortOptions);
+    console.log('fetchData feito');
     if (products === null) return;
+    console.log('products nao esta vazio, setando...');
     setCurrentProducts(products);
   };
 
@@ -137,7 +138,8 @@ function ProductsPage({
   }, [filters, sortOptions]);
 
   useEffect(() => {
-    setCurrentProducts(JSON.parse(data));
+    if (data === null) return;
+    setCurrentProducts(data);
     isScreenSmallerThen
       ? setMobileFilter(true)
       : setMobileFilter(false);
