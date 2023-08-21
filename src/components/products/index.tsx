@@ -140,6 +140,7 @@ function ProductsPage({
 
   useEffect(() => {
     if (data === null) return;
+    if (clearInputs) return;
     setCurrentProducts(data);
     isScreenSmallerThen
       ? setMobileFilter(true)
